@@ -36,6 +36,21 @@ your browser so you don’t even need to refresh thanks to [Browser Sync](https:
 
 **[⬆ back to top](#contents)**
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+## Contributing
+
+To contribute to the GOV.AU UI-Kit Starter Pack:
+1. Fork the project & clone it locally.
+1. Create a new branch for the work that is going to be completed.
+1. Complete the work and test it to the best of your abilities following the [guidelines here](https://github.com/govau/uikit#checklist-and-browser-support).
+1. Once the work is completed, write a good commit message.
+1. Push your work to github and create a new pull request.
+1. Respond to any code review feedback.
+
+**[⬆ back to top](#contents)**
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
