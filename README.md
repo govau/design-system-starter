@@ -17,10 +17,9 @@ GOV.AU UI-Kit Starter Pack
 
 ## Install
 
-To get the Starter Kit to work download this repo and run `yarn` to install all dependencies. _(alternatively you can run `npm install` as well).
+To get the Starter Kit to work download this repo and run `yarn` or `npm install` to install all dependencies.
 
-After you got all dependencies installed run `yarn watch` to spin up a new local server and watch for changed on *.scss files. Changes will be injected into
-your browser so you don’t even need to refresh thanks to [Browser Sync](https://www.browsersync.io/).
+After you got all dependencies installed run `yarn watch` or `npm run watch` to spin up a new local server and watch for changed on *.scss files. Changes will be injected into your browser so you don’t even need to refresh thanks to [Browser Sync](https://www.browsersync.io/).
 
 
 **[⬆ back to top](#contents)**
@@ -33,6 +32,21 @@ your browser so you don’t even need to refresh thanks to [Browser Sync](https:
 
 ❗️The Starter Kit watch only works with Mac. If you must run Windows run `npm run build` after each change to your Sass.
 
+
+**[⬆ back to top](#contents)**
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+## Contributing
+
+To contribute to the GOV.AU UI-Kit Starter Pack:
+1. Fork the project & clone it locally.
+1. Create a new branch for the work that is going to be completed.
+1. Complete the work and test it to the best of your abilities following the [guidelines here](https://github.com/govau/uikit#checklist-and-browser-support).
+1. Once the work is completed, write a good commit message.
+1. Push your work to github and create a new pull request.
+1. Respond to any code review feedback.
 
 **[⬆ back to top](#contents)**
 
