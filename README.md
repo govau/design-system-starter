@@ -7,7 +7,6 @@ GOV.AU UI-Kit Starter Pack
 ## Contents
 
 * [Install](#install)
-* [Requirements](#requirements)
 * [Contributing](#contributing)
 * [License](#license)
 
@@ -24,16 +23,6 @@ After you got all dependencies installed run `yarn watch` or `npm run watch` to 
 
 **[⬆ back to top](#contents)**
 
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-## Requirements
-
-❗️The Starter Kit watch only works with Mac. If you must run Windows run `npm run build` after each change to your Sass.
-
-
-**[⬆ back to top](#contents)**
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
