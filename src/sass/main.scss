@@ -6,3 +6,11 @@
 
 
 // CUSTOM SASS
+main {
+	@include AU-space( padding-top, 4unit );
+	@include AU-space( padding-bottom, 4unit );
+}
+
+form {
+	@include AU-space( margin-top, 2unit );
+}
