@@ -14,11 +14,6 @@
 		"watch": "npm run build && npm-run-all --parallel serve watch:*",
 		"test": "echo \"Error: no test specified\" && exit 0"
 	},
-	"devDependencies": {
-		"browser-sync": "^2.18.8",
-		"npm-run-all": "^4.0.2",
-		"onchange": "^3.2.1"
-	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/govau/uikit-starter.git"
@@ -41,6 +36,14 @@
 		}
 	],
 	"license": "MIT",
+	"devDependencies": {
+		"browser-sync": "^2.18.8",
+		"npm-run-all": "^4.0.2",
+		"onchange": "^3.2.1",
+		"autoprefixer": "^7.2.3",
+		"node-sass": "^4.7.2",
+		"postcss-cli": "^4.1.1"
+	},
 	"dependencies": {
 		"@gov.au/accordion": "latest",
 		"@gov.au/animate": "latest",
@@ -60,34 +63,31 @@
 		"@gov.au/keyword-list": "latest",
 		"@gov.au/link-list": "latest",
 		"@gov.au/page-alerts": "latest",
+		"@gov.au/pancake-sass": "^1.2.0",
 		"@gov.au/progress-indicator": "latest",
 		"@gov.au/responsive-media": "latest",
 		"@gov.au/select": "latest",
 		"@gov.au/skip-link": "latest",
 		"@gov.au/tags": "latest",
-		"@gov.au/text-inputs": "latest",
-		"autoprefixer": "^7.2.3",
-		"node-sass": "^4.7.2",
-		"postcss-cli": "^4.1.1"
+		"@gov.au/text-inputs": "latest"
 	},
 	"pancake": {
-		"auto-save": false,
+		"auto-save": true,
 		"plugins": true,
 		"ignore": [
 			"@gov.au/pancake-react",
 			"@gov.au/pancake-json"
 		],
 		"css": {
-			"minified": true,
-			"modules": false,
-			"location": "pancake/css/",
 			"name": false
 		},
 		"sass": {
+			"modules": false,
 			"location": "src/_uikit/sass/",
 			"name": "_uikit.scss"
 		},
 		"js": {
+			"minified": true,
 			"modules": false,
 			"location": "docs/js/",
 			"name": "uikit.min.js"
