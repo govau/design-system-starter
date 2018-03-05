@@ -6,17 +6,14 @@
 		"npm": ">=3.0.0"
 	},
 	"scripts": {
-		"build": "node-sass src/sass/main.scss docs/css/main.css --output-style compressed",
-		"watch:sass": "npm run build && onchange \"src/sass/*.scss\" -- npm run build",
+		"pancake": "./node_modules/.bin/pancake",
+		"build:autoprefix": "postcss docs/css/main.css -u autoprefixer -r --no-map",
+		"build:sass": "node-sass src/sass/main.scss docs/css/main.css --output-style compressed",
+		"build": "npm run build:sass && npm run build:autoprefix",
+		"watch:sass": "onchange \"src/sass/*.scss\" -- npm run build",
 		"serve": "browser-sync start --server --startPath \"docs\" --files \"docs/*.html\" \"docs/css/*.css\" \"docs/js/*.js\"",
-		"watch": "npm-run-all --parallel serve watch:*",
+		"watch": "npm run build && npm-run-all --parallel serve watch:*",
 		"test": "echo \"Error: no test specified\" && exit 0"
-	},
-	"devDependencies": {
-		"browser-sync": "^2.18.8",
-		"node-sass": "^4.5.1",
-		"npm-run-all": "^4.0.2",
-		"onchange": "^3.2.1"
 	},
 	"repository": {
 		"type": "git",
@@ -40,6 +37,14 @@
 		}
 	],
 	"license": "MIT",
+	"devDependencies": {
+		"browser-sync": "^2.18.8",
+		"npm-run-all": "^4.0.2",
+		"onchange": "^3.2.1",
+		"autoprefixer": "^7.2.3",
+		"node-sass": "^4.7.2",
+		"postcss-cli": "^4.1.1"
+	},
 	"dependencies": {
 		"@gov.au/accordion": "latest",
 		"@gov.au/animate": "latest",
@@ -59,6 +64,7 @@
 		"@gov.au/keyword-list": "latest",
 		"@gov.au/link-list": "latest",
 		"@gov.au/page-alerts": "latest",
+		"@gov.au/pancake-sass": "^1.2.0",
 		"@gov.au/progress-indicator": "latest",
 		"@gov.au/responsive-media": "latest",
 		"@gov.au/select": "latest",
@@ -84,7 +90,7 @@
 		},
 		"sass": {
 			"modules": false,
-			"location": "src/sass/",
+			"location": "src/_uikit/sass/",
 			"name": "uikit.scss"
 		},
 		"js": {
@@ -92,6 +98,27 @@
 			"modules": false,
 			"location": "docs/js/",
 			"name": "uikit.min.js"
+		},
+		"json": {
+			"enable": true,
+			"location": "src/_uikit/",
+			"name": "uikit",
+			"content": {
+				"name": true,
+				"version": true,
+				"dependencies": true,
+				"path": true,
+				"settings": true
+			}
+		},
+		"react": {
+			"location": "src/_uikit/react/"
 		}
-	}
+	},
+	"browserslist": [
+		"last 2 versions",
+		"ie 8",
+		"ie 9",
+		"ie 10"
+	]
 }

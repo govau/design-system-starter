@@ -2,7 +2,23 @@
 
 
 // UI-Kit
-@import 'uikit';
+@import '../_uikit/sass/uikit';
 
 
 // CUSTOM SASS
+body {
+	margin: 0;
+}
+
+.au-body.au-body--alt {
+	@include AU-space( margin-top, 4unit );
+	@include AU-space( padding, 4unit 0 );
+}
+
+main {
+	@include AU-space( margin-top, 4unit );
+}
+
+form {
+	@include AU-space( margin-top, 2unit );
+}

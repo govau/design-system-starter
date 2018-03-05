@@ -16,9 +16,9 @@ GOV.AU UI-Kit Starter Pack
 
 ## Install
 
-To get the Starter Kit to work download this repo and run `yarn` or `npm install` to install all dependencies.
+To get the Starter Kit to work download this repo and run `npm install` to install all dependencies.
 
-After you got all dependencies installed run `yarn watch` or `npm run watch` to spin up a new local server and watch for changed on *.scss files. Changes will be injected into your browser so you don’t even need to refresh thanks to [Browser Sync](https://www.browsersync.io/).
+After you got all dependencies installed run `npm run watch` to spin up a new local server and watch for changed on *.scss files. Changes will be injected into your browser so you don’t even need to refresh thanks to [Browser Sync](https://www.browsersync.io/).
 
 
 **[⬆ back to top](#contents)**
