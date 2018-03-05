@@ -38,287 +38,509 @@
 </head>
 <!-- BODY -->
 <!-- GRID-12 -->
-<body class="au-body au-grid">
+<body class="au-grid">
 
-	<!-- SKIP-LINKS -->
-	<nav class="au-skip-link">
-		<a class="au-skip-link__link" href="#content">Skip to main content</a>
-		<a class="au-skip-link__link" href="#nav">Skip to main navigation</a>
-	</nav>
+	<div class="au-body">
+		<!-- SKIP-LINKS -->
+		<nav class="au-skip-link">
+			<a class="au-skip-link__link" href="#content">Skip to main content</a>
+			<a class="au-skip-link__link" href="#nav">Skip to main navigation</a>
+		</nav>
 
-	<!-- HEADER -->
-	<header class="au-header au-header--dark" role="banner">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<h1 class="au-header-heading">GOV.AU UI-Kit</h1>
+		<!-- HEADER -->
+		<header class="au-header au-header--dark au-header--alt" role="banner">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h1 class="au-header-heading">GOV.AU UI-Kit</h1>
 
-					<span class="au-header-subline">
-						Starter Pack
-					</span>
+						<span class="au-header-subline">
+							Starter Pack
+						</span>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+
+	<main>
+		<div class="au-body">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 col-md-3" id="nav">
+
+
+						<!-- INPAGE-NAV -->
+						<nav class="au-inpage-nav-links">
+							<h2 class="au-inpage-nav-links__heading">Contents</h2>
+							<ul class="au-link-list">
+								<li><a href="#alerts">Alerts</a></li>
+								<li><a href="#components">Components</a></li>
+							</ul>
+						</nav>
+
+
+						<!-- PROGRESS-INDICATOR -->
+						<nav>
+							<ul class="au-progress-indicator">
+								<li>
+									<a class="au-progress-indicator__link au-progress-indicator__link--doing" href="#url">
+										<span class="au-progress-indicator__status">Doing</span>
+										Introduction
+									</a>
+								</li>
+								<li>
+									<a class="au-progress-indicator__link au-progress-indicator__link--todo" href="#url">
+										<span class="au-progress-indicator__status">To do</span>
+										Business Contacts
+									</a>
+								</li>
+								<li>
+									<a class="au-progress-indicator__link au-progress-indicator__link--done" href="#url">
+										<span class="au-progress-indicator__status">Done</span>
+										Case Studies
+									</a>
+								</li>
+								<li>
+									<a class="au-progress-indicator__link au-progress-indicator__link--done" href="#url">
+										<span class="au-progress-indicator__status">Done</span>
+										Personal Infos
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-sm-8 col-lg-9" id="content">
+
+						<!-- BREADCRUMBS -->
+						<nav class="au-breadcrumbs" aria-label="breadcrumb">
+							<ul class="au-link-list au-link-list--inline">
+								<li><a href="#">Home</a></li>
+								<li><a href="#">Parent</a></li>
+								<li>Current page</li>
+							</ul>
+						</nav>
+
+
+						<!-- HEADINGS -->
+						<!-- INPAGE-NAV -->
+						<h2 class="au-inpage-nav-section au-display-md">
+							Alerts
+
+							<a id="alerts" class="au-inpage-nav-section-link" href="#alerts">Link to section</a>
+						</h2>
+
+
+						<!-- PAGE-ALERT -->
+						<div class="au-page-alerts au-page-alerts--info" role="alert">
+							<h2 class="au-display-md">Announcements</h2>
+							<p>
+								This is only a <strong>sample</strong> page
+							</p>
+						</div>
+
+
+						<!-- CALLOUT -->
+						<section class="au-callout" aria-label="Some ipsum lorem">
+							<p>Nullam quis aliquam massa. Nunc suscipit, nisi in facilisis tempus, lectus quam ullamcorper tellus, in rutrum ipsum tortor sed nisl.</p>
+						</section>
+
+
+						<!-- HEADINGS -->
+						<!-- INPAGE-NAV -->
+						<h2 class="au-inpage-nav-section au-display-md">
+							Components
+
+							<a id="components" class="au-inpage-nav-section-link" href="#components">Link to section</a>
+						</h2>
+
+
+						<!-- ACCORDION -->
+						<section class="au-accordion">
+							<a href="#accordion-stacked1"
+								class="au-accordion__title au-accordion--closed js-au-accordion"
+								aria-controls="accordion-stacked1"
+								aria-expanded="false"
+								aria-selected="false"
+								role="tab"
+								tabindex="0"
+								onclick="return AU.accordion.Toggle( this )">
+									First accordion title
+							</a>
+
+							<div class="au-accordion__body au-accordion--closed" id="accordion-stacked1" aria-hidden="true">
+								<div class="au-accordion__body-wrapper">
+
+									<p>Here is some accordion content</p>
+
+									<p>Here is some accordion <a href="#url">content</a>.</p>
+
+								</div>
+
+							</div>
+						</section>
+						<section class="au-accordion">
+							<a href="#accordion-stacked2"
+								class="au-accordion__title au-accordion--closed js-au-accordion"
+								aria-controls="accordion-stacked2"
+								aria-expanded="false"
+								aria-selected="false"
+								role="tab"
+								tabindex="0"
+								onclick="return AU.accordion.Toggle( this )">
+									Second accordion title
+							</a>
+
+							<div class="au-accordion__body au-accordion--closed" id="accordion-stacked2" aria-hidden="true">
+								<div class="au-accordion__body-wrapper">
+
+									<p>Here is some accordion content</p>
+
+									<p>Here is some accordion <a href="#url">content</a>.</p>
+
+								</div>
+
+							</div>
+						</section>
+						<section class="au-accordion">
+							<a href="#accordion-stacked3"
+								class="au-accordion__title au-accordion--closed js-au-accordion"
+								aria-controls="accordion-stacked3"
+								aria-expanded="false"
+								aria-selected="false"
+								role="tab"
+								tabindex="0"
+								onclick="return AU.accordion.Toggle( this )">
+									Third accordion title
+							</a>
+
+							<div class="au-accordion__body au-accordion--closed" id="accordion-stacked3" aria-hidden="true">
+								<div class="au-accordion__body-wrapper">
+
+									<p>Here is some accordion content</p>
+
+									<p>Here is some accordion <a href="#url">content</a>.</p>
+
+								</div>
+
+							</div>
+						</section>
+
+
+						<!-- CTA-LINK -->
+						<p>
+							<a class="au-cta-link" href="#">Sign up</a>
+						</p>
+
+
+						<!-- DIRECTION-LINK -->
+						<p>
+							<a class="au-direction-link au-direction-link--right" href="#">Next</a>
+						</p>
+
+
+						<!-- KEYWORD-LIST -->
+						<ul class="au-keyword-list au-link-list">
+							<li>
+								<a href="#">
+									<small class="au-keyword-list__small">Department of </small>Agriculture and Water Resources
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<small class="au-keyword-list__small">Department of</small>Communications and the Arts
+								</a>
+							</li>
+						</ul>
+
+
+						<!-- LINK-LIST -->
+						<ul class="au-link-list">
+							<li><a href="#">Options</a></li>
+							<li><a href="#">Help</a></li>
+							<li><a href="#">Sign Out</a></li>
+						</ul>
+
+
+						<form>
+							<!-- CONTROL-INPUTS -->
+							<p>
+								<label class="au-control-input">
+									<input class="au-control-input__input" type="checkbox" name="checkbox-ex" value="email">
+									<span class="au-control-input__text">Email</span>
+								</label>
+							</p>
+
+							<p>
+								<label class="au-control-input">
+									<input class="au-control-input__input" type="checkbox" name="checkbox-ex" value="slack">
+									<span class="au-control-input__text">Slack</span>
+								</label>
+							</p>
+
+
+							<!-- TEXT-INPUT -->
+							<p>
+								<label class="au-text-input__label">More infos please
+									<input class="au-text-input au-text-input--block" name="more" type="text">
+								</label>
+							</p>
+
+
+							<!-- SELECT -->
+							<p>
+								<label for="select1" class="au-text-input__label">More infos please</label>
+							</p>
+							<select id="select1" class="au-select">
+								<option value="">Please select</option>
+								<option value="1">Option 1</option>
+								<option value="2">Option 2</option>
+								<option value="3">Option 3</option>
+							</select>
+
+							<!-- BUTTONS -->
+							<p>
+								<button type="button" class="au-btn">Continue</button>
+								<button type="button" class="au-btn au-btn--secondary">Save</button>
+								<button type="button" class="au-btn au-btn--tertiary">Cancel</button>
+							</p>
+						</form>
+
+						<hr>
+
+
+						<!-- TAGS -->
+						<ul class="au-tags">
+							<li class="au-tags__item">
+								<a href="#">foo</a>
+							</li>
+							<li class="au-tags__item">
+								<a href="#">bar</a>
+							</li>
+							<li class="au-tags__item">
+								<a href="#">baz</a>
+							</li>
+						</ul>
+
+					</div>
 				</div>
 			</div>
 		</div>
-	</header>
 
-	<main>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-4 col-md-3" id="nav">
-
-
-					<!-- INPAGE-NAV -->
-					<nav class="au-inpage-nav-links">
-						<h2 class="au-inpage-nav-links__heading au-display-2">Contents</h2>
-						<ul class="au-link-list">
-							<li><a href="#alerts">Alerts</a></li>
-							<li><a href="#components">Components</a></li>
-						</ul>
-					</nav>
-
-
-					<!-- PROGRESS-INDICATOR -->
-					<nav>
-						<ul class="au-progress-indicator">
-							<li>
-								<a class="au-progress-indicator__link au-progress-indicator--doing" href="#url">
-									<span class="au-progress-indicator__status">Doing</span>
-									Introduction
-								</a>
-							</li>
-							<li>
-								<a class="au-progress-indicator__link au-progress-indicator--todo" href="#url">
-									<span class="au-progress-indicator__status">To do</span>
-									Business Contacts
-								</a>
-							</li>
-							<li>
-								<a class="au-progress-indicator__link au-progress-indicator--done" href="#url">
-									<span class="au-progress-indicator__status">Done</span>
-									Case Studies
-								</a>
-							</li>
-							<li>
-								<a class="au-progress-indicator__link au-progress-indicator--done" href="#url">
-									<span class="au-progress-indicator__status">Done</span>
-									Personal Infos
-								</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<div class="col-sm-8 col-lg-9" id="content">
-
-					<!-- BREADCRUMBS -->
-					<nav class="au-breadcrumbs" aria-label="breadcrumb">
-						<ul class="au-link-list au-link-list--inline">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">Parent</a></li>
-							<li>Current page</li>
-						</ul>
-					</nav>
-
-
-					<!-- HEADINGS -->
-					<!-- INPAGE-NAV -->
-					<h2 class="au-inpage-nav-section au-display-3">
-						Alerts
-
-						<a id="alerts" class="au-inpage-nav-section-link" href="#alerts">Link to section</a>
-					</h2>
-
-
-					<!-- PAGE-ALERT -->
-					<div class="au-page-alerts au-page-alerts--info" role="alert">
-						<h2 class="au-display-3">Announcements</h2>
-						<p>
-							This is only a <strong>sample</strong> page
-						</p>
+		<div class="au-body au-body--alt">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 col-md-3">
+						<!-- INPAGE-NAV -->
+						<nav class="au-inpage-nav-links au-inpage-nav-links--alt">
+							<h2 class="au-inpage-nav-links__heading">Contents dark</h2>
+							<ul class="au-link-list">
+								<li><a href="#alerts-alt">Alerts</a></li>
+								<li><a href="#components-alt">Components</a></li>
+							</ul>
+						</nav>
 					</div>
 
 
-					<!-- CALLOUT -->
-					<section class="au-callout" aria-label="Some ipsum lorem">
-						<p>Nullam quis aliquam massa. Nunc suscipit, nisi in facilisis tempus, lectus quam ullamcorper tellus, in rutrum ipsum tortor sed nisl.</p>
-					</section>
+					<div class="col-sm-8 col-lg-9">
+						<h2 class="au-inpage-nav-section au-display-md">
+							Alerts alt
+
+							<a id="alerts-alt" class="au-inpage-nav-section-link" href="#alerts-alt">Link to section</a>
+						</h2>
 
 
-					<!-- HEADINGS -->
-					<!-- INPAGE-NAV -->
-					<h2 class="au-inpage-nav-section au-display-3">
-						Components
-
-						<a id="components" class="au-inpage-nav-section-link" href="#components">Link to section</a>
-					</h2>
-
-
-					<!-- ACCORDION -->
-					<section class="au-accordion">
-						<a href="#accordion-stacked1"
-							class="au-accordion__title au-accordion--closed js-au-accordion"
-							aria-controls="accordion-stacked1"
-							aria-expanded="false"
-							aria-selected="false"
-							role="tab"
-							tabindex="0"
-							onclick="return UIKIT.accordion.Toggle( this )">
-								First accordion title
-						</a>
-
-						<div class="au-accordion__body au-accordion--closed" id="accordion-stacked1" aria-hidden="true">
-							<div class="au-accordion__body-wrapper">
-
-								<p>Here is some accordion content</p>
-
-								<p>Here is some accordion <a href="#url">content</a>.</p>
-
-							</div>
-
+						<!-- PAGE-ALERT -->
+						<div class="au-page-alerts au-page-alerts--info au-page-alerts--alt" role="alert">
+							<h2 class="au-display-md">Announcements</h2>
+							<p>
+								This is only a <strong>sample</strong> page
+							</p>
 						</div>
-					</section>
-					<section class="au-accordion">
-						<a href="#accordion-stacked2"
-							class="au-accordion__title au-accordion--closed js-au-accordion"
-							aria-controls="accordion-stacked2"
-							aria-expanded="false"
-							aria-selected="false"
-							role="tab"
-							tabindex="0"
-							onclick="return UIKIT.accordion.Toggle( this )">
-								Second accordion title
-						</a>
-
-						<div class="au-accordion__body au-accordion--closed" id="accordion-stacked2" aria-hidden="true">
-							<div class="au-accordion__body-wrapper">
-
-								<p>Here is some accordion content</p>
-
-								<p>Here is some accordion <a href="#url">content</a>.</p>
-
-							</div>
-
-						</div>
-					</section>
-					<section class="au-accordion">
-						<a href="#accordion-stacked3"
-							class="au-accordion__title au-accordion--closed js-au-accordion"
-							aria-controls="accordion-stacked3"
-							aria-expanded="false"
-							aria-selected="false"
-							role="tab"
-							tabindex="0"
-							onclick="return UIKIT.accordion.Toggle( this )">
-								Third accordion title
-						</a>
-
-						<div class="au-accordion__body au-accordion--closed" id="accordion-stacked3" aria-hidden="true">
-							<div class="au-accordion__body-wrapper">
-
-								<p>Here is some accordion content</p>
-
-								<p>Here is some accordion <a href="#url">content</a>.</p>
-
-							</div>
-
-						</div>
-					</section>
 
 
-					<!-- CTA-LINK -->
-					<p>
-						<a class="au-cta-link" href="#">Sign up</a>
-					</p>
+						<!-- CALLOUT -->
+						<section class="au-callout au-callout--alt" aria-label="Some ipsum lorem">
+							<p>Nullam quis aliquam massa. Nunc suscipit, nisi in facilisis tempus, lectus quam ullamcorper tellus, in rutrum ipsum tortor sed nisl.</p>
+						</section>
 
 
-					<!-- DIRECTION-LINK -->
-					<p>
-						<a class="au-direction-link au-direction-link--right" href="#">Next</a>
-					</p>
+						<!-- HEADINGS -->
+						<!-- INPAGE-NAV -->
+						<h2 class="au-inpage-nav-section au-display-md">
+							Components alt
+
+							<a id="components-alt" class="au-inpage-nav-section-link" href="#components-alt">Link to section</a>
+						</h2>
 
 
-					<!-- KEYWORD-LIST -->
-					<ul class="au-keyword-list au-link-list">
-						<li>
-							<a href="#">
-								<small class="au-keyword-list__small">Department of </small>Agriculture and Water Resources
+						<!-- ACCORDION -->
+						<section class="au-accordion au-accordion--alt">
+							<a href="#accordion-stacked-dark1"
+								class="au-accordion__title au-accordion--closed js-au-accordion"
+								aria-controls="accordion-stacked-dark1"
+								aria-expanded="false"
+								aria-selected="false"
+								role="tab"
+								tabindex="0"
+								onclick="return AU.accordion.Toggle( this )">
+									First accordion title
 							</a>
-						</li>
-						<li>
-							<a href="#">
-								<small class="au-keyword-list__small">Department of</small>Communications and the Arts
+
+							<div class="au-accordion__body au-accordion--closed" id="accordion-stacked-dark1" aria-hidden="true">
+								<div class="au-accordion__body-wrapper">
+
+									<p>Here is some accordion content</p>
+
+									<p>Here is some accordion <a href="#url">content</a>.</p>
+
+								</div>
+
+							</div>
+						</section>
+						<section class="au-accordion au-accordion--alt">
+							<a href="#accordion-stacked-dark2"
+								class="au-accordion__title au-accordion--closed js-au-accordion"
+								aria-controls="accordion-stacked-dark2"
+								aria-expanded="false"
+								aria-selected="false"
+								role="tab"
+								tabindex="0"
+								onclick="return AU.accordion.Toggle( this )">
+									Second accordion title
 							</a>
-						</li>
-					</ul>
+
+							<div class="au-accordion__body au-accordion--closed" id="accordion-stacked-dark2" aria-hidden="true">
+								<div class="au-accordion__body-wrapper">
+
+									<p>Here is some accordion content</p>
+
+									<p>Here is some accordion <a href="#url">content</a>.</p>
+
+								</div>
+
+							</div>
+						</section>
+						<section class="au-accordion au-accordion--alt">
+							<a href="#accordion-stacked-dark3"
+								class="au-accordion__title au-accordion--closed js-au-accordion"
+								aria-controls="accordion-stacked-dark3"
+								aria-expanded="false"
+								aria-selected="false"
+								role="tab"
+								tabindex="0"
+								onclick="return AU.accordion.Toggle( this )">
+									Third accordion title
+							</a>
+
+							<div class="au-accordion__body au-accordion--closed" id="accordion-stacked-dark3" aria-hidden="true">
+								<div class="au-accordion__body-wrapper">
+
+									<p>Here is some accordion content</p>
+
+									<p>Here is some accordion <a href="#url">content</a>.</p>
+
+								</div>
+
+							</div>
+						</section>
 
 
-					<!-- LINK-LIST -->
-					<ul class="au-link-list">
-						<li><a href="#">Options</a></li>
-						<li><a href="#">Help</a></li>
-						<li><a href="#">Sign Out</a></li>
-					</ul>
-
-
-					<form>
-						<!-- CONTROL-INPUTS -->
+						<!-- CTA-LINK -->
 						<p>
-							<label class="au-control-input">
-								<input class="au-control-input__input" type="checkbox" name="checkbox-ex" value="email">
-								<span class="au-control-input__text">Email</span>
-							</label>
+							<a class="au-cta-link au-cta-link--alt" href="#">Sign up</a>
 						</p>
 
+
+						<!-- DIRECTION-LINK -->
 						<p>
-							<label class="au-control-input">
-								<input class="au-control-input__input" type="checkbox" name="checkbox-ex" value="slack">
-								<span class="au-control-input__text">Slack</span>
-							</label>
+							<a class="au-direction-link au-direction-link--right" href="#">Next</a>
 						</p>
 
 
-						<!-- TEXT-INPUT -->
-						<p>
-							<label class="au-text-input__label">More infos please
-								<input class="au-text-input au-text-input--block" name="more" type="text">
-							</label>
-						</p>
+						<!-- KEYWORD-LIST -->
+						<ul class="au-keyword-list au-keyword-list--alt au-link-list">
+							<li>
+								<a href="#">
+									<small class="au-keyword-list__small">Department of </small>Agriculture and Water Resources
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<small class="au-keyword-list__small">Department of</small>Communications and the Arts
+								</a>
+							</li>
+						</ul>
 
 
-						<!-- SELECT -->
-						<p>
-							<label for="select1" class="au-text-input__label">More infos please</label>
-						</p>
-						<select id="select1" class="au-select">
-							<option value="">Please select</option>
-							<option value="1">Option 1</option>
-							<option value="2">Option 2</option>
-							<option value="3">Option 3</option>
-						</select>
-
-						<!-- BUTTONS -->
-						<p>
-							<button type="button" class="au-btn">Continue</button>
-							<button type="button" class="au-btn au-btn--secondary">Save</button>
-							<button type="button" class="au-btn au-btn--tertiary">Cancel</button>
-						</p>
-					</form>
-
-					<hr>
+						<!-- LINK-LIST -->
+						<ul class="au-link-list au-link-list--alt">
+							<li><a href="#">Options</a></li>
+							<li><a href="#">Help</a></li>
+							<li><a href="#">Sign Out</a></li>
+						</ul>
 
 
-					<!-- TAGS -->
-					<ul class="au-tags">
-						<li class="au-tags__item">
-							<a href="#">foo</a>
-						</li>
-						<li class="au-tags__item">
-							<a href="#">bar</a>
-						</li>
-						<li class="au-tags__item">
-							<a href="#">baz</a>
-						</li>
-					</ul>
+						<form>
+							<!-- CONTROL-INPUTS -->
+							<p>
+								<label class="au-control-input au-control-input--alt">
+									<input class="au-control-input__input" type="checkbox" name="checkbox-ex" value="email">
+									<span class="au-control-input__text">Email</span>
+								</label>
+							</p>
 
+							<p>
+								<label class="au-control-input au-control-input--alt">
+									<input class="au-control-input__input" type="checkbox" name="checkbox-ex" value="slack">
+									<span class="au-control-input__text">Slack</span>
+								</label>
+							</p>
+
+
+							<!-- TEXT-INPUT -->
+							<p>
+								<label class="au-text-input__label">More infos please
+									<input class="au-text-input au-text-input--alt au-text-input--block" name="more" type="text">
+								</label>
+							</p>
+
+
+							<!-- SELECT -->
+							<p>
+								<label for="select1" class="au-text-input__label">More infos please</label>
+							</p>
+							<select id="select1" class="au-select au-select--alt">
+								<option value="">Please select</option>
+								<option value="1">Option 1</option>
+								<option value="2">Option 2</option>
+								<option value="3">Option 3</option>
+							</select>
+
+							<!-- BUTTONS -->
+							<p>
+								<button type="button" class="au-btn au-btn--alt">Continue</button>
+								<button type="button" class="au-btn au-btn--alt au-btn--secondary">Save</button>
+								<button type="button" class="au-btn au-btn--alt au-btn--tertiary">Cancel</button>
+							</p>
+						</form>
+
+						<hr>
+
+
+						<!-- TAGS -->
+						<ul class="au-tags au-tags--alt">
+							<li class="au-tags__item">
+								<a href="#">foo</a>
+							</li>
+							<li class="au-tags__item">
+								<a href="#">bar</a>
+							</li>
+							<li class="au-tags__item">
+								<a href="#">baz</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -326,7 +548,7 @@
 
 
 	<!-- FOOTER -->
-	<footer class="au-footer au-footer--alt" role="contentinfo">
+	<footer class="au-body au-body--dark au-footer au-footer--dark au-footer--alt" role="contentinfo">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-2">

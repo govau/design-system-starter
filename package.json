@@ -6,6 +6,7 @@
 		"npm": ">=3.0.0"
 	},
 	"scripts": {
+		"pancake": "./node_modules/.bin/pancake",
 		"build:autoprefix": "postcss docs/css/main.css -u autoprefixer -r --no-map",
 		"build:sass": "node-sass src/sass/main.scss docs/css/main.css --output-style compressed",
 		"build": "npm run build:sass && npm run build:autoprefix",
@@ -74,10 +75,7 @@
 	"pancake": {
 		"auto-save": true,
 		"plugins": true,
-		"ignore": [
-			"@gov.au/pancake-react",
-			"@gov.au/pancake-json"
-		],
+		"ignore": [],
 		"css": {
 			"minified": true,
 			"modules": false,
@@ -93,13 +91,28 @@
 		"sass": {
 			"modules": false,
 			"location": "src/_uikit/sass/",
-			"name": "_uikit.scss"
+			"name": "uikit.scss"
 		},
 		"js": {
 			"minified": true,
 			"modules": false,
 			"location": "docs/js/",
 			"name": "uikit.min.js"
+		},
+		"json": {
+			"enable": true,
+			"location": "src/_uikit/",
+			"name": "uikit",
+			"content": {
+				"name": true,
+				"version": true,
+				"dependencies": true,
+				"path": true,
+				"settings": true
+			}
+		},
+		"react": {
+			"location": "src/_uikit/react/"
 		}
 	},
 	"browserslist": [
