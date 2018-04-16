@@ -45,8 +45,7 @@ To contribute to the GOV.AU UI-Kit Starter Pack:
 
 ## License
 
-Copyright (c) Commonwealth of Australia.
-Licensed under [MIT](https://raw.githubusercontent.com/govau/uikit-starter/master/LICENSE).
+Copyright (c) Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the [MIT license](https://raw.githubusercontent.com/govau/uikit-starter/master/LICENSE).
 
 
 **[⬆ back to top](#contents)**
