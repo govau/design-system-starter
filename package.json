@@ -34,6 +34,11 @@
 			"name": "Alex Page",
 			"email": "alex@alexpage.com.au",
 			"url": "http://alexpage.com.au"
+		},
+		{
+			"name": "Patrick De Young",
+			"email": "hello@patrickdeyoung.me",
+			"url": "https://patrickdeyoung.me"
 		}
 	],
 	"license": "MIT",
@@ -42,7 +47,7 @@
 		"npm-run-all": "^4.0.2",
 		"onchange": "^3.2.1",
 		"autoprefixer": "^7.2.3",
-		"node-sass": "^4.7.2",
+		"node-sass": "^4.9.0",
 		"postcss-cli": "^4.1.1"
 	},
 	"dependencies": {
