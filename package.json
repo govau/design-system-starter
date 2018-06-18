@@ -8,11 +8,11 @@
 	"scripts": {
 		"pancake": "./node_modules/.bin/pancake",
 		"build:autoprefix": "postcss docs/css/main.css -u autoprefixer -r --no-map",
-		"build:sass": "node-sass src/sass/main.scss docs/css/main.css --output-style compressed",
+		"build:sass": "sass src/sass/main.scss docs/css/main.css --style compressed",
 		"build": "npm run build:sass && npm run build:autoprefix",
 		"watch:sass": "onchange \"src/sass/*.scss\" -- npm run build",
 		"serve": "browser-sync start --server --startPath \"docs\" --files \"docs/*.html\" \"docs/css/*.css\" \"docs/js/*.js\"",
-		"watch": "npm run build && npm-run-all --parallel serve watch:*",
+		"watch": "npm run build && npm run serve | npm run watch:sass",
 		"test": "echo \"Error: no test specified\" && exit 0"
 	},
 	"repository": {
@@ -44,11 +44,7 @@
 	"license": "MIT",
 	"devDependencies": {
 		"browser-sync": "^2.18.8",
-		"npm-run-all": "^4.0.2",
-		"onchange": "^3.2.1",
-		"autoprefixer": "^7.2.3",
-		"node-sass": "^4.9.0",
-		"postcss-cli": "^4.1.1"
+		"onchange": "^3.2.1"
 	},
 	"dependencies": {
 		"@gov.au/accordion": "latest",
@@ -75,7 +71,10 @@
 		"@gov.au/select": "latest",
 		"@gov.au/skip-link": "latest",
 		"@gov.au/tags": "latest",
-		"@gov.au/text-inputs": "latest"
+		"@gov.au/text-inputs": "latest",
+		"sass": "^1.6.1",
+		"autoprefixer": "^7.2.3",
+		"postcss-cli": "^4.1.1"
 	},
 	"pancake": {
 		"auto-save": true,
