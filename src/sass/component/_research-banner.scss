@@ -1,0 +1,35 @@
+.research-banner {
+    @include AU-space(padding, 2unit);
+    @include AU-space(margin-bottom, 1unit);
+    background: #ebebeb66;
+
+    .research-banner__image {
+        display: none;
+        @include AU-space(margin-top, 2unit);
+        content: url("http://placehold.it/700x200")
+    }
+
+    @include AU-media ( "md" ) {
+        .research-banner__image {
+            margin-top: 0;
+            content: url("http://placehold.it/900x300")
+        }
+    }
+
+    .research-banner__button {
+        width: 15rem;
+        @include AU-space( margin-top, .5unit );
+    }
+
+
+    @include AU-media ("sm") {
+        .research-banner__image {
+            display: block;
+        }
+        .research-banner__button {
+            margin-top: 0;
+            @include AU-space( margin-left, 1unit );
+        }
+    }
+}
+

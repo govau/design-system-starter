@@ -1,127 +1,76 @@
 {
-	"name": "uikit-starterpack",
-	"version": "1.0.1",
-	"description": "The GOV.AU UI-Kit Starter Pack",
-	"engines": {
-		"npm": ">=3.0.0"
-	},
-	"scripts": {
-		"pancake": "./node_modules/.bin/pancake",
-		"build:autoprefix": "postcss docs/css/main.css -u autoprefixer -r --no-map",
-		"build:sass": "sass src/sass/main.scss docs/css/main.css --style compressed",
-		"build": "npm run build:sass && npm run build:autoprefix",
-		"watch:sass": "onchange \"src/sass/*.scss\" -- npm run build",
-		"serve": "browser-sync start --server --startPath \"docs\" --files \"docs/*.html\" \"docs/css/*.css\" \"docs/js/*.js\"",
-		"watch": "npm run build && npm run serve | npm run watch:sass",
-		"test": "echo \"Error: no test specified\" && exit 0"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/govau/uikit-starter.git"
-	},
-	"author": {
-		"name": "Commonwealth of Australia, DTA",
-		"email": "guides@digital.gov.au",
-		"url": "https://www.dta.gov.au/"
-	},
-	"contributors": [
-		{
-			"name": "Dominik Wilkowski",
-			"email": "hi@dominik-wilkowski.com",
-			"url": "https://dominik-wilkowski.com/"
-		},
-		{
-			"name": "Alex Page",
-			"email": "alex@alexpage.com.au",
-			"url": "http://alexpage.com.au"
-		},
-		{
-			"name": "Patrick De Young",
-			"email": "hello@patrickdeyoung.me",
-			"url": "https://patrickdeyoung.me"
-		}
-	],
-	"license": "MIT",
-	"devDependencies": {
-		"browser-sync": "^2.18.8",
-		"onchange": "^3.2.1"
-	},
-	"dependencies": {
-		"@gov.au/accordion": "latest",
-		"@gov.au/animate": "latest",
-		"@gov.au/body": "latest",
-		"@gov.au/breadcrumbs": "latest",
-		"@gov.au/buttons": "latest",
-		"@gov.au/callout": "latest",
-		"@gov.au/control-input": "latest",
-		"@gov.au/core": "latest",
-		"@gov.au/cta-link": "latest",
-		"@gov.au/direction-links": "latest",
-		"@gov.au/footer": "latest",
-		"@gov.au/grid-12": "latest",
-		"@gov.au/header": "latest",
-		"@gov.au/headings": "latest",
-		"@gov.au/inpage-nav": "latest",
-		"@gov.au/keyword-list": "latest",
-		"@gov.au/link-list": "latest",
-		"@gov.au/page-alerts": "latest",
-		"@gov.au/progress-indicator": "latest",
-		"@gov.au/responsive-media": "latest",
-		"@gov.au/select": "latest",
-		"@gov.au/skip-link": "latest",
-		"@gov.au/tags": "latest",
-		"@gov.au/text-inputs": "latest",
-		"sass": "^1.6.1",
-		"autoprefixer": "^7.2.3",
-		"postcss-cli": "^4.1.1"
-	},
-	"pancake": {
-		"auto-save": true,
-		"plugins": true,
-		"ignore": [],
-		"css": {
-			"minified": true,
-			"modules": false,
-			"browsers": [
-				"last 2 versions",
-				"ie 8",
-				"ie 9",
-				"ie 10"
-			],
-			"location": "pancake/css/",
-			"name": false
-		},
-		"sass": {
-			"modules": false,
-			"location": "src/_uikit/sass/",
-			"name": "uikit.scss"
-		},
-		"js": {
-			"minified": true,
-			"modules": false,
-			"location": "docs/js/",
-			"name": "uikit.min.js"
-		},
-		"json": {
-			"enable": true,
-			"location": "src/_uikit/",
-			"name": "uikit",
-			"content": {
-				"name": true,
-				"version": true,
-				"dependencies": true,
-				"path": true,
-				"settings": true
-			}
-		},
-		"react": {
-			"location": "src/_uikit/react/"
-		}
-	},
-	"browserslist": [
-		"last 2 versions",
-		"ie 8",
-		"ie 9",
-		"ie 10"
-	]
+  "name": "uikit-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "node-sass src/sass/main.scss src/css/style.css",
+    "watch:sass": "onchange './src/sass/**/*.scss' -- npm run build:css",
+    "serve": "browser-sync start --server ./src -w --files \"./src/index.html\" \"./src/css/style.css\" \"./src/js/script.min.js\"",
+    "watch": "npm run build:css && npm run serve | npm run watch:sass"
+  },
+  "author": "raj",
+  "license": "ISC",
+  "pancake": {
+    "auto-save": true,
+    "plugins": true,
+    "ignore": [],
+    "json": {
+      "enable": false,
+      "location": "pancake/",
+      "name": "pancake",
+      "content": {
+        "name": true,
+        "version": true,
+        "dependencies": true,
+        "path": true,
+        "settings": true
+      }
+    },
+    "css": {
+      "minified": true,
+      "modules": false,
+      "browsers": [
+        "last 2 versions",
+        "ie 8",
+        "ie 9",
+        "ie 10"
+      ],
+      "location": false,
+      "name": false
+    },
+    "sass": {
+      "modules": false,
+      "location": "src/sass/",
+      "name": "_uikit.scss"
+    },
+    "react": {
+      "location": false
+    },
+    "js": {
+      "minified": false,
+      "modules": false,
+      "location": "src/js/",
+      "name": "script.js"
+    }
+  },
+  "dependencies": {
+    "@gov.au/accordion": "latest",
+    "@gov.au/animate": "latest",
+    "@gov.au/breadcrumbs": "latest",
+    "@gov.au/buttons": "latest",
+    "@gov.au/footer": "latest",
+    "@gov.au/grid-12": "latest",
+    "@gov.au/header": "latest",
+    "@gov.au/link-list": "latest",
+    "@gov.au/responsive-media": "latest",
+    "@gov.au/side-nav": "latest",
+    "@gov.au/text-inputs": "latest"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "node-sass": "^4.9.2",
+    "onchange": "^4.1.0"
+  }
 }

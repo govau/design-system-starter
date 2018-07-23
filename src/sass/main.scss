@@ -1,24 +1,9 @@
-// OVERWRITES
+@import '_uikit.scss';
+@import 'component/_research-banner.scss';
+@import 'component/_header.scss';
+@import 'component/_body-content.scss';
 
-
-// UI-Kit
-@import '../_uikit/sass/uikit';
-
-
-// CUSTOM SASS
 body {
-	margin: 0;
-}
-
-.au-body.au-body--alt {
-	@include AU-space( margin-top, 4unit );
-	@include AU-space( padding, 4unit 0 );
-}
-
-main {
-	@include AU-space( margin-top, 4unit );
-}
-
-form {
-	@include AU-space( margin-top, 2unit );
+    margin: 0;
+    padding: 0;
 }
