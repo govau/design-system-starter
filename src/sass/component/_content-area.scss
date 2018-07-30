@@ -4,7 +4,11 @@ main {
 
     .au-side-nav {
         display: none;
-    }
+	}
+
+	ul {
+		@include AU-space( padding-left, 2unit );
+	}
 
     @include AU-media( md ) {
 

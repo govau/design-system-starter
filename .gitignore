@@ -2,5 +2,5 @@
 node_modules
 .sass-cache
 _uikit.scss
-src/css
-src/js
+docs/css
+docs/js
