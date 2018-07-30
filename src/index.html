@@ -1,5 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if lt IE 8]>
+	<html class="no-js lt-ie8 lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+	<html class="no-js lt-ie9 ie8" lang="en">
+<![endif]-->
+<!--[if IE 9 ]>
+	<html class="no-js ie9" lang="en">
+<![endif]-->
+<!--[if !(IE)]><!-->
+	<html class="no-js" lang="en">
+<!--<![endif]-->
 
 <head>
 	<meta charset="utf-8">
@@ -8,9 +19,10 @@
 	<title>GOV.AU UI-Kit Starter Pack</title>
 
 	<script type="text/javascript">
-			var $html=document.documentElement;if($html.classList)$html.classList.remove("no-js"),$html.classList.add("js");else{var className="no-js";$html.className=$html.className.replace(new RegExp("(^|\\b)"+className.split(" ").join("|")+"(\\b|$)","gi")," "),$html.className+=" js"}
+		var $html=document.documentElement;if($html.classList)$html.classList.remove("no-js"),$html.classList.add("js");else{var className="no-js";$html.className=$html.className.replace(new RegExp("(^|\\b)"+className.split(" ").join("|")+"(\\b|$)","gi")," "),$html.className+=" js"}
 	</script>
 
+	<link type="text/css" rel="stylesheet" href="./css/main.css">
 	<!--[if lt IE 9]>
 		<script>
 			/* https://github.com/aFarkas/html5shiv HTML5 Shiv 3.7.3 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed */
@@ -22,7 +34,6 @@
 		</script>
 	<![endif]-->
 
-	<link type="text/css" rel="stylesheet" href="./css/main.css">
 </head>
 
 <body class="au-grid">
