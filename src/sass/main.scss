@@ -1,9 +1,16 @@
-@import '_uikit.scss';
-@import 'component/_research-banner.scss';
-@import 'component/_header.scss';
-@import 'component/_body-content.scss';
 
-body {
-    margin: 0;
-    padding: 0;
-}
+// OVERWRITES
+
+
+//RESET FILE
+@import 'component/reset.scss';
+
+// UI-Kit
+@import './_uikit.scss';
+
+
+// CUSTOM SASS
+@import 'component/banner.scss';
+@import 'component/content-area.scss';
+@import 'component/section.scss';
+

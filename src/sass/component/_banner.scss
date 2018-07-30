@@ -1,0 +1,34 @@
+
+.banner {
+
+    @include AU-space( margin-bottom, 1unit );
+
+	.banner__button + .banner__button  {
+		@include AU-space( margin-top, 0.5unit );
+	}
+
+	.banner__button {
+		width: 100%;
+	}
+
+    @include AU-media ( sm ) {
+
+		.banner__button {
+			width: auto;
+		}
+
+		.banner__button + .banner__button  {
+			@include AU-space( margin-top, 0 );
+		}
+	}
+
+	div[ class^="col-" ] + div[ class^="col-" ]  {
+		@include AU-space( margin-top, 1unit );
+	}
+
+	@include AU-media ( md ) {
+		div[ class^="col-" ] + div[ class^="col-" ]  {
+			@include AU-space( margin-top, 0);
+		}
+	}
+}

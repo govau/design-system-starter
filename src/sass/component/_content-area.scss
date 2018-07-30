@@ -1,0 +1,16 @@
+main {
+    @include AU-space( margin-top, 2unit );
+    @include AU-space( margin-bottom, 2unit );
+
+    .au-side-nav {
+        display: none;
+    }
+
+    @include AU-media( md ) {
+
+        .au-side-nav {
+            display: block;
+            @include AU-space( margin-right, 4unit );
+        }
+    }
+}

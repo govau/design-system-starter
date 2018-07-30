@@ -2,197 +2,168 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Design Systems | Example</title>
-  <link rel="stylesheet" href="./css/style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>GOV.AU UI-Kit Starter Pack</title>
+
+	<!-- <script type="text/javascript">
+			var $html=document.documentElement;if($html.classList)$html.classList.remove("no-js"),$html.classList.add("js");else{var className="no-js";$html.className=$html.className.replace(new RegExp("(^|\\b)"+className.split(" ").join("|")+"(\\b|$)","gi")," "),$html.className+=" js"}
+		</script> -->
+	<link type="text/css" rel="stylesheet" href="./css/main.css">
 </head>
 
 <body class="au-grid">
-  <div class="au-body au-body--dark">
-    <header class="au-header au-header--dark" role="banner">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-9">
-            <a class="au-header__brand" href="#">
-              <img class="au-header__brand-image" alt="Insert alternate text here" src="./assets/img/header-logo-agov-ie8.png">
-              <div class="au-header__text">
-                <h1 class="au-header__heading">Example Site</h1>
-                <div class="au-header__subline">
-                  An example of the system in use
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-3">
-            <form class="header-form">
-              <input class="au-text-input au-text-input--block header-form--search-input" name="text-input" aria-label="search input box"
-                type="text">
-              <button class="au-btn au-btn--dark header-form--search-button">Search</button>
-            </form>
-          </div>
-        </div>
-      </div>
+	<!-- SKIP-LINKS -->
+	<nav class="au-skip-link">
+		<a class="au-skip-link__link" href="#content">Skip to main content</a>
+		<a class="au-skip-link__link" href="#nav">Skip to main navigation</a>
+	</nav>
 
-      <div class="mainmenu au-body au-body--dark au-accordion__body au-accordion--closed">
-        <div class="container header-nav">
-          <div class="row">
-            <div class="col-md-12">
-              <nav class="navigation navigation--dark">
-                <ul class="au-link-list  au-link-list--inline">
-                  <li class="header-nav__header-link" tabindex="0">
-                    <a class="" href=".">About</a>
-                  </li>
-                  <li class="header-nav__header-link">
-                    <a class="" href="get-started">Get started</a>
-                  </li>
-                  <li class="header-nav__header-link">
-                    <a class="" href="components">Community</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-  </div>
+	<!-- HEADER -->
+	<header class="au-body au-header au-header--dark" role="banner">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9">
+					<a class="au-header__brand" href="#">
+						<img class="au-header__brand-image" alt="Australian Government" src="./assets/img/header-logo-agov--light.png">
+						<div class="au-header__text">
+							<h1 class="au-header__heading">Example Site</h1>
+							<div class="au-header__subline">
+								An example of the system in use
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
 
+	<!-- Banner -->
+	<section class="au-body au-body--alt banner" id="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h3>Understand user needs. Research to develop a deep knowledge of the users and their context for using the service.</h3>
+					<br/>
+					<button class="au-btn au-btn--secondary banner__button">
+						Examples
+					</button>
+					<button class="au-btn banner__button">
+						Get Started
+					</button>
+				</div>
+				<div class="col-md-6">
+					<img class="au-responsive-media-img banner__image" src="http://placehold.it/900x300" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
 
-  <main class="main au-body">
-    <div class="research-banner">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h3>Understand user needs. Research to develop a deep knowledge of the users and their context for using the service.</h3>
-            <br/>
-            <button class="au-btn au-btn--secondary research-banner__button">
-              See Examples
-            </button>
-            <button class="au-btn research-banner__button">
-              Get Started
-            </button>
-          </div>
-          <div class="col-md-6">
-            <img class="au-responsive-media-img research-banner__image" src="http://placehold.it/900x300" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div>
+	<!-- Breadcrumbs -->
+	<div class="container au-body">
+		<div class="row">
+			<div class="col-md-7">
+				<nav class="au-breadcrumbs" aria-label="breadcrumb">
+					<ul class="au-link-list au-link-list--inline">
+						<li>
+							<a href="#">Home</a>
+						</li>
+						<li>
+							<a href="#">Responsibilities</a>
+						</li>
+						<li>
+							<a href="#">User Needs</a>
+						</li>
+						<li>Community</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
 
-    </div>
-  </main>
+	<!-- Main Body -->
+	<main>
+		<div class="container au-body">
+			<div class="row">
+				<!-- Side Nav -->
+				<div class="col-md-4">
+					<aside class="au-side-nav au-accordion">
+						<a href="#nav-default" class="au-side-nav__toggle au-accordion__title au-accordion--closed" aria-controls="nav-default" aria-expanded="false"
+						 aria-selected="false" role="tab" onclick="return AU.accordion.Toggle( this )">
+							In this section
+						</a>
+						<div id="nav-default" class="au-side-nav__content au-accordion--closed au-accordion__body" aria-hidden="true">
+							<h2 class="au-sidenav__title">
+								<a href="#">Responsibilities</a>
+							</h2>
+							<ul class="au-link-list">
+								<li>
+									<a href="#">Side-nav item level 1</a>
+								</li>
+								<li>
+									<a href="#">User Needs</a>
+									<ul class="au-link-list">
+										<li>
+											<a href="#">Understand user needs</a>
+											<ul class="au-link-list">
+												<li class="active">
+													<a href="#">Community</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Side-nav item level 1</a>
+								</li>
+							</ul>
+						</div>
+					</aside>
+				</div>
+				<div class="col-md-7 col-md-offset-1 col-sm-12">
+					<h3>Community</h3>
+					<p>Together we'll be able to build products and services better, faster and easier</p>
+					<p>Join in the community today. This is a great chance for you to:</p>
+					<ul>
+						<li>collaborate on developing up great solutions to common design problems</li>
+						<li>share your hard work, insights and learnings with others</li>
+						<li>get help with your own design and development challenges</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</main>
 
-  <div class="container au-body">
-    <div class="row">
-      <div class="col-md-7">
-        <nav class="au-breadcrumbs" aria-label="breadcrumb">
-          <ul class="au-link-list au-link-list--inline">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Responsibilities</a>
-            </li>
-            <li>
-              <a href="#">User Needs</a>
-            </li>
-            <li>Community</li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </div>
+	<!--FOOTER -->
+	<footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
+		<div class="container">
+			<nav class="au-footer__navigation row">
+				<div class="col-md-4 col-sm-6">
+					<ul class="au-link-list au-link-list--inline">
+						<li>
+							<a href="#">Privacy</a>
+						</li>
+						<li>
+							<a href="#">Need Help?</a>
+						</li>
+						<li>
+							<a href="#">Accessibility</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<section class="au-footer__end row">
+				<div class="col-sm-12">
+					<p>
+						<small>&copy; Commonwealth of Australia
+						</small>
+					</p>
+				</div>
+			</section>
+	</footer>
 
-  <div class="body-content">
-    <div class="container au-body">
-      <div class="row">
-        <div class="body-content__sidebar">
-          <div class="col-md-4">
-            <nav class="au-side-nav au-accordion">
-              <a href="#nav-default" class="au-side-nav__toggle au-accordion__title au-accordion--closed" aria-controls="nav-default" aria-expanded="false"
-                aria-selected="false" role="tab" onclick="return AU.accordion.Toggle( this )">
-                In this section
-              </a>
-              <div id="nav-default" class="au-side-nav__content au-accordion--closed au-accordion__body" aria-hidden="true">
-                <h2 class="au-sidenav__title">
-                  <a href="#">Responsibilities</a>
-                </h2>
-                <ul class="au-link-list">
-                  <li>
-                    <a href="#">Side-nav item level 1</a>
-                  </li>
-                  <li>
-                    <a href="#">User Needs</a>
-                    <ul class="au-link-list">
-                      <li>
-                        <a href="#">Understand user needs</a>
-                        <ul class="au-link-list">
-                          <li class="active">
-                            <a href="#">Community</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#">Side-nav item level 1</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-        </div>
-        <div class="col-md-7 col-md-offset-1 col-sm-12">
-          <h3>Community</h3>
-          <p>Together we'll be able to build products and services better, faster and easier</p>
-          <p>Join in the community today. This is a great chance for you to:</p>
-          <ul>
-            <li>collaborate on developing up great solutions to common design problems</li>
-            <li>share your hard work, insights and learnings with others</li>
-            <li>get help with your own design and development challenges</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="main au-body au-body--dark">
-    <footer class="au-footer au-footer--dark" role="contentinfo">
-      <div class="container">
-        <nav class="au-footer__navigation row">
-          <div class="col-md-4 col-sm-6">
-            <ul class="au-link-list au-link-list--inline">
-              <li>
-                <a href="#">Privacy</a>
-              </li>
-              <li>
-                <a href="#">Need Help?</a>
-              </li>
-              <li>
-                <a href="#">Accessibility</a>
-              </li>
-              <li>
-                <a href="#">Accessibility</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <section class="au-footer__end row">
-          <div class="col-sm-12">
-            <p>
-              <small>&copy; Commonwealth of Australia
-              </small>
-            </p>
-          </div>
-        </section>
-    </footer>
-
-
-    <script src="./js/script.js"></script>
-
+	<script src="./js/script.js"></script>
 </body>
 
 </html>
