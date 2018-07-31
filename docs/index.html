@@ -19,10 +19,11 @@
 	<title>GOV.AU UI-Kit Starter Pack</title>
 
 	<script type="text/javascript">
-		var $html=document.documentElement;if($html.classList)$html.classList.remove("no-js"),$html.classList.add("js");else{var className="no-js";$html.className=$html.className.replace(new RegExp("(^|\\b)"+className.split(" ").join("|")+"(\\b|$)","gi")," "),$html.className+=" js"}
+		var $html = document.documentElement; if ($html.classList) $html.classList.remove("no-js"), $html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
 	</script>
 
-	<link type="text/css" rel="stylesheet" href="./css/main.css">
+	<link type="text/css" rel="stylesheet" href="css/main.css">
+
 	<!--[if lt IE 9]>
 		<script>
 			/* https://github.com/aFarkas/html5shiv HTML5 Shiv 3.7.3 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed */
@@ -36,16 +37,18 @@
 
 </head>
 
+<!-- BODY -->
+<!-- GRID-12 -->
 <body class="au-grid">
 
 	<!-- SKIP-LINKS -->
-	<nav class="au-skip-link au-body">
+	<nav class="au-skip-link">
 		<a class="au-skip-link__link" href="#content">Skip to main content</a>
 		<a class="au-skip-link__link" href="#nav">Skip to main navigation</a>
 	</nav>
 
 	<!-- HEADER -->
-	<header class="au-body au-header au-header--dark" role="banner">
+	<header class="au-header au-header--dark" role="banner">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-9">
@@ -64,16 +67,16 @@
 	</header>
 
 	<!-- BANNER -->
-	<section class="au-body au-body--alt banner" id="content">
+	<div class="banner au-body au-body--alt">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
 					<h3>Understand user needs. Research to develop a deep knowledge of the users and their context for using the service.</h3>
 					<br/>
-					<button class="au-btn au-btn--secondary banner__button">
+					<button class="au-btn au-btn--secondary au-btn--block">
 						Examples
 					</button>
-					<button class="au-btn banner__button">
+					<button class="au-btn au-btn--block">
 						Get Started
 					</button>
 				</div>
@@ -82,10 +85,10 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 
-	<!-- BREADCRUMBS -->
-	<div class="container au-body">
+	<div class="container au-body main-content">
+		<!-- BREADCRUMBS -->
 		<div class="row">
 			<div class="col-md-7">
 				<nav class="au-breadcrumbs" aria-label="breadcrumb">
@@ -97,56 +100,56 @@
 							<a href="#">Responsibilities</a>
 						</li>
 						<li>
-							<a href="#">User Needs</a>
+							<a href="#">User needs</a>
+						</li>
+						<li>
+								<a href="#">Understand user needs</a>
 						</li>
 						<li>Community</li>
 					</ul>
 				</nav>
 			</div>
 		</div>
-	</div>
 
-	<!-- MAIN BODY -->
-	<main>
-		<div class="container au-body">
-			<div class="row">
-				<!-- SIDE NAV -->
-				<div class="col-md-4">
-					<aside class="au-side-nav au-accordion">
-						<a href="#nav-default" class="au-side-nav__toggle au-accordion__title au-accordion--closed" aria-controls="nav-default" aria-expanded="false"
-						 aria-selected="false" role="tab" onclick="return AU.accordion.Toggle( this )">
-							In this section
-						</a>
-						<div id="nav-default" class="au-side-nav__content au-accordion--closed au-accordion__body" aria-hidden="true">
-							<h2 class="au-sidenav__title">
-								<a href="#">Responsibilities</a>
-							</h2>
-							<ul class="au-link-list">
-								<li>
-									<a href="#">Side-nav item level 1</a>
-								</li>
-								<li>
-									<a href="#">User Needs</a>
-									<ul class="au-link-list">
-										<li>
-											<a href="#">Understand user needs</a>
-											<ul class="au-link-list">
-												<li class="active">
-													<a href="#">Community</a>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li>
-									<a href="#">Side-nav item level 1</a>
-								</li>
-							</ul>
-						</div>
-					</aside>
-				</div>
-				<!-- CONTENT AREA -->
-				<div class="col-md-7 col-md-offset-1 col-sm-12">
+		<div class="row">
+			<!-- SIDE NAV -->
+			<div class="col-md-4">
+				<aside class="au-side-nav au-accordion" id="nav">
+					<a href="#nav-default" class="au-side-nav__toggle au-accordion__title au-accordion--closed" aria-controls="nav-default" aria-expanded="false"
+					 aria-selected="false" role="tab" onclick="return AU.accordion.Toggle( this )">
+						In this section
+					</a>
+					<div id="nav-default" class="au-side-nav__content au-accordion--closed au-accordion__body" aria-hidden="true">
+						<h2 class="au-sidenav__title">
+							<a href="#">Responsibilities</a>
+						</h2>
+						<ul class="au-link-list">
+							<li>
+								<a href="#">Side-nav item level 1</a>
+							</li>
+							<li>
+								<a href="#">User Needs</a>
+								<ul class="au-link-list">
+									<li>
+										<a href="#">Understand user needs</a>
+										<ul class="au-link-list">
+											<li class="active">
+												<a href="#">Community</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Side-nav item level 1</a>
+							</li>
+						</ul>
+					</div>
+				</aside>
+			</div>
+			<div class="col-md-7 col-md-offset-1 col-sm-12">
+				<!-- MAIN BODY -->
+				<main id="content">
 					<h3>Community</h3>
 					<p>Together we'll be able to build products and services better, faster and easier</p>
 					<p>Join in the community today. This is a great chance for you to:</p>
@@ -155,15 +158,15 @@
 						<li>share your hard work, insights and learnings with others</li>
 						<li>get help with your own design and development challenges</li>
 					</ul>
-				</div>
 			</div>
 		</div>
-	</main>
+		</main>
+	</div>
 
 	<!--FOOTER -->
-	<footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
+	<footer class="au-footer au-footer--dark" role="contentinfo">
 		<div class="container">
-			<nav class="au-footer__navigation row">
+			<nav class="au-footer__navigation row au-body au-body--dark">
 				<div class="col-md-4 col-sm-6">
 					<ul class="au-link-list au-link-list--inline">
 						<li>

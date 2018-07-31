@@ -1,16 +1,56 @@
-
 // OVERWRITES
+// $AU-colordark-foreground-text:   #ffffff;
+// $AU-colordark-foreground-action: #f9f9f9;
+// $AU-colordark-foreground-focus:  #13e241;
+// $AU-color-foreground-focus:      #13e241;
+// $AU-colordark-background:        #134169;
 
-
-//RESET FILE
-@import 'component/reset.scss';
 
 // UI-Kit
 @import './_uikit.scss';
 
 
-// CUSTOM SASS
-@import 'component/banner.scss';
-@import 'component/content-area.scss';
-@import 'component/section.scss';
+// RESET
+body {
+	padding: 0;
+	margin: 0;
+}
 
+
+// CUSTOM SASS
+body > .au-body {
+	@include AU-space( padding, 2unit 0 );
+}
+
+
+.banner {
+	.col-md-6 + .col-md-6 {
+		@include AU-space( padding-top, 2unit );
+	}
+
+	@include AU-media( sm ) {
+		// reset button block for desktop
+		.au-btn.au-btn--block {
+			display: inline-block;
+			width: auto;
+
+			& + .au-btn.au-btn--block  {
+				margin: 0;
+			}
+		}
+
+		.col-md-6 + .col-md-6 {
+			padding-top: 0;
+		}
+	}
+}
+
+
+.main-content .row + .row {
+	@include AU-space( margin-top, 1unit );
+}
+
+
+.au-footer .au-link-list li {
+	@include AU-space( padding-right, 1unit );
+}

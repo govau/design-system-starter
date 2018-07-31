@@ -4,7 +4,6 @@
 	"description": "The GOV.AU UI-Kit Starter Pack",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
 		"build:autoprefix": "postcss docs/css/main.css -u autoprefixer -r -m",
 		"build:css": "node-sass src/sass/main.scss docs/css/main.css --output-style compressed",
 		"build": "npm run build:css && npm run build:autoprefix",
@@ -39,7 +38,28 @@
 			"url": "https://github.com/sukhrajghuman"
 		}
 	],
-	"license": "ISC",
+	"license": "MIT",
+	"dependencies": {
+		"@gov.au/accordion": "latest",
+		"@gov.au/animate": "latest",
+		"@gov.au/breadcrumbs": "latest",
+		"@gov.au/buttons": "latest",
+		"@gov.au/footer": "^2.1.4",
+		"@gov.au/grid-12": "^2.0.6",
+		"@gov.au/header": "^4.1.3",
+		"@gov.au/link-list": "latest",
+		"@gov.au/responsive-media": "latest",
+		"@gov.au/side-nav": "latest",
+		"@gov.au/skip-link": "^2.0.7",
+		"@gov.au/text-inputs": "latest"
+	},
+	"devDependencies": {
+		"autoprefixer": "^9.0.1",
+		"browser-sync": "^2.24.5",
+		"node-sass": "^4.9.2",
+		"onchange": "^4.1.0",
+		"postcss-cli": "^6.0.0"
+	},
 	"pancake": {
 		"auto-save": true,
 		"plugins": true,
@@ -82,27 +102,6 @@
 			"location": "docs/js/",
 			"name": "script.js"
 		}
-	},
-	"dependencies": {
-		"@gov.au/accordion": "latest",
-		"@gov.au/animate": "latest",
-		"@gov.au/breadcrumbs": "latest",
-		"@gov.au/buttons": "latest",
-		"@gov.au/footer": "^2.1.4",
-		"@gov.au/grid-12": "^2.0.6",
-		"@gov.au/header": "^4.1.3",
-		"@gov.au/link-list": "latest",
-		"@gov.au/responsive-media": "latest",
-		"@gov.au/side-nav": "latest",
-		"@gov.au/skip-link": "^2.0.7",
-		"@gov.au/text-inputs": "latest"
-	},
-	"devDependencies": {
-		"autoprefixer": "^9.0.1",
-		"browser-sync": "^2.24.5",
-		"node-sass": "^4.9.2",
-		"onchange": "^4.1.0",
-		"postcss-cli": "^6.0.0"
 	},
 	"browserslist": [
 		"last 2 versions",
