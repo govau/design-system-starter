@@ -2,7 +2,6 @@
 	"name": "uikit-starterpack",
 	"version": "1.0.1",
 	"description": "The GOV.AU UI-Kit Starter Pack",
-	"main": "index.js",
 	"scripts": {
 		"build:autoprefix": "postcss docs/css/main.css -u autoprefixer -r -m",
 		"build:css": "node-sass src/sass/main.scss docs/css/main.css --output-style compressed",
@@ -39,6 +38,13 @@
 		}
 	],
 	"license": "MIT",
+	"devDependencies": {
+		"autoprefixer": "^9.0.1",
+		"browser-sync": "^2.24.5",
+		"node-sass": "^4.9.2",
+		"onchange": "^4.1.0",
+		"postcss-cli": "^6.0.0"
+	},
 	"dependencies": {
 		"@gov.au/accordion": "latest",
 		"@gov.au/animate": "latest",
@@ -53,29 +59,10 @@
 		"@gov.au/skip-link": "latest",
 		"@gov.au/text-inputs": "latest"
 	},
-	"devDependencies": {
-		"autoprefixer": "^9.0.1",
-		"browser-sync": "^2.24.5",
-		"node-sass": "^4.9.2",
-		"onchange": "^4.1.0",
-		"postcss-cli": "^6.0.0"
-	},
 	"pancake": {
 		"auto-save": true,
 		"plugins": true,
 		"ignore": [],
-		"json": {
-			"enable": false,
-			"location": "pancake/",
-			"name": "pancake",
-			"content": {
-				"name": true,
-				"version": true,
-				"dependencies": true,
-				"path": true,
-				"settings": true
-			}
-		},
 		"css": {
 			"minified": true,
 			"modules": false,
