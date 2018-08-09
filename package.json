@@ -79,7 +79,10 @@
 	"pancake": {
 		"auto-save": true,
 		"plugins": true,
-		"ignore": [],
+		"ignore": [
+			"@gov.au/pancake-react",
+			"@gov.au/pancake-json"
+		],
 		"css": {
 			"minified": true,
 			"modules": false,
@@ -96,9 +99,6 @@
 			"modules": false,
 			"location": "src/sass/",
 			"name": "_uikit.scss"
-		},
-		"react": {
-			"location": false
 		},
 		"js": {
 			"minified": true,

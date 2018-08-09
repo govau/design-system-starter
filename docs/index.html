@@ -49,7 +49,7 @@
 
 	<!-- HEADER -->
 	<header class="au-header au-header--dark" role="banner">
-		<div class="container">
+		<div class="container-fluid">
 		  <div class="row">
 			<div class="col-md-9">
 			  <a class="au-header__brand" href="#">
@@ -69,26 +69,26 @@
 
 	<!-- BANNER -->
 	<div class="banner au-body au-body--alt">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-sm-6">
 					<h3>Understand user needs. Research to develop a deep knowledge of the users and their context for using the service.</h3>
 					<br/>
-					<button class="au-btn au-btn--secondary au-btn--block">
+					<button class="au-btn au-btn--secondary">
 						Examples
 					</button>
-					<button class="au-btn au-btn--block">
+					<button class="au-btn">
 						Get Started
 					</button>
 				</div>
-				<div class="col-md-6">
+				<div class="col-sm-6">
 					<img class="au-responsive-media-img banner__image" src="http://placehold.it/900x300" alt="">
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="container au-body main-content">
+	<div class="container-fluid au-body main-content">
 		<!-- BREADCRUMBS -->
 		<div class="row">
 			<div class="col-md-12">
@@ -114,8 +114,8 @@
 
 		<div class="row">
 			<!-- SIDE NAV -->
-			<div class="col-md-4">
-				<aside class="au-side-nav au-accordion" id="nav">
+			<div class="col-sm-4">
+				<aside id="nav" class="au-side-nav au-accordion">
 					<a href="#nav-default" class="au-side-nav__toggle au-accordion__title au-accordion--closed" aria-controls="nav-default" aria-expanded="false"
 					 aria-selected="false" role="tab" onclick="return AU.accordion.Toggle( this )">
 						In this section
@@ -148,7 +148,7 @@
 					</div>
 				</aside>
 			</div>
-			<div class="col-md-7 col-md-offset-1 col-sm-12">
+			<div class="col-sm-8">
 				<!-- MAIN BODY -->
 				<main id="content">
 					<h3>Community</h3>
@@ -166,7 +166,7 @@
 
 	<!--FOOTER -->
 	<footer class="au-footer au-footer--dark" role="contentinfo">
-		<div class="container">
+		<div class="container-fluid">
 			<nav class="au-footer__navigation row au-body au-body--dark">
 				<div class="col-md-4 col-sm-6">
 					<ul class="au-link-list au-link-list--inline">
@@ -192,6 +192,7 @@
 			</section>
 	</footer>
 
+	<!-- The javascript from pancake to open and close side nav on desktop -->
 	<script type="text/javascript" src="./js/script.min.js"></script>
 </body>
 

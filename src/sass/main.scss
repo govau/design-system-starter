@@ -1,51 +1,56 @@
-// OVERWRITES
-// $AU-colordark-foreground-text:   #ffffff;
-// $AU-colordark-foreground-action: #f9f9f9;
-// $AU-colordark-foreground-focus:  #13e241;
-// $AU-color-foreground-focus:      #13e241;
-// $AU-colordark-background:        #134169;
+// Dark theme overrides
+$AU-colordark-foreground-text:   #ffffff;
+$AU-colordark-foreground-action: #f9f9f9;
+$AU-colordark-foreground-focus:  #13e241;
+$AU-colordark-background:        #134169;
+
+// Light theme overrides
+$AU-color-foreground-action: #134169;
+$AU-color-foreground-focus:  #0C8927;
 
 
 // UI-Kit
 @import './_uikit.scss';
 
 
-// RESET
+// Reset the body
 body {
 	padding: 0;
 	margin: 0;
 }
 
 
-// CUSTOM SASS
+// Increase the spacing for au-body elements
 body > .au-body {
 	@include AU-space( padding, 2unit 0 );
+
+	@include AU-media( sm ) {
+		@include AU-space( padding, 4unit 0 );
+	}
 }
 
 
+// Add a max width to container fluid
+.container-fluid {
+	@include AU-space( max-width, 72unit );
+}
+
+
+// Change the banner responsiveness
 .banner {
-	.col-md-6 + .col-md-6 {
+	[class^="col-"] + [class^="col-"] {
 		@include AU-space( padding-top, 2unit );
 	}
 
 	@include AU-media( md ) {
-		// reset button block for desktop
-		.au-btn.au-btn--block {
-			display: inline-block;
-			width: auto;
-
-			& + .au-btn.au-btn--block  {
-				margin: 0;
-			}
-		}
-
-		.col-md-6 + .col-md-6 {
+		[class^="col-"] + [class^="col-"] {
 			padding-top: 0;
 		}
 	}
 }
 
 
+// Change the main content spacing between sections
 .main-content  {
 	.row + .row {
 		@include AU-space( margin-top, 2unit );
@@ -53,14 +58,20 @@ body > .au-body {
 
 	main {
 		@include AU-space( padding-top, 2unit );
+	}
 
-		@include AU-media( md ) {
+	@include AU-media( sm ) {
+		.row + .row {
+			@include AU-space( margin-top, 4unit );
+		}
+		main {
 			padding-top: 0;
 		}
 	}
 }
 
 
+// Increase spacing between list items in footer
 .au-footer .au-link-list li {
 	@include AU-space( padding-right, 1unit );
 }
