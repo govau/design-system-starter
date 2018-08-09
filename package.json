@@ -1,19 +1,14 @@
 {
 	"name": "uikit-starterpack",
-	"version": "1.0.1",
-	"description": "The GOV.AU UI-Kit Starter Pack",
-	"engines": {
-		"npm": ">=3.0.0"
-	},
+	"version": "1.1.1",
+	"description": "The Australian Government Design System Starter Pack",
 	"scripts": {
-		"pancake": "./node_modules/.bin/pancake",
-		"build:autoprefix": "postcss docs/css/main.css -u autoprefixer -r --no-map",
-		"build:sass": "sass src/sass/main.scss docs/css/main.css --style compressed",
-		"build": "npm run build:sass && npm run build:autoprefix",
-		"watch:sass": "onchange \"src/sass/*.scss\" -- npm run build",
-		"serve": "browser-sync start --server --startPath \"docs\" --files \"docs/*.html\" \"docs/css/*.css\" \"docs/js/*.js\"",
-		"watch": "npm run build && npm run serve | npm run watch:sass",
-		"test": "echo \"Error: no test specified\" && exit 0"
+		"build:autoprefix": "postcss docs/css/main.css -u autoprefixer -r -m",
+		"build:css": "node-sass src/sass/main.scss docs/css/main.css --output-style compressed",
+		"build": "npm run build:css && npm run build:autoprefix",
+		"watch:sass": "onchange './src/sass/**/*.scss' -- npm run build",
+		"serve": "browser-sync start --server ./docs -w --files \"./docs/index.html\" \"./docs/css/main.css\" \"./docs/js/script.js\"",
+		"watch": "npm run build && npm run serve & npm run watch:sass"
 	},
 	"repository": {
 		"type": "git",
@@ -39,12 +34,17 @@
 			"name": "Patrick De Young",
 			"email": "hello@patrickdeyoung.me",
 			"url": "https://patrickdeyoung.me"
+		},
+		{
+			"name": "Sukhraj Ghuman",
+			"email": "sukhrajghuman@live.com",
+			"url": "https://github.com/sukhrajghuman"
 		}
 	],
 	"license": "MIT",
 	"devDependencies": {
-		"browser-sync": "^2.18.8",
-		"onchange": "^3.2.1"
+		"browser-sync": "^2.24.5",
+		"onchange": "^4.1.0"
 	},
 	"dependencies": {
 		"@gov.au/accordion": "latest",
@@ -68,17 +68,21 @@
 		"@gov.au/progress-indicator": "latest",
 		"@gov.au/responsive-media": "latest",
 		"@gov.au/select": "latest",
+		"@gov.au/side-nav": "latest",
 		"@gov.au/skip-link": "latest",
 		"@gov.au/tags": "latest",
 		"@gov.au/text-inputs": "latest",
-		"sass": "^1.6.1",
-		"autoprefixer": "^7.2.3",
-		"postcss-cli": "^4.1.1"
+		"autoprefixer": "^9.0.1",
+		"node-sass": "^4.9.2",
+		"postcss-cli": "^6.0.0"
 	},
 	"pancake": {
 		"auto-save": true,
 		"plugins": true,
-		"ignore": [],
+		"ignore": [
+			"@gov.au/pancake-react",
+			"@gov.au/pancake-json"
+		],
 		"css": {
 			"minified": true,
 			"modules": false,
@@ -88,34 +92,19 @@
 				"ie 9",
 				"ie 10"
 			],
-			"location": "pancake/css/",
+			"location": false,
 			"name": false
 		},
 		"sass": {
 			"modules": false,
-			"location": "src/_uikit/sass/",
-			"name": "uikit.scss"
+			"location": "src/sass/",
+			"name": "_uikit.scss"
 		},
 		"js": {
 			"minified": true,
 			"modules": false,
 			"location": "docs/js/",
-			"name": "uikit.min.js"
-		},
-		"json": {
-			"enable": true,
-			"location": "src/_uikit/",
-			"name": "uikit",
-			"content": {
-				"name": true,
-				"version": true,
-				"dependencies": true,
-				"path": true,
-				"settings": true
-			}
-		},
-		"react": {
-			"location": "src/_uikit/react/"
+			"name": "script.min.js"
 		}
 	},
 	"browserslist": [
