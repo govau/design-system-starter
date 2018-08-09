@@ -28,7 +28,7 @@ body > .au-body {
 		@include AU-space( padding-top, 2unit );
 	}
 
-	@include AU-media( sm ) {
+	@include AU-media( md ) {
 		// reset button block for desktop
 		.au-btn.au-btn--block {
 			display: inline-block;
@@ -46,8 +46,18 @@ body > .au-body {
 }
 
 
-.main-content .row + .row {
-	@include AU-space( margin-top, 1unit );
+.main-content  {
+	.row + .row {
+		@include AU-space( margin-top, 2unit );
+	}
+
+	main {
+		@include AU-space( padding-top, 2unit );
+
+		@include AU-media( md ) {
+			padding-top: 0;
+		}
+	}
 }
 
 
