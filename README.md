@@ -1,7 +1,7 @@
-GOV.AU UI-Kit Starter Pack
+Australian Government Design System Starter Pack
 ==========================
 
-> Get quickly running with all uikit modules and some great npm scripts
+> Get up and running with examples of the design system's components in action and some great `npm` scripts
 
 
 ## Contents
@@ -16,9 +16,9 @@ GOV.AU UI-Kit Starter Pack
 
 ## Install
 
-To get the Starter Kit to work download this repo and run `npm install` to install all dependencies.
+Download, clone, or fork this repository and run `npm install` to install all dependencies.
 
-After you got all dependencies installed run `npm run watch` to spin up a new local server and watch for changed on *.scss files. Changes will be injected into your browser so you don’t even need to refresh thanks to [Browser Sync](https://www.browsersync.io/).
+After you have all dependencies installed, run `npm run watch` to spin up a new local server and watch for changes on `*.scss` files. Changes will be injected into your browser so you don’t even need to refresh thanks to [Browser Sync](https://www.browsersync.io/).
 
 
 **[⬆ back to top](#contents)**
@@ -29,12 +29,12 @@ After you got all dependencies installed run `npm run watch` to spin up a new lo
 
 ## Contributing
 
-To contribute to the GOV.AU UI-Kit Starter Pack:
+To contribute to the Australian Government Design System Starter Pack:
 1. Fork the project & clone it locally.
 1. Create a new branch for the work that is going to be completed.
 1. Complete the work and test it to the best of your abilities following the [guidelines here](https://github.com/govau/uikit#checklist-and-browser-support).
 1. Once the work is completed, write a good commit message.
-1. Push your work to github and create a new pull request.
+1. Push your work to GitHub and create a new pull request.
 1. Respond to any code review feedback.
 
 **[⬆ back to top](#contents)**

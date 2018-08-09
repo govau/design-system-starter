@@ -1,7 +1,7 @@
 {
 	"name": "uikit-starterpack",
-	"version": "1.0.1",
-	"description": "The GOV.AU UI-Kit Starter Pack",
+	"version": "1.1.1",
+	"description": "The Australian Government Design System Starter Pack",
 	"scripts": {
 		"build:autoprefix": "postcss docs/css/main.css -u autoprefixer -r -m",
 		"build:css": "node-sass src/sass/main.scss docs/css/main.css --output-style compressed",
