@@ -8,7 +8,7 @@ Australian Government Design System Starter Pack
 
 * [Install](#install)
 * [Contributing](#contributing)
-* [License](#license)
+* [Licence](#licence)
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -43,9 +43,9 @@ To contribute to the Australian Government Design System Starter Pack:
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-## License
+## Licence
 
-Copyright (c) Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the [MIT license](https://raw.githubusercontent.com/govau/uikit-starter/master/LICENSE).
+Copyright (c) Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the [MIT licence](https://raw.githubusercontent.com/govau/uikit-starter/master/LICENSE).
 
 
 **[⬆ back to top](#contents)**
