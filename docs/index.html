@@ -68,6 +68,45 @@
 		</div>
 	  </header>
 
+	  <!-- MAIN NAVIGATION -->
+	  <nav class="au-main-nav au-main-nav--dark">
+		  <div class="container-fluid">
+			  <div class="row">
+				  <div class="col-md-12">
+					  <div class="au-main-nav__content" id="main-nav-default-alt">
+						  <button
+							  aria-controls="main-nav-default-alt"
+							  class="au-main-nav__toggle au-main-nav__toggle--open"
+							  onClick="return AU.mainNav.Toggle( this )">
+							  Menu
+						  </button>
+						  <div class="au-main-nav__menu">
+							  <div class="au-main-nav__menu-inner">
+								  <div class="au-main-nav__focus-trap-top"></div>
+								  <button
+									  aria-controls="main-nav-default-alt"
+									  class="au-main-nav__toggle au-main-nav__toggle--close"
+									  onClick="return AU.mainNav.Toggle( this )">
+									  Close
+								  </button>
+								  <ul class="au-link-list">
+									  <li><a href="#">About</a></li>
+									  <li class="active"><a href="#">Responsibilities</a></li>
+									  <li><a href="#">Templates</a></li>
+									  <li><a href="#">Community</a></li>
+									  <li><a href="#">Support</a></li>
+								  </ul>
+								  <div class="au-main-nav__focus-trap-bottom"></div>
+							  </div>
+						  </div>
+						  <div class="au-main-nav__overlay" aria-controls="main-nav-default-alt" onClick="return AU.mainNav.Toggle( this )"></div>
+					  </div>
+				  </div>
+			  </div>
+		  </div>
+	  </nav>
+  
+
 	<!-- BANNER -->
 	<div class="banner au-body au-body--alt">
 		<div class="container-fluid">
@@ -115,7 +154,7 @@
 
 		<div class="row">
 			<!-- SIDE NAV -->
-			<div class="col-sm-4">
+			<div class="col-sm-4 col-md-3">
 				<aside id="nav" class="au-side-nav au-accordion">
 					<a href="#nav-default" class="au-side-nav__toggle au-accordion__title au-accordion--closed" aria-controls="nav-default" aria-expanded="false"
 					 aria-selected="false" role="tab" onclick="return AU.accordion.Toggle( this )">
@@ -149,7 +188,7 @@
 					</div>
 				</aside>
 			</div>
-			<div class="col-sm-8">
+			<div class="col-sm-8 col-md-8 col-md-offset-1">
 				<!-- MAIN BODY -->
 				<main id="content">
 					<h3>Community</h3>
