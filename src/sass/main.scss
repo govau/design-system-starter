@@ -8,6 +8,8 @@
 // $AU-color-foreground-action: #134169;
 // $AU-color-foreground-focus:  #0C8927;
 
+//Main nav, set project specific breakpoint
+$AU-main-nav-breakpoint: sm;
 
 // UI-Kit
 @import './_uikit.scss';
@@ -74,4 +76,10 @@ body > .au-body {
 // Increase spacing between list items in footer
 .au-footer .au-link-list li {
 	@include AU-space( padding-right, 1unit );
+}
+
+.au-side-nav {
+	@include AU-media( md ) {
+		@include AU-space( max-width, 20unit );
+	}
 }
