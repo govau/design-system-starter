@@ -77,9 +77,3 @@ body > .au-body {
 .au-footer .au-link-list li {
 	@include AU-space( padding-right, 1unit );
 }
-
-.au-side-nav {
-	@include AU-media( md ) {
-		@include AU-space( max-width, 20unit );
-	}
-}
