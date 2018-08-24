@@ -8,6 +8,8 @@
 // $AU-color-foreground-action: #134169;
 // $AU-color-foreground-focus:  #0C8927;
 
+//Main nav, set project specific breakpoint
+$AU-main-nav-breakpoint: sm;
 
 // UI-Kit
 @import './_uikit.scss';
