@@ -2,5 +2,4 @@
 node_modules
 .sass-cache
 _uikit.scss
-docs/css/*
-docs/js/*
+docs/css/main.css.map
