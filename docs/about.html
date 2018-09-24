@@ -16,7 +16,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 
-	<title>Design System Starter | Home</title>
+	<title>Design System Starter | About</title>
 
 	<script type="text/javascript">
 		var $html = document.documentElement; if ($html.classList) $html.classList.remove("no-js"), $html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
@@ -40,7 +40,7 @@
 
 <!-- BODY -->
 <!-- GRID-12 -->
-<body class="au-grid au-body">
+<body class="au-grid">
 
 	<!-- SKIP-LINKS -->
 	<nav class="au-skip-link">
@@ -56,9 +56,9 @@
 			  <a class="au-header__brand" href="#">
 				<img class="au-header__brand-image" alt="Insert alternate text here" src="./assets/img/header-logo-agov.png">
 				<div class="au-header__text">
-				  <h1 class="au-header__heading">Starter Site</h1>
+				  <h1 class="au-header__heading">Example Site</h1>
 				  <div class="au-header__subline">
-					An starter site based on the design system
+					An example of the system in use
 				  </div>
 				</div>
 			  </a>
@@ -90,8 +90,8 @@
 									  Close
 								  </button>
 								  <ul class="au-link-list">
-									  <li class="active"><a href="/index.html">Home</a></li>
-									  <li><a href="/about.html">About</a></li>
+									  <li><a href="/index.html">Home</a></li>
+									  <li class="active"><a href="/about.html">About</a></li>
 									  <li><a href="#">Responsibilities</a></li>
 									  <li><a href="#">Community</a></li>
 									  <li><a href="#">Support</a></li>
@@ -111,61 +111,98 @@
 	<div class="banner au-body au-body--alt">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-12 col-md-6">
-					<h2>Welcome to the design system starter site</h2>
-					<p>If you inspect the html for this page you will see that the <code>&lt;body&gt;</code> tag is using a class called <code>au-grid</code>. This class let's you use the design system grid which is based on 12 columns.</p>
-					<p>Use button classes such as <code>au-btn</code> to style your interative elements.</p>
-					<p>
-					</p>
+				<div class="col-sm-6">
+					<h3>About Page</h3>
 					<br/>
-					<a class="au-btn au-btn--secondary" href="https://designsystem.gov.au/components/grid-12/">Read about grid</a>
-					<a class="au-btn" href="https://designsystem.gov.au/components/buttons/">
-						Read about buttons
-					</a>
+					<button class="au-btn au-btn--secondary">
+						Examples
+					</button>
+					<button class="au-btn">
+						Get Started
+					</button>
 				</div>
-				<div class="col-sm-12 col-md-6">
-					<img class="au-responsive-media-img banner__image" src="http://placehold.it/900x400" alt="">
+				<div class="col-sm-6">
+					<img class="au-responsive-media-img banner__image" src="http://placehold.it/900x300" alt="">
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- MAIN BODY -->
-	<main class="container-fluid au-body main-content">
+	<div class="container-fluid au-body main-content">
+		<!-- BREADCRUMBS -->
 		<div class="row">
-			<section class="col-sm-12 col-md-6 col-lg-4">
-				<div id="content">
-					<img class="au-responsive-media-img" src="//via.placeholder.com/350x200" alt="Placeholder image description">
-					<h3>Use the grid system</h3>
-					<p>The <code>col-lg-4</code> class (the lg stands for large, the 4 means that this column will take up 4 of the 12 grid spaces) on this <code>&lt;section&gt;</code> tag turns it into one of 3 columns on a screen greater than 1200px. You will see the other classes <code>col-md-6</code> and <code>col-sm-12</code>. These change the width of the section based on the size of the screen the website is being viewed on.</p>
-					<p>
-						<a class="au-btn" href="https://designsystem.gov.au/components/grid-12/">Read about grid</a>
-					</p>
-				</div>
-			</section>
-			<section class="col-sm-12 col-md-6 col-lg-4">
-				<div id="content">
-					<img class="au-responsive-media-img" src="//via.placeholder.com/350x200" alt="Placeholder image description">
-					<h3>Use built in body styles</h3>
-					<p>Inspect the html of any text on this page and you will see tht it is all taken care of by default when the class <code>au-body</code> is used on the <code>&lt;body&gt;</code>. This class gives all your content the design systems default body styles which means great typography out of the box. Use <code>au-body</code> plus <code>au-body--dark</code> to have white text on a dark background.</p>
-					<p>
-						<a class="au-btn" href="https://designsystem.gov.au/components/body/">Read about body</a>
-					</p>
-				</div>
-			</section>
-			<section class="col-sm-12 col-md-6 col-lg-4">
-				<div id="content">
-					<img class="au-responsive-media-img" src="//via.placeholder.com/350x200" alt="Placeholder image description">
-					<h3>Use responsive media</h3>
-					<p>Responsive media keeps images, videos and slideshows the right size across device widths and viewports. If you inspect the html for this page and look at the <code>&lt;img&gt;</code> tag inside this section you see the class <code>au-responsive-media-img</code>. Add this class to any of your images to make them responsive across all viewport widths.</p>
-					<p>
-						<a class="au-btn" href="https://designsystem.gov.au/components/grid-12/">Read about responsive media</a>
-					</p>
-				</div>
-			</section>
+			<div class="col-md-12">
+				<nav class="au-breadcrumbs" aria-label="breadcrumb">
+					<ul class="au-link-list au-link-list--inline">
+						<li>
+							<a href="#">Home</a>
+						</li>
+						<li>
+							<a href="#">Responsibilities</a>
+						</li>
+						<li>
+							<a href="#">User needs</a>
+						</li>
+						<li>
+								<a href="#">Understand user needs</a>
+						</li>
+						<li>Community</li>
+					</ul>
+				</nav>
+			</div>
 		</div>
-	</main>
-	<!-- END MAIN BODY -->
+
+		<div class="row">
+			<!-- SIDE NAV -->
+			<div class="col-sm-4 col-md-3">
+				<aside id="nav" class="au-side-nav au-accordion">
+					<a href="#nav-default" class="au-side-nav__toggle au-accordion__title au-accordion--closed" aria-controls="nav-default" aria-expanded="false"
+					 aria-selected="false" role="tab" onclick="return AU.accordion.Toggle( this )">
+						In this section
+					</a>
+					<div id="nav-default" class="au-side-nav__content au-accordion--closed au-accordion__body" aria-hidden="true">
+						<h2 class="au-sidenav__title">
+							<a href="#">Responsibilities</a>
+						</h2>
+						<ul class="au-link-list">
+							<li>
+								<a href="#">Side-nav item level 1</a>
+							</li>
+							<li>
+								<a href="#">User Needs</a>
+								<ul class="au-link-list">
+									<li>
+										<a href="#">Understand user needs</a>
+										<ul class="au-link-list">
+											<li class="active">
+												<a href="#">Community</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Side-nav item level 1</a>
+							</li>
+						</ul>
+					</div>
+				</aside>
+			</div>
+			<div class="col-sm-8 col-md-8 col-md-offset-1">
+				<!-- MAIN BODY -->
+				<main id="content">
+					<h3>Community</h3>
+					<p>Together we'll be able to build products and services better, faster and easier</p>
+					<p>Join in the community today. This is a great chance for you to:</p>
+					<ul>
+						<li>collaborate on developing up great solutions to common design problems</li>
+						<li>share your hard work, insights and learnings with others</li>
+						<li>get help with your own design and development challenges</li>
+					</ul>
+			</div>
+		</div>
+		</main>
+	</div>
 
 	<!--FOOTER -->
 	<footer class="au-footer au-footer--dark" role="contentinfo">
