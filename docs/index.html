@@ -51,22 +51,21 @@
 	<!-- HEADER -->
 	<header class="au-header au-header--dark" role="banner">
 		<div class="container-fluid">
-		  <div class="row">
-			<div class="col-md-9">
-			  <a class="au-header__brand" href="#">
-				<img class="au-header__brand-image" alt="Insert alternate text here" src="./assets/img/header-logo-agov.png">
-				<div class="au-header__text">
-				  <h1 class="au-header__heading">Starter Site</h1>
-				  <div class="au-header__subline">
-					An starter site based on the design system
-				  </div>
+			<div class="row">
+				<div class="col-md-9">
+					<a class="au-header__brand" href="#">
+						<img class="au-header__brand-image" alt="Insert alternate text here" src="./assets/img/header-logo-agov.png">
+						<div class="au-header__text">
+						<h2 class="au-header__heading">Example Site</h2>
+						<div class="au-header__subline">
+							An example of the system in use
+						</div>
+						</div>
+					</a>
 				</div>
-			  </a>
 			</div>
-			<!-- <div class="col-md-3">Extras</div> -->
-		  </div>
 		</div>
-	  </header>
+	</header>
 
 	  <!-- MAIN NAVIGATION -->
 	  <nav class="au-main-nav au-main-nav--dark">
@@ -92,9 +91,8 @@
 								  <ul class="au-link-list">
 									  <li class="active"><a href="/index.html">Home</a></li>
 									  <li><a href="/about.html">About</a></li>
-									  <li><a href="#">Responsibilities</a></li>
-									  <li><a href="#">Community</a></li>
-									  <li><a href="#">Support</a></li>
+									  <li><a href="/listing.html">Listing</a></li>
+									  <li><a href="/newpage.html">New Page</a></li>
 								  </ul>
 								  <div class="au-main-nav__focus-trap-bottom"></div>
 							  </div>
@@ -114,10 +112,7 @@
 				<div class="col-sm-12 col-md-6">
 					<h2>Welcome to the design system starter site</h2>
 					<p>If you inspect the html for this page you will see that the <code>&lt;body&gt;</code> tag is using a class called <code>au-grid</code>. This class let's you use the design system grid which is based on 12 columns.</p>
-					<p>Use button classes such as <code>au-btn</code> to style your interative elements.</p>
-					<p>
-					</p>
-					<br/>
+					<p>Use button classes such as <code>au-btn</code> to style your interactive calls to action.</p>
 					<a class="au-btn au-btn--secondary" href="https://designsystem.gov.au/components/grid-12/">Read about grid</a>
 					<a class="au-btn" href="https://designsystem.gov.au/components/buttons/">
 						Read about buttons
@@ -132,37 +127,39 @@
 
 	<!-- MAIN BODY -->
 	<main class="container-fluid au-body main-content">
-		<div class="row">
-			<section class="col-sm-12 col-md-6 col-lg-4">
-				<div id="content">
-					<img class="au-responsive-media-img" src="//via.placeholder.com/350x200" alt="Placeholder image description">
-					<h3>Use the grid system</h3>
-					<p>The <code>col-lg-4</code> class (the lg stands for large, the 4 means that this column will take up 4 of the 12 grid spaces) on this <code>&lt;section&gt;</code> tag turns it into one of 3 columns on a screen greater than 1200px. You will see the other classes <code>col-md-6</code> and <code>col-sm-12</code>. These change the width of the section based on the size of the screen the website is being viewed on.</p>
-					<p>
-						<a class="au-btn" href="https://designsystem.gov.au/components/grid-12/">Read about grid</a>
-					</p>
-				</div>
-			</section>
-			<section class="col-sm-12 col-md-6 col-lg-4">
-				<div id="content">
-					<img class="au-responsive-media-img" src="//via.placeholder.com/350x200" alt="Placeholder image description">
-					<h3>Use built in body styles</h3>
-					<p>Inspect the html of any text on this page and you will see tht it is all taken care of by default when the class <code>au-body</code> is used on the <code>&lt;body&gt;</code>. This class gives all your content the design systems default body styles which means great typography out of the box. Use <code>au-body</code> plus <code>au-body--dark</code> to have white text on a dark background.</p>
-					<p>
-						<a class="au-btn" href="https://designsystem.gov.au/components/body/">Read about body</a>
-					</p>
-				</div>
-			</section>
-			<section class="col-sm-12 col-md-6 col-lg-4">
-				<div id="content">
-					<img class="au-responsive-media-img" src="//via.placeholder.com/350x200" alt="Placeholder image description">
-					<h3>Use responsive media</h3>
-					<p>Responsive media keeps images, videos and slideshows the right size across device widths and viewports. If you inspect the html for this page and look at the <code>&lt;img&gt;</code> tag inside this section you see the class <code>au-responsive-media-img</code>. Add this class to any of your images to make them responsive across all viewport widths.</p>
-					<p>
-						<a class="au-btn" href="https://designsystem.gov.au/components/grid-12/">Read about responsive media</a>
-					</p>
-				</div>
-			</section>
+		<div class="container-fluid">
+			<div class="row">
+				<section class="col-sm-6 col-md-4">
+					<div class="content-card">
+						<img class="au-responsive-media-img" src="//via.placeholder.com/350x200" alt="Placeholder image description">
+						<h3>Use the grid system</h3>
+						<p>The <code>col-md-4</code> class (the md stands for medium, the 4 means that this column will take up 4 of 12 grid spaces) on this <code>&lt;section&gt;</code> tag turns it into one of 3 columns on a screen greater than 992px. You will see the other class <code>col-sm-6</code> changes the width of the section based on the size of the screen the website is being viewed on.</p>
+						<p>
+							<a class="au-btn" href="https://designsystem.gov.au/components/grid-12/">Read about grid</a>
+						</p>
+					</div>
+				</section>
+				<section class="col-sm-6 col-md-4">
+					<div class="content-card">
+						<img class="au-responsive-media-img" src="//via.placeholder.com/350x200" alt="Placeholder image description">
+						<h3>Use built in body styles</h3>
+						<p>Inspect the html of any text on this page and you will see tht it is all taken care of by default when the class <code>au-body</code> is used on the <code>&lt;body&gt;</code>. This class gives all your content the design systems default body styles which means great typography out of the box. Use <code>au-body</code> plus <code>au-body--dark</code> to have white text on a dark background.</p>
+						<p>
+							<a class="au-btn" href="https://designsystem.gov.au/components/body/">Read about body</a>
+						</p>
+					</div>
+				</section>
+				<section class="col-sm-6 col-md-4">
+					<div class="content-card">
+						<img class="au-responsive-media-img" src="//via.placeholder.com/350x200" alt="Placeholder image description">
+						<h3>Use responsive media</h3>
+						<p>Responsive media keeps images, videos and slideshows the right size across device widths and viewports. If you inspect the html for this page and look at the <code>&lt;img&gt;</code> tag inside this section you see the class <code>au-responsive-media-img</code>. Add this class to any of your images to make them responsive across all viewport widths.</p>
+						<p>
+							<a class="au-btn" href="https://designsystem.gov.au/components/grid-12/">Read about responsive media</a>
+						</p>
+					</div>
+				</section>
+			</div>
 		</div>
 	</main>
 	<!-- END MAIN BODY -->

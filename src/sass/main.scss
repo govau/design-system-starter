@@ -49,6 +49,10 @@ body > .au-body {
 			padding-top: 0;
 		}
 	}
+
+	.au-btn {
+		@include AU-space( margin-top, 1.5unit );
+	}
 }
 
 
@@ -76,4 +80,10 @@ body > .au-body {
 // Increase spacing between list items in footer
 .au-footer .au-link-list li {
 	@include AU-space( padding-right, 1unit );
+}
+
+
+.content-card {
+	@include AU-space( margin, 2unit auto 0 );
+	@include AU-space( max-width, 22unit );
 }
