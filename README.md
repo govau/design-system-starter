@@ -17,7 +17,7 @@ Australian Government Design System Starter Pack
 
 ## Get started
 
-The starter pack uses NPM (node package manager) to set up a local development environment. NPM is a package manager for Node based projects. NPM comes pre-installed with Node.
+The starter pack uses NPM (node package manager) to set up a local development environment and install the Design System components. NPM is a package manager for Node based projects. NPM comes pre-installed with Node.
 
 1. Make sure you have `NPM` and `node` installed on your computer. You can follow the [NPM instructions](https://www.npmjs.com/get-npm) if you are unsure.
 
