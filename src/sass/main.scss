@@ -85,16 +85,24 @@ body > .au-body {
 
 .content-card {
 	@include AU-space( margin, 2unit auto 0 );
+	@include AU-space( padding, 0 0.75unit 0.5unit );
 	@include AU-space( max-width, 22unit );
+	text-align: justify;
+	display: flex;
+	flex-direction: column;
 }
 
 .card__container {
-	// display: flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .card {
 	@include AU-space( padding-top, 1unit );
 	min-width: 300px;
+	display: flex;
+	flex-wrap: wrap;
 
 	@include AU-media( sm ) {
 		@include AU-space( margin, 2unit 0 );
@@ -102,7 +110,7 @@ body > .au-body {
 
 	&.card__linked {
 		display: flex;
-		@include AU-space( margin, 1unit 0 );
+		@include AU-space( margin, 1unit 0 1unit auto );
 
 		a {
 			display: flex;
@@ -113,6 +121,7 @@ body > .au-body {
 			border: 1px solid $AU-color-foreground-border;
 			border-radius: 0.5em;
 			transition: all 0.2s ease-in-out;
+			margin: 0 auto;
 			@include AU-space( padding, 1unit 1unit 10unit );
 
 
@@ -123,6 +132,19 @@ body > .au-body {
 					right: 2rem;
 				}
 			}
+
+			&:last-child {
+				margin-left: auto;
+			}
+		}
+	}
+
+	.link__container {
+		display: flex;
+		flex: 1 0 auto;
+
+		a {
+			margin-top: auto;
 		}
 	}
 }
