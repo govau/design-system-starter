@@ -1512,4 +1512,18 @@ body > .au-body { padding: 32px 0; padding: 2rem 0; }
 
 .content-card { margin: 32px auto 0; margin: 2rem auto 0; max-width: 352px; max-width: 22rem; }
 
+.card { padding-top: 16px; padding-top: 1rem; min-width: 300px; }
+
+@media (min-width: 768px) { .card { margin: 32px 0; margin: 2rem 0; } }
+
+.card.card__linked { display: flex; margin: 16px 0; margin: 1rem 0; }
+
+.card.card__linked a { display: flex; position: relative; text-decoration: none; color: #313131; flex-direction: column; border: 1px solid gray; border-radius: 0.5em; transition: all 0.2s ease-in-out; padding: 16px 16px 160px; padding: 1rem 1rem 10rem; }
+
+.card.card__linked a:hover { border: 1px solid #ebebeb; }
+
+.card.card__linked a:hover .card__carat { right: 2rem; }
+
+.card__carat { position: absolute; bottom: 1rem; right: 1.5rem; width: 1rem; height: 1rem; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='000' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='000' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E"); transition: right 0.2s ease-in-out; }
+
 /*# sourceMappingURL=main.css.map */

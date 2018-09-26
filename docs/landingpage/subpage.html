@@ -22,8 +22,8 @@
 		var $html = document.documentElement; if ($html.classList) $html.classList.remove("no-js"), $html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
 	</script>
 
-	<link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png">
-	<link type="text/css" rel="stylesheet" href="css/main.css">
+	<link rel="icon" type="image/png" href="/assets/favicons/favicon-16x16.png">
+	<link type="text/css" rel="stylesheet" href="/css/main.css">
 
 	<!--[if lt IE 9]>
 		<script>
@@ -91,8 +91,8 @@
 								<ul class="au-link-list">
 									<li><a href="/index.html">Home</a></li>
 									<li><a href="/about.html">About</a></li>
-									<li><a href="/landingpage.html">Landing page</a></li>
-									<li class="active"><a href="/newpage.html">New Page</a></li>
+									<li class="active"><a href="/landingpage.html">Landing page</a></li>
+									<li><a href="/newpage.html">New Page</a></li>
 								</ul>
 								<div class="au-main-nav__focus-trap-bottom"></div>
 							</div>
@@ -114,15 +114,9 @@
 							<a href="#">Home</a>
 						</li>
 						<li>
-							<a href="#">Level 1 navigation</a>
+							<a href="#">Landing page</a>
 						</li>
-						<li>
-							<a href="#">Parent page 1</a>
-						</li>
-						<li>
-							<a href="#">Parent page 2</a>
-						</li>
-						<li>New page template</li>
+						<li>Sub page</li>
 					</ul>
 				</nav>
 			</div>
@@ -138,27 +132,23 @@
 					</a>
 					<div id="nav-default" class="au-side-nav__content au-accordion--closed au-accordion__body" aria-hidden="true">
 						<h2 class="au-sidenav__title">
-							<a href="#">Level 1 navigation</a>
+							<a href="#">Landing page</a>
 						</h2>
 						<ul class="au-link-list">
+							<li class="active">
+								<a href="#">Sub page</a>
+							</li>
 							<li>
 								<a href="#">Sibling page 1</a>
 							</li>
 							<li>
-								<a href="#">Parent page 1</a>
-								<ul class="au-link-list">
-									<li>
-										<a href="#">Parent page 2</a>
-										<ul class="au-link-list">
-											<li class="active">
-												<a href="#">New page template</a>
-											</li>
-										</ul>
-									</li>
-								</ul>
+								<a href="#">Sibling page 2</a>
 							</li>
 							<li>
-								<a href="#">Sibling page 2</a>
+								<a href="#">Sibling page 3</a>
+							</li>
+							<li>
+								<a href="#">Sibling page 4</a>
 							</li>
 						</ul>
 					</div>
@@ -167,7 +157,7 @@
 			<div class="col-sm-8 col-md-8 col-md-offset-1">
 				<!-- MAIN BODY -->
 				<main id="content">
-					<h1 class="au-display-lg">New page template</h1>
+					<h1 class="au-display-lg">Sub page</h1>
 					<p>[ Add your conent here ]</p>
 				</main>
 			</div>

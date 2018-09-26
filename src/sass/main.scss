@@ -87,3 +87,52 @@ body > .au-body {
 	@include AU-space( margin, 2unit auto 0 );
 	@include AU-space( max-width, 22unit );
 }
+
+.card__container {
+	// display: flex;
+}
+
+.card {
+	@include AU-space( padding-top, 1unit );
+	min-width: 300px;
+
+	@include AU-media( sm ) {
+		@include AU-space( margin, 2unit 0 );
+	}
+
+	&.card__linked {
+		display: flex;
+		@include AU-space( margin, 1unit 0 );
+
+		a {
+			display: flex;
+			position: relative;
+			text-decoration: none;
+			color: $AU-color-foreground-text;
+			flex-direction: column;
+			border: 1px solid $AU-color-foreground-border;
+			border-radius: 0.5em;
+			transition: all 0.2s ease-in-out;
+			@include AU-space( padding, 1unit 1unit 10unit );
+
+
+			&:hover {
+				border: 1px solid $AU-color-background-alt;
+
+				.card__carat {
+					right: 2rem;
+				}
+			}
+		}
+	}
+}
+
+.card__carat {
+	position: absolute;
+	bottom: 1rem;
+	right: 1.5rem;
+    width: 1rem;
+    height: 1rem;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='000' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='000' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
+	transition: right 0.2s ease-in-out;
+}
