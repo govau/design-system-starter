@@ -90,6 +90,10 @@ body > .au-body {
 	text-align: justify;
 	display: flex;
 	flex-direction: column;
+
+	@include AU-media( md ) {
+		@include AU-space( margin, 0 auto );
+	}
 }
 
 .card__container {
@@ -103,9 +107,10 @@ body > .au-body {
 	min-width: 300px;
 	display: flex;
 	flex-wrap: wrap;
+	@include AU-space( margin, 0 );
 
-	@include AU-media( sm ) {
-		@include AU-space( margin, 2unit 0 );
+	@include AU-media( md ) {
+		@include AU-space( margin, 0 0 2unit );
 	}
 
 	&.card__linked {
