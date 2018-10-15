@@ -23,11 +23,14 @@ body {
 
 
 // Increase the spacing for au-body elements
-body > .au-body {
-	@include AU-space( padding, 2unit 0 );
+main,
+.banner {
+	&.au-body {
+		@include AU-space( padding, 2unit 0 );
 
-	@include AU-media( sm ) {
-		@include AU-space( padding, 4unit 0 );
+		@include AU-media( sm ) {
+			@include AU-space( padding, 4unit 0 );
+		}
 	}
 }
 
@@ -80,86 +83,4 @@ body > .au-body {
 // Increase spacing between list items in footer
 .au-footer .au-link-list li {
 	@include AU-space( padding-right, 1unit );
-}
-
-
-.content-card {
-	@include AU-space( margin, 2unit auto 0 );
-	@include AU-space( padding, 0 0.75unit 0.5unit );
-	@include AU-space( max-width, 22unit );
-	text-align: justify;
-	display: flex;
-	flex-direction: column;
-
-	@include AU-media( md ) {
-		@include AU-space( margin, 0 auto );
-	}
-}
-
-.card__container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.card {
-	@include AU-space( padding-top, 1unit );
-	min-width: 300px;
-	display: flex;
-	flex-wrap: wrap;
-	@include AU-space( margin, 0 );
-
-	@include AU-media( md ) {
-		@include AU-space( margin, 0 0 2unit );
-	}
-
-	&.card__linked {
-		display: flex;
-		@include AU-space( margin, 1unit 0 1unit auto );
-
-		a {
-			display: flex;
-			position: relative;
-			text-decoration: none;
-			color: $AU-color-foreground-text;
-			flex-direction: column;
-			border: 1px solid $AU-color-foreground-border;
-			border-radius: 0.5em;
-			transition: all 0.2s ease-in-out;
-			margin: 0 auto;
-			@include AU-space( padding, 1unit 1unit 10unit );
-
-
-			&:hover {
-				border: 1px solid $AU-color-background-alt;
-
-				.card__carat {
-					right: 2rem;
-				}
-			}
-
-			&:last-child {
-				margin-left: auto;
-			}
-		}
-	}
-
-	.link__container {
-		display: flex;
-		flex: 1 0 auto;
-
-		a {
-			margin-top: auto;
-		}
-	}
-}
-
-.card__carat {
-	position: absolute;
-	bottom: 1rem;
-	right: 1.5rem;
-    width: 1rem;
-    height: 1rem;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Cpath fill='000' d='M128 64l-64 64-16-16 64-64'/%3E%3Cpath fill='000' d='M128 64l-16 16-64-64L64 0'/%3E%3C/svg%3E");
-	transition: right 0.2s ease-in-out;
 }

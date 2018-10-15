@@ -22,8 +22,8 @@
 		var $html = document.documentElement; if ($html.classList) $html.classList.remove("no-js"), $html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
 	</script>
 
-	<link rel="icon" href="assets/favicons/favicon.ico">
-	<link type="text/css" rel="stylesheet" href="css/main.css">
+	<link rel="icon" href="/assets/favicons/favicon.ico">
+	<link type="text/css" rel="stylesheet" href="/css/main.css">
 
 	<!-- These are shivs to help modern html work in older internet explorer browsers -->
 	<!--[if lt IE 9]>
@@ -55,12 +55,10 @@
 			<div class="row">
 				<div class="col-md-9">
 					<a class="au-header__brand" href="#">
-						<img class="au-header__brand-image" alt="Insert alternate text here" src="./assets/img/header-logo-agov.png">
+						<img class="au-header__brand-image" alt="Insert alternate text here" src="/assets/img/header-logo-agov.png">
 						<div class="au-header__text">
-						<h2 class="au-header__heading">Example Site</h2>
-						<div class="au-header__subline">
-							An example of the system in use
-						</div>
+						<h2 class="au-header__heading">Name of product or service</h2>
+						<div class="au-header__subline">Simple explaination of the product or service</div>
 						</div>
 					</a>
 				</div>
@@ -68,42 +66,42 @@
 		</div>
 	</header>
 
-	  <!-- MAIN NAVIGATION -->
-	  <nav class="au-main-nav au-main-nav--dark">
-		  <div class="container-fluid">
-			  <div class="row">
-				  <div class="col-md-12">
-					  <div class="au-main-nav__content" id="main-nav-default-alt">
-						  <button
-							  aria-controls="main-nav-default-alt"
-							  class="au-main-nav__toggle au-main-nav__toggle--open"
-							  onClick="return AU.mainNav.Toggle( this )">
-							  Menu
-						  </button>
-						  <div class="au-main-nav__menu">
-							  <div class="au-main-nav__menu-inner">
-								  <div class="au-main-nav__focus-trap-top"></div>
-								  <button
-									  aria-controls="main-nav-default-alt"
-									  class="au-main-nav__toggle au-main-nav__toggle--close"
-									  onClick="return AU.mainNav.Toggle( this )">
-									  Close
-								  </button>
-								  <ul class="au-link-list">
-									  <li class="active"><a href="/index.html">Home</a></li>
-									  <li><a href="/about.html">About</a></li>
-									  <li><a href="/landingpage.html">Landing page</a></li>
-									  <li><a href="/newpage.html">New Page</a></li>
-								  </ul>
-								  <div class="au-main-nav__focus-trap-bottom"></div>
-							  </div>
-						  </div>
-						  <div class="au-main-nav__overlay" aria-controls="main-nav-default-alt" onClick="return AU.mainNav.Toggle( this )"></div>
-					  </div>
-				  </div>
-			  </div>
-		  </div>
-	  </nav>
+	<!-- MAIN NAVIGATION -->
+	<nav class="au-main-nav au-main-nav--dark">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="au-main-nav__content" id="main-nav-default-alt">
+						<button
+							aria-controls="main-nav-default-alt"
+							class="au-main-nav__toggle au-main-nav__toggle--open"
+							onClick="return AU.mainNav.Toggle( this )">
+							Menu
+						</button>
+						<div class="au-main-nav__menu">
+							<div class="au-main-nav__menu-inner">
+								<div class="au-main-nav__focus-trap-top"></div>
+								<button
+									aria-controls="main-nav-default-alt"
+									class="au-main-nav__toggle au-main-nav__toggle--close"
+									onClick="return AU.mainNav.Toggle( this )">
+									Close
+								</button>
+								<ul class="au-link-list">
+									<li class="active"><a href="/">Home</a></li>
+									<li><a href="/section">Section title</a></li>
+									<li><a href="/section">Simple terms</a></li>
+									<li><a href="/section">Distinct from eachother</a></li>
+								</ul>
+								<div class="au-main-nav__focus-trap-bottom"></div>
+							</div>
+						</div>
+						<div class="au-main-nav__overlay" aria-controls="main-nav-default-alt" onClick="return AU.mainNav.Toggle( this )"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
 
 
 	<!-- BANNER -->
@@ -128,70 +126,33 @@
 
 	<!-- MAIN BODY -->
 	<main class="container-fluid au-body main-content">
-		<div class="container-fluid">
-			<div class="row card__container">
-				<!-- The 2 classes below col-sm-6 and col-md-4 set the width of the section based on the viewport width -->
-				<section class="col-sm-6 col-md-4 card">
-					<div class="content-card">
-						<img class="au-responsive-media-img" src="//via.placeholder.com/350x200" alt="Placeholder image description">
-						<h3>Use the grid system</h3>
-						<p>The <code>col-md-4</code> class (md stands for medium, 4 means this column will take up 4 of 12 grid spaces) on this <code>&lt;section&gt;</code> tag turns it into one of 3 columns on a screen greater than 992px. The other class <code>col-sm-6</code> after it changes the width of the section based on the size of the screen the website is being viewed on.</p>
-						<p class="link__container">
-							<a class="au-btn" href="https://designsystem.gov.au/components/grid-12/">Read about grid</a>
-						</p>
-					</div>
-				</section>
-				<section class="col-sm-6 col-md-4 card">
-					<div class="content-card">
-						<img class="au-responsive-media-img" src="//via.placeholder.com/350x200" alt="Placeholder image description">
-						<h3>Use built in body styles</h3>
-						<p>Inspect the html of any section on this page and you will see that width is taken care of by using <code>au-grid</code> on the <code>&lt;body&gt;</code>. This class gives you access to the design systems grid system which means you can use responsive sizing on elements by using any of the col- classes.</p>
-						<p class="link__container">
-							<a class="au-btn" href="https://designsystem.gov.au/components/body/">Read about body</a>
-						</p>
-					</div>
-				</section>
-				<section class="col-sm-6 col-md-4 card">
-					<div class="content-card">
-						<img class="au-responsive-media-img" src="//via.placeholder.com/350x200" alt="Placeholder image description">
-						<h3>Use responsive media</h3>
-						<p>Responsive media keeps images, videos and slideshows the right size across device widths and viewports. If you inspect the html for this page and look at the <code>&lt;img&gt;</code> tag inside this section you see the class <code>au-responsive-media-img</code>. Add this class to any of your images to make them responsive across all viewport widths.</p>
-						<p class="link__container">
-							<a class="au-btn" href="https://designsystem.gov.au/components/grid-12/">Read about responsive media</a>
-						</p>
-					</div>
-				</section>
+		<div class="row">
+			<!--CONTENT-->
+			<div class="col-md-12">
+				<p>Hello world</p>
 			</div>
+			<!--END CONTENT-->
 		</div>
 	</main>
 	<!-- END MAIN BODY -->
 
 	<!--FOOTER -->
-	<footer class="au-footer au-footer--dark" role="contentinfo">
+	<footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
 		<div class="container-fluid">
-			<nav class="au-footer__navigation row au-body au-body--dark">
-				<div class="col-md-4 col-sm-6">
+			<div class="row">
+				<nav class="col-md-12 au-footer__navigation">
 					<ul class="au-link-list au-link-list--inline">
-						<li>
-							<a href="#">Privacy</a>
-						</li>
-						<li>
-							<a href="#">Need Help?</a>
-						</li>
-						<li>
-							<a href="#">Accessibility</a>
-						</li>
+						<li><a href="#">Privacy</a></li>
+						<li><a href="#">Need Help?</a></li>
+						<li><a href="#">Accessibility</a></li>
 					</ul>
-				</div>
-			</nav>
-			<section class="au-footer__end row">
-				<div class="col-sm-12">
+				</nav>
+				<section class="col-sm-12 au-footer__end">
 					<p>
-						<small>&copy; Commonwealth of Australia
-						</small>
+						© Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the <a href="https://github.com/govau/uikit-starter/blob/master/LICENSE" rel="external">MIT license</a>
 					</p>
-				</div>
-			</section>
+				</section>
+			</div>
 	</footer>
 
 	<!-- The javascript from pancake to open and close side nav on desktop -->

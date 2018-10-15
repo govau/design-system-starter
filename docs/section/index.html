@@ -16,15 +16,16 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 
-	<title>Design System Starter | About</title>
+	<title>Design System Starter | Home</title>
 
 	<script type="text/javascript">
 		var $html = document.documentElement; if ($html.classList) $html.classList.remove("no-js"), $html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
 	</script>
 
-	<link rel="icon" type="image/png" href="/assets/favicons/favicon-16x16.png">
+	<link rel="icon" href="/assets/favicons/favicon.ico">
 	<link type="text/css" rel="stylesheet" href="/css/main.css">
 
+	<!-- These are shivs to help modern html work in older internet explorer browsers -->
 	<!--[if lt IE 9]>
 		<script>
 			/* https://github.com/aFarkas/html5shiv HTML5 Shiv 3.7.3 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed */
@@ -54,12 +55,10 @@
 			<div class="row">
 				<div class="col-md-9">
 					<a class="au-header__brand" href="#">
-						<img class="au-header__brand-image" alt="Insert alternate text here" src="../assets/img/header-logo-agov.png">
+						<img class="au-header__brand-image" alt="Insert alternate text here" src="/assets/img/header-logo-agov.png">
 						<div class="au-header__text">
-						<h1 class="au-header__heading">Example Site</h1>
-						<div class="au-header__subline">
-							An example of the system in use
-						</div>
+						<h2 class="au-header__heading">Name of product or service</h2>
+						<div class="au-header__subline">Simple explaination of the product or service</div>
 						</div>
 					</a>
 				</div>
@@ -89,10 +88,10 @@
 									Close
 								</button>
 								<ul class="au-link-list">
-									<li><a href="/index.html">Home</a></li>
-									<li><a href="/about.html">About</a></li>
-									<li class="active"><a href="/landingpage.html">Landing page</a></li>
-									<li><a href="/newpage.html">New Page</a></li>
+									<li><a href="/">Home</a></li>
+									<li class="active"><a href="/section">Section title</a></li>
+									<li><a href="/section">Simple terms</a></li>
+									<li><a href="/section">Distinct from eachother</a></li>
 								</ul>
 								<div class="au-main-nav__focus-trap-bottom"></div>
 							</div>
@@ -104,80 +103,34 @@
 		</div>
 	</nav>
 
-	<!-- BREADCRUMBS -->
-	<div class="container-fluid au-body main-content">
+	<!-- MAIN BODY -->
+	<main class="container-fluid au-body main-content">
 		<div class="row">
-			<div class="col-md-12">
-				<nav class="au-breadcrumbs" aria-label="breadcrumb">
-					<ul class="au-link-list au-link-list--inline">
-						<li>
-							<a href="#">Home</a>
-						</li>
-						<li>
-							<a href="#">Landing page</a>
-						</li>
-						<li>Sub page</li>
-					</ul>
-				</nav>
+			<!--CONTENT-->
+			<div class="col-md-8">
+				<p>Hello world</p>
 			</div>
+			<!--END CONTENT-->
 		</div>
-
-		<div class="row">
-			<!-- SIDE NAV -->
-			<div class="col-sm-4 col-md-3">
-				<aside id="nav" class="au-side-nav au-accordion">
-					<a href="#nav-default" class="au-side-nav__toggle au-accordion__title au-accordion--closed" aria-controls="nav-default" aria-expanded="false"
-					 aria-selected="false" role="tab" onclick="return AU.accordion.Toggle( this )">
-						In this section
-					</a>
-					<div id="nav-default" class="au-side-nav__content au-accordion--closed au-accordion__body" aria-hidden="true">
-						<h2 class="au-sidenav__title">
-							<a href="#">Landing page</a>
-						</h2>
-						<ul class="au-link-list">
-							<li class="active">
-								<a href="./subpage.html">Sub page</a>
-							</li>
-							<li>
-								<a href="./subpage2.html">Sub page 2</a>
-							</li>
-						</ul>
-					</div>
-				</aside>
-			</div>
-			<div class="col-sm-8 col-md-8 col-md-offset-1">
-				<!-- MAIN BODY -->
-				<main id="content">
-					<h1 class="au-display-lg">Sub page</h1>
-					<p>[ Add your conent here ]</p>
-				</main>
-			</div>
-		</div>
-	</div>
+	</main>
+	<!-- END MAIN BODY -->
 
 	<!--FOOTER -->
-	<footer class="au-footer au-footer--dark" role="contentinfo">
+	<footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
 		<div class="container-fluid">
-			<nav class="au-footer__navigation row au-body au-body--dark">
+			<nav class="au-footer__navigation row">
 				<div class="col-md-4 col-sm-6">
 					<ul class="au-link-list au-link-list--inline">
-						<li>
-							<a href="#">Privacy</a>
-						</li>
-						<li>
-							<a href="#">Need Help?</a>
-						</li>
-						<li>
-							<a href="#">Accessibility</a>
-						</li>
+						<li><a href="#">Privacy</a></li>
+						<li><a href="#">Need Help?</a></li>
+						<li><a href="#">Accessibility</a></li>
 					</ul>
 				</div>
 			</nav>
 			<section class="au-footer__end row">
 				<div class="col-sm-12">
 					<p>
-						<small>&copy; Commonwealth of Australia
-						</small>
+						© Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the <a href="https://github.com/govau/uikit-starter/blob/master/LICENSE" rel="external">MIT license</a>
 					</p>
 				</div>
 			</section>
