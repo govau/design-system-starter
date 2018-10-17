@@ -22,7 +22,7 @@ body {
 }
 
 
-// Increase the spacing for au-body elements
+// Increase the spacing for au-body elements inside main
 main {
 	.au-body {
 		@include AU-space( padding, 2unit 0 );
@@ -33,56 +33,47 @@ main {
 	}
 }
 
-.card {
-	color: red;
-}
 
-.card {
-	display: inline;
-	border-radius: 3px;
-	box-shadow: 0 0 3px #000;
-	outline: 3px solid purple;
-	color: blue;
-}
+// Slight grid changes for container fluid
+.au-grid .container-fluid {
+	@include AU-space( max-width, 80unit );
 
-// Add a max width to container fluid
-.container-fluid {
-	@include AU-space( max-width, 72unit );
-}
-
-
-// Change the banner responsiveness
-.banner {
-	[class^="col-"] + [class^="col-"] {
-		@include AU-space( padding-top, 2unit );
-	}
-
-	@include AU-media( md ) {
-		[class^="col-"] + [class^="col-"] {
-			padding-top: 0;
-		}
-	}
-
-	.au-btn {
-		@include AU-space( margin-top, 1.5unit );
+	@include AU-media( sm ){
+		@include AU-space( padding-left, 2unit );
+		@include AU-space( padding-right, 2unit );
 	}
 }
 
-// Increase spacing between list items in footer
-.au-footer .au-link-list li {
+// Increase spacing between inline list items in footer
+.au-footer .au-link-list--inline li {
 	@include AU-space( padding-right, 1unit );
 }
 
 // The call to actions on the home page
-.btn-cta-group .au-btn {
-	@include AU-space( margin-top, 2unit );
+.btn-cta-group {
+	@include AU-space( margin-top, 1unit );
+
+	.au-btn {
+		@include AU-space( margin-top, 1unit );
+	}
 }
 
 
+// Home page highlighted spacing on mobile
 .highlighted-section .col-sm-4 + .col-sm-4 {
 	@include AU-space( margin-top, 4unit );
 
 	@include AU-media( sm ) {
 		margin-top: 0;
+	}
+}
+
+
+// Mobile side nav spacing
+.au-side-nav {
+	@include AU-space( margin-bottom, 2unit );
+
+	@include AU-media( sm ){
+		margin-bottom: 0;
 	}
 }
