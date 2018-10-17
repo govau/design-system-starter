@@ -1489,9 +1489,13 @@ textarea.au-text-input { font-size: 16px; font-size: 1rem; line-height: 1.5; hei
 
 body { padding: 0; margin: 0; }
 
-main.au-body, .banner.au-body { padding: 32px 0; padding: 2rem 0; }
+main .au-body, .banner .au-body { padding: 32px 0; padding: 2rem 0; }
 
-@media (min-width: 768px) { main.au-body, .banner.au-body { padding: 64px 0; padding: 4rem 0; } }
+@media (min-width: 768px) { main .au-body, .banner .au-body { padding: 64px 0; padding: 4rem 0; } }
+
+.card { color: red; }
+
+.card { display: inline; border-radius: 3px; box-shadow: 0 0 3px #000; outline: 3px solid purple; color: blue; }
 
 .container-fluid { max-width: 1152px; max-width: 72rem; }
 
@@ -1501,13 +1505,10 @@ main.au-body, .banner.au-body { padding: 32px 0; padding: 2rem 0; }
 
 .banner .au-btn { margin-top: 24px; margin-top: 1.5rem; }
 
-.main-content .row + .row { margin-top: 32px; margin-top: 2rem; }
-
-.main-content main { padding-top: 32px; padding-top: 2rem; }
-
-@media (min-width: 768px) { .main-content .row + .row { margin-top: 64px; margin-top: 4rem; }
-  .main-content main { padding-top: 0; } }
-
 .au-footer .au-link-list li { padding-right: 16px; padding-right: 1rem; }
+
+.call-to-action-group { margin-top: 32px; margin-top: 2rem; }
+
+.call-to-action-group .au-btn + .au-btn { margin-left: 16px; margin-left: 1rem; }
 
 /*# sourceMappingURL=main.css.map */

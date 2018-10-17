@@ -25,7 +25,7 @@ body {
 // Increase the spacing for au-body elements
 main,
 .banner {
-	&.au-body {
+	.au-body {
 		@include AU-space( padding, 2unit 0 );
 
 		@include AU-media( sm ) {
@@ -34,6 +34,17 @@ main,
 	}
 }
 
+.card {
+	color: red;
+}
+
+.card {
+	display: inline;
+	border-radius: 3px;
+	box-shadow: 0 0 3px #000;
+	outline: 3px solid purple;
+	color: blue;
+}
 
 // Add a max width to container fluid
 .container-fluid {
@@ -58,29 +69,16 @@ main,
 	}
 }
 
-
-// Change the main content spacing between sections
-.main-content  {
-	.row + .row {
-		@include AU-space( margin-top, 2unit );
-	}
-
-	main {
-		@include AU-space( padding-top, 2unit );
-	}
-
-	@include AU-media( sm ) {
-		.row + .row {
-			@include AU-space( margin-top, 4unit );
-		}
-		main {
-			padding-top: 0;
-		}
-	}
-}
-
-
 // Increase spacing between list items in footer
 .au-footer .au-link-list li {
 	@include AU-space( padding-right, 1unit );
+}
+
+// The call to actions on the home page
+.call-to-action-group {
+	@include AU-space( margin-top, 2unit );
+
+	.au-btn + .au-btn {
+		@include AU-space( margin-left, 1unit );
+	}
 }

@@ -89,7 +89,8 @@
 								</button>
 								<ul class="au-link-list">
 									<li><a href="/">Home</a></li>
-									<li class="active"><a href="/section">Section title</a></li>
+									<li><a href="/basic">Basic page</a></li>
+									<li class="active"><a href="/form">Form page</a></li>
 									<li><a href="/section">Simple terms</a></li>
 									<li><a href="/section">Distinct from eachother</a></li>
 								</ul>
@@ -104,40 +105,45 @@
 	</nav>
 
 	<!-- MAIN BODY -->
-	<main class="container-fluid au-body main-content">
-		<div class="row">
-			<!--CONTENT-->
-			<div class="col-md-8">
-				<p>Hello world</p>
+	<main>
+		<!--CONTENT-->
+		<section class="au-body">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Some highlighted content</h2>
+						<p>The tagline should inspire confidence and interest, focusing on the value that your overall approach offers to your audience. Use a heading typeface and keep your tagline to just a few words, and don’t confuse or mystify.</p>
+
+						<p>Use the right side of the grid to explain the tagline a bit more. What are your goals? How do you do your work? Write in the present tense, and stay brief here. People who are interested can find details on internal pages.</p>
+					</div>
+				</div>
 			</div>
-			<!--END CONTENT-->
-		</div>
+		</section>
+		<!--END CONTENT-->
 	</main>
 	<!-- END MAIN BODY -->
 
 	<!--FOOTER -->
 	<footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
 		<div class="container-fluid">
-			<nav class="au-footer__navigation row">
-				<div class="col-md-4 col-sm-6">
+			<div class="row">
+				<nav class="col-md-12 au-footer__navigation">
 					<ul class="au-link-list au-link-list--inline">
 						<li><a href="#">Privacy</a></li>
 						<li><a href="#">Need Help?</a></li>
 						<li><a href="#">Accessibility</a></li>
 					</ul>
-				</div>
-			</nav>
-			<section class="au-footer__end row">
-				<div class="col-sm-12">
+				</nav>
+				<section class="col-sm-12 au-footer__end">
 					<p>
 						© Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the <a href="https://github.com/govau/uikit-starter/blob/master/LICENSE" rel="external">MIT license</a>
 					</p>
-				</div>
-			</section>
+				</section>
+			</div>
 	</footer>
 
 	<!-- The javascript from pancake to open and close side nav on desktop -->
-	<script type="text/javascript" src="./js/script.min.js"></script>
+	<script type="text/javascript" src="/js/script.min.js"></script>
 </body>
 
 </html>

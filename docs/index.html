@@ -89,7 +89,8 @@
 								</button>
 								<ul class="au-link-list">
 									<li class="active"><a href="/">Home</a></li>
-									<li><a href="/section">Section title</a></li>
+									<li><a href="/basic">Basic page</a></li>
+									<li><a href="/form">Form page</a></li>
 									<li><a href="/section">Simple terms</a></li>
 									<li><a href="/section">Distinct from eachother</a></li>
 								</ul>
@@ -103,36 +104,72 @@
 		</div>
 	</nav>
 
-
-	<!-- BANNER -->
-	<div class="banner au-body au-body--alt">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm-12 col-md-6">
-					<h2>Welcome to the design system starter site</h2>
-					<p>If you inspect the html for this page you will see that the <code>&lt;body&gt;</code> tag is using a class called <code>au-grid</code>. This class let's you use the design system grid which is based on 12 columns.</p>
-					<p>Use button classes such as <code>au-btn</code> to style your interactive calls to action.</p>
-					<a class="au-btn au-btn--secondary" href="https://designsystem.gov.au/components/grid-12/">Read about grid</a>
-					<a class="au-btn" href="https://designsystem.gov.au/components/buttons/">
-						Read about buttons
-					</a>
-				</div>
-				<div class="col-sm-12 col-md-6">
-					<img class="au-responsive-media-img banner__image" src="http://placehold.it/900x400" alt="">
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<!-- MAIN BODY -->
-	<main class="container-fluid au-body main-content">
-		<div class="row">
-			<!--CONTENT-->
-			<div class="col-md-12">
-				<p>Hello world</p>
+	<main>
+		<!-- BANNER -->
+		<div class="au-body au-body--alt">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-sm-push-6">
+						<img class="au-responsive-media-img banner__image" src="http://placehold.it/600x260" alt="">
+					</div>
+					<div class="col-xs-12 col-sm-6 col-sm-pull-6">
+						<h2>Hero callout</h2>
+						<p>Support the callout with some short explanatory text. You don't need more than a couple of sentences.</p>
+						<p>Use buttons to give your user a clear call to action about what to do next.</p>
+						<div class="call-to-action-group">
+							<a class="au-btn" href="#">Primary call to action</a>
+							<a class="au-btn au-btn--secondary" href="">Secondary call to action</a>
+						</div>
+					</div>
+				</div>
 			</div>
-			<!--END CONTENT-->
 		</div>
+		<!-- END BANNER -->
+		<!--CONTENT-->
+		<section class="au-body">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Some highlighted content</h2>
+						<p>The tagline should inspire confidence and interest, focusing on the value that your overall approach offers to your audience. Use a heading typeface and keep your tagline to just a few words, and don’t confuse or mystify.</p>
+
+						<p>Use the right side of the grid to explain the tagline a bit more. What are your goals? How do you do your work? Write in the present tense, and stay brief here. People who are interested can find details on internal pages.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="au-body au-body--dark au-body--alt">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-4">
+						<h3>Featured title</h3>
+						<p>A small explanation of the featured item this may include a link or a call to action.</p>
+					</div>
+					<div class="col-sm-4">
+						<h3>Featured title</h3>
+						<p>A small explanation of the featured item this may include a link or a call to action.</p>
+					</div>
+					<div class="col-sm-4">
+						<h3>Featured title</h3>
+						<p>A small explanation of the featured item this may include a link or a call to action.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="au-body">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Some highlighted content</h2>
+						<p>The tagline should inspire confidence and interest, focusing on the value that your overall approach offers to your audience. Use a heading typeface and keep your tagline to just a few words, and don’t confuse or mystify.</p>
+
+						<p>Use the right side of the grid to explain the tagline a bit more. What are your goals? How do you do your work? Write in the present tense, and stay brief here. People who are interested can find details on internal pages.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--END CONTENT-->
 	</main>
 	<!-- END MAIN BODY -->
 
@@ -156,7 +193,7 @@
 	</footer>
 
 	<!-- The javascript from pancake to open and close side nav on desktop -->
-	<script type="text/javascript" src="./js/script.min.js"></script>
+	<script type="text/javascript" src="/js/script.min.js"></script>
 </body>
 
 </html>
