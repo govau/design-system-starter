@@ -23,8 +23,7 @@ body {
 
 
 // Increase the spacing for au-body elements
-main,
-.banner {
+main {
 	.au-body {
 		@include AU-space( padding, 2unit 0 );
 
@@ -75,10 +74,15 @@ main,
 }
 
 // The call to actions on the home page
-.call-to-action-group {
+.btn-cta-group .au-btn {
 	@include AU-space( margin-top, 2unit );
+}
 
-	.au-btn + .au-btn {
-		@include AU-space( margin-left, 1unit );
+
+.highlighted-section .col-sm-4 + .col-sm-4 {
+	@include AU-space( margin-top, 4unit );
+
+	@include AU-media( sm ) {
+		margin-top: 0;
 	}
 }

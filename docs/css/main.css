@@ -1489,9 +1489,9 @@ textarea.au-text-input { font-size: 16px; font-size: 1rem; line-height: 1.5; hei
 
 body { padding: 0; margin: 0; }
 
-main .au-body, .banner .au-body { padding: 32px 0; padding: 2rem 0; }
+main .au-body { padding: 32px 0; padding: 2rem 0; }
 
-@media (min-width: 768px) { main .au-body, .banner .au-body { padding: 64px 0; padding: 4rem 0; } }
+@media (min-width: 768px) { main .au-body { padding: 64px 0; padding: 4rem 0; } }
 
 .card { color: red; }
 
@@ -1507,8 +1507,10 @@ main .au-body, .banner .au-body { padding: 32px 0; padding: 2rem 0; }
 
 .au-footer .au-link-list li { padding-right: 16px; padding-right: 1rem; }
 
-.call-to-action-group { margin-top: 32px; margin-top: 2rem; }
+.btn-cta-group .au-btn { margin-top: 32px; margin-top: 2rem; }
 
-.call-to-action-group .au-btn + .au-btn { margin-left: 16px; margin-left: 1rem; }
+.highlighted-section .col-sm-4 + .col-sm-4 { margin-top: 64px; margin-top: 4rem; }
+
+@media (min-width: 768px) { .highlighted-section .col-sm-4 + .col-sm-4 { margin-top: 0; } }
 
 /*# sourceMappingURL=main.css.map */
