@@ -110,11 +110,71 @@
 		<section class="au-body">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-sm-8 col-md-8">
 						<h2>Some highlighted content</h2>
 						<p>The tagline should inspire confidence and interest, focusing on the value that your overall approach offers to your audience. Use a heading typeface and keep your tagline to just a few words, and don’t confuse or mystify.</p>
 
 						<p>Use the right side of the grid to explain the tagline a bit more. What are your goals? How do you do your work? Write in the present tense, and stay brief here. People who are interested can find details on internal pages.</p>
+						<form>
+							<div class="form-item">
+								<label for="name-input"><span class="form-hint">*</span> Name</label>
+								<input class="au-text-input au-text-input--block" name="name-input" id="name-input" type="text">
+							</div>
+
+							<div class="form-item">
+								<label for="email-input"><span class="form-hint">*</span> Email</label>
+								<input class="au-text-input au-text-input--block" name="email-input" id="email-input" type="text">
+							</div>
+
+							<!--RADIO OPTIONS-->
+							<div class="form-item">
+								<span class="form-hint">*</span> Preferred contact method
+								<label class="au-control-input au-control-input--block">
+									<input class="au-control-input__input" type="radio" name="radio-ex">
+									<span class="au-control-input__text">Don't contact me</span>
+								</label>
+
+								<label class="au-control-input au-control-input--block">
+									<input class="au-control-input__input" type="radio" name="radio-ex" checked>
+									<span class="au-control-input__text">Email</span>
+								</label>
+							</div>
+
+							<!--CHECK OPTIONS-->
+							<div class="form-item">
+								How did you hear about us? <span class="form-hint"><i>(Optional)</i></span>
+
+								<label class="au-control-input au-control-input--block">
+									<input class="au-control-input__input" type="checkbox" name="checkbox-ex">
+									<span class="au-control-input__text">Google</span>
+								</label>
+
+								<label class="au-control-input au-control-input--block">
+									<input class="au-control-input__input" type="checkbox" name="checkbox-ex">
+									<span class="au-control-input__text">Newspaper</span>
+								</label>
+
+								<label class="au-control-input au-control-input--block">
+									<input class="au-control-input__input" type="checkbox" name="checkbox-ex">
+									<span class="au-control-input__text">Website</span>
+								</label>
+
+								<label class="au-control-input au-control-input--block">
+									<input class="au-control-input__input" type="checkbox" name="checkbox-ex">
+									<span class="au-control-input__text">Other</span>
+								</label>
+							</div>
+
+							<div class="form-item">
+								<label for="comment-input-area"><span class="form-hint">*</span> How can we help you?</label>
+								<textarea class="au-text-input au-text-input--block" name="comment-input-area" id="comment-input-area"></textarea>
+							</div>
+
+							<!--FORM SUBMIT BUTTON-->
+							<div class="form-item">
+								<button class="au-btn">Submit</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>

@@ -77,3 +77,22 @@ main {
 		margin-bottom: 0;
 	}
 }
+
+form {
+	@include AU-space( margin-top, 2unit );
+}
+
+.form-item + .form-item {
+	@include AU-space( margin-top, 2.5unit );
+}
+
+
+.form-hint {
+	color: red;
+	@include AU-fontgrid( xs, default );
+}
+
+
+label + input, label + textarea {
+	@include AU-space( margin-top, .5unit );
+}
