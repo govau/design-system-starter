@@ -105,7 +105,7 @@
 	</nav>
 
 	<!-- MAIN BODY -->
-	<main>
+	<main id="content">
 		<!--CONTENT-->
 		<section class="au-body">
 			<div class="container-fluid">
@@ -117,18 +117,18 @@
 						<p>Use the right side of the grid to explain the tagline a bit more. What are your goals? How do you do your work? Write in the present tense, and stay brief here. People who are interested can find details on internal pages.</p>
 						<form>
 							<div class="form-item">
-								<label for="name-input"> Name</label>
-								<input class="au-text-input au-text-input--block" name="name-input" id="name-input" type="text">
+								<label for="firstname-input" class="label--block"> First Name <span class="form-required">(Required)</span></label>
+								<input class="au-text-input" name="firstname-input" id="firstname-input" type="text" required>
 							</div>
 
 							<div class="form-item">
-								<label for="email-input"> Email</label>
-								<input class="au-text-input au-text-input--block" name="email-input" id="email-input" type="text">
+								<label for="surname-input" class="label--block"> Surname <span class="form-required">(Required)</span></label>
+								<input class="au-text-input" name="surname-input" id="surname-input" type="text" required>
 							</div>
 
 							<!--RADIO OPTIONS-->
 							<div class="form-item">
-								 Preferred contact method
+								 Preferred contact method <span class="form-required">(Required)</span>
 								<label class="au-control-input au-control-input--block">
 									<input class="au-control-input__input" type="radio" name="radio-ex">
 									<span class="au-control-input__text">Don't contact me</span>
@@ -142,7 +142,7 @@
 
 							<!--CHECK OPTIONS-->
 							<div class="form-item">
-								How did you hear about us? <span class="form-hint"><i>(Optional)</i></span>
+								How did you hear about us?
 
 								<label class="au-control-input au-control-input--block">
 									<input class="au-control-input__input" type="checkbox" name="checkbox-ex">
@@ -166,8 +166,8 @@
 							</div>
 
 							<div class="form-item">
-								<label for="comment-input-area"> How can we help you?</label>
-								<textarea class="au-text-input au-text-input--block" name="comment-input-area" id="comment-input-area"></textarea>
+								<label for="comment-input-area"> How can we help you? <span class="form-required">(Required)</span></label>
+								<textarea class="au-text-input au-text-input--block" name="comment-input-area" id="comment-input-area" required></textarea>
 							</div>
 
 							<!--FORM SUBMIT BUTTON-->
