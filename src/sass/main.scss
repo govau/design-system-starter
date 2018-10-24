@@ -80,6 +80,11 @@ main {
 
 form {
 	@include AU-space( margin-top, 2unit );
+
+	label + input,
+	label + textarea {
+		@include AU-space( margin-top, .5unit );
+	}
 }
 
 .form-item + .form-item {
@@ -98,7 +103,25 @@ form {
 	display: block;
 }
 
+// Reset empty required values
+.empty-required {
 
-label + input, label + textarea {
-	@include AU-space( margin-top, .5unit );
+	// Text inputs and text areas
+	&.au-text-input:invalid,
+	&.au-text-input.au-text-input--dark:invalid, {
+		background: transparent;
+		border-color: $AU-color-foreground-border;
+	}
+
+	// Radio buttons and control inputs
+	&.au-control-input__input:invalid + .au-control-input__text, {
+		background:transparent;
+	}
+
+	&.au-control-input__input:invalid + .au-control-input__text:after{
+		border-color: transparent;
+	}
 }
+
+
+
