@@ -1,10 +1,20 @@
-Australian Government Design System Starter Pack
+Australian Government Design System - Uikit Starter
 ==========================
 
-> Get started with the Australian Government Design System
+> Get started with full page templates using the Australian Government Design System.
+
+## Templates
+
+Browse full page templates using the Australian Government Design System.
+
+- [Home page](https://govau.github.io/uikit-starter/)
+- [Basic page](https://govau.github.io/uikit-starter/basic)
+- [Form page](https://govau.github.io/uikit-starter/form)
 
 
-## Contents
+## Development environment
+
+Clone this repository to create a local development environment and start modifying the templates.
 
 * [Get started](#get-started)
 * [How it works](#how-it-works)
