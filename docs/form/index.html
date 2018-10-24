@@ -117,26 +117,31 @@
 						<p>Use the right side of the grid to explain the tagline a bit more. What are your goals? How do you do your work? Write in the present tense, and stay brief here. People who are interested can find details on internal pages.</p>
 						<form>
 							<div class="form-item">
-								<label for="firstname-input" class="label--block"> First Name <span class="form-required">(Required)</span></label>
-								<input class="au-text-input" name="firstname-input" id="firstname-input" type="text" required>
+								<label for="first-name" class="label--block"> First Name <span class="form-required">(Required)</span></label>
+								<input class="au-text-input" name="first-name" id="first-name" type="text" required>
 							</div>
 
 							<div class="form-item">
-								<label for="surname-input" class="label--block"> Surname <span class="form-required">(Required)</span></label>
-								<input class="au-text-input" name="surname-input" id="surname-input" type="text" required>
+								<label for="surname" class="label--block"> Surname <span class="form-required">(Required)</span></label>
+								<input class="au-text-input" name="surname" id="surname" type="text" required>
 							</div>
 
 							<!--RADIO OPTIONS-->
 							<div class="form-item">
 								 Preferred contact method <span class="form-required">(Required)</span>
 								<label class="au-control-input au-control-input--block">
-									<input class="au-control-input__input" type="radio" name="radio-ex">
+									<input class="au-control-input__input" type="radio" name="contact-method" required>
 									<span class="au-control-input__text">Don't contact me</span>
 								</label>
 
 								<label class="au-control-input au-control-input--block">
-									<input class="au-control-input__input" type="radio" name="radio-ex" checked>
+									<input class="au-control-input__input" type="radio" name="contact-method" required>
 									<span class="au-control-input__text">Email</span>
+								</label>
+
+								<label class="au-control-input au-control-input--block">
+									<input class="au-control-input__input" type="radio" name="contact-method" required>
+									<span class="au-control-input__text">Raven</span>
 								</label>
 							</div>
 
@@ -145,29 +150,29 @@
 								How did you hear about us?
 
 								<label class="au-control-input au-control-input--block">
-									<input class="au-control-input__input" type="checkbox" name="checkbox-ex">
+									<input class="au-control-input__input" type="checkbox" name="referral">
 									<span class="au-control-input__text">Google</span>
 								</label>
 
 								<label class="au-control-input au-control-input--block">
-									<input class="au-control-input__input" type="checkbox" name="checkbox-ex">
+									<input class="au-control-input__input" type="checkbox" name="referral">
 									<span class="au-control-input__text">Newspaper</span>
 								</label>
 
 								<label class="au-control-input au-control-input--block">
-									<input class="au-control-input__input" type="checkbox" name="checkbox-ex">
+									<input class="au-control-input__input" type="checkbox" name="referral">
 									<span class="au-control-input__text">Website</span>
 								</label>
 
 								<label class="au-control-input au-control-input--block">
-									<input class="au-control-input__input" type="checkbox" name="checkbox-ex">
+									<input class="au-control-input__input" type="checkbox" name="referral">
 									<span class="au-control-input__text">Other</span>
 								</label>
 							</div>
 
 							<div class="form-item">
-								<label for="comment-input-area"> How can we help you? <span class="form-required">(Required)</span></label>
-								<textarea class="au-text-input au-text-input--block" name="comment-input-area" id="comment-input-area" required></textarea>
+								<label for="help-comment"> How can we help you? <span class="form-required">(Required)</span></label>
+								<textarea class="au-text-input au-text-input--block" name="help-comment" id="help-comment" required></textarea>
 							</div>
 
 							<!--FORM SUBMIT BUTTON-->
