@@ -46,7 +46,7 @@
 	<!-- SKIP-LINKS -->
 	<nav class="au-skip-link">
 		<a class="au-skip-link__link" href="#content">Skip to main content</a>
-		<a class="au-skip-link__link" href="#nav">Skip to main navigation</a>
+		<a class="au-skip-link__link" href="#mainmenu">Skip to main navigation</a>
 	</nav>
 
 	<!-- HEADER -->
@@ -67,13 +67,13 @@
 	</header>
 
 	<!-- MAIN NAVIGATION -->
-	<nav class="au-main-nav au-main-nav--dark">
+	<nav class="au-main-nav au-main-nav--dark" id="#mainmenu" aria-label="main navigation">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="au-main-nav__content" id="nav">
+					<div class="au-main-nav__content" id="main-nav-default-dark">
 						<button
-							aria-controls="main-nav-default-alt"
+							aria-controls="main-nav-default-dark"
 							class="au-main-nav__toggle au-main-nav__toggle--open"
 							onClick="return AU.mainNav.Toggle( this )">
 							Menu
@@ -82,7 +82,7 @@
 							<div class="au-main-nav__menu-inner">
 								<div class="au-main-nav__focus-trap-top"></div>
 								<button
-									aria-controls="main-nav-default-alt"
+									aria-controls="main-nav-default-dark"
 									class="au-main-nav__toggle au-main-nav__toggle--close"
 									onClick="return AU.mainNav.Toggle( this )">
 									Close
@@ -97,7 +97,7 @@
 								<div class="au-main-nav__focus-trap-bottom"></div>
 							</div>
 						</div>
-						<div class="au-main-nav__overlay" aria-controls="main-nav-default-alt" onClick="return AU.mainNav.Toggle( this )"></div>
+						<div class="au-main-nav__overlay" aria-controls="main-nav-default-dark" onClick="return AU.mainNav.Toggle( this )"></div>
 					</div>
 				</div>
 			</div>
