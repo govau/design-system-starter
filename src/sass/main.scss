@@ -94,8 +94,6 @@ form {
 
 .form-required {
 	color: $AU-color-foreground-muted;
-	@include AU-fontgrid( xs, default );
-	border-bottom: 1px $AU-color-error solid;
 }
 
 
