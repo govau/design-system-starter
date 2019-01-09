@@ -1,5 +1,5 @@
 {
-	"name": "uikit-starterpack",
+	"name": "design-system-starter",
 	"version": "1.1.1",
 	"description": "The Australian Government Design System Starter Pack",
 	"scripts": {
@@ -13,7 +13,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/govau/uikit-starter.git"
+		"url": "https://github.com/govau/design-system-starter.git"
 	},
 	"author": {
 		"name": "Commonwealth of Australia, DTA",

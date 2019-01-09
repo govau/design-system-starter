@@ -1,4 +1,4 @@
-Australian Government Design System - Uikit Starter
+Australian Government Design System - Starter
 ==========================
 
 > Get started with full page templates using the Australian Government Design System.
@@ -7,9 +7,9 @@ Australian Government Design System - Uikit Starter
 
 Browse full page templates using the Australian Government Design System.
 
-- [Home page](https://govau.github.io/uikit-starter/)
-- [Basic page](https://govau.github.io/uikit-starter/basic)
-- [Form page](https://govau.github.io/uikit-starter/form)
+- [Home page](https://govau.github.io/design-system-starter/)
+- [Basic page](https://govau.github.io/design-system-starter/basic)
+- [Form page](https://govau.github.io/design-system-starter/form)
 
 
 ## Development environment
@@ -86,7 +86,7 @@ To contribute to the Australian Government Design System Starter Pack:
 
 ## License
 
-Copyright (c) Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the [MIT license](https://raw.githubusercontent.com/govau/uikit-starter/master/LICENSE).
+Copyright (c) Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the [MIT license](https://raw.githubusercontent.com/govau/design-system-starter/master/LICENSE).
 
 
 **[⬆ back to top](#contents)**
