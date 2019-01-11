@@ -100,7 +100,7 @@
 		"sass": {
 			"modules": false,
 			"location": "src/sass/",
-			"name": "_uikit.scss"
+			"name": "_auds.scss"
 		},
 		"js": {
 			"minified": true,
