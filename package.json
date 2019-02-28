@@ -4,12 +4,12 @@
 	"description": "The Australian Government Design System Starter Pack",
 	"scripts": {
 		"build:autoprefix": "postcss docs/css/main.css -u autoprefixer -r",
-		"build:css": "node-sass --output-style compressed src/sass/main.scss docs/css/main.css",
+		"build:css": "node-sass --output-style compressed \"./src/sass/main.scss\" \"./docs/css/main.css\"",
 		"build:css:dev": "node-sass --output-style compact --source-map true src/sass/main.scss docs/css/main.css",
 		"build": "npm run build:css && npm run build:autoprefix",
-		"watch:sass": "onchange './src/sass/**/*.scss' -- npm run build:css:dev && npm run build:autoprefix",
+		"watch:sass": "onchange \"./src/sass/tables.scss\" -- npm run build:css:dev && npm run build:autoprefix",
 		"serve": "browser-sync start --server ./docs -w --files \"./docs/index.html\" \"./docs/css/main.css\" \"./docs/js/script.js\"",
-		"watch": "npm run build && npm run serve & npm run watch:sass"
+		"watch": "npm run build && npm-run-all --parallel serve watch:sass"
 	},
 	"repository": {
 		"type": "git",
@@ -45,6 +45,7 @@
 	"license": "MIT",
 	"devDependencies": {
 		"browser-sync": "^2.24.7",
+		"npm-run-all": "^4.1.5",
 		"onchange": "^4.1.0"
 	},
 	"dependencies": {
