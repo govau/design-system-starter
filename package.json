@@ -7,7 +7,7 @@
 		"build:css": "node-sass --output-style compressed \"./src/sass/main.scss\" \"./docs/css/main.css\"",
 		"build:css:dev": "node-sass --output-style compact --source-map true src/sass/main.scss docs/css/main.css",
 		"build": "npm run build:css && npm run build:autoprefix",
-		"watch:sass": "onchange \"./src/sass/tables.scss\" -- npm run build:css:dev && npm run build:autoprefix",
+		"watch:sass": "onchange \"./src/sass/main.scss\" -- npm run build:css:dev && npm run build:autoprefix",
 		"serve": "browser-sync start --server ./docs -w --files \"./docs/index.html\" \"./docs/css/main.css\" \"./docs/js/script.js\"",
 		"watch": "npm run build && npm-run-all --parallel serve watch:sass"
 	},
@@ -60,6 +60,7 @@
 		"@gov.au/cta-link": "latest",
 		"@gov.au/direction-links": "latest",
 		"@gov.au/footer": "latest",
+		"@gov.au/form": "^0.1.0",
 		"@gov.au/grid-12": "latest",
 		"@gov.au/header": "latest",
 		"@gov.au/headings": "latest",
