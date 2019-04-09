@@ -96,10 +96,12 @@ function setInvalid( field, message ) {
 	if ( !HasClass( field, 'au-text-input--invalid' ) ) {
 		AddClass( field, 'au-text-input--invalid' );
 	};
+
 	var errorField = field.nextElementSibling;
 	RemoveClass( errorField, 'hide_content' );
 	errorField.innerHTML = message;
 
+	field.setAttribute( 'aria-invalid', true );
 	AddErrors( field, message );
 }
 
@@ -118,6 +120,7 @@ function setValid( field ) {
 
 	errorField.innerHTML = '';
 	RemoveErrors( field );
+	field.setAttribute( 'aria-invalid', false );
 };
 
 /**

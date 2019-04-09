@@ -129,9 +129,9 @@
 
 							<div class="au-form-group">
 								<label for="email" class="au-label">Email</label>
-								<span class="au-hint-text">We will only use this to respond to your request</span>
-								<input class="au-text-input au-text-input--width-lg" name="Email" id="email" type="text" aria-required="true">
-								<span class="au-error-text hide_content"></span>
+								<span class="au-hint-text" id="email-hint">We will only use this to respond to your request</span>
+								<input class="au-text-input au-text-input--width-lg" name="Email" id="email" type="text" aria-required="true" aria-describedby="email-hint email-error">
+								<span class="au-error-text hide_content" id="email-error"></span>
 							</div>
 
 							<!--RADIO OPTIONS-->
@@ -159,9 +159,9 @@
 
 							<div class="au-form-group">
 								<label class="au-label" for="help-comment"> How can we help you?</label>
-								<span class="au-hint-text">Add some detail about your complaint, suggestion or compliment. Minimum 10 characters</span>
-								<textarea class="au-text-input au-text-input--block" name="Description" id="help-comment" aria-required="true"></textarea>
-								<span class="au-error-text hide_content"></span>
+								<span class="au-hint-text" id="description-hint">Add some detail about your complaint, suggestion or compliment. Minimum 10 characters</span>
+								<textarea class="au-text-input au-text-input--block" name="Description" id="help-comment" aria-required="true" aria-describedby="description-hint"></textarea>
+								<span class="au-error-text hide_content" id="description-error"></span>
 							</div>
 
 							<!--FORM SUBMIT BUTTON-->
