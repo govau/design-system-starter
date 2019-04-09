@@ -7,12 +7,14 @@ const errorSummaryMessages = document.querySelector( '#error-summary p' );
 const errorMessageHeading  = document.querySelector( '#error-summary h3' );
 const errors               = { name: '' , email: '' , 'help-comment': ''};
 
-
+/**
+ * Add event listener when form submitted
+ */
 form.addEventListener( 'submit', function( event ) {
 	if ( validateForm() ) {
 	}
 	else {
-		event.preventDefault();
+		PreventEvent( event );
 		generateErrorSummary();
 		RemoveClass( errorSummary, 'hide_content' );
 		errorMessageHeading.focus();
@@ -20,13 +22,16 @@ form.addEventListener( 'submit', function( event ) {
 });
 
 // Validation
-
+/**
+ * Validate all fields on the form
+ *
+ */
 function validateForm() {
-	var formValid  = false;
-	formValid = validateName();
-	formValid = validateEmail();
-	formValid =validateHelpDescription();
-	return formValid;
+	var isFormValid  = false;
+	isFormValid = validateName();
+	isFormValid = validateEmail();
+	isFormValid = validateHelpDescription();
+	return isFormValid;
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -55,9 +60,7 @@ function validateEmail() {
  */
 function validateHelpDescription() {
 	if( isEmpty( helpDescription )) return;
-
 	if ( !meetLength( helpDescription, 10, 100 ) ) return;
-
 	return true;
 }
 
@@ -75,11 +78,11 @@ function validateHelpDescription() {
 function isEmpty( field ) {
 	if ( field.value.trim() === '' ) {
 		// set field invalid
-		setInvalid( field, `${field.name} must not be empty`);
+		setInvalid( field, `${ field.name } must not be empty`);
 		return true;
 	} else {
 		// set field valid
-		setValid(field);
+		setValid( field );
 		return false;
 	}
 };
@@ -90,18 +93,18 @@ function isEmpty( field ) {
  * @param {String} message     - The error message to be displayed
  */
 function setInvalid( field, message ) {
-	if ( !HasClass( field, 'au-text-input--invalid' )) {
-		AddClass( field, 'au-text-input--invalid');
+	if ( !HasClass( field, 'au-text-input--invalid' ) ) {
+		AddClass( field, 'au-text-input--invalid' );
 	};
 	var errorField = field.nextElementSibling;
-	RemoveClass(errorField, 'hide_content');
+	RemoveClass( errorField, 'hide_content' );
 	errorField.innerHTML = message;
 
 	AddErrors( field, message );
 }
 
 /**
- *
+ * Sets a field to be valid. Removes any error messages and stylings
  * @param {HTMLElement} field  - The field to set valid
  */
 function setValid( field ) {
@@ -123,7 +126,7 @@ function setValid( field ) {
  * @param {String} message     - The error message to be shown in the error sumamry
  */
 function AddErrors( field, message ) {
-	errors[field.id] = '<p><a onclick="stopUrlChange(event)" data-id="'+field.id+'" href="#' + field.id +'">' + message + '</a></p>';
+	errors[ field.id ] = '<p><a onclick="stopUrlChange(event)" data-id="'+field.id+'" href="#' + field.id +'">' + message + '</a></p>';
 };
 
 /**
@@ -142,15 +145,12 @@ function RemoveErrors( field ) {
  */
 function containsCharacters( field, code ) {
 	var regEx;
-	switch (code) {
+	switch ( code ) {
 		case "EMAIL":
 			// Email pattern
 			regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 			return matchWithRegEx(regEx, field, 'Enter an email in a valid format, like name@example.com');
 		//another example
-		case "PASSWORD":
-			regEx = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
-			return matchWithRegEx( regEx, field, 'Password needs an uppercase letter' );
 		default:
 			return false;
 	}
@@ -159,8 +159,8 @@ function containsCharacters( field, code ) {
 /**
  *
  * @param {RegExp} regEx  - The reg ex type to match the field with
- * @param {*} field       - The text field to test against
- * @param {*} message     - The error message to be displayed if invalid
+ * @param {HTMLElement} field       - The text field to test against
+ * @param {String} message     - The error message to be displayed if invalid
  */
 function matchWithRegEx(regEx, field, message) {
 	if (field.value.match(regEx)) {
@@ -173,10 +173,10 @@ function matchWithRegEx(regEx, field, message) {
 };
 
 /**
- *
- * @param {HTMLElement} field
- * @param {String} minLength
- * @param {String} maxLength
+ * Checks if a field meets length requirements
+ * @param {HTMLElement} field  - the field to check against
+ * @param {String} minLength   - the minimum length of the field
+ * @param {String} maxLength   - the maximum length of the field
  */
 function meetLength( field, minLength, maxLength ) {
 	if ( field.value.trim().length >= minLength && field.value.trim().length <= maxLength ) {
@@ -190,6 +190,9 @@ function meetLength( field, minLength, maxLength ) {
 	}
 }
 
+/**
+ * Generates the error summary on top of page in the page alert
+ */
 function generateErrorSummary() {
 	var errorSummary = "";
 
@@ -202,7 +205,8 @@ function generateErrorSummary() {
 	errorSummaryMessages.innerHTML = errorSummary;
 }
 
+//Stop url changing when clicking in links in the error message summary
 function stopUrlChange( event ){
-	event.preventDefault();
-	document.getElementById(event.target.getAttribute('data-id')).focus();
+	PreventDefault( event );
+	document.getElementById( event.target.getAttribute('data-id') ).focus();
 }
