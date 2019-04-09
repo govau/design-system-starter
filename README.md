@@ -66,6 +66,16 @@ The `docs` folder in the contains all the files required to publish a website. T
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+## Prerequisites
+- [`Node.js`](https://nodejs.org) **8 or higher**, preferably the current LTS version.
+
+> **NOTE:** If you're developing on Windows, please ensure that [your local `npm` configuration is using a shell that supports UNIX like folder pathing](https://stackoverflow.com/questions/23243353/how-to-set-shell-for-npm-run-scripts-in-windows) ( i.e `a/unix/path`  rather than `a\\windows\\path` ).
+
+**[⬆ back to top](#contents)**
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## Contributing
 
