@@ -2,7 +2,7 @@ const fullName             = document.getElementById( 'name' );
 const email                = document.getElementById( 'email' );
 const helpDescription      = document.getElementById( 'help-comment' );
 const form                 = document.querySelector( 'form' );
-const errorSummary         = document.getElementById('error-summary');
+const errorSummary         = document.getElementById( 'error-summary' );
 const errorSummaryMessages = document.querySelector( '#error-summary p' );
 const errorMessageHeading  = document.querySelector( '#error-summary h3' );
 const errors               = { name: '' , email: '' , 'help-comment': ''};
@@ -11,9 +11,7 @@ const errors               = { name: '' , email: '' , 'help-comment': ''};
  * Add event listener when form submitted
  */
 form.addEventListener( 'submit', function( event ) {
-	if ( validateForm() ) {
-	}
-	else {
+	if ( !validateForm() ) {
 		PreventEvent( event );
 		generateErrorSummary();
 		RemoveClass( errorSummary, 'hide_content' );
@@ -21,7 +19,7 @@ form.addEventListener( 'submit', function( event ) {
 	}
 });
 
-// Validation
+
 /**
  * Validate all fields on the form
  *
@@ -46,6 +44,7 @@ function validateName() {
 	return true;
 };
 
+
 /**
  * Validates email field
  */
@@ -54,6 +53,7 @@ function validateEmail() {
 	if( !containsCharacters( email, "EMAIL" )) return;
 	return true;
 };
+
 
 /**
  * Validates description field
@@ -87,6 +87,7 @@ function isEmpty( field ) {
 	}
 };
 
+
 /**
  * Displays error text and sets field to invalid
  * @param {HTMLElement} field  - The field to set invalid
@@ -104,6 +105,7 @@ function setInvalid( field, message ) {
 	field.setAttribute( 'aria-invalid', true );
 	AddErrors( field, message );
 }
+
 
 /**
  * Sets a field to be valid. Removes any error messages and stylings
@@ -123,6 +125,7 @@ function setValid( field ) {
 	field.setAttribute( 'aria-invalid', false );
 };
 
+
 /**
  * Adds the error messages to an error message summary which is displayed when the form is submitted
  * @param {HTMLElement} field  - The field to add errors to
@@ -131,6 +134,7 @@ function setValid( field ) {
 function AddErrors( field, message ) {
 	errors[ field.id ] = '<p><a onclick="stopUrlChange(event)" data-id="'+field.id+'" href="#' + field.id +'">' + message + '</a></p>';
 };
+
 
 /**
  * Removes errors from the errors array if valid
@@ -159,6 +163,7 @@ function containsCharacters( field, code ) {
 	}
 };
 
+
 /**
  *
  * @param {RegExp} regEx  - The reg ex type to match the field with
@@ -174,6 +179,7 @@ function matchWithRegEx(regEx, field, message) {
 		return false;
 	}
 };
+
 
 /**
  * Checks if a field meets length requirements
@@ -193,6 +199,7 @@ function meetLength( field, minLength, maxLength ) {
 	}
 }
 
+
 /**
  * Generates the error summary on top of page in the page alert
  */
@@ -207,6 +214,7 @@ function generateErrorSummary() {
 	}
 	errorSummaryMessages.innerHTML = errorSummary;
 }
+
 
 //Stop url changing when clicking in links in the error message summary
 function stopUrlChange( event ){
