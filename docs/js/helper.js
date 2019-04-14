@@ -61,7 +61,3 @@ function GetStyle( element, property ) {
 			: element.currentStyle
 	)[ property ]; // avoid getPropertyValue altogether
 }
-
-function PreventEvent( event ) {
-	event.preventDefault ? event.preventDefault() : ( event.returnValue = false );
-}

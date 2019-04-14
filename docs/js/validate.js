@@ -218,6 +218,6 @@ function generateErrorSummary() {
 
 //Stop url changing when clicking in links in the error message summary
 function stopUrlChange( event ){
-	PreventDefault( event );
+	PreventEvent( event );
 	document.getElementById( event.target.getAttribute('data-id') ).focus();
 }
