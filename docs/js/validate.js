@@ -7,6 +7,7 @@ var errorSummaryMessages = document.getElementById( 'error-list' );
 var errorMessageHeading  = document.getElementById( 'error-heading' );
 var errors               = { name: '' , email: '' , 'help-comment': ''};
 
+
 /**
  * Add event listener when form submitted
  */
@@ -32,16 +33,17 @@ function validateForm() {
 	return isFormValid;
 }
 
+
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Field validation functions
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 /**
  * Validates name field
  */
 function validateName() {
-	if( isFieldEmpty( fullName )) return;
-	return true;
+	return isFieldEmpty( fullName );
 };
 
 
@@ -69,10 +71,13 @@ function validateHelpDescription() {
 // UTILITY FUNCTIONS
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
 /**
  * Checks to see if a text field is empty
- * @param {HTMLInputElement} field    - The html input element
- * @return {boolean}                  - False if not empty
+ * 
+ * @param { HTMLInputElement } field    - The html input element
+ * 
+ * @return {boolean}                    - False if not empty
  */
 function isFieldEmpty( field ) {
 	if ( field.value.trim() === '' ) {
@@ -89,8 +94,9 @@ function isFieldEmpty( field ) {
 
 /**
  * Displays error text and sets field to invalid
- * @param {HTMLElement} field  - The field to set invalid
- * @param {String} message     - The error message to be displayed
+ * 
+ * @param { HTMLElement } field  - The field to set invalid
+ * @param { string } message     - The error message to be displayed
  */
 function setInvalid( field, message ) {
 	if ( !HasClass( field, 'au-text-input--invalid' ) ) {
@@ -109,7 +115,8 @@ function setInvalid( field, message ) {
 
 /**
  * Sets a field to be valid. Removes any error messages and stylings
- * @param {HTMLElement} field  - The field to set valid
+ * 
+ * @param { HTMLElement } field  - The field to set valid
  */
 function setValid( field ) {
 	//the error span element
@@ -129,8 +136,9 @@ function setValid( field ) {
 
 /**
  * Adds the error messages to an error message summary which is displayed when the form is submitted
- * @param {HTMLElement} field  - The field to add errors to
- * @param {String} message     - The error message to be shown in the error sumamry
+ * 
+ * @param { HTMLElement } field  - The field to add errors to
+ * @param { string } message     - The error message to be shown in the error sumamry
  */
 function AddError( field, message ) {
 	errors[ field.id ] = '<li><a onclick="stopUrlChange(event)" data-id="'+field.id+'" href="#' + field.id +'">' + message + '</a></li>';
@@ -139,7 +147,8 @@ function AddError( field, message ) {
 
 /**
  * Removes errors from the errors array if the field is valid
- * @param {HTMLElement} field  - The html form control to remove errors from
+ * 
+ * @param { HTMLElement } field  - The html form control to remove errors from
  */
 function RemoveError( field ) {
 	errors[field.id] = "";
@@ -148,8 +157,9 @@ function RemoveError( field ) {
 
 /**
  * Checks to see if a field contains a pattern
- * @param {HTMLElement} field  - The field to be validated against
- * @param {String} code        - The type of
+ * 
+ * @param { HTMLElement } field  - The field to be validated against
+ * @param { string } code        - The type of
  */
 function matchExpression( field, code ) {
 	var regEx;
@@ -167,9 +177,11 @@ function matchExpression( field, code ) {
 
 
 /**
- * @param {RegExp} regEx  - The reg ex type to match the field with
- * @param {HTMLElement} field       - The text field to test against
- * @param {String} message     - The error message to be displayed if invalid
+ * Match
+ * 
+ * @param {RegExp} regEx         - The reg ex type to match the field with
+ * @param { HTMLElement } field    - The text field to test against
+ * @param { string } message       - The error message to be displayed if invalid
  */
 function matchWithRegEx( regEx, field, message ) {
 	if ( field.value.match( regEx ) ) {
@@ -184,9 +196,10 @@ function matchWithRegEx( regEx, field, message ) {
 
 /**
  * Checks if a field meets length requirements
- * @param {HTMLElement} field  - the field to check against
- * @param {String} minLength   - the minimum length of the field
- * @param {String} maxLength   - the maximum length of the field
+ * 
+ * @param { HTMLElement } field  - the field to check against
+ * @param { string } minLength   - the minimum length of the field
+ * @param { string } maxLength   - the maximum length of the field
  */
 function meetLength( field, minLength, maxLength ) {
 	// If field length meets requirements
@@ -221,6 +234,7 @@ function generateErrorSummary() {
 
 /**
  * Stop url changing when clicking in links in the error message summary and focus on selected field
+ * 
  * @param { Object } event
  */
 function stopUrlChange( event ){
