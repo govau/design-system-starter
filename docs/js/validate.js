@@ -3,7 +3,7 @@ var email                = document.getElementById( 'email' );
 var helpDescription      = document.getElementById( 'help-comment' );
 var button                 = document.getElementById( 'form-submit' );
 var errorSummary         = document.getElementById( 'error-summary' );
-var errorSummaryMessages = document.querySelector( '#error-summary p' );
+var errorSummaryMessages = document.querySelector( '#error-summary ul' );
 var errorMessageHeading  = document.querySelector( '#error-summary h3' );
 var errors               = { name: '' , email: '' , 'help-comment': ''};
 
@@ -19,7 +19,6 @@ AddEvent( button, 'click', function( event, $this ) {
 		errorMessageHeading.focus();
 	}
 });
-
 
 
 /**
@@ -132,8 +131,10 @@ function setValid( field ) {
  * @param {HTMLElement} field  - The field to add errors to
  * @param {String} message     - The error message to be shown in the error sumamry
  */
+
+
 function AddError( field, message ) {
-	errors[ field.id ] = '<p><a onclick="stopUrlChange(event)" data-id="'+field.id+'" href="#' + field.id +'">' + message + '</a></p>';
+	errors[ field.id ] = '<li><a onclick="stopUrlChange(event)" data-id="'+field.id+'" href="#' + field.id +'">' + message + '</a></li>';
 };
 
 
