@@ -14,7 +14,6 @@ AddEvent( formSubmit, 'click', function( event, $this ) {
 	if ( !validateForm() ) {
 		PreventEvent( event );
 		RemoveClass( errorSummary, 'hide_content' );
-		console.log(errorSummaryMessages)
 		generateErrorSummary();
 		errorMessageHeading.focus();
 	}
@@ -226,5 +225,8 @@ function generateErrorSummary() {
  */
 function stopUrlChange( event ){
 	PreventEvent( event );
-	document.getElementById( event.target.getAttribute('data-id') ).focus();
+
+	//ie8 polyfill
+	var eventTarget = event.target || event.srcElement;
+	document.getElementById( eventTarget.getAttribute('data-id') ).focus();
 }

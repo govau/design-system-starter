@@ -62,9 +62,23 @@ function GetStyle( element, property ) {
 	)[ property ]; // avoid getPropertyValue altogether
 }
 
-
+//polyfill for IE
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim#Polyfill
 if(typeof String.prototype.trim !== 'function') {
 	String.prototype.trim = function() {
 	  return this.replace(/^\s+|\s+$/g, '');
 	};
+}
+
+// polyfill for ie8
+// https://developer.mozilla.org/en-US/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling#Polyfill_for_Internet_Explorer_8
+if(!("nextElementSibling" in document.documentElement)){
+    Object.defineProperty(Element.prototype, "nextElementSibling", {
+        get: function(){
+            var e = this.nextSibling;
+            while(e && 1 !== e.nodeType)
+                e = e.nextSibling;
+            return e;
+        }
+    });
 }
