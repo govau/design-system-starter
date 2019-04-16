@@ -1,16 +1,17 @@
-const fullName             = document.getElementById( 'name' );
-const email                = document.getElementById( 'email' );
-const helpDescription      = document.getElementById( 'help-comment' );
-const form                 = document.querySelector( 'form' );
-const errorSummary         = document.getElementById( 'error-summary' );
-const errorSummaryMessages = document.querySelector( '#error-summary p' );
-const errorMessageHeading  = document.querySelector( '#error-summary h3' );
-const errors               = { name: '' , email: '' , 'help-comment': ''};
+var fullName             = document.getElementById( 'name' );
+var email                = document.getElementById( 'email' );
+var helpDescription      = document.getElementById( 'help-comment' );
+var button                 = document.getElementById( 'form-submit' );
+var errorSummary         = document.getElementById( 'error-summary' );
+var errorSummaryMessages = document.querySelector( '#error-summary p' );
+var errorMessageHeading  = document.querySelector( '#error-summary h3' );
+var errors               = { name: '' , email: '' , 'help-comment': ''};
 
 /**
  * Add event listener when form submitted
  */
-form.addEventListener( 'submit', function( event ) {
+AddEvent( button, 'click', function( event, $this ) {
+	// form.addEventListener('submit', function( event ){
 	if ( !validateForm() ) {
 		PreventEvent( event );
 		generateErrorSummary();
@@ -18,6 +19,7 @@ form.addEventListener( 'submit', function( event ) {
 		errorMessageHeading.focus();
 	}
 });
+
 
 
 /**
@@ -40,7 +42,7 @@ function validateForm() {
  * Validates name field
  */
 function validateName() {
-	if( isEmpty( fullName )) return;
+	if( isFieldEmpty( fullName )) return;
 	return true;
 };
 
@@ -49,8 +51,8 @@ function validateName() {
  * Validates email field
  */
 function validateEmail() {
-	if( isEmpty( email )) return;
-	if( !containsCharacters( email, "EMAIL" )) return;
+	if( isFieldEmpty( email )) return;
+	if( !matchExpression( email, "EMAIL" )) return;
 	return true;
 };
 
@@ -59,7 +61,7 @@ function validateEmail() {
  * Validates description field
  */
 function validateHelpDescription() {
-	if( isEmpty( helpDescription )) return;
+	if( isFieldEmpty( helpDescription )) return;
 	if ( !meetLength( helpDescription, 10, 100 ) ) return;
 	return true;
 }
@@ -69,16 +71,15 @@ function validateHelpDescription() {
 // UTILITY FUNCTIONS
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
 /**
  * Checks to see if a text field is empty
  * @param {HTMLInputElement} field    - The html input element
  * @return {boolean}                  - False if not empty
  */
-function isEmpty( field ) {
+function isFieldEmpty( field ) {
 	if ( field.value.trim() === '' ) {
 		// set field invalid
-		setInvalid( field, `${ field.name } must not be empty`);
+		setInvalid( field,  field.name + ' must not be empty');
 		return true;
 	} else {
 		// set field valid
@@ -103,7 +104,7 @@ function setInvalid( field, message ) {
 	errorField.innerHTML = message;
 
 	field.setAttribute( 'aria-invalid', true );
-	AddErrors( field, message );
+	AddError( field, message );
 }
 
 
@@ -121,7 +122,7 @@ function setValid( field ) {
 	RemoveClass( field, 'au-text-input--invalid');
 
 	errorField.innerHTML = '';
-	RemoveErrors( field );
+	RemoveError( field );
 	field.setAttribute( 'aria-invalid', false );
 };
 
@@ -131,16 +132,16 @@ function setValid( field ) {
  * @param {HTMLElement} field  - The field to add errors to
  * @param {String} message     - The error message to be shown in the error sumamry
  */
-function AddErrors( field, message ) {
+function AddError( field, message ) {
 	errors[ field.id ] = '<p><a onclick="stopUrlChange(event)" data-id="'+field.id+'" href="#' + field.id +'">' + message + '</a></p>';
 };
 
 
 /**
- * Removes errors from the errors array if valid
+ * Removes errors from the errors array if the field is valid
  * @param {HTMLElement} field  - The html form control to remove errors from
  */
-function RemoveErrors( field ) {
+function RemoveError( field ) {
 	errors[field.id] = "";
 };
 
@@ -150,13 +151,14 @@ function RemoveErrors( field ) {
  * @param {HTMLElement} field  - The field to be validated against
  * @param {String} code        - The type of
  */
-function containsCharacters( field, code ) {
+function matchExpression( field, code ) {
 	var regEx;
 	switch ( code ) {
 		case "EMAIL":
 			// Email pattern
+			// INCLUDE LINK
 			regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-			return matchWithRegEx(regEx, field, 'Enter an email in a valid format, like name@example.com');
+			return matchWithRegEx( regEx, field, 'Enter an email in a valid format, like name@example.com' );
 		//another example
 		default:
 			return false;
@@ -165,7 +167,6 @@ function containsCharacters( field, code ) {
 
 
 /**
- *
  * @param {RegExp} regEx  - The reg ex type to match the field with
  * @param {HTMLElement} field       - The text field to test against
  * @param {String} message     - The error message to be displayed if invalid
@@ -206,7 +207,7 @@ function meetLength( field, minLength, maxLength ) {
 function generateErrorSummary() {
 	var errorSummary = "";
 
-	for (var field in errors ) {
+	for ( var field in errors ) {
 
 		if ( errors[ field ] ){
 			errorSummary += errors[ field ];
@@ -216,7 +217,10 @@ function generateErrorSummary() {
 }
 
 
-//Stop url changing when clicking in links in the error message summary
+/**
+ * Stop url changing when clicking in links in the error message summary and focus on selected field
+ * @param { Object } event
+ */
 function stopUrlChange( event ){
 	PreventEvent( event );
 	document.getElementById( event.target.getAttribute('data-id') ).focus();

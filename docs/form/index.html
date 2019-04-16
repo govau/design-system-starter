@@ -120,17 +120,17 @@
 							<p></p>
 						</div>
 
-						<form action="index.html">
+						<form action="index.html" id="form-1">
 							<div class="au-form-group">
 								<label for="name" class="au-label">Full name</label>
-								<input class="au-text-input au-text-input--width-lg" name="Full name" id="name" type="text" aria-required="true" aria-describedby="full-name-error">
+								<input class="au-text-input au-text-input--width-lg" name="Full name" id="name" type="text" aria-required="true" aria-describedby="full-name-error" autocomplete="name">
 								<span class="au-error-text hide_content" id="full-name-error"></span>
 							</div>
 
 							<div class="au-form-group">
 								<label for="email" class="au-label">Email</label>
 								<span class="au-hint-text" id="email-hint">We will only use this to respond to your request</span>
-								<input class="au-text-input au-text-input--width-lg" name="Email" id="email" type="text" aria-required="true" aria-describedby="email-hint email-error">
+								<input class="au-text-input au-text-input--width-lg" name="Email" id="email" type="email" aria-required="true" aria-describedby="email-hint email-error" autocomplete="email">
 								<span class="au-error-text hide_content" id="email-error"></span>
 							</div>
 
@@ -166,7 +166,7 @@
 
 							<!--FORM SUBMIT BUTTON-->
 							<div class="au-form-group">
-								<button class="au-btn">Submit</button>
+								<button class="au-btn" id="form-submit" type="submit">Submit</button>
 							</div>
 						</form>
 					</div>
