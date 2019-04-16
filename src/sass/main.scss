@@ -85,39 +85,10 @@ form {
 	}
 }
 
-.form-item + .form-item {
-	@include AU-space( margin-top, 2.5unit );
+.hide_content {
+	display: none;
 }
 
-
-.form-required {
-	color: $AU-color-foreground-muted;
+.au-form-group + .au-form-group {
+	@include AU-space( 'margin-top', 2unit)
 }
-
-
-.label--block {
-	display: block;
-}
-
-// Reset empty required values
-.empty-required {
-
-	// Text inputs and text areas
-	&.au-text-input:invalid,
-	&.au-text-input.au-text-input--dark:invalid, {
-		background: transparent;
-		border-color: $AU-color-foreground-border;
-	}
-
-	// Radio buttons and control inputs
-	&.au-control-input__input:invalid + .au-control-input__text, {
-		background:transparent;
-	}
-
-	&.au-control-input__input:invalid + .au-control-input__text:after{
-		border-color: transparent;
-	}
-}
-
-
-
