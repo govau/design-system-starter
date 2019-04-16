@@ -89,6 +89,7 @@ form {
 	display: none;
 }
 
+//increase the space between form groups
 .au-form-group + .au-form-group {
 	@include AU-space( 'margin-top', 2unit)
 }
