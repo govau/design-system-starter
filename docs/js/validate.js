@@ -1,21 +1,21 @@
 var fullName             = document.getElementById( 'name' );
 var email                = document.getElementById( 'email' );
 var helpDescription      = document.getElementById( 'help-comment' );
-var button                 = document.getElementById( 'form-submit' );
+var formSubmit           = document.getElementById( 'form-submit' );
 var errorSummary         = document.getElementById( 'error-summary' );
-var errorSummaryMessages = document.querySelector( '#error-summary ul' );
-var errorMessageHeading  = document.querySelector( '#error-summary h3' );
+var errorSummaryMessages = document.getElementById( 'error-list' );
+var errorMessageHeading  = document.getElementById( 'error-heading' );
 var errors               = { name: '' , email: '' , 'help-comment': ''};
 
 /**
  * Add event listener when form submitted
  */
-AddEvent( button, 'click', function( event, $this ) {
-	// form.addEventListener('submit', function( event ){
+AddEvent( formSubmit, 'click', function( event, $this ) {
 	if ( !validateForm() ) {
 		PreventEvent( event );
-		generateErrorSummary();
 		RemoveClass( errorSummary, 'hide_content' );
+		console.log(errorSummaryMessages)
+		generateErrorSummary();
 		errorMessageHeading.focus();
 	}
 });
@@ -98,6 +98,7 @@ function setInvalid( field, message ) {
 		AddClass( field, 'au-text-input--invalid' );
 	};
 
+	// the error span element
 	var errorField = field.nextElementSibling;
 	RemoveClass( errorField, 'hide_content' );
 	errorField.innerHTML = message;
@@ -112,6 +113,7 @@ function setInvalid( field, message ) {
  * @param {HTMLElement} field  - The field to set valid
  */
 function setValid( field ) {
+	//the error span element
 	var errorField = field.nextElementSibling;
 
 	if ( !HasClass( errorField, 'hide_content' )) {
@@ -121,8 +123,8 @@ function setValid( field ) {
 	RemoveClass( field, 'au-text-input--invalid');
 
 	errorField.innerHTML = '';
-	RemoveError( field );
 	field.setAttribute( 'aria-invalid', false );
+	RemoveError( field );
 };
 
 
@@ -131,8 +133,6 @@ function setValid( field ) {
  * @param {HTMLElement} field  - The field to add errors to
  * @param {String} message     - The error message to be shown in the error sumamry
  */
-
-
 function AddError( field, message ) {
 	errors[ field.id ] = '<li><a onclick="stopUrlChange(event)" data-id="'+field.id+'" href="#' + field.id +'">' + message + '</a></li>';
 };
@@ -157,7 +157,7 @@ function matchExpression( field, code ) {
 	switch ( code ) {
 		case "EMAIL":
 			// Email pattern
-			// INCLUDE LINK
+			// reg ex patter found here: https://emailregex.com/
 			regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 			return matchWithRegEx( regEx, field, 'Enter an email in a valid format, like name@example.com' );
 		//another example
@@ -172,12 +172,12 @@ function matchExpression( field, code ) {
  * @param {HTMLElement} field       - The text field to test against
  * @param {String} message     - The error message to be displayed if invalid
  */
-function matchWithRegEx(regEx, field, message) {
-	if (field.value.match(regEx)) {
-		setValid(field);
+function matchWithRegEx( regEx, field, message ) {
+	if ( field.value.match( regEx ) ) {
+		setValid( field );
 		return true;
 	} else {
-		setInvalid(field, message);
+		setInvalid( field, message );
 		return false;
 	}
 };
@@ -190,6 +190,7 @@ function matchWithRegEx(regEx, field, message) {
  * @param {String} maxLength   - the maximum length of the field
  */
 function meetLength( field, minLength, maxLength ) {
+	// If field length meets requirements
 	if ( field.value.trim().length >= minLength && field.value.trim().length <= maxLength ) {
 		setValid( field );
 		return true;
@@ -206,15 +207,16 @@ function meetLength( field, minLength, maxLength ) {
  * Generates the error summary on top of page in the page alert
  */
 function generateErrorSummary() {
-	var errorSummary = "";
+	var errorSummaryList = "";
 
+	// loop over the error array and generate a list of errors
 	for ( var field in errors ) {
-
 		if ( errors[ field ] ){
-			errorSummary += errors[ field ];
+			errorSummaryList += errors[ field ];
 		}
 	}
-	errorSummaryMessages.innerHTML = errorSummary;
+	//add the list of errors to the unordered list in the page alert
+	errorSummaryMessages.innerHTML = errorSummaryList;
 }
 
 
