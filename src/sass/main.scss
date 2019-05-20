@@ -78,11 +78,6 @@ main > .au-body {
 
 form {
 	@include AU-space( margin-top, 2unit );
-
-	label + input,
-	label + textarea {
-		@include AU-space( margin-top, .5unit );
-	}
 }
 
 .hide_content {
