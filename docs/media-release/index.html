@@ -16,14 +16,14 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 
-	<title>Australian Government Design System | Home</title>
+	<title>Australian Government Design System | Form</title>
 
 	<script type="text/javascript">
 		var $html = document.documentElement; if ($html.classList) $html.classList.remove("no-js"), $html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
 	</script>
 
-	<link rel="icon" href="assets/favicons/favicon.ico">
-	<link type="text/css" rel="stylesheet" href="css/main.css">
+	<link rel="icon" href="../assets/favicons/favicon.ico">
+	<link type="text/css" rel="stylesheet" href="../css/main.css">
 
 	<!-- These are shivs to help modern html work in older internet explorer browsers -->
 	<!--[if lt IE 9]>
@@ -55,10 +55,10 @@
 			<div class="row">
 				<div class="col-md-12">
 					<a class="au-header__brand" href="#">
-						<img class="au-header__brand-image" alt="Insert alternate text here" src="assets/img/header-logo-agov.png">
+						<img class="au-header__brand-image" alt="Insert alternate text here" src="../assets/img/header-logo-agov.png">
 						<div class="au-header__text">
 						<h2 class="au-header__heading">Name of website</h2>
-						<div class="au-header__subline">Simple explanation of the website</div>
+						<div class="au-header__subline">Simple explaination of the website</div>
 						</div>
 					</a>
 				</div>
@@ -67,7 +67,7 @@
 	</header>
 
 	<!-- MAIN NAVIGATION -->
-	<nav class="au-main-nav au-main-nav--dark" id="#mainmenu" aria-label="main">
+	<nav class="au-main-nav au-main-nav--dark" id="mainmenu" aria-label="main">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
@@ -88,10 +88,10 @@
 									Close
 								</button>
 								<ul class="au-link-list">
-									<li class="active"><a href="#">Home</a></li>
-									<li><a href="basic">Basic page</a></li>
-									<li><a href="form">Form page</a></li>
-									<li><a href="media-release">Media Release</a></li>
+									<li><a href="../">Home</a></li>
+									<li><a href="../basic">Basic page</a></li>
+									<li><a href="../form/">Form page</a></li>
+									<li class="active"><a href="#">Media release</a></li>
 									<li><a href="#">Distinct from eachother</a></li>
 								</ul>
 								<div class="au-main-nav__focus-trap-bottom"></div>
@@ -107,72 +107,57 @@
 	<!-- MAIN BODY -->
 	<main id="content">
 		<!--CONTENT-->
-		<div class="au-body au-body--alt">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-sm-push-6">
-						<img class="au-responsive-media-img banner__image" src="assets/img/600x260.jpg" alt="Placeholder image 600x260">
-					</div>
-					<div class="col-xs-12 col-sm-6 col-sm-pull-6">
-						<h2>Hero callout</h2>
-						<p>Support the callout with some short explanatory text. You don't need more than a couple of sentences.</p>
-						<p>Use buttons to give your user a clear call to action about what to do next.</p>
-						<div class="btn-cta-group">
-							<a class="au-btn" href="#">Primary call to action</a>
-						</div>
-					</div>
+		<div class="au-body container-fluid">
+			<div class="row">
+			<article class="col-md-7 media-release">
+				<h1>Third release of the Trusted Digital Identity Framework</h1>
+				<p class="media-release__caption">
+					We’ve released the third part of the Trusted Digital Identity Framework (TDIF). TDIF sits across all elements of the digital identity program to ensure a consistent approach to usability, accessibility, privacy protection, security and more.
+				</p>
+				<div class="media-release__metadata">
+					<span>Published 10 April 2019</span>
+					<span>Digital Transformation Agency</span>
+					<span>John Smith</span>
 				</div>
+
+				<div class="media-release__article">
+					<p>Taking people on the journey through regular consultation is an important part of how we’re developing the TDIF. At this stage, we have heard from:</p>
+					<ul>
+						<li>federal, state and territory governments</li>
+						<li>privacy advocates</li>
+						<li>digital identity experts</li>
+						<li>the financial sector</li>
+						<li>industry groups</li>
+						<li>standards bodies</li>
+						<li>vendors</li>
+						<li>users and members of the public</li>
+					</ul>
+					<p>Following the consultation period in January, we’re releasing part 3 of the TDIF, which includes 3 new documents and updates to 9 existing documents.</p>
+					<figure class="media-release__figure">
+						<img src="../assets/img/600x260.jpg" class="responsive-media" alt="" />
+						<figcaption class="media-release__figure__caption">An optional caption</figcaption>
+					</figure>
+					<p>The main updates in this release include:</p>
+					<ul dir="ltr">
+						<li>an architectural overview that describes the functions of the TDIF participants and how they interact.</li>
+						<li>requirements for government agencies and organisations that wish to be accredited as attribute providers (this is a new type of accreditation class).</li>
+						<li>technical requirements for government agencies and organisations that wish to be accredited as identity providers and attribute providers.</li>
+						<li>updates to the accreditation process to include the ongoing accreditation obligations for TDIF participants. This includes the annual assessment and the conditions when re-accreditation will be required.</li>
+						<li>updates to the protective security requirements to ensure they align with the current edition (2018) of the Australian Government Protective Security Policy Framework and Information Security Manual.</li>
+						<li>updates to the attribute profile to allow the sharing of additional identity attributes under certain situations (for example, to investigate instances of fraud).</li>
+					</ul>
+					<p>As the program develops and we learn more about our users, we will continue to iterate the TDIF. The next release will focus on authorisations and the needs of people who act on behalf of others when interacting with government.</p>
+					<p>You can read more about how we’re developing the TDIF in a blog post from the director of digital identity policy, Shannon Peterson.</p>
+				</div>
+
+				<div class="au-media-contact au-callout">
+					<p>For media enquiries email us at <a href="mailto:media@dta.gov.au">media@dta.gov.au</a>&nbsp;or call&nbsp;<a href="tel:0261208704">02&nbsp;6120&nbsp;8704</a></p>
+					<p>For other enquiries email us at&nbsp;<a href="mailto:info@dta.gov.au">info@dta.gov.au</a></p>
+				</div>
+			</article>
 			</div>
 		</div>
-		<section class="au-body">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Some highlighted content</h2>
-						<p>Explain some important information upfront, what is the product or service. What is the role of it. How does the user get started using it. Keep this text simple and informative. Vestibulum non consequat tellus.</p>
 
-						<p>Nullam sollicitudin orci neque, ut condimentum ipsum blandit eu. Praesent eu sagittis elit.</p>
-
-						<p>Nullam ut nibh sed nunc molestie faucibus. Integer pulvinar sapien in porta fringilla. Cras et velit fermentum, pretium lacus gravida, egestas mauris. Explain some important information upfront, what is the product or service. What is the role of it. How does the user get started using it. Keep this text simple and informative.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="highlighted-section au-body au-body--dark au-body--alt">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-sm-4">
-							<img class="au-responsive-media-img banner__image" src="assets/img/100x100.jpg" alt="Placeholder image 100x100">
-						<h3>Small highlight</h3>
-						<p>A small explanation of the featured item this may include a link or a call to action.</p>
-					</div>
-					<div class="col-sm-4">
-						<img class="au-responsive-media-img banner__image" src="assets/img/100x100.jpg" alt="Placeholder image 100x100">
-						<h3>Small highlight</h3>
-						<p>A small explanation of the featured item this may include a link or a call to action.</p>
-					</div>
-					<div class="col-sm-4">
-						<img class="au-responsive-media-img banner__image" src="assets/img/100x100.jpg" alt="Placeholder image 100x100">
-						<h3>Small highlight</h3>
-						<p>A small explanation of the featured item this may include a link or a call to action.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="au-body">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Sub content</h2>
-						<p>Content that is important to have on the home page but not so important that it has to be visible at the top of the page. This could include contact information, more detailed explanation of the functionality of a product or service.</p>
-						<div class="btn-cta-group">
-							<a class="au-btn" href="#">Primary call to action</a>
-							<a class="au-btn au-btn--secondary" href="#">Secondary call to action</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
 		<!--END CONTENT-->
 	</main>
 	<!-- END MAIN BODY -->
@@ -199,7 +184,9 @@
 	</footer>
 
 	<!-- The javascript from pancake to open and close side nav on desktop -->
-	<script type="text/javascript" src="js/script.min.js"></script>
+	<script type="text/javascript" src="../js/script.min.js"></script>
+	<script type="text/javascript" src="../js/helper.js"></script>
+	<script type="text/javascript" src="../js/validate.js"></script>
 </body>
 
 </html>
