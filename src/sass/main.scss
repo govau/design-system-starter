@@ -88,7 +88,3 @@ form {
 .au-form-group + .au-form-group {
 	@include AU-space( 'margin-top', 2unit)
 }
-
-hr {
-	border-color: lightgray !important;
-}
