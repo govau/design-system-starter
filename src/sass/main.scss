@@ -28,7 +28,7 @@ main > .au-body {
 
 }
 
-main #banner {
+main .banner {
 
 	@include AU-media( sm ) {
 		@include AU-space( padding, 4unit 0 );
