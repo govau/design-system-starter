@@ -60,17 +60,6 @@ main > .banner {
 	}
 }
 
-
-// Home page highlighted spacing on mobile
-.highlighted-section .col-sm-4 + .col-sm-4 {
-	@include AU-space( margin-top, 4unit );
-
-	@include AU-media( sm ) {
-		margin-top: 0;
-	}
-}
-
-
 // Mobile side nav spacing
 .au-side-nav {
 	@include AU-space( margin-bottom, 2unit );
