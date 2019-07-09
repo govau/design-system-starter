@@ -26,6 +26,10 @@ body {
 main > .au-body {
 	@include AU-space( padding, 2unit 0 );
 
+}
+
+main > .banner {
+
 	@include AU-media( sm ) {
 		@include AU-space( padding, 4unit 0 );
 	}
@@ -55,17 +59,6 @@ main > .au-body {
 		@include AU-space( margin-top, 1unit );
 	}
 }
-
-
-// Home page highlighted spacing on mobile
-.highlighted-section .col-sm-4 + .col-sm-4 {
-	@include AU-space( margin-top, 4unit );
-
-	@include AU-media( sm ) {
-		margin-top: 0;
-	}
-}
-
 
 // Mobile side nav spacing
 .au-side-nav {
