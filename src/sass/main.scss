@@ -81,3 +81,34 @@ form {
 .au-form-group + .au-form-group {
 	@include AU-space( 'margin-top', 2unit)
 }
+
+hr {
+	border-color: lightgray !important;
+}
+
+.media-release__caption {
+	color: $AU-color-foreground-muted;
+	@include AU-fontgrid('md');
+}
+
+.media-release__metadata {
+	border-top: lightgray solid 2px !important;
+	border-bottom: lightgray solid 2px !important;
+	@include AU-space( 'margin', 1.5unit 0 2.5unit 0 );
+	@include AU-space( 'padding', 1unit 0 1unit 0 );
+	@include AU-fontgrid('xs');
+
+	span {
+		display: block;
+	}
+
+}
+
+.media-release__figure__caption {
+	color: $AU-color-foreground-muted;
+	@include AU-fontgrid( sm );
+}
+
+.media-release__last-updated{
+	float: right;
+}
