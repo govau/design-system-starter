@@ -3,6 +3,21 @@ Australian Government Design System - Starter
 
 > Get started with full page templates using the Australian Government Design System.
 
+## Contents
+
+
+* [Templates](#templates)
+* [Development environment](#development-environment)
+* [Get started](#get-started)
+* [How it works](#how-it-works)
+* [Prerequisites](#prerequisites)
+* [Contributing](#contributing)
+* [License](#license)
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 ## Templates
 
 Browse full page templates using the Australian Government Design System.
