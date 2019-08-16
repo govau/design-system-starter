@@ -56,30 +56,6 @@
 		</script>
 	<![endif]-->
 	
-	<style type="text/css">
-		ol.search-results {
-			list-style: none;
-			padding-left: 0;
-		}
-		
-		.search-results .search-result {
-			margin-bottom: 1.5rem;
-		}
-		
-		.search-results .search-result h3 {
-			font-weight: normal;
-		}
-		
-		.search-results .search-result p {
-			margin-top: 0;
-		}
-		
-		.search-results mark {
-			background-color: yellow;
-			color: inherit;
-		}
-	</style>
-
 </head>
 
 <!-- BODY -->
@@ -88,6 +64,7 @@
 
 	<!-- SKIP-LINKS -->
 	<nav class="au-skip-link">
+		<a class="au-skip-link__link" href="#search-results">Skip to search results</a>
 		<a class="au-skip-link__link" href="#content">Skip to main content</a>
 		<a class="au-skip-link__link" href="#mainmenu">Skip to main navigation</a>
 	</nav>
@@ -153,14 +130,19 @@
 		<!--CONTENT-->
 		<div class="au-body container-fluid">
 			<div class="row">     			
-				<h1>Search results for SEARCHTERM</h1>
-        
-				<!-- SEARCH INPUT FORM -->
-				<form action="#">
-					<label for="search-input">Search</label>
-					<input class="au-text-input" name="search-input" id="search-input" type="search" value="SEARCHTERM" required>
-					<input type="submit" class="au-btn" value="Search"/>
-				</form>
+				<h1>Search results for SEARCHTERM</h1>        
+				<div class="col-sm-8">
+
+					<!-- SEARCH INPUT FORM -->
+					<form class="au-search au-form-group au-search--responsive" role="search" aria-label="Sitewide">
+						<label for="search-input" class="au-search__label">Search</label>
+						<input class="au-text-input" name="search-input" id="search-input" type="search" value="SEARCHTERM" required>
+						<div class="au-search__btn">
+							<button class="au-btn"><span class="au-search__submit-btn-text">Search</span></button>
+						</div>
+					</form>
+
+				</div> <!-- /.col-sm-8-->
 			</div> <!--/.row-->
 			
 			<div class="row">
@@ -175,59 +157,75 @@
 							<form action="#">
 								<fieldset class="au-fieldset">
 									<legend class="au-fieldset_legend"><h4>State</h4></legend>
-								<div class="au-control-input au-control-input--block">
-								  <input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="phone-cb-block">
-								  <label class="au-control-input__text" for="phone-cb-block">Phone</label>
-								</div>
-								<div class="au-control-input au-control-input--block">
-								  <input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="tablet-cb-block" checked>
-								  <label class="au-control-input__text" for="tablet-cb-block">Tablet</label>
-								</div>
-								<div class="au-control-input au-control-input--block">
-								  <input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="laptop-cb-block" checked>
-								  <label class="au-control-input__text" for="laptop-cb-block">Laptop</label>
-								</div>
+									<div class="au-control-input au-control-input--block">
+									<input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="phone-cb-block">
+									<label class="au-control-input__text" for="phone-cb-block">Phone</label>
+									</div>
+									<div class="au-control-input au-control-input--block">
+									<input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="tablet-cb-block" checked>
+									<label class="au-control-input__text" for="tablet-cb-block">Tablet</label>
+									</div>
+									<div class="au-control-input au-control-input--block">
+									<input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="laptop-cb-block" checked>
+									<label class="au-control-input__text" for="laptop-cb-block">Laptop</label>
+									</div>
 								</fieldset>
 								<hr/>
 								<fieldset class="au-fieldset">
 									<legend class="au-fieldset_legend"><h4>Format</h4></legend>
-								<div class="au-control-input au-control-input--block">
-								  <input class="au-control-input__input" type="radio" name="radio-ex" id="phone-radio-block">
-								  <label class="au-control-input__text" for="phone-radio-block">Phone</label>
-								</div>
-								<div class="au-control-input au-control-input--block">
-								  <input class="au-control-input__input" type="radio" name="radio-ex" id="tablet-radio-block" checked>
-								  <label class="au-control-input__text" for="tablet-radio-block">Tablet</label>
-								</div>
-								<div class="au-control-input au-control-input--block">
-								  <input class="au-control-input__input" type="radio" name="radio-ex" id="laptop-radio-block">
-								  <label class="au-control-input__text" for="laptop-radio-block">Laptop</label>
-								</div>
+									<div class="au-control-input au-control-input--block">
+									<input class="au-control-input__input" type="radio" name="radio-ex" id="phone-radio-block">
+									<label class="au-control-input__text" for="phone-radio-block">Phone</label>
+									</div>
+									<div class="au-control-input au-control-input--block">
+									<input class="au-control-input__input" type="radio" name="radio-ex" id="tablet-radio-block" checked>
+									<label class="au-control-input__text" for="tablet-radio-block">Tablet</label>
+									</div>
+									<div class="au-control-input au-control-input--block">
+									<input class="au-control-input__input" type="radio" name="radio-ex" id="laptop-radio-block">
+									<label class="au-control-input__text" for="laptop-radio-block">Laptop</label>
+									</div>
 								</fieldset>
+								<hr/>
+								<!-- SEARCH SORT -->
+								<fieldset class="au-fieldset">
+								<label for="search-sort"><h4>Sort:</h4></label>
+								<select id="search-sort" class="au-select">
+									<option value="">Relevance</option>
+									<option value="date">Date (Newest first)</option>
+									<option value="adate">Date (oldest first)</option>
+								</select>
+								</fieldset>
+
 								<p><input type="submit" class="au-btn" value="Refine"/></p>
 							</form>
 						</div> <!-- /#search-refine-->
 					</aside>
 				</div> <!--/.col-sm-4-->
 				
+				<!-- SEARCH RESULTS -->
 				<div class="col-sm-8">
 				
 					<!-- SEARCH RESULT SUMMARY -->
 					<div class="au-callout">
-					  <p><strong>1,248</strong> results for <strong>SEARCHTERM</strong></p>
+						<p><strong>1,248</strong> results for <strong>SEARCHTERM</strong> - showing <strong>1</strong> to <strong>10</strong>
+						</p>
 					</div>
+
 					
-					<!-- CURRENT REFINEMENTS -->
 					
-					<h4>Current Filters:</h4>
+					<!-- CURRENT REFINEMENTS -->					
+					<!--
+						<h4>Current Filters:</h4>
 					<ul class="au-tag-list">
 						<li><a href="#" class="au-tag">foo <button class="au-btn">x</button></a></li>
 						<li><a href="#" class="au-tag">bar <button class="au-btn">x</button></a></li>
 						<li><a href="#" class="au-tag">baz <button class="au-btn">x</button></a></li>
 					</ul>
+					-->
 
 					<!-- SEARCH RESULTS - FIRST PAGE -->
-					<ol class="search-results" start="1">
+					<ol class="search-result-list" start="1" id="search-results">
 
 					  <li class="search-result">
 					    <h3><a href="#" title="Title of search results with an extremely long title that may span several lines or require truncation. Not truncated in this example.">Title of <mark>search result</mark> with an extremely long title that may span several lines or require trunc&hellip;</a></h3>
@@ -251,13 +249,23 @@
 
 					  <li class="search-result">
 					    <h3><a href="#">Title of <mark>search result</mark></a></h3>
-					    <p><img src="../assets/img/600x260.jpg" class="au-responsive-media-img" alt=""  />This is a snippet with a thumbnail from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
+						<p>This is a snippet with several metadata fields from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
+						<dl class="search-result__metadata">
+							<dt>Author</dt>
+							<dd>Kelly Jones</dd>
+							<dt>Agency</dt>
+							<dd>Department of Information</dd>
+						</dl>
 					  </li>
 
 					  <li class="search-result">
-					    <h3><a href="#">Title of <mark>search result</mark></a></h3>
-					    <p>This is a bare-minimum snippet from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
-					  </li>
+							<h3><a href="#">Title of <mark>search result</mark></a></h3>
+							<div class="row">
+								<div class="col-xs-3"><img src="../assets/img/600x260.jpg" class="au-responsive-media-img" alt="" /></div>
+								<div class="col-xs-9"><p>This is a snippet with a thumbnail from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
+								</div>
+							</div
+						</li>
 
 					  <li class="search-result">
 					    <h3><a href="#">Title of <mark>search result</mark></a></h3>
@@ -299,7 +307,7 @@
 					
 					<!-- SEARCH RESULT SUMMARY -->
 					<div class="au-callout">
-					  <p><strong>1,248</strong> results for <strong>SEARCHTERM</strong></p>
+					  <p><strong>1,248</strong> results for <strong>SEARCHTERM</strong> - showing <strong>1</strong> to <strong>10</strong>.</p>
 					</div>
 					
 					<!-- SEARCH RESULT ALERT MESSAGES -->
@@ -345,5 +353,4 @@
 	<script type="text/javascript" src="../js/helper.js"></script>
 	<script type="text/javascript" src="../js/validate.js"></script>
 </body>
-
 </html>

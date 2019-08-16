@@ -208,3 +208,26 @@ hr {
 		}
 	}
 }
+
+// Search results
+ol.search-result-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+.search-result {
+	margin-bottom: 1.5rem;
+}
+
+.search-result h3 {
+	font-weight: normal;
+}
+
+.search-result p {
+	margin-top: 0;
+}
+
+.search-result mark {
+	background-color: yellow;
+	color: inherit;
+}
