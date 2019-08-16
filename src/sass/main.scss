@@ -112,3 +112,99 @@ hr {
 .media-release__last-updated{
 	float: right;
 }
+
+///searchbox css
+
+%search-btn {
+	.au-btn {
+		background-image:  AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#{ $AU-colordark-foreground-text }" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+		background-repeat: no-repeat;
+		background-size: 1.5rem;
+		@include AU-space( height, 2.875unit );
+		background-position: 50%;
+
+		&--dark {
+			background-image:  AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#{ $AU-color-foreground-text }" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+		}
+
+		.lt-ie9 & {
+			background-image: none;
+			&:after {
+				content: "search";
+			}
+		}
+	}
+}
+
+
+.au-search {
+
+	display: table;
+	width: 99%;
+
+	&__label {
+		@include AU-sronly();
+	}
+
+	.au-text-input {
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+		border-right: 0;
+		max-width: 100%;
+		position: relative;
+		display: table-cell;
+		vertical-align: top;
+
+		&:focus {
+			z-index: 2;
+		}
+
+		.ie8 & {
+			display: block;
+			table-layout:fixed;
+		}
+	}
+
+	.au-search__btn {
+		position: relative;
+		display: table-cell;
+		vertical-align: top;
+		width: 1%;
+		white-space: nowrap;
+	}
+
+	&.au-search--dark .au-search__btn {
+		border-left: solid 2px gray !important;
+	}
+
+	.au-btn {
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+		margin: 0;
+		width:100%
+	}
+
+	&.au-search--icon {
+		@extend %search-btn;
+
+		.au-search__submit-btn-text {
+			@include AU-sronly();
+		}
+	}
+
+	&.au-search--responsive {
+			@extend %search-btn;
+
+			@include AU-media( xs ) {
+				.au-btn {
+					background-image: none;
+				}
+			}
+
+		.au-search__submit-btn-text {
+			@media screen and ( max-width: 576px) {
+				@include AU-sronly();
+			}
+		}
+	}
+}
