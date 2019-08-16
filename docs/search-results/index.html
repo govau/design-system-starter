@@ -131,30 +131,48 @@
 			<div class="row">      			
 				<h1>Search results for SEARCHTERM</h1>
         
-        <!-- SEARCH INPUT FORM -->
+			<!-- SEARCH INPUT FORM -->
+			<form action="#">
+				<label for="search-input">Search</label>
+				<input class="au-text-input" name="search-input" id="search-input" type="text" value="SEARCHTERM">
+				<button class="au-btn">Search</button>
+			</form>
+				
+
+			<!-- SEARCH RESULT SUMMARY -->
+			<div class="au-callout">
+			  <p><strong>1,248</strong> results for <strong>SEARCHTERM</strong></p>
+			</div>
+
+			<!-- SEARCH RESULTS - FIRST PAGE -->
+			<ol class="search-results" start="1">
+
+			  <li class="search-result">
+			    <h3><a href="#">Title of <mark>search results</mark></a></h3>
+			    <p>This is a bare-minimum snippet from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
+			  </li>
+
+			  <li class="search-result">
+			    <h3><a href="#">Title of <mark>search results</mark></a></h3>
+			    <p>This is a bare-minimum snippet with tags from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
+				  <ul class="au-tag-list">
+					  <li><a href="#" class="au-tag">foo</a></li>
+					  <li><a href="#" class="au-tag">bar</a></li>
+					  <li><a href="#" class="au-tag">baz</a></li>
+				</ul>
+			  </li>
+
+			</ol>
         
-        <!-- SEARCH RESULT SUMMARY -->
-        <div class="au-callout">
-          <p><strong>1,248</strong> results for <strong>SEARCHTERM</strong></p>
-        </div>
-        
-        <!-- SEARCH RESULTS - FIRST PAGE -->
-        <ol class="search-results" start="1">
-        
-          <li class="search-result">
-            <h3><a href="#">Title of <mark>search results</mark></a></h3>
-            <p>This is a bare-minimum snippet from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
-          </li>
-          
-          <li class="search-result">
-            <h3><a href="#">Title of <mark>search results</mark></a></h3>
-            <p>This is a bare-minimum snippet from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
-          </li>
-        
-        </ol>
-        
-        <!-- SEARCH RESULT PAGINATION -->
-        
+        		<!-- SEARCH RESULT PAGINATION -->
+			<div class="au-pagination">
+				<a class="au-direction-link" href="#" rel="prev">
+			  Previous<span class="au-direction-link__arrow au-direction-link__arrow--left" aria-hidden="true"></span>
+			</a>
+					<a class="au-direction-link" href="#" rel="next">
+			  Next<span class="au-direction-link__arrow au-direction-link__arrow--right" aria-hidden="true"></span>
+			</a>				
+			</div> <!-- /.au-pagination -->
         
 			</div> <!-- /.row -->
 		</div> <!-- /.container-fluid -->
