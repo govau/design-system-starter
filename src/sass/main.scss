@@ -235,3 +235,8 @@ ol.search-result-list {
 .au-body :target {
 	outline: none;
 }
+
+.visually-hidden {
+
+	@include AU-sronly();
+}
