@@ -132,7 +132,7 @@
 				<h1>Search results for SEARCHTERM</h1>
         
 				<!-- SEARCH INPUT FORM -->
-				<form action="#">
+				<form action="#" required>
 					<label for="search-input">Search</label>
 					<input class="au-text-input" name="search-input" id="search-input" type="text" value="SEARCHTERM">
 					<input type="submit" class="au-btn" value="Search"/>
@@ -228,7 +228,8 @@
 				<div class="col-xs-4">
 					<h3>Refine</h3>
 					<form action="#">
-						<h4>State</h4>
+						<fieldset class="au-fieldset">
+							<legend class="au-fieldset_legend"><h4>State</h4></legend>
 						<div class="au-control-input au-control-input--block">
 						  <input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="phone-cb-block">
 						  <label class="au-control-input__text" for="phone-cb-block">Phone</label>
@@ -241,7 +242,7 @@
 						  <input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="laptop-cb-block" checked>
 						  <label class="au-control-input__text" for="laptop-cb-block">Laptop</label>
 						</div>	
-						<h4>Format</h4>
+						<legend class="au-fieldset_legend"><h4>Format</h4></legend>
 						<div class="au-control-input au-control-input--block">
 						  <input class="au-control-input__input" type="radio" name="radio-ex" id="phone-radio-block">
 						  <label class="au-control-input__text" for="phone-radio-block">Phone</label>
@@ -254,6 +255,7 @@
 						  <input class="au-control-input__input" type="radio" name="radio-ex" id="laptop-radio-block">
 						  <label class="au-control-input__text" for="laptop-radio-block">Laptop</label>
 						</div>
+						</fieldset>
 						<input type="submit" class="au-btn" value="Refine"/>
 					</form>
 				</div> <!--/.col-xs-4-->
