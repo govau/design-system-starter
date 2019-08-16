@@ -77,7 +77,7 @@
 						<img class="au-header__brand-image" alt="Insert alternate text here" src="../assets/img/header-logo-agov.png">
 						<div class="au-header__text">
 						<h2 class="au-header__heading">Name of website</h2>
-						<div class="au-header__subline">Simple explaination of the website</div>
+						<div class="au-header__subline">Simple explanation of the website</div>
 						</div>
 					</a>
 				</div>
@@ -128,17 +128,20 @@
 	<main id="content">
 		<!--CONTENT-->
 		<div class="au-body container-fluid">
-			<div class="row">      			
+			<div class="row">     			
 				<h1>Search results for SEARCHTERM</h1>
         
-			<!-- SEARCH INPUT FORM -->
-			<form action="#">
-				<label for="search-input">Search</label>
-				<input class="au-text-input" name="search-input" id="search-input" type="text" value="SEARCHTERM">
-				<button class="au-btn">Search</button>
-			</form>
+				<!-- SEARCH INPUT FORM -->
+				<form action="#">
+					<label for="search-input">Search</label>
+					<input class="au-text-input" name="search-input" id="search-input" type="text" value="SEARCHTERM">
+					<button class="au-btn">Search</button>
+				</form>
+			</div> <!--/.row-->
+			
+			<div class="row">
+				<div class="col-xs-8">
 				
-
 			<!-- SEARCH RESULT SUMMARY -->
 			<div class="au-callout">
 			  <p><strong>1,248</strong> results for <strong>SEARCHTERM</strong></p>
@@ -148,12 +151,12 @@
 			<ol class="search-results" start="1">
 
 			  <li class="search-result">
-			    <h3><a href="#">Title of <mark>search results</mark></a></h3>
+			    <h3><a href="#">Title of <mark>search result</mark></a></h3>
 			    <p>This is a bare-minimum snippet from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
 			  </li>
 
 			  <li class="search-result">
-			    <h3><a href="#">Title of <mark>search results</mark></a></h3>
+			    <h3><a href="#">Title of <mark>search result</mark></a></h3>
 			    <p>This is a bare-minimum snippet with tags from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
 				  <ul class="au-tag-list">
 					  <li><a href="#" class="au-tag">foo</a></li>
@@ -161,18 +164,93 @@
 					  <li><a href="#" class="au-tag">baz</a></li>
 				</ul>
 			  </li>
+				
+			  <li class="search-result">
+			    <h3><a href="#">Title of <mark>search result</mark></a></h3>
+			    <p>This is a bare-minimum snippet from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
+			  </li>
+			
+			  <li class="search-result">
+			    <h3><a href="#">Title of <mark>search result</mark></a></h3>
+			    <p>This is a bare-minimum snippet from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
+			  </li>
+				
+			  <li class="search-result">
+			    <h3><a href="#">Title of <mark>search result</mark></a></h3>
+			    <p>This is a bare-minimum snippet from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
+			  </li>
+				
+			  <li class="search-result">
+			    <h3><a href="#">Title of <mark>search result</mark></a></h3>
+			    <p>This is a bare-minimum snippet from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
+			  </li>
+				
+		          <li class="search-result">
+			    <h3><a href="#">Title of <mark>search result</mark></a></h3>
+			    <p>This is a bare-minimum snippet from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
+			  </li>
+				
+			  <li class="search-result">
+			    <h3><a href="#">Title of <mark>search result</mark></a></h3>
+			    <p>This is a bare-minimum snippet from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
+			  </li>
+				
+			  <li class="search-result">
+			    <h3><a href="#">Title of <mark>search result</mark></a></h3>
+			    <p>This is a bare-minimum snippet from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
+			  </li>
+				
+			  <li class="search-result">
+			    <h3><a href="#">Title of <mark>search result</mark></a></h3>
+			    <p>This is a bare-minimum snippet from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
+			  </li>
 
 			</ol>
         
         		<!-- SEARCH RESULT PAGINATION -->
 			<div class="au-pagination">
 				<a class="au-direction-link" href="#" rel="prev">
-			  Previous<span class="au-direction-link__arrow au-direction-link__arrow--left" aria-hidden="true"></span>
+			  <span class="au-direction-link__arrow au-direction-link__arrow--left" aria-hidden="true">Previous</span>
 			</a>
 					<a class="au-direction-link" href="#" rel="next">
 			  Next<span class="au-direction-link__arrow au-direction-link__arrow--right" aria-hidden="true"></span>
 			</a>				
 			</div> <!-- /.au-pagination -->
+					
+				</div> <!-- /.col-xs-8 -->
+			
+				<!-- SEARCH RESULT REFINEMENTS -->
+				<div clas="col-xs-4">
+					<h3>Refine</h3>
+					<form action="#">
+						<h4>State</h4>
+						<div class="au-control-input au-control-input--block">
+  <input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="phone-cb-block">
+  <label class="au-control-input__text" for="phone-cb-block">Phone</label>
+</div>
+<div class="au-control-input au-control-input--block">
+  <input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="tablet-cb-block" checked>
+  <label class="au-control-input__text" for="tablet-cb-block">Tablet</label>
+</div>
+<div class="au-control-input au-control-input--block">
+  <input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="laptop-cb-block" checked>
+  <label class="au-control-input__text" for="laptop-cb-block">Laptop</label>
+</div>	
+						<h4>Format</h4>
+						<div class="au-control-input au-control-input--block">
+  <input class="au-control-input__input" type="radio" name="radio-ex" id="phone-radio-block">
+  <label class="au-control-input__text" for="phone-radio-block">Phone</label>
+</div>
+<div class="au-control-input au-control-input--block">
+  <input class="au-control-input__input" type="radio" name="radio-ex" id="tablet-radio-block" checked>
+  <label class="au-control-input__text" for="tablet-radio-block">Tablet</label>
+</div>
+<div class="au-control-input au-control-input--block">
+  <input class="au-control-input__input" type="radio" name="radio-ex" id="laptop-radio-block">
+  <label class="au-control-input__text" for="laptop-radio-block">Laptop</label>
+</div>
+					</form>
+				</div> <!--/.col-xs-4-->
         
 			</div> <!-- /.row -->
 		</div> <!-- /.container-fluid -->
