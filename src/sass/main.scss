@@ -231,3 +231,7 @@ ol.search-result-list {
 	background-color: yellow;
 	color: inherit;
 }
+
+.au-body :target {
+	outline: none;
+}
