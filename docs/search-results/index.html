@@ -174,7 +174,7 @@
 						<div id="search-refine" class="au-side-nav__content au-accordion--closed au-accordion__body">
 							<form action="#">
 								<fieldset class="au-fieldset">
-									<legend class="au-fieldset_legend">State</legend>
+									<legend class="au-fieldset_legend"><h4>State</h4></legend>
 								<div class="au-control-input au-control-input--block">
 								  <input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="phone-cb-block">
 								  <label class="au-control-input__text" for="phone-cb-block">Phone</label>
@@ -189,8 +189,8 @@
 								</div>
 								</fieldset>
 								<hr/>
-								<fieldset>
-								<legend class="au-fieldset_legend">Format</legend>
+								<fieldset class="au-fieldset">
+									<legend class="au-fieldset_legend"><h4>Format</h4></legend>
 								<div class="au-control-input au-control-input--block">
 								  <input class="au-control-input__input" type="radio" name="radio-ex" id="phone-radio-block">
 								  <label class="au-control-input__text" for="phone-radio-block">Phone</label>
@@ -204,7 +204,7 @@
 								  <label class="au-control-input__text" for="laptop-radio-block">Laptop</label>
 								</div>
 								</fieldset>
-								<input type="submit" class="au-btn" value="Refine"/>
+								<p><input type="submit" class="au-btn" value="Refine"/></p>
 							</form>
 						</div> <!-- /#search-refine-->
 					</aside>
@@ -216,6 +216,15 @@
 					<div class="au-callout">
 					  <p><strong>1,248</strong> results for <strong>SEARCHTERM</strong></p>
 					</div>
+					
+					<!-- CURRENT REFINEMENTS -->
+					
+					<h4>Current Filters:</h4>
+					<ul class="au-tag-list">
+						<li><a href="#" class="au-tag">foo <button class="au-btn">x</button></a></li>
+						<li><a href="#" class="au-tag">bar <button class="au-btn">x</button></a></li>
+						<li><a href="#" class="au-tag">baz <button class="au-btn">x</button></a></li>
+					</ul>
 
 					<!-- SEARCH RESULTS - FIRST PAGE -->
 					<ol class="search-results" start="1">
@@ -237,12 +246,12 @@
 
 					  <li class="search-result">
 					    <h3><a href="#">Title of <mark>search result</mark></a></h3>
-					    <p>This is a bare-minimum snippet from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
+						  <p><time datetime="2017-05-08" class="search-result-date">8 May 2019</time> - This is a snippet with a date from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
 					  </li>
 
 					  <li class="search-result">
 					    <h3><a href="#">Title of <mark>search result</mark></a></h3>
-					    <p>This is a bare-minimum snippet from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
+					    <p><img src="../assets/img/600x260.jpg" class="au-responsive-media-img" alt=""  />This is a snippet with a thumbnail from a <mark>search result</mark>, using that result's description. Search terms have been highlighted.</p>
 					  </li>
 
 					  <li class="search-result">
