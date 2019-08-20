@@ -120,7 +120,7 @@ hr {
 		background-image:  AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#{ $AU-colordark-foreground-text }" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
 		background-repeat: no-repeat;
 		background-size: 1.5rem;
-		@include AU-space( height, 2.875unit );
+		@include AU-space( height, 3.5unit );
 		background-position: 50%;
 
 		&--dark {
@@ -154,6 +154,7 @@ hr {
 		position: relative;
 		display: table-cell;
 		vertical-align: top;
+		@include AU-space( height, 3.5unit );
 
 		&:focus {
 			z-index: 2;
@@ -209,29 +210,46 @@ hr {
 	}
 }
 
-// Search resultss
+// Search results
 ol.search-result-list {
 	list-style: none;
-	padding-left: 0;
+	@include AU-space( 'margin-top', 2unit);
+	@include AU-space( 'padding-left', 0unit);
 }
 
-.search-result {
-	margin-bottom: 1.5rem;
+.search-result  {
+	@include AU-space( 'margin-top', 2unit);
+	@include AU-space( 'margin-bottom', 2unit);
+	@include AU-space( 'padding-top', 2unit);
+	border-top: 1px solid #ccc;	
 }
 
-.search-result h3 {
-	font-weight: normal;
+.search-result__heading {
+	font-weight: normal !important;
 }
 
-.search-result p {
-	margin-top: 0;
+.search-result__summary {
+	@include AU-space( 'margin-top', 0.7unit);
 }
 
-.search-result mark {
-	background-color: yellow;
-	color: inherit;
+.search-result__image{
+	@include AU-space( 'margin-top', 1unit);
 }
 
+dl.search-result__metadata{
+@include AU-space( 'margin-top', 0.5unit);
+font-size: small;
+}
+
+dd.search-result__metadata--item{
+	margin: 0px;
+	padding: 0px !important;
+	border-left: none !important;
+}
+
+.search-result-filter-heading{
+	margin-bottom: 1rem !important;
+}
 .au-body :target {
 	outline: none;
 }
@@ -239,4 +257,50 @@ ol.search-result-list {
 .visually-hidden {
 
 	@include AU-sronly();
+}
+
+.search-result-list + .au-pagination {
+	@include AU-space( 'margin-top', 2unit);
+	@include AU-space( 'padding-top', 2unit);
+    border-top: 1px solid #ccc;
+}
+
+.page-link:hover {
+	background-color: #ebebeb;
+  }
+  
+.page-link--active {
+    background-color: #ebebeb;
+    border: none;
+}
+  .page-link{
+   border: 1px solid #d3d3d3;
+   height: 44px;
+   min-width: 44px;
+   display: flex;	
+   justify-content: center;
+   align-items: center;
+  
+
+  }
+
+  a:link.page-link {
+	
+	text-decoration: none;
+	  
+  }
+  .pagination-control{
+	@include AU-space( 'padding-top', 0.9unit);
+	@include AU-space( 'padding-left', 1unit);
+	@include AU-space( 'padding-bottom', 0.5unit);
+	@include AU-space( 'padding-right', 1unit);
+  }
+  
+  .page-link.current {
+	  background-color: #320e3b;
+	  color: #f7f7f7;
+  }
+
+.au-pagination--center{
+	text-align: center;
 }
