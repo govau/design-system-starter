@@ -40,10 +40,10 @@ workflows:
   version: 2
   deploy-starter:
     jobs:
-      - build-and-test-ds
+      - build-and-test
       - deploy-staging: # run deploy staging
           requires:
-            - build-and-test-ds
+            - build-and-test
           filters:
             branches:
               only: test-circle # and only on the `develop` branch
