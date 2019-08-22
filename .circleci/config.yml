@@ -7,7 +7,7 @@ jobs:
   build-and-test:
     docker:
       - image: circleci/node:8.12.0
-
+    working_directory: ~/ds-starter
     steps:
       - checkout
       # Download and cache dependencies
@@ -17,24 +17,43 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: npm install
-
+      - run:
+          name: Install NodeJs dependencies
+          command: npm install
       - save_cache:
+          name: Save node_modules to cache
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Generate static assets
+          command: npm run build
+      - persist_to_workspace:
+          root: ~/ds-starter
+          paths:
+            - docs/
+            - .deploy/
+            - package.json
+            - package-lock.json
 
   deploy-staging:
     docker:
-      - image: circleci/node:8.12.0
+      - image: govau/cf-cli
     steps:
+      - attach_workspace:
+          at: ~/ds-starter
       - run:
-        name: deploy to staging
-        command: echo "staging"
-      - run:
-        name: deploy to prod
-        command: echo "prod"
-
+        name: Deploy staging to cloudgov.au
+        command: |
+          cd ~/ds-starter
+          mkdir -p deploy/
+          mv docs/ deploy/
+          mv package.json deploy/
+          mv package-lock.json deploy/
+          mv ./deploy/manifest-staging.yml deploy/
+          cd deploy/
+          cf login -a $CF_API_STAGING -o $CF_ORG -s $CF_SPACE -u $CF_USERNAME -p $CF_PASSWORD_STAGING
+          cf zero-downtime-push designsystem -f manifest-staging.yml
 
 workflows:
   version: 2
