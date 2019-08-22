@@ -30,7 +30,7 @@ jobs:
     steps:
       -run:
         name: deploy to staging
-				command: echo "staging"
+        command: echo "staging"
       -run:
         name: deploy to prod
         command: echo "prod"
@@ -46,4 +46,4 @@ workflows:
             - build-and-test-ds
           filters:
             branches:
-              only: develop # and only on the `develop` branch
+              only: test-circle # and only on the `develop` branch
