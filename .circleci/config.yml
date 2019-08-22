@@ -30,7 +30,10 @@ jobs:
     steps:
       -run:
         name: deploy to staging
-        command: pwd
+				command: echo "staging"
+      -run:
+        name: deploy to prod
+        command: echo "prod"
 
 
 workflows:
