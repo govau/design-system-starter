@@ -50,7 +50,7 @@ jobs:
             mv docs/ deploy/
             mv package.json deploy/
             mv package-lock.json deploy/
-            mv ./deploy/manifest-staging.yml deploy/
+            mv .deploy/manifest-staging.yml deploy/
             cd deploy/
             cf login -a $CF_API_STAGING -o $CF_ORG -s $CF_SPACE -u $CF_USERNAME -p $CF_PASSWORD_STAGING
             cf zero-downtime-push designsystem -f manifest-staging.yml
