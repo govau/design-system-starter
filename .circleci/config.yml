@@ -28,10 +28,10 @@ jobs:
     docker:
       - image: circleci/node:8.12.0
     steps:
-      -run:
+      - run:
         name: deploy to staging
         command: echo "staging"
-      -run:
+      - run:
         name: deploy to prod
         command: echo "prod"
 
