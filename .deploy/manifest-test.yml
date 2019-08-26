@@ -1,0 +1,7 @@
+---
+buildpack: nodejs_buildpack
+memory: 256M
+instances: 1
+env:
+  NODE_MODULES_CACHE: false
+path: ./
