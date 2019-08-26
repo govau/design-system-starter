@@ -104,17 +104,3 @@ workflows:
           filters:
             branches:
               only: test-circle # and only on the `develop` branch
-
-      - deploy-prod: # run deploy staging
-        requires:
-          - build-and-test
-        filters:
-          branches:
-            only: master # and only on the `master` branch
-
-      - deploy-test: # run deploy staging
-        requires:
-          - build-and-test
-        filters:
-          branches:
-            only: /.*-test/ # and only on the `master` branch
