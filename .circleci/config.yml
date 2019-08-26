@@ -16,7 +16,6 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-
       - run:
           name: Install NodeJs dependencies
           command: npm install
@@ -53,7 +52,46 @@ jobs:
             mv .deploy/manifest-staging.yml deploy/
             cd deploy/
             cf login -a $CF_API_STAGING -o $CF_ORG -s $CF_SPACE -u $CF_USERNAME -p $CF_PASSWORD_STAGING
-            cf zero-downtime-push designsystem -f manifest-staging.yml
+            cf zero-downtime-push ds-starter -f manifest-staging.yml
+
+  deploy-test:
+    docker:
+      - image: govau/cf-cli
+    steps:
+      - attach_workspace:
+          at: ~/ds-starter
+      - run:
+          name: Deploy staging to cloudgov.au
+          command: |
+            cd ~/ds-starter
+            mkdir -p deploy/
+            mv docs/ deploy/
+            mv package.json deploy/
+            mv package-lock.json deploy/
+            mv .deploy/manifest-staging.yml deploy/
+            cd deploy/
+            cf login -a $CF_API_STAGING -o $CF_ORG -s $CF_SPACE -u $CF_USERNAME -p $CF_PASSWORD_STAGING
+            cf zero-downtime-push ds-starter -f manifest-staging.yml
+
+  deploy-prod:
+    docker:
+      - image: govau/cf-cli
+    steps:
+      - attach_workspace:
+          at: ~/ds-starter
+      - run:
+          name: Deploy staging to cloudgov.au
+          command: |
+            cd ~/ds-starter
+            mkdir -p deploy/
+            mv docs/ deploy/
+            mv package.json deploy/
+            mv package-lock.json deploy/
+            mv .deploy/manifest-staging.yml deploy/
+            cd deploy/
+            cf login -a $CF_API_PROD -o $CF_ORG -s $CF_SPACE -u $CF_USERNAME -p $CF_PASSWORD_PROD
+            cf zero-downtime-push ds-starter -f manifest-staging.yml
+
 
 workflows:
   version: 2
@@ -66,3 +104,17 @@ workflows:
           filters:
             branches:
               only: test-circle # and only on the `develop` branch
+
+      - deploy-prod: # run deploy staging
+        requires:
+          - build-and-test
+        filters:
+          branches:
+            only: master # and only on the `master` branch
+
+      - deploy-test: # run deploy staging
+        requires:
+          - build-and-test
+        filters:
+          branches:
+            only: /.*-test/ # and only on the `master` branch
