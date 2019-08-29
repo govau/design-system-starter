@@ -78,7 +78,7 @@ jobs:
             mv .deploy/manifest-prod.yml deploy/
             cd deploy/
             cf login -a $CF_API_PROD -o $CF_ORG -s $CF_SPACE -u $CF_USERNAME -p $CF_PASSWORD_PROD
-            cf zero-downtime-push ds-starter -f manifest-prod.yml
+            cf zero-downtime-push design-system-starter -f manifest-prod.yml
 
 
 workflows:

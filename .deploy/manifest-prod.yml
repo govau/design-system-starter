@@ -4,5 +4,5 @@ memory: 256M
 instances: 1
 
 applications:
-- name: ds-starter
+- name: design-system-starter
   path: ./docs
