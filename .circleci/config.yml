@@ -26,8 +26,6 @@ jobs:
           paths:
             - docs/
             - .deploy/
-            - package.json
-            - package-lock.json
 
   deploy-staging:
     docker:
@@ -60,10 +58,8 @@ jobs:
             cd ~/ds-starter
             mkdir -p deploy/
             mv docs/ deploy/
-            mv package.json deploy/
-            mv package-lock.json deploy/
             mv .deploy/manifest-test.yml deploy/
-            mv .deploy/Staticfile.auth deploy/
+            mv .deploy/Staticfile.auth deploy/docs/
             cd deploy/
             cf login -a $CF_API_STAGING -o $CF_ORG -s $CF_SPACE -u $CF_USERNAME -p $CF_PASSWORD_STAGING
             cf zero-downtime-push ds-starter-$CIRCLE_BRANCH -f manifest-test.yml
