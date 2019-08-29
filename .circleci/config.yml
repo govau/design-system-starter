@@ -97,7 +97,7 @@ workflows:
             - build-and-test
           filters:
             branches:
-              only: test-circle # and only on the `develop` branch
+              only: develop # and only on the `develop` branch
 
       - deploy-prod: # run deploy staging
           requires:
