@@ -1,0 +1,8 @@
+---
+buildpack: staticfile_buildpack
+memory: 256M
+instances: 1
+
+applications:
+- name: ds-starter
+  path: ./docs
