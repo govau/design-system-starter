@@ -1,10 +1,11 @@
 ---
-buildpack: nodejs_buildpack
+buildpack: staticfile_buildpack
 memory: 256M
 instances: 1
 env:
   NODE_MODULES_CACHE: false
-path: ./
+
 
 applications:
 - name: ds-starter
+  path: ./docs
