@@ -55,7 +55,7 @@ jobs:
       - attach_workspace:
           at: ~/ds-starter
       - run:
-          name: Deploy staging to cloudgov.au
+          name: Deploy test to cloudgov.au
           command: |
             cd ~/ds-starter
             mkdir -p deploy/
@@ -74,7 +74,7 @@ jobs:
       - attach_workspace:
           at: ~/ds-starter
       - run:
-          name: Deploy staging to cloudgov.au
+          name: Deploy prod to cloudgov.au
           command: |
             cd ~/ds-starter
             mkdir -p deploy/
