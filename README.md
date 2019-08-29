@@ -20,6 +20,12 @@ Australian Government Design System - Starter
 
 ## Templates
 
+
+| Production [![CircleCI](https://circleci.com/gh/govau/design-system-starter/tree/master.svg?style=svg)](https://circleci.com/gh/govau/design-system-starter/tree/master)          | Staging [![CircleCI](https://circleci.com/gh/govau/design-system-starter/tree/develop.svg?style=svg)](https://circleci.com/gh/govau/design-system-starter/tree/develop)                     |
+|-----------------------------|--------------------------------|
+| ds-starter.apps.b.cld.gov.au | ds-starter.apps.y.cld.gov.au |
+
+
 Browse full page templates using the Australian Government Design System.
 
 - [Home page](https://govau.github.io/design-system-starter/)
