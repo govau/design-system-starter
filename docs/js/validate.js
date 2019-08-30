@@ -74,9 +74,9 @@ function validateHelpDescription() {
 
 /**
  * Checks to see if a text field is empty
- * 
+ *
  * @param { HTMLInputElement } field    - The html input element
- * 
+ *
  * @return {boolean}                    - False if not empty
  */
 function isFieldEmpty( field ) {
@@ -94,7 +94,7 @@ function isFieldEmpty( field ) {
 
 /**
  * Displays error text and sets field to invalid
- * 
+ *
  * @param { HTMLElement } field  - The field to set invalid
  * @param { string } message     - The error message to be displayed
  */
@@ -104,7 +104,7 @@ function setInvalid( field, message ) {
 	};
 
 	// the error span element
-	var errorField = field.nextElementSibling;
+	var errorField = field.previousElementSibling;
 	RemoveClass( errorField, 'hide_content' );
 	errorField.innerHTML = message;
 
@@ -115,12 +115,12 @@ function setInvalid( field, message ) {
 
 /**
  * Sets a field to be valid. Removes any error messages and stylings
- * 
+ *
  * @param { HTMLElement } field  - The field to set valid
  */
 function setValid( field ) {
 	//the error span element
-	var errorField = field.nextElementSibling;
+	var errorField = field.previousElementSibling;
 
 	if ( !HasClass( errorField, 'hide_content' )) {
 		AddClass( errorField, 'hide_content');
@@ -136,7 +136,7 @@ function setValid( field ) {
 
 /**
  * Adds the error messages to an error message summary which is displayed when the form is submitted
- * 
+ *
  * @param { HTMLElement } field  - The field to add errors to
  * @param { string } message     - The error message to be shown in the error sumamry
  */
@@ -147,7 +147,7 @@ function AddError( field, message ) {
 
 /**
  * Removes errors from the errors array if the field is valid
- * 
+ *
  * @param { HTMLElement } field  - The html form control to remove errors from
  */
 function RemoveError( field ) {
@@ -157,7 +157,7 @@ function RemoveError( field ) {
 
 /**
  * Checks to see if a field contains a pattern
- * 
+ *
  * @param { HTMLElement } field  - The field to be validated against
  * @param { string } code        - The type of
  */
@@ -178,7 +178,7 @@ function matchExpression( field, code ) {
 
 /**
  * Match
- * 
+ *
  * @param {RegExp} regEx         - The reg ex type to match the field with
  * @param { HTMLElement } field    - The text field to test against
  * @param { string } message       - The error message to be displayed if invalid
@@ -196,7 +196,7 @@ function matchWithRegEx( regEx, field, message ) {
 
 /**
  * Checks if a field meets length requirements
- * 
+ *
  * @param { HTMLElement } field  - the field to check against
  * @param { string } minLength   - the minimum length of the field
  * @param { string } maxLength   - the maximum length of the field
@@ -234,7 +234,7 @@ function generateErrorSummary() {
 
 /**
  * Stop url changing when clicking in links in the error message summary and focus on selected field
- * 
+ *
  * @param { Object } event
  */
 function stopUrlChange( event ){

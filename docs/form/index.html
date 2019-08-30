@@ -89,7 +89,7 @@
 	<header class="au-header au-header--dark" role="banner">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-12">
 					<a class="au-header__brand" href="#">
 						<img class="au-header__brand-image" alt="Insert alternate text here" src="../assets/img/header-logo-agov.png">
 						<div class="au-header__text">
@@ -97,15 +97,6 @@
 						<div class="au-header__subline">Simple explanation of the website</div>
 						</div>
 					</a>
-				</div>
-				<div class="col-sm-4">
-					<form role="search" aria-label="sitewide" class="au-search au-search--dark au-search--icon">
-						<label for="standard" class="au-search__label">Search this website</label>
-						<input type="search" placeholder="Search this site" id="standard" name="standard" class="au-text-input au-text-input--dark"/>
-						<div class="au-search__btn">
-							<button class="au-btn au-btn--dark" type="submit"><span class="au-search__submit-btn-text">Search</span></button>
-						</div>
-					</form>
 				</div>
 			</div>
 		</div>
@@ -168,15 +159,15 @@
 						<form action="index.html" id="form-1" novalidate>
 							<div class="au-form-group">
 								<label for="name" class="au-label">Full name</label>
-								<input class="au-text-input au-text-input--width-lg" name="Full name" id="name" type="text" aria-required="true" aria-describedby="full-name-error" autocomplete="name">
 								<span class="au-error-text hide_content" id="full-name-error"></span>
+								<input class="au-text-input au-text-input--width-lg" name="Full name" id="name" type="text" aria-required="true" aria-describedby="full-name-error" autocomplete="name">
 							</div>
 
 							<div class="au-form-group">
 								<label for="email" class="au-label">Email</label>
 								<span class="au-hint-text" id="email-hint">We will only use this to respond to your request</span>
-								<input class="au-text-input au-text-input--width-lg" name="Email" id="email" type="email" aria-required="true" aria-describedby="email-error email-hint" autocomplete="email">
 								<span class="au-error-text hide_content" id="email-error"></span>
+								<input class="au-text-input au-text-input--width-lg" name="Email" id="email" type="email" aria-required="true" aria-describedby="email-error email-hint" autocomplete="email">
 							</div>
 
 							<!--RADIO OPTIONS-->
@@ -205,8 +196,8 @@
 							<div class="au-form-group">
 								<label class="au-label" for="help-comment"> How can we help you?</label>
 								<span class="au-hint-text" id="description-hint">Add some detail about your complaint, suggestion or compliment. Minimum 10 characters</span>
-								<textarea class="au-text-input au-text-input--block" name="Description" id="help-comment" aria-required="true" aria-describedby="description-error description-hint"></textarea>
 								<span class="au-error-text hide_content" id="description-error"></span>
+								<textarea class="au-text-input au-text-input--block" name="Description" id="help-comment" aria-required="true" aria-describedby="description-error description-hint"></textarea>
 							</div>
 
 							<!--FORM SUBMIT BUTTON-->
