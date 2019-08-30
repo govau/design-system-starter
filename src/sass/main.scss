@@ -90,3 +90,15 @@ form {
 		@include AU-space( 'margin-top', 1unit );
 	}
 }
+
+
+.au-header .au-search {
+
+	width: 100%;
+	@include AU-media( xs ) {
+		width: 75%;
+	}
+	@include AU-media( sm ) {
+		width: 100%;
+	}
+}
