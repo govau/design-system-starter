@@ -17,7 +17,8 @@ AddEvent( formSubmit, 'click', function( event, $this ) {
 		RemoveClass( errorSummary, 'hide_content' );
 		generateErrorSummary();
 		errorMessageHeading.focus();
-		document.title= " Error - Australian Government Design System | Content";
+		var currentTitle = document.title;
+		document.title= " Error - " + currentTitle;
 	}
 });
 
