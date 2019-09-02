@@ -18,7 +18,7 @@ AddEvent( formSubmit, 'click', function( event, $this ) {
 		generateErrorSummary();
 		errorMessageHeading.focus();
 		var currentTitle = document.title;
-		document.title= " Error - " + currentTitle;
+		document.title = "Error - " + currentTitle;
 	}
 });
 
