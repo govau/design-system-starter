@@ -34,6 +34,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install modules
+          command: npm install
+      - run:
           name: Test
           command: npm run backstop:test
 
