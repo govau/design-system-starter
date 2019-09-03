@@ -59,6 +59,20 @@ The starter pack uses npm (node package manager) to set up a local development e
 1. You should now be ready to start your local server by running `npm run watch`. This will watch for changes on `*.scss` files, create new `*.css` files and refresh the browser.
 
 
+### Using Docker
+
+Build the image:
+
+```bash
+$ docker build -t ds-starter .
+```
+
+Then run the image and map the volume. Note: $PWD is not supported in windows.
+
+```bash
+$ docker run --rm --volume="$PWD:/app" -p 3000:3000 -it ds-starter
+```
+
 **[⬆ back to top](#contents)**
 
 
