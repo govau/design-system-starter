@@ -34,11 +34,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Get reference
-          command: |
-            npm install
-            npm run backstop:ref
-      - run:
           name: Test
           command: npm run backstop:test
 
