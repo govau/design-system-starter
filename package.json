@@ -5,6 +5,7 @@
 	"scripts": {
 		"backstop:ref": "backstop reference",
 		"backstop:test": "backstop test",
+		"backstop:approve": "backstop approve",
 		"build:autoprefix": "postcss docs/css/main.css -u autoprefixer -r",
 		"build:css": "node-sass --output-style compressed \"./src/sass/main.scss\" \"./docs/css/main.css\"",
 		"build:css:dev": "node-sass --output-style compact --source-map true src/sass/main.scss docs/css/main.css",
