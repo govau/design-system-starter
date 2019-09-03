@@ -3,3 +3,6 @@ node_modules
 .sass-cache
 _auds.scss
 docs/css/main.css.map
+backstop_data/html_report/
+backstop_data/bitmaps_test/
+backstop_data/json_report/

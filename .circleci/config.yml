@@ -27,6 +27,21 @@ jobs:
             - docs/
             - .deploy/
 
+  visual-regression:
+    docker:
+      image: backstopjs/backstopjs
+    working_directory: ~/ds-starter
+    steps:
+      - checkout
+      - run:
+          name: Get reference
+          command: |
+            npm install
+            npm run backstop:ref
+      - run:
+          name: Test
+          command: npm run backstop:test
+
   deploy-staging:
     docker:
       - image: govau/cf-cli
