@@ -101,6 +101,7 @@ workflows:
   deploy-starter:
     jobs:
       - build-and-test
+      - visual-regression
       - deploy-staging: # run deploy staging
           requires:
             - build-and-test
