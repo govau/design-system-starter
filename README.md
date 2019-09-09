@@ -28,9 +28,9 @@ Australian Government Design System - Starter
 
 Browse full page templates using the Australian Government Design System.
 
-- [Home page](https://govau.github.io/design-system-starter/)
-- [Basic page](https://govau.github.io/design-system-starter/basic)
-- [Form page](https://govau.github.io/design-system-starter/form)
+- [Home page](https://design-system-starter.apps.b.cld.gov.au/)
+- [Content page](https://design-system-starter.apps.b.cld.gov.au/content/)
+- [Form page](https://design-system-starter.apps.b.cld.gov.au/form/)
 
 
 ## Development environment
