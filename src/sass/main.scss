@@ -265,6 +265,11 @@ dd.search-result__metadata--item{
     border-top: 1px solid #ccc;
 }
 
+.search-no-results{
+	@include AU-space( 'margin-top', 1.5unit);
+
+}
+
 .page-link:hover {
 	background-color: #ebebeb;
   }
