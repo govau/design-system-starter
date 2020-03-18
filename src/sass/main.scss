@@ -1,11 +1,11 @@
 // Dark theme overrides
-// $AU-colordark-foreground-text:   #ffffff;
-// $AU-colordark-foreground-action: #f9f9f9;
+$AU-colordark-foreground-text:   #ffffff;
+$AU-colordark-foreground-action: #f9f9f9;
 // $AU-colordark-foreground-focus:  #13e241;
-// $AU-colordark-background:        #134169;
+$AU-colordark-background:        #183052;
 
 // Light theme overrides
-// $AU-color-foreground-action: #134169;
+$AU-color-foreground-action: #183052;
 // $AU-color-foreground-focus:  #0C8927;
 
 //Main nav, set project specific breakpoint
@@ -23,7 +23,9 @@ body {
 
 
 // Increase the spacing for au-body elements inside main
-main > .au-body {
+main > .au-body,
+section
+{
 	@include AU-space( padding, 2unit 0 );
 
 }
@@ -92,13 +94,170 @@ form {
 }
 
 
-.au-header .au-search {
+.au-header  {
+	@include AU-space( padding, 8unit 0);
 
-	width: 100%;
-	@include AU-media( xs ) {
-		width: 75%;
+	&__brand {
+		text-align: center;
 	}
-	@include AU-media( sm ) {
-		width: 100%;
+
+	&__heading {
+		margin-bottom: 32px !important;
+		margin-bottom: 2rem !important;
 	}
+
+	&__subline {
+		color: $AU-colordark-foreground-text !important;
+		@include AU-fontgrid( sm );
+	}
+
+}
+
+
+.header-logo {
+	background: black;
+	text-align: center;
+	@include AU-space( padding, 2unit 0);
+}
+
+.au-card__title {
+	a {
+		text-decoration: none;
+	}
+}
+
+.au-card__content {
+	@include AU-fontgrid(xs);
+	color: $AU-color-foreground-hint;
+	margin-bottom: 16px !important;
+	margin-bottom: 1rem !important;
+}
+
+.au-card__icon {
+	color: #0073ec;
+	@include AU-fontgrid( xs );
+	&:after {
+
+		content: ' ';
+		@include AU-space( width, 1unit );
+		@include AU-space( height, 1unit );
+		@include AU-space( bottom, 1unit );
+		@include AU-space( right, 1unit );
+
+		position: absolute;
+		display: block;
+		transition: right 0.2s ease;
+		background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14">'
+		 + '<path fill="#0073EC" fill-rule="evenodd" d="M7.1153041,0 L8.61538462,1.47577158 L3.961,6.054 L16,6.05412256 L16,7.87035933 L3.885,7.87 L8.61538462,12.5242284 L7.1153041,14 L0,7 L7.1153041,0 Z" transform="rotate(-180 8 7)"/>' +
+	  '</svg>');
+	  	background-repeat: no-repeat;
+	}
+}
+
+.au-card:hover {
+
+	.au-card__icon {
+			&:after {
+				content: ' ';
+				@include AU-space( width, 1unit );
+				@include AU-space( height, 1unit );
+				@include AU-space( bottom, 1unit );
+				@include AU-space( right, 0.75unit );
+
+				position: absolute;
+				display: block;
+				transition: right 0.2s ease;
+				background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14">'
+				 + '<path fill="#0073EC" fill-rule="evenodd" d="M7.1153041,0 L8.61538462,1.47577158 L3.961,6.054 L16,6.05412256 L16,7.87035933 L3.885,7.87 L8.61538462,12.5242284 L7.1153041,14 L0,7 L7.1153041,0 Z" transform="rotate(-180 8 7)"/>' +
+			  '</svg>');
+				  background-repeat: no-repeat;
+			}
+	}
+
+	.au-card__icon-key {
+		&:after {
+			content: ' ';
+			@include AU-space( width, 2unit );
+			@include AU-space( height, 2unit );
+			@include AU-space( bottom, 1unit );
+			@include AU-space( left, 1.25unit );
+			border-radius: $AU-border-radius;
+
+			position: absolute;
+			display: block;
+			transition: right 0.2s ease;
+			background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14">'
+			 + '<path fill="#0073EC" fill-rule="evenodd" d="M7.1153041,0 L8.61538462,1.47577158 L3.961,6.054 L16,6.05412256 L16,7.87035933 L3.885,7.87 L8.61538462,12.5242284 L7.1153041,14 L0,7 L7.1153041,0 Z" transform="rotate(-180 8 7)"/>' +
+		  '</svg>');
+			  background-repeat: no-repeat;
+			  background-size: 16px;
+
+			background-position: 50%;
+
+			background-color:
+			rgba(0,115,236,.1);
+		}
+	}
+}
+
+
+.travel-icon {
+	height: 25px;
+	width: 25px;
+
+	+ h2 {
+		margin-top: 8px !important;
+		margin-top: 0.5rem !important;
+	}
+}
+
+
+#key-updates {
+	.au-card {
+		width: 268px;
+		height: 340px;
+	}
+
+	.au-card__inner {
+		position: absolute;
+		bottom: 0;
+		width: 80%;
+		background: white;
+		border-top-right-radius: $AU-border-radius;
+		height: 180px;
+	}
+
+	.au-card__icon-key {
+		height: 32px;
+		width: 32px;
+
+		&:after {
+			content: ' ';
+			@include AU-space( width, 2unit );
+			@include AU-space( height, 2unit );
+			@include AU-space( bottom, 1unit );
+			@include AU-space( left, 1unit );
+			border-radius: $AU-border-radius;
+
+			position: absolute;
+			display: block;
+			transition: right 0.2s ease;
+			background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14">'
+			 + '<path fill="#0073EC" fill-rule="evenodd" d="M7.1153041,0 L8.61538462,1.47577158 L3.961,6.054 L16,6.05412256 L16,7.87035933 L3.885,7.87 L8.61538462,12.5242284 L7.1153041,14 L0,7 L7.1153041,0 Z" transform="rotate(-180 8 7)"/>' +
+		  '</svg>');
+			  background-repeat: no-repeat;
+			  background-size: 16px;
+
+			background-position: 50%;
+
+			background-color:
+			rgba(0,115,236,.1);
+		}
+
+	}
+}
+
+.card-image {
+	width: 100% !important;
+	height: 100% !important;
 }

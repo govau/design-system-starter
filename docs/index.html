@@ -88,166 +88,264 @@
 	</nav>
 
 	<!-- HEADER -->
+	<div class="header-logo">
+		<img src="assets/img/Aus-Gov-stacked-white.svg" alt="">
+	</div>
 	<header class="au-header au-header--dark" role="banner">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-8">
-					<a class="au-header__brand" href="#">
-						<img class="au-header__brand-image" alt="Insert alternate text here" src="assets/img/header-logo-agov.png">
+				<div class="col-sm-12">
+					<div class="au-header__brand">
 						<div class="au-header__text">
-							<h1 class="au-header__heading">Name of website</h1>
-							<div class="au-header__subline">Simple explanation of the website</div>
+							<h1 class="au-header__heading au-display-xxxl">Coronavirus (COVID-19)</h1>
+							<span class="au-header__subline">This site will link you to the latest COVID-19 news, updates and advice from government agencies across Australia</span>
 						</div>
-					</a>
+					</div>
 				</div>
-				<div class="col-sm-4">
-					<form role="search" aria-label="sitewide" class="au-search au-search--dark au-search--icon">
-						<label for="standard" class="au-search__label">Search this website</label>
-						<input type="search" placeholder="Search this site" id="standard" name="standard" class="au-text-input au-text-input--dark"/>
-						<div class="au-search__btn">
-							<button class="au-btn au-btn--dark" type="submit"><span class="au-search__submit-btn-text">Search</span></button>
-						</div>
-					</form>
 				</div>
 			</div>
 		</div>
 	</header>
-
-	<!-- MAIN NAVIGATION -->
-	<nav class="au-main-nav au-main-nav--dark" id="#mainmenu" aria-label="main">
+	<section class="au-body" id="key-updates">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="au-main-nav__content" id="main-nav-default-dark">
-						<button
-							aria-controls="main-nav-default-dark"
-							class="au-main-nav__toggle au-main-nav__toggle--open"
-							onClick="return AU.mainNav.Toggle( this )">
-							Menu
-						</button>
-						<div class="au-main-nav__menu">
-							<div class="au-main-nav__menu-inner">
-								<div class="au-main-nav__focus-trap-top"></div>
-								<button
-									aria-controls="main-nav-default-dark"
-									class="au-main-nav__toggle au-main-nav__toggle--close"
-									onClick="return AU.mainNav.Toggle( this )">
-									Close
-								</button>
-								<ul class="au-link-list">
-									<li class="active"><a href="#">Home</a></li>
-									<li><a href="content">Content page</a></li>
-									<li><a href="form">Form page</a></li>
-									<li><a href="#">Simple terms</a></li>
-									<li><a href="#">Distinct from eachother</a></li>
-								</ul>
-								<div class="au-main-nav__focus-trap-bottom"></div>
-							</div>
-						</div>
-						<div class="au-main-nav__overlay" aria-controls="main-nav-default-dark" onClick="return AU.mainNav.Toggle( this )"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
-
-	<!-- MAIN BODY -->
-	<main id="content">
-		<!--CONTENT-->
-		<div class="au-body au-body--alt banner">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-sm-push-6">
-						<img class="au-responsive-media-img banner__image" src="assets/img/600x260.jpg" alt="Placeholder image 600x260">
-					</div>
-					<div class="col-xs-12 col-sm-6 col-sm-pull-6">
-						<h2>Hero callout</h2>
-						<p>Support the callout with some short explanatory text. You don't need more than a couple of sentences.</p>
-						<p>Use buttons to give your user a clear call to action about what to do next.</p>
-						<div class="btn-cta-group">
-							<a class="au-btn" href="#">Primary call to action</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<section class="au-body">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Some highlighted content</h2>
-						<p>Explain some important information upfront, what is the product or service. What is the role of it. How does the user get started using it. Keep this text simple and informative. Vestibulum non consequat tellus.</p>
-
-						<p>Nullam sollicitudin orci neque, ut condimentum ipsum blandit eu. Praesent eu sagittis elit.</p>
-
-						<p>Nullam ut nibh sed nunc molestie faucibus. Integer pulvinar sapien in porta fringilla. Cras et velit fermentum, pretium lacus gravida, egestas mauris. Explain some important information upfront, what is the product or service. What is the role of it. How does the user get started using it. Keep this text simple and informative.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="au-body au-body--alt banner">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Sub content</h2>
-						<p>Content that is important to have on the home page but not so important that it has to be visible at the top of the page. This could include contact information, more detailed explanation of the functionality of a product or service.</p>
-						<div class="btn-cta-group">
-							<a class="au-btn" href="#">Primary call to action</a>
-							<a class="au-btn au-btn--secondary" href="#">Secondary call to action</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="au-body">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Articles</h2>
-						<div class="row">
-							<ul class="au-card-list au-card-list--matchheight ">
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card au-card--shadow au-card--centred au-card--clickable">
-										<img class="au-responsive-media-img" alt="placeholder image"
-												src="assets/img/600x260.jpg">
-										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="#"
-													class="au-card--clickable__link ">Card title</a></h2>
-											<p type="content" class="au-card__content">Additional text relating to the card.</p>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card  au-card--shadow au-card--centred au-card--clickable">
-										<img class="au-responsive-media-img"
-											alt="placeholder image" src="assets/img/600x260.jpg">
-										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="#"
-													class="au-card--clickable__link ">Card title</a></h2>
-											<p type="content" class="au-card__content">Additional text relating to the card.</p>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card  au-card--shadow au-card--centred au-card--clickable">
-										<img class="au-responsive-media-img" alt="placeholder image"
-											src="assets/img/600x260.jpg">
-										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="#"
-													class="au-card--clickable__link ">Card title</a></h2>
-										<p type="content" class="au-card__content">Additional text relating to the card.</p>
+					<h2 class="au-display-lg">Key updates</h2>
+					<div class="row">
+						<ul class="au-card-list au-card-list--matchheight ">
+							<li class="col-sm-6 col-md-3">
+								<div class="au-card au-card--shadow au-card--clickable">
+									<img class="card-image" alt
+											src="https://www.australia.gov.au/profiles/gsecms/themes/ausgovau_bootstrap/images/resources/protecting-yourself-and-others.jpg">
+									<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-md" type="heading"><a href="https://www.staysmartonline.gov.au/alert-service/covid-19-scam-messages-targeting-australians"
+												class="au-card--clickable__link">Protecting yourself and others</a></h2>
+										<p type="content" class="au-card__content">Follow the latest advice to prevent the spread and reduce your risk.</p>
+									<span class="au-card__icon-key" aria-hidden="true"></span>
 									</div>
 								</div>
 							</li>
-						</ul>
+							<li class="col-sm-6 col-md-3">
+								<div class="au-card  au-card--shadow au-card--clickable">
+									<img class="card-image"
+										alt src="https://www.australia.gov.au/profiles/gsecms/themes/ausgovau_bootstrap/images/resources/Getting-tested.jpg">
+									<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-md" type="heading"><a href="https://www.staysmartonline.gov.au/alert-service/covid-19-scam-messages-targeting-australians"
+												class="au-card--clickable__link ">Getting tested</a></h2>
+										<p type="content" class="au-card__content">Read more to find out who can be tested and when they should get tested.</p>
+									<span class="au-card__icon-key" aria-hidden="true"></span>
+									</div>
+								</div>
+							</li>
+							<li class="col-sm-6 col-md-3">
+								<div class="au-card  au-card--shadow au-card--clickable">
+									<img class="card-image" alt
+										src="https://www.australia.gov.au/profiles/gsecms/themes/ausgovau_bootstrap/images/resources/Government-updates.jpg">
+									<div class="au-card__inner ">
+									<h2 class="au-card__title au-display-md" type="heading"><a href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert#symptoms-and-when-to-get-tested"
+												class="au-card--clickable__link ">Government updates</a></h2>
+									<p type="content" class="au-card__content">Additional text relating to the card.</p>
+									<span class="au-card__icon-key" aria-hidden="true"></span>
+								</div>
+							</div>
+						</li>
+
+						<li class="col-sm-6 col-md-3">
+							<div class="au-card  au-card--shadow au-card--clickable">
+								<img class="card-image" alt
+									src="https://www.australia.gov.au/profiles/gsecms/themes/ausgovau_bootstrap/images/resources/social-distancing.jpg">
+								<div class="au-card__inner ">
+								<h2 class="au-card__title au-display-md" type="heading"><a href="https://www.health.gov.au/resources/publications/coronavirus-covid-19-information-on-social-distancing"
+											class="au-card--clickable__link ">Social distancing</a></h2>
+								<p type="content" class="au-card__content">How you can reduce your risk of exposure through social distancing.</p>
+									<span class="au-card__icon-key" aria-hidden="true"></span>
+							</div>
+						</div>
+					</li>
+					<li class="col-sm-6 col-md-3">
+						<div class="au-card  au-card--shadow au-card--clickable">
+							<img class="card-image" alt
+								src="https://www.australia.gov.au/profiles/gsecms/themes/ausgovau_bootstrap/images/resources/1101025.jpeg">
+							<div class="au-card__inner ">
+							<h2 class="au-card__title au-display-md" type="heading"><a href="https://www.staysmartonline.gov.au/alert-service/covid-19-scam-messages-targeting-australians"
+										class="au-card--clickable__link ">COVID-19 scam messages</a></h2>
+							<p type="content" class="au-card__content">Find out about a COVID-19 scam being sent via text message.</p>
+							<span class="au-card__icon-key" aria-hidden="true"></span>
+						</div>
 					</div>
+				</li>
+					</ul>
 				</div>
 			</div>
+		</div>
+	</section>
 
-			<div class="articles-cta">
-				<a class="au-cta-link" href="#">See more articles</a>
+	<section class="au-body au-body--alt">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="au-display-lg">Information for travellers</h2>
+					<div class="row">
+						<ul class="au-card-list au-card-list--matchheight ">
+							<li class="col-xs-12 col-sm-6 col-md-3">
+								<div class="au-card au-card--shadow au-card--clickable">
+									<div class="au-card__inner ">
+										<img src="https://www.australia.gov.au/profiles/gsecms/themes/ausgovau_bootstrap/images/resources/Travellers-1.svg" alt class="travel-icon">
+										<h2 class="au-card__title au-display-sm" type="heading"><a href="https://www.staysmartonline.gov.au/alert-service/covid-19-scam-messages-targeting-australians"
+												class="au-card--clickable__link">Australians overseas</a></h2>
+										<p type="content" class="au-card__content">View latest advice or for urgent consular assistance contact: +61 26261 330</p>
+										<span class="au-card__icon" aria-hidden="true">Learn more</span>
+									</div>
+								</div>
+							</li>
+							<li class="col-xs-12 col-sm-6 col-md-3">
+								<div class="au-card  au-card--shadow au-card--clickable">
+									<div class="au-card__inner ">
+									<img src="https://www.australia.gov.au/profiles/gsecms/themes/ausgovau_bootstrap/images/resources/Travellers-2.svg" alt class="travel-icon">
+									<h2 class="au-card__title au-display-sm" type="heading"><a href="https://www.smartraveller.gov.au/crisis/covid-19-and-travel"
+												class="au-card--clickable__link ">Travel bans and restrictions</a></h2>
+									<p type="content" class="au-card__content">View the country by country breakdown</p>
+									<span class="au-card__icon" aria-hidden="true">Learn more</span>
+								</div>
+							</div>
+							</li>
+							<li class="col-xs-12 col-sm-6 col-md-3">
+								<div class="au-card  au-card--shadow au-card--clickable">
+									<div class="au-card__inner ">
+										<img src="https://www.australia.gov.au/profiles/gsecms/themes/ausgovau_bootstrap/images/resources/Travellers-3.svg" alt class="travel-icon">
+										<h2 class="au-card__title au-display-sm" type="heading"><a href="https://www.homeaffairs.gov.au/news-media/current-alerts/novel-coronavirus"
+												class="au-card--clickable__link ">Australians returning from overseas</a></h2>
+										<p type="content" class="au-card__content">Additional health measures in place when returning home</p>
+										<span class="au-card__icon" aria-hidden="true">Learn more</span>
+									</div>
+								</div>
+							</li>
+							<li class="col-xs-12 col-sm-6 col-md-3">
+								<div class="au-card  au-card--shadow au-card--clickable">
+									<div class="au-card__inner ">
+										<img src="https://www.australia.gov.au/profiles/gsecms/themes/ausgovau_bootstrap/images/resources/Travellers-4.svg" alt class="travel-icon">
+										<h2 class="au-card__title au-display-sm" type="heading"><a href="https://www.homeaffairs.gov.au/news-media/current-alerts/novel-coronavirus"
+												class="au-card--clickable__link ">Self isolation</a></h2>
+										<p type="content" class="au-card__content">Advice and information for people who are self isolating</p>
+										<span class="au-card__icon" aria-hidden="true">Learn more</span>
+									</div>
+								</div>
+							</li>
+					</ul>
+				</div>
 			</div>
-		</section>
+		</div>
+	</div>
+	</section>
+
+	<section class="au-body">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="au-display-lg">Receiving financial support</h2>
+					<div class="row">
+						<ul class="au-card-list au-card-list--matchheight ">
+							<li class="col-xs-12 col-sm-6 col-md-3">
+								<div class="au-card au-card--shadow au-card--clickable">
+									<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-sm" type="heading"><a href="https://www.servicesaustralia.gov.au/individuals/subjects/affected-coronavirus-covid-19"
+												class="au-card--clickable__link">Government payments and services</a></h2>
+										<p type="content" class="au-card__content">Information about social welfare payments and other assistance.</p>
+										<span class="au-card__icon" aria-hidden="true">Learn more</span>
+									</div>
+								</div>
+							</li>
+							<li class="col-xs-12 col-sm-6 col-md-3">
+								<div class="au-card  au-card--shadow au-card--clickable">
+									<div class="au-card__inner ">
+									<h2 class="au-card__title au-display-sm" type="heading"><a href="https://www.servicesaustralia.gov.au/individuals/news/750-one-economic-support-payment"
+												class="au-card--clickable__link ">Economic support payment</a></h2>
+									<p type="content" class="au-card__content">Check if you&#x27;re eligible to receive a one-off payment for those impacted by COVID-19.</p>
+									<span class="au-card__icon" aria-hidden="true">Learn more</span>
+								</div>
+							</div>
+							</li>
+							<li class="col-xs-12 col-sm-6 col-md-3">
+								<div class="au-card  au-card--shadow au-card--clickable">
+									<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-sm" type="heading"><a href="https://www.servicesaustralia.gov.au/individuals/subjects/affected-coronavirus-covid-19/people-who-dont-get-payment-from-us-coronavirus-covid-19"
+												class="au-card--clickable__link ">Payments if you can't work while isolated</a></h2>
+										<p type="content" class="au-card__content">Information for people who can't work due to quarantine or self-isolation</p>
+										<span class="au-card__icon" aria-hidden="true">Learn more</span>
+									</div>
+								</div>
+							</li>
+							<li class="col-xs-12 col-sm-6 col-md-3">
+								<div class="au-card  au-card--shadow au-card--clickable">
+									<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-sm" type="heading"><a href="https://www.servicesaustralia.gov.au/individuals/subjects/affected-coronavirus-covid-19/job-seekers-coronavirus-covid-19"
+												class="au-card--clickable__link ">Job-seekers affected by self-isolation</a></h2>
+										<p type="content" class="au-card__content">Information for people seeking employment during isolation</p>
+										<span class="au-card__icon" aria-hidden="true">Learn more</span>
+									</div>
+								</div>
+							</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+
+	<section class="au-body au-body--alt">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="au-display-lg">Information for schools, employers and businesses</h2>
+					<div class="row">
+						<ul class="au-card-list au-card-list--matchheight ">
+							<li class="col-xs-12 col-sm-6 col-md-3">
+								<div class="au-card au-card--shadow au-card--clickable">
+									<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-sm" type="heading"><a href="https://www.servicesaustralia.gov.au/individuals/subjects/affected-coronavirus-covid-19"
+												class="au-card--clickable__link">Government payments and services</a></h2>
+										<p type="content" class="au-card__content">Information about social welfare payments and other assistance.</p>
+										<span class="au-card__icon" aria-hidden="true">Learn more</span>
+									</div>
+								</div>
+							</li>
+							<li class="col-xs-12 col-sm-6 col-md-3">
+								<div class="au-card  au-card--shadow au-card--clickable">
+									<div class="au-card__inner ">
+									<h2 class="au-card__title au-display-sm" type="heading"><a href="https://www.servicesaustralia.gov.au/individuals/news/750-one-economic-support-payment"
+												class="au-card--clickable__link ">Economic support payment</a></h2>
+									<p type="content" class="au-card__content">Check if you&#x27;re eligible to receive a one-off payment for those impacted by COVID-19.</p>
+									<span class="au-card__icon" aria-hidden="true">Learn more</span>
+								</div>
+							</div>
+							</li>
+							<li class="col-xs-12 col-sm-6 col-md-3">
+								<div class="au-card  au-card--shadow au-card--clickable">
+									<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-sm" type="heading"><a href="https://www.servicesaustralia.gov.au/individuals/subjects/affected-coronavirus-covid-19/people-who-dont-get-payment-from-us-coronavirus-covid-19"
+												class="au-card--clickable__link ">Payments if you can't work while isolated</a></h2>
+										<p type="content" class="au-card__content">Information for people who can't work due to quarantine or self-isolation</p>
+										<span class="au-card__icon" aria-hidden="true">Learn more</span>
+									</div>
+								</div>
+							</li>
+							<li class="col-xs-12 col-sm-6 col-md-3">
+								<div class="au-card  au-card--shadow au-card--clickable">
+									<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-sm" type="heading"><a href="https://www.servicesaustralia.gov.au/individuals/subjects/affected-coronavirus-covid-19/job-seekers-coronavirus-covid-19"
+												class="au-card--clickable__link ">Job-seekers affected by self-isolation</a></h2>
+										<p type="content" class="au-card__content">Information for people seeking employment during isolation</p>
+										<span class="au-card__icon" aria-hidden="true">Learn more</span>
+									</div>
+								</div>
+							</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+
 		<!--END CONTENT-->
 	</main>
 	<!-- END MAIN BODY -->
