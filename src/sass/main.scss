@@ -95,7 +95,11 @@ form {
 
 
 .au-header  {
-	@include AU-space( padding, 8unit 0);
+	@include AU-space( padding, 3unit 0);
+
+	@include AU-media( md ) {
+		@include AU-space( padding, 8unit 0);
+	}
 
 	&__brand {
 		text-align: center;

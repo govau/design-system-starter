@@ -1721,7 +1721,9 @@ form { margin-top: 32px; margin-top: 2rem; }
 
 @media (min-width: 992px) { .articles-cta { margin-top: 16px; margin-top: 1rem; } }
 
-.au-header { padding: 128px 0; padding: 8rem 0; }
+.au-header { padding: 48px 0; padding: 3rem 0; }
+
+@media (min-width: 992px) { .au-header { padding: 128px 0; padding: 8rem 0; } }
 
 .au-header__brand { text-align: center; }
 
