@@ -119,7 +119,7 @@ form {
 
 
 .header-logo {
-	background: black;
+	background: #101012;
 	text-align: center;
 	@include AU-space( padding, 2unit 0);
 }
@@ -218,7 +218,7 @@ form {
 
 #key-updates {
 	.au-card {
-		width: 268px;
+		width: 298px;
 		height: 340px;
 	}
 
@@ -264,4 +264,9 @@ form {
 .card-image {
 	width: 100% !important;
 	height: 100% !important;
+}
+
+
+.au-footer {
+	background-color: #101012 !important;
 }
