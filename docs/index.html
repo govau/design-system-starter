@@ -179,7 +179,7 @@
 				</div>
 			</div>
 		</div>
-		<button class="move-right" aria-hidden="true"></button>
+		<button class="move-right hidden" aria-hidden="true"></button>
 		<button class="move-left hidden" aria-hidden="true"></button>
 	</section>
 
@@ -473,12 +473,15 @@
 	</script>
 
 	<script>
+		//remove hidden classes if JS loads
 		var cards = document.querySelectorAll('#key-updates li');
 		for( i=0 ; i< cards.length; i++ ){
 			cards[i].classList.remove('col-xs-6' );
 			cards[i].classList.remove('col-sm-4' );
 			cards[i].classList.remove('col-md-3' );
 		}
+		document.querySelector('.move-right').classList.remove('hidden')
+		document.querySelector('.move-left').classList.remove('hidden')
 
 	</script>
 </body>
