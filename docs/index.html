@@ -57,7 +57,7 @@
 	<title>Australian Government Design System | Home</title>
 
 	<script type="text/javascript">
-		var $html = document.documentElement; if ($html.classList) $html.classList.remove("no-js"), $html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
+		var $html = document.documentElement; if ($html.classList) $html.RemoveClass("no-js"), $html.AddClass("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
 	</script>
 
 	<link rel="icon" href="assets/favicons/favicon.ico">
@@ -422,6 +422,7 @@
 			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 			  crossorigin="anonymous"></script>
 	<script type="text/javascript" src="js/owl.js"></script>
+	<script type="text/javascript" src="js/helper.js"></script>
 	<script type="text/javascript" src="js/script.min.js"></script>
 	<script>
 
@@ -456,16 +457,16 @@
 
 	$('.owl-carousel').on('changed.owl.carousel', function(e) {
           if (e.page.index+1 == e.page.count) {
-			document.querySelector('.move-right').classList.add('hidden');
-			document.querySelector('.move-left').classList.remove('hidden')
+			AddClass(document.querySelector('.move-right'), 'hidden');
+			RemoveClass(document.querySelector('.move-left'),'hidden')
           }
           else if (e.item.index==0) {
-			document.querySelector('.move-left').classList.add('hidden')
-			document.querySelector('.move-right').classList.remove('hidden');
+			AddClass(document.querySelector('.move-left'), 'hidden')
+			RemoveClass(document.querySelector('.move-right'), 'hidden');
 		  }
 		  else {
-			document.querySelector('.move-right').classList.remove('hidden')
-			document.querySelector('.move-left').classList.remove('hidden')
+			RemoveClass(document.querySelector('.move-right'), 'hidden')
+			RemoveClass(document.querySelector('.move-left'), 'hidden')
 		  }
         });
 
@@ -476,11 +477,11 @@
 		//remove hidden classes if JS loads
 		var cards = document.querySelectorAll('#key-updates li');
 		for( i=0 ; i< cards.length; i++ ){
-			cards[i].classList.remove('col-xs-6' );
-			cards[i].classList.remove('col-sm-4' );
-			cards[i].classList.remove('col-md-3' );
+			RemoveClass(cards[i], 'col-xs-6' );
+			RemoveClass(cards[i], 'col-sm-4' );
+			RemoveClass(cards[i], 'col-md-3' );
 		}
-		document.querySelector('.move-right').classList.remove('hidden');
+		document.querySelector('.move-right').RemoveClass('hidden');
 
 	</script>
 </body>
