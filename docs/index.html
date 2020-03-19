@@ -113,7 +113,7 @@
 				<div class="col-md-12">
 					<h2 class="au-display-lg">Key updates</h2>
 					<div class="row">
-						<ul class="au-card-list au-card-list--matchheight owl-carousel owl-theme" id="carousel">
+						<ul class="au-card-list au-card-list--matchheight" id="carousel">
 							<li class="col-xs-6 col-sm-4 col-md-3 item">
 								<div class="au-card au-card--shadow au-card--clickable">
 									<img class="card-image" alt
@@ -425,6 +425,9 @@
 	<script type="text/javascript" src="js/helper.js"></script>
 	<script type="text/javascript" src="js/script.min.js"></script>
 	<script>
+		var carousel = document.getElementById('carousel');
+		AddClass(carousel, 'owl-carousel');
+		AddClass(carousel,'owl-theme' );
 
 	var owl = $('.owl-carousel');
 
@@ -489,7 +492,7 @@
 		<script>
 			var carousel = document.getElementById('carousel');
 			RemoveClass(carousel, 'owl-carousel');
-					var cards = document.querySelectorAll('#key-updates li');
+			var cards = document.querySelectorAll('#key-updates li');
 		for( i=0 ; i< cards.length; i++ ){
 			AddClass(cards[i], 'col-xs-6' );
 			AddClass(cards[i], 'col-sm-4' );
