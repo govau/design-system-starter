@@ -122,6 +122,12 @@ form {
 	background: #101012;
 	text-align: center;
 	@include AU-space( padding, 2unit 0);
+
+	img {
+		@include AU-space( max-width, 20unit );
+	}
+
+
 }
 
 .au-card__title {

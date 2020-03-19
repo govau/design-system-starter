@@ -1733,6 +1733,8 @@ form { margin-top: 32px; margin-top: 2rem; }
 
 .header-logo { background: #101012; text-align: center; padding: 32px 0; padding: 2rem 0; }
 
+.header-logo img { max-width: 320px; max-width: 20rem; }
+
 .au-card__title a { text-decoration: none; }
 
 .au-card__content { font-size: 14px; font-size: 0.875rem; line-height: 1.42857; color: #6f777b; margin-top: 16px !important; margin-top: 1rem !important; }
