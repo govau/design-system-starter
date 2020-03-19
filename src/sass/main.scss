@@ -270,3 +270,77 @@ form {
 .au-footer {
 	background-color: #101012 !important;
 }
+
+
+.move-right {
+	border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+	-webkit-appearance: none;
+
+	background-image: AU-svguri('<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 7 11" style="enable-background:new 0 0 7 11;" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#0073EC;}</style><title>Icons / Chevron / Small</title><desc>Created with Sketch.</desc><g><polygon id="Combined-Shape" class="st0" points="0.3,1.2 4.7,5.5 0.3,9.8 1.5,11 7,5.5 1.5,0  "/></g></svg>');
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: 13px;
+	border-radius: $AU-border-radius;
+	@include AU-space( padding, 1rem );
+	@include AU-space( width, 3rem );
+	@include AU-space( height, 3rem );
+	float: right;
+	@include AU-focus();
+}
+
+
+.move-left {
+	border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+	-webkit-appearance: none;
+
+	background-image: AU-svguri('<svg width="7px" height="11px" viewBox="0 0 7 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><!-- Generator: Sketch 63.1 (92452) - https://sketch.com --><title>Icons / Chevron / Small</title><desc>Created with Sketch.</desc><g id="Icons-/-Chevron-/-Small" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><polygon id="Combined-Shape" fill="#0073EC" transform="translate(3.329767, 5.500000) rotate(-180.000000) translate(-3.329767, -5.500000) " points="-1.0658141e-13 1.15953481 4.34046519 5.5 -1.0658141e-13 9.84046519 1.15953481 11 6.65953481 5.5 1.15953481 0"/></g></svg>');
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: 13px;
+	border-radius: $AU-border-radius;
+	@include AU-space( padding, 1rem );
+	@include AU-space( width, 3rem );
+	@include AU-space( height, 3rem );
+	float: left;
+	@include AU-focus();
+}

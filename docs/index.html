@@ -179,6 +179,8 @@
 				</div>
 			</div>
 		</div>
+		<button class="move-right"></button>
+		<button class="move-left"></button>
 	</section>
 
 	<section class="au-body au-body--alt">
@@ -392,24 +394,34 @@
 	<script type="text/javascript" src="js/script.min.js"></script>
 	<script>
 
-$('.owl-carousel').owlCarousel({
-    margin:10,
-	stagePadding: 50,
-    responsive:{
-        0:{
-            items:1
-        },
-        576:{
-            items:2
-		},
-		768:{
-            items:3
-		},
-        992:{
-            items:4
-		},
-    }
-})
+	var owl = $('.owl-carousel');
+
+	$('.owl-carousel').owlCarousel({
+		margin:10,
+		stagePadding: 50,
+		responsive:{
+			0:{
+				items:1
+			},
+			576:{
+				items:2
+			},
+			768:{
+				items:3
+			},
+			992:{
+				items:4
+			},
+		}
+	})
+
+	$('.move-right').on('click', function(){
+		owl.trigger('next.owl.carousel');
+	});
+
+	$('.move-left').on('click', function(){
+		owl.trigger('prev.owl.carousel');
+	})
 
 	</script>
 
