@@ -344,3 +344,8 @@ form {
 	float: left;
 	@include AU-focus();
 }
+
+
+.hidden {
+	display: none !important;
+}

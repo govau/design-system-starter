@@ -1773,4 +1773,6 @@ form { margin-top: 32px; margin-top: 2rem; }
 
 .move-left::-moz-focus-inner { border: 0; }
 
+.hidden { display: none !important; }
+
 /*# sourceMappingURL=main.css.map */

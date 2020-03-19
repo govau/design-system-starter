@@ -180,7 +180,7 @@
 			</div>
 		</div>
 		<button class="move-right"></button>
-		<button class="move-left"></button>
+		<button class="move-left hidden"></button>
 	</section>
 
 	<section class="au-body au-body--alt">
@@ -453,6 +453,22 @@
 	$('.move-left').on('click', function(){
 		owl.trigger('prev.owl.carousel');
 	})
+
+	$('.owl-carousel').on('changed.owl.carousel', function(e) {
+          if (e.page.index+1 == e.page.count) {
+			document.querySelector('.move-right').classList.add('hidden');
+			document.querySelector('.move-left').classList.remove('hidden')
+          }
+          else if (e.item.index==0) {
+			document.querySelector('.move-left').classList.add('hidden')
+			document.querySelector('.move-right').classList.remove('hidden');
+		  }
+		  else {
+			document.querySelector('.move-right').classList.remove('hidden')
+			document.querySelector('.move-left').classList.remove('hidden')
+		  }
+        });
+
 
 	</script>
 
