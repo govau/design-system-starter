@@ -307,6 +307,7 @@ form {
 	@include AU-space( height, 3rem );
 	float: right;
 	@include AU-focus();
+	cursor: pointer;
 }
 
 
@@ -344,9 +345,14 @@ form {
 	@include AU-space( height, 3rem );
 	float: left;
 	@include AU-focus();
+	cursor: pointer;
 }
 
 
 .hidden {
 	display: none !important;
+}
+
+.au-card.au-card--clickable .au-card--clickable__link::after {
+	z-index: 10;
 }
