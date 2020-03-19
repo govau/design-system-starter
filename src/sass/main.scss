@@ -133,6 +133,13 @@ form {
 .au-card__content {
 	@include AU-fontgrid(xs);
 	color: $AU-color-foreground-hint;
+	margin-top: 16px !important;
+	margin-top: 1rem !important;
+
+	@include AU-media( sm ){
+		margin-top: 24px !important;
+		margin-top: 1.5rem !important;
+	}
 }
 
 

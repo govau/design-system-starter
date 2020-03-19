@@ -1735,7 +1735,9 @@ form { margin-top: 32px; margin-top: 2rem; }
 
 .au-card__title a { text-decoration: none; }
 
-.au-card__content { font-size: 14px; font-size: 0.875rem; line-height: 1.42857; color: #6f777b; }
+.au-card__content { font-size: 14px; font-size: 0.875rem; line-height: 1.42857; color: #6f777b; margin-top: 16px !important; margin-top: 1rem !important; }
+
+@media (min-width: 768px) { .au-card__content { margin-top: 24px !important; margin-top: 1.5rem !important; } }
 
 .au-card__learn { color: #0073ec; font-size: 14px; font-size: 0.875rem; line-height: 1.42857; position: absolute; bottom: 16px; bottom: 1rem; }
 
