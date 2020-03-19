@@ -133,13 +133,16 @@ form {
 .au-card__content {
 	@include AU-fontgrid(xs);
 	color: $AU-color-foreground-hint;
-	margin-bottom: 16px !important;
-	margin-bottom: 1rem !important;
 }
 
-.au-card__icon {
+
+.au-card__learn {
 	color: #0073ec;
 	@include AU-fontgrid( xs );
+	position: absolute;
+	@include AU-space( bottom, 1unit );
+}
+.au-card__icon {
 	&:after {
 
 		content: ' ';
@@ -360,4 +363,9 @@ form {
 .owl-stage {
 	padding-left: 10px !important;
 	padding-right: 10px !important;
+}
+
+
+.card-footer {
+	@include AU-space( padding, 1unit 0 );
 }

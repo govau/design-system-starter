@@ -1735,9 +1735,9 @@ form { margin-top: 32px; margin-top: 2rem; }
 
 .au-card__title a { text-decoration: none; }
 
-.au-card__content { font-size: 14px; font-size: 0.875rem; line-height: 1.42857; color: #6f777b; margin-bottom: 16px !important; margin-bottom: 1rem !important; }
+.au-card__content { font-size: 14px; font-size: 0.875rem; line-height: 1.42857; color: #6f777b; }
 
-.au-card__icon { color: #0073ec; font-size: 14px; font-size: 0.875rem; line-height: 1.42857; }
+.au-card__learn { color: #0073ec; font-size: 14px; font-size: 0.875rem; line-height: 1.42857; position: absolute; bottom: 16px; bottom: 1rem; }
 
 .au-card__icon:after { content: ' '; width: 16px; width: 1rem; height: 16px; height: 1rem; bottom: 16px; bottom: 1rem; right: 16px; right: 1rem; position: absolute; display: block; transition: right 0.2s ease; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='14' viewBox='0 0 16 14'%3E%3Cpath fill='%230073EC' fill-rule='evenodd' d='M7.1153041,0 L8.61538462,1.47577158 L3.961,6.054 L16,6.05412256 L16,7.87035933 L3.885,7.87 L8.61538462,12.5242284 L7.1153041,14 L0,7 L7.1153041,0 Z' transform='rotate(-180 8 7)'/%3E%3C/svg%3E"); background-repeat: no-repeat; }
 
@@ -1778,5 +1778,7 @@ form { margin-top: 32px; margin-top: 2rem; }
 .au-card.au-card--clickable .au-card--clickable__link::after { z-index: 10; }
 
 .owl-stage { padding-left: 10px !important; padding-right: 10px !important; }
+
+.card-footer { padding: 16px 0; padding: 1rem 0; }
 
 /*# sourceMappingURL=main.css.map */
