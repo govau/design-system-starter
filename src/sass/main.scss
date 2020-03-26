@@ -96,10 +96,13 @@ form {
 
 .au-header  {
 	padding: 0;
+	background: #ffd643 !important;
+	color: #000 !important;
 
 
 	&__alert {
 		background: #dc3548;
+		color: $AU-colordark-foreground-text;
 		@include AU-space( padding, 1unit 0 1unit 4.5unit );
 		position: relative;
 		@include AU-fontgrid( sm );
@@ -456,9 +459,4 @@ form {
 			width: calc(100% - 50px);
 		}
 	}
-}
-
-.covid-header {
-	background: #ffd643 !important;
-	color: #000 !important;
 }

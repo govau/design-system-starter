@@ -1721,9 +1721,9 @@ form { margin-top: 32px; margin-top: 2rem; }
 
 @media (min-width: 992px) { .articles-cta { margin-top: 16px; margin-top: 1rem; } }
 
-.au-header { padding: 0; }
+.au-header { padding: 0; background: #ffd643 !important; color: #000 !important; }
 
-.au-header__alert { background: #dc3548; padding: 16px 0 16px 72px; padding: 1rem 0 1rem 4.5rem; position: relative; font-size: 16px; font-size: 1rem; line-height: 1.5; }
+.au-header__alert { background: #dc3548; color: #ffffff; padding: 16px 0 16px 72px; padding: 1rem 0 1rem 4.5rem; position: relative; font-size: 16px; font-size: 1rem; line-height: 1.5; }
 
 .au-header__alert .info { background: url("../homepage-resources/resources/icon-alert-circle.svg"); position: absolute; left: 0; top: 0; background-color: rgba(0, 0, 0, 0.2); background-size: 20px; background-position: 50%; min-width: 60px; height: 100%; background-repeat: no-repeat; }
 
@@ -1798,7 +1798,5 @@ form { margin-top: 32px; margin-top: 2rem; }
 .essential-information__list:before { content: ''; box-sizing: inherit; position: absolute; top: 0; left: 0; height: 5px; background-color: #0073ec; width: 50px; }
 
 .essential-information__list:after { content: ''; box-sizing: inherit; position: absolute; top: 0; right: 0; height: 5px; background-color: #183052; width: calc(100% - 50px); }
-
-.covid-header { background: #ffd643 !important; color: #000 !important; }
 
 /*# sourceMappingURL=main.css.map */
