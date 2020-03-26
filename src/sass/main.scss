@@ -127,7 +127,7 @@ form {
 
 	&__brand {
 		text-align: center;
-		@include AU-space( padding, 4unit );
+		@include AU-space( padding, 4unit 4unit 2unit 4unit );
 	}
 
 	&__heading {
@@ -136,8 +136,11 @@ form {
 	}
 
 	&__subline {
-		color: $AU-color-foreground-text !important;
-		@include AU-fontgrid( sm );
+		color: #000 !important;
+		@include AU-fontgrid( md );
+		font-weight: bold;
+		@include AU-space( max-width, 35unit );
+		display: inline-block;
 	}
 
 }
@@ -457,6 +460,31 @@ form {
 			height: 5px;
 			background-color: #183052;
 			width: calc(100% - 50px);
+		}
+	}
+}
+
+.sr-only {
+	@include AU-sronly()
+}
+
+.social-media {
+	text-align: center;
+	@include AU-space( margin-bottom, 1.5unit );
+
+	.au-link-list li {
+
+		img {
+			height: 30px;
+			width: 30px;
+		}
+
+		+ li {
+			@include AU-space( margin-left, 0.4unit );
+		}
+
+		a {
+			@include AU-focus();
 		}
 	}
 }
