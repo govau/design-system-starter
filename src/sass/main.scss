@@ -250,8 +250,8 @@ form {
 
 
 .travel-icon {
-	height: 25px;
-	width: 25px;
+	height: 25px !important;
+	width: 25px !important;
 
 	+ h2 {
 		margin-top: 8px !important;
@@ -486,5 +486,11 @@ form {
 		a {
 			@include AU-focus();
 		}
+	}
+}
+
+.small-carousel {
+	li {
+		height: 220px;
 	}
 }

@@ -62,9 +62,9 @@
 
 	<title>Australian Government Design System | Home</title>
 
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		var $html = document.documentElement; if ($html.classList) $html.RemoveClass("no-js"), $html.AddClass("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
-	</script>
+	</script> -->
 
 	<link rel="icon" href="assets/favicons/favicon.ico">
 	<link type="text/css" rel="stylesheet" href="css/main.css">
@@ -1044,13 +1044,16 @@
 	<script>
 		var imageCarousel = document.querySelectorAll('.image-carousel');
 		var smallCarousel = document.querySelectorAll('.small-carousel');
-		var cards = document.querySelectorAll('.carousel-gen li');
+		var cards = document.querySelectorAll('.image-carousel li, .small-carousel li');
 
 		//remove hidden classes if JS loads
 		for (i = 0; i < cards.length; i++) {
-			// RemoveClass(cards[i], 'col-xs-6');
-			// RemoveClass(cards[i], 'col-sm-4');
-			// RemoveClass(cards[i], 'col-md-3');
+			RemoveClass(cards[ i ], 'col-xs-6');
+			RemoveClass(cards[ i ], 'col-sm-4');
+			RemoveClass(cards[ i ], 'col-md-3');
+			RemoveClass(cards[ i ], 'col-xs-12' )
+			RemoveClass(cards[ i ], 'col-sm-6' )
+			RemoveClass(cards[ i ], 'col-md-3' )
 		}
 
 		for( i=0; i < imageCarousel.length; i ++ ){
@@ -1089,7 +1092,7 @@
 				0: {
 					items: 1
 				},
-				576: {
+				460: {
 					items: 2
 				},
 				768: {
@@ -1112,27 +1115,27 @@
 			owl.trigger('prev.owl.carousel');
 		})
 
-		$('.owl-carousel').on('changed.owl.carousel', function (e) {
-			if (e.page.index + 1 == e.page.count) {
-				AddClass(document.querySelector('.move-right'), 'hidden');
-				RemoveClass(document.querySelector('.move-left'), 'hidden')
-			}
-			else if (e.item.index == 0) {
-				AddClass(document.querySelector('.move-left'), 'hidden')
-				RemoveClass(document.querySelector('.move-right'), 'hidden');
-			}
-			else {
-				RemoveClass(document.querySelector('.move-right'), 'hidden')
-				RemoveClass(document.querySelector('.move-left'), 'hidden')
-			}
-		});
+		// $('.owl-carousel').on('changed.owl.carousel', function (e) {
+		// 	if (e.page.index + 1 == e.page.count) {
+		// 		AddClass(document.querySelector('.move-right'), 'hidden');
+		// 		RemoveClass(document.querySelector('.move-left'), 'hidden')
+		// 	}
+		// 	else if (e.item.index == 0) {
+		// 		AddClass(document.querySelector('.move-left'), 'hidden')
+		// 		RemoveClass(document.querySelector('.move-right'), 'hidden');
+		// 	}
+		// 	else {
+		// 		RemoveClass(document.querySelector('.move-right'), 'hidden')
+		// 		RemoveClass(document.querySelector('.move-left'), 'hidden')
+		// 	}
+		// });
 
 
 	</script>
 
 	<script>
 
-		RemoveClass(document.querySelector('.move-right'), 'hidden');
+		// RemoveClass(document.querySelector('.move-right'), 'hidden');
 
 	</script>
 
