@@ -146,7 +146,7 @@
 		</section>
 
 		<!--Carousel 1 KEY UPDATES-->
-		<section class="au-body" id="key-updates">
+		<section class="au-body" id="key-updates-carousel-large">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
@@ -251,7 +251,7 @@
 		<!--Carousel 1 END KEY UPDATES-->
 
 		<!--Carousel 2 HEALTH AND PREVENTION-->
-		<section class="au-body au-body--alt" id="health">
+		<section class="au-body au-body--alt" id="health-carousel-large">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
@@ -458,6 +458,8 @@
 						</div>
 					</div>
 				</div>
+				<button class="move-right hidden" aria-hidden="true"></button>
+				<button class="move-left hidden" aria-hidden="true"></button>
 			</div>
 		</section>
 		<!--END Carousel 3 Supporting the community-->
@@ -601,9 +603,9 @@
 						</div>
 					</div>
 				</div>
+				<button class="move-right hidden" aria-hidden="true"></button>
+				<button class="move-left hidden" aria-hidden="true"></button>
 			</div>
-			<button class="move-right hidden" aria-hidden="true"></button>
-			<button class="move-left hidden" aria-hidden="true"></button>
 		</section>
 		<!--END Carousel 4 State and Territory Government information-->
 
@@ -686,9 +688,9 @@
 						</div>
 					</div>
 				</div>
+				<button class="move-right hidden" aria-hidden="true"></button>
+				<button class="move-left hidden" aria-hidden="true"></button>
 			</div>
-			<button class="move-right hidden" aria-hidden="true"></button>
-			<button class="move-left hidden" aria-hidden="true"></button>
 		</section>
 		<!--END Carousel 5 INFORMATION FOR TRAVELLERS-->
 
@@ -789,6 +791,8 @@
 						</div>
 					</div>
 				</div>
+				<button class="move-right hidden" aria-hidden="true"></button>
+				<button class="move-left hidden" aria-hidden="true"></button>
 			</div>
 		</section>
 		<!--END Carousel 6 RECEIVING FINANCIAL SUPPORT-->
@@ -871,6 +875,8 @@
 								</div>
 							</div>
 						</div>
+						<button class="move-right hidden" aria-hidden="true"></button>
+						<button class="move-left hidden" aria-hidden="true"></button>
 					</div>
 				</section>
 				<!--END Carousel 7 Information for education providers-->
@@ -995,6 +1001,8 @@
 						</div>
 					</div>
 				</div>
+				<button class="move-right hidden" aria-hidden="true"></button>
+				<button class="move-left hidden" aria-hidden="true"></button>
 			</div>
 		</section>
 		<!--END Carousel 8 INFORMATION FOR SCHOOLS, EMPLOYERS and BUSINESS-->
@@ -1042,25 +1050,34 @@
 	<script type="text/javascript" src="js/helper.js"></script>
 	<script type="text/javascript" src="js/script.min.js"></script>
 	<script>
-		var imageCarousel = document.querySelectorAll('.image-carousel');
-		var smallCarousel = document.querySelectorAll('.small-carousel');
+		var imageCarousel = document.querySelectorAll('[id$="-carousel-large"] ul.au-card-list');
+		var smallCarousel = document.querySelectorAll('[id$="-carousel"] ul.au-card-list');
 		var cards = document.querySelectorAll('.image-carousel li, .small-carousel li');
+
+
 
 		//remove hidden classes if JS loads
 		for (i = 0; i < cards.length; i++) {
 			RemoveClass(cards[ i ], 'col-xs-6');
 			RemoveClass(cards[ i ], 'col-sm-4');
 			RemoveClass(cards[ i ], 'col-md-3');
-			RemoveClass(cards[ i ], 'col-xs-12' )
-			RemoveClass(cards[ i ], 'col-sm-6' )
-			RemoveClass(cards[ i ], 'col-md-3' )
+			RemoveClass(cards[ i ], 'col-xs-12' );
+			RemoveClass(cards[ i ], 'col-sm-6' );
+			RemoveClass(cards[ i ], 'col-md-3' );
 		}
 
-		for( i=0; i < imageCarousel.length; i ++ ){
+		for( i=0; i < imageCarousel.length; i ++ ) {
+
+			const owl = $( imageCarousel[ i ] )
+
 			AddClass(imageCarousel[ i ], 'owl-carousel');
 			AddClass(imageCarousel[ i ], 'owl-theme');
 
-			$('.image-carousel').owlCarousel({
+			const nextButton = imageCarousel[ i ].parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('move-right')[0];
+			const prevButton = imageCarousel[ i ].parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('move-left')[0];
+
+
+			owl.owlCarousel({
 			margin: 10,
 			stagePadding: 50,
 			responsive: {
@@ -1077,15 +1094,45 @@
 					items: 4
 				},
 			}
-		})
+		});
+
+			nextButton.addEventListener('click', function () {
+
+				console.log(nextButton)
+				owl.trigger('next.owl.carousel');
+			});
+
+			prevButton.addEventListener('click', function () {
+				owl.trigger('prev.owl.carousel');
+			})
+
+			owl.on('changed.owl.carousel', function (e) {
+			if (e.page.index + 1 == e.page.count) {
+				AddClass(nextButton, 'hidden');
+				RemoveClass(prevButton, 'hidden')
+			}
+			else if (e.item.index == 0) {
+				AddClass(prevButton, 'hidden')
+				RemoveClass(nextButton, 'hidden');
+			}
+			else {
+				RemoveClass(nextButton, 'hidden')
+				RemoveClass(prevButton, 'hidden')
+			}
+		});
 
 		}
 
 		for( i=0; i < smallCarousel.length; i ++ ){
+			const owl = $( smallCarousel[ i ] )
+
 			AddClass(smallCarousel[ i ], 'owl-carousel');
 			AddClass(smallCarousel[ i ], 'owl-theme');
 
-			$('.small-carousel').owlCarousel({
+			const nextButton = smallCarousel[ i ].parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('move-right')[0];
+			const prevButton = smallCarousel[ i ].parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('move-left')[0];
+
+			$(smallCarousel[ i ]).owlCarousel({
 			margin: 10,
 			stagePadding: 50,
 			responsive: {
@@ -1102,40 +1149,44 @@
 					items: 5
 				},
 			}
-		})
+		});
 
-		}
+		nextButton.addEventListener('click', function () {
 
-
-		$('.move-right').on('click', function () {
+			console.log(nextButton)
 			owl.trigger('next.owl.carousel');
 		});
 
-		$('.move-left').on('click', function () {
+		prevButton.addEventListener('click', function () {
 			owl.trigger('prev.owl.carousel');
 		})
 
-		// $('.owl-carousel').on('changed.owl.carousel', function (e) {
-		// 	if (e.page.index + 1 == e.page.count) {
-		// 		AddClass(document.querySelector('.move-right'), 'hidden');
-		// 		RemoveClass(document.querySelector('.move-left'), 'hidden')
-		// 	}
-		// 	else if (e.item.index == 0) {
-		// 		AddClass(document.querySelector('.move-left'), 'hidden')
-		// 		RemoveClass(document.querySelector('.move-right'), 'hidden');
-		// 	}
-		// 	else {
-		// 		RemoveClass(document.querySelector('.move-right'), 'hidden')
-		// 		RemoveClass(document.querySelector('.move-left'), 'hidden')
-		// 	}
-		// });
+		owl.on('changed.owl.carousel', function (e) {
+			if (e.page.index + 1 == e.page.count) {
+				AddClass(nextButton, 'hidden');
+				RemoveClass(prevButton, 'hidden')
+			}
+			else if (e.item.index == 0) {
+				AddClass(prevButton, 'hidden')
+				RemoveClass(nextButton, 'hidden');
+			}
+			else {
+				RemoveClass(nextButton, 'hidden')
+				RemoveClass(prevButton, 'hidden')
+			}
+		});
+
+		}
 
 
 	</script>
 
 	<script>
+		var buttons = document.querySelectorAll('.move-right')
 
-		// RemoveClass(document.querySelector('.move-right'), 'hidden');
+		for( i = 0; i < buttons.length; i++ ) {
+			RemoveClass( buttons[ i ], 'hidden');
+		}
 
 	</script>
 
