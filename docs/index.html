@@ -152,7 +152,7 @@
 					<div class="col-md-12">
 						<h2 class="au-display-lg">Key updates</h2>
 						<div class="row">
-							<ul class="au-card-list au-card-list--matchheight carousel-gen">
+							<ul class="au-card-list au-card-list--matchheight image-carousel">
 								<li class="col-xs-6 col-sm-4 col-md-3 item">
 									<div class="au-card au-card--shadow au-card--clickable">
 										<img class="card-image" alt
@@ -251,13 +251,13 @@
 		<!--Carousel 1 END KEY UPDATES-->
 
 		<!--Carousel 2 HEALTH AND PREVENTION-->
-		<section class="au-body au-body--alt" class="carousel-gen" id="health">
+		<section class="au-body au-body--alt" id="health">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
 						<h2 class="au-display-lg">Health and prevention</h2>
 						<div class="row">
-							<ul class="au-card-list au-card-list--matchheight carousel-gen" >
+							<ul class="au-card-list au-card-list--matchheight image-carousel" >
 								<!--Start Cards-->
 								<li class="col-xs-6 col-sm-4 col-md-3 item">
 									<div class="au-card  au-card--shadow au-card--clickable">
@@ -359,7 +359,7 @@
 					<div class="col-md-12">
 						<h2 class="au-display-lg">Supporting the community</h2>
 						<div class="row">
-							<ul class="au-card-list au-card-list--matchheight ">
+							<ul class="au-card-list au-card-list--matchheight small-carousel">
 								<li class="col-xs-12 col-sm-6 col-md-3">
 									<div class="au-card au-card--shadow au-card--clickable">
 										<div class="au-card__inner ">
@@ -470,7 +470,7 @@
 					<div class="col-md-12">
 						<h2 class="au-display-lg">State and Territory Government information</h2>
 						<div class="row">
-							<ul class="au-card-list au-card-list--matchheight ">
+							<ul class="au-card-list au-card-list--matchheight small-carousel ">
 								<li class="col-xs-12 col-sm-6 col-md-3">
 									<div class="au-card au-card--shadow au-card--clickable">
 										<div class="au-card__inner ">
@@ -615,8 +615,8 @@
 					<div class="col-md-12">
 						<h2 class="au-display-lg">Information for travellers</h2>
 						<div class="row">
-							<ul class="au-card-list au-card-list--matchheight ">
-								
+							<ul class="au-card-list au-card-list--matchheight small-carousel">
+
 								<li class="col-xs-12 col-sm-6 col-md-3">
 									<div class="au-card au-card--shadow au-card--clickable">
 										<div class="au-card__inner ">
@@ -699,7 +699,7 @@
 					<div class="col-md-12">
 						<h2 class="au-display-lg">Receiving financial support</h2>
 						<div class="row">
-							<ul class="au-card-list au-card-list--matchheight ">
+							<ul class="au-card-list au-card-list--matchheight small-carousel">
 								<li class="col-xs-12 col-sm-6 col-md-3">
 									<div class="au-card au-card--shadow au-card--clickable">
 										<div class="au-card__inner ">
@@ -801,7 +801,7 @@
 							<div class="col-md-12">
 								<h2 class="au-display-lg">Information for education providers</h2>
 								<div class="row">
-									<ul class="au-card-list au-card-list--matchheight ">
+									<ul class="au-card-list au-card-list--matchheight small-carousel">
 										<li class="col-xs-12 col-sm-6 col-md-3">
 											<div class="au-card au-card--shadow au-card--clickable">
 												<div class="au-card__inner ">
@@ -853,7 +853,7 @@
 															aria-hidden="true"></span>
 													</div>
 												</div>
-		
+
 												<li class="col-xs-12 col-sm-6 col-md-3">
 													<div class="au-card  au-card--shadow au-card--clickable">
 														<div class="au-card__inner ">
@@ -865,7 +865,7 @@
 																	aria-hidden="true">Learn more</span><span class="au-card__icon"
 																	aria-hidden="true"></span>
 															</div>
-														</div>			
+														</div>
 										</li>
 									</ul>
 								</div>
@@ -883,7 +883,7 @@
 					<div class="col-md-12">
 						<h2 class="au-display-lg">Information for bussinesses and employers </h2>
 						<div class="row">
-							<ul class="au-card-list au-card-list--matchheight ">
+							<ul class="au-card-list au-card-list--matchheight small-carousel">
 								<li class="col-xs-12 col-sm-6 col-md-3">
 									<div class="au-card au-card--shadow au-card--clickable">
 										<div class="au-card__inner ">
@@ -1042,25 +1042,22 @@
 	<script type="text/javascript" src="js/helper.js"></script>
 	<script type="text/javascript" src="js/script.min.js"></script>
 	<script>
-		var carousels = document.querySelectorAll('.carousel-gen');
+		var imageCarousel = document.querySelectorAll('.image-carousel');
+		var smallCarousel = document.querySelectorAll('.small-carousel');
 		var cards = document.querySelectorAll('.carousel-gen li');
 
 		//remove hidden classes if JS loads
 		for (i = 0; i < cards.length; i++) {
-			RemoveClass(cards[i], 'col-xs-6');
-			RemoveClass(cards[i], 'col-sm-4');
-			RemoveClass(cards[i], 'col-md-3');
+			// RemoveClass(cards[i], 'col-xs-6');
+			// RemoveClass(cards[i], 'col-sm-4');
+			// RemoveClass(cards[i], 'col-md-3');
 		}
 
-		for( i=0; i < carousels.length; i ++ ){
-			AddClass(carousels[ i ], 'owl-carousel');
-			AddClass(carousels[ i ], 'owl-theme');
-		}
+		for( i=0; i < imageCarousel.length; i ++ ){
+			AddClass(imageCarousel[ i ], 'owl-carousel');
+			AddClass(imageCarousel[ i ], 'owl-theme');
 
-
-		var owl = $('.owl-carousel');
-
-		$('.owl-carousel').owlCarousel({
+			$('.image-carousel').owlCarousel({
 			margin: 10,
 			stagePadding: 50,
 			responsive: {
@@ -1078,6 +1075,34 @@
 				},
 			}
 		})
+
+		}
+
+		for( i=0; i < smallCarousel.length; i ++ ){
+			AddClass(smallCarousel[ i ], 'owl-carousel');
+			AddClass(smallCarousel[ i ], 'owl-theme');
+
+			$('.small-carousel').owlCarousel({
+			margin: 10,
+			stagePadding: 50,
+			responsive: {
+				0: {
+					items: 1
+				},
+				576: {
+					items: 2
+				},
+				768: {
+					items: 3
+				},
+				992: {
+					items: 5
+				},
+			}
+		})
+
+		}
+
 
 		$('.move-right').on('click', function () {
 			owl.trigger('next.owl.carousel');
