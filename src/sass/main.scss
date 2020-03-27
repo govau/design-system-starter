@@ -126,8 +126,15 @@ form {
 	}
 
 	&__brand {
-		text-align: center;
-		@include AU-space( padding, 4unit 4unit 2unit 4unit );
+		text-align: left;
+		@include AU-space( padding, 2unit 2unit 2unit 0unit );
+
+		@include AU-media( sm ) {
+			text-align: center;
+			@include AU-space( padding, 4unit 4unit 2unit 4unit );
+
+		}
+
 	}
 
 	&__heading {
@@ -148,7 +155,13 @@ form {
 
 .header-logo {
 	background: #101012;
-	text-align: center;
+
+	text-align: left;
+
+	@include AU-media( sm ) {
+		text-align: center;
+	}
+
 	@include AU-space( padding, 2unit 0);
 
 	img {
@@ -413,7 +426,6 @@ form {
 
 
 .essential-information {
-	// text-align: center;
 
 	&__list {
 		@include AU-space( padding, 2unit );
@@ -469,7 +481,12 @@ form {
 }
 
 .social-media {
-	text-align: center;
+
+	text-align: left;
+
+	@include AU-media( sm ) {
+		text-align: center;
+	}
 	@include AU-space( margin-bottom, 1.5unit );
 
 	.au-link-list li {

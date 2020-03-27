@@ -1729,13 +1729,17 @@ form { margin-top: 32px; margin-top: 2rem; }
 
 .au-header__alert a { color: white; }
 
-.au-header__brand { text-align: center; padding: 64px 64px 32px 64px; padding: 4rem 4rem 2rem 4rem; }
+.au-header__brand { text-align: left; padding: 32px 32px 32px 0px; padding: 2rem 2rem 2rem 0rem; }
+
+@media (min-width: 768px) { .au-header__brand { text-align: center; padding: 64px 64px 32px 64px; padding: 4rem 4rem 2rem 4rem; } }
 
 .au-header__heading { margin-bottom: 32px !important; margin-bottom: 2rem !important; }
 
 .au-header__subline { color: #000 !important; font-size: 20px; font-size: 1.25rem; line-height: 1.6; font-weight: bold; max-width: 560px; max-width: 35rem; display: inline-block; }
 
-.header-logo { background: #101012; text-align: center; padding: 32px 0; padding: 2rem 0; }
+.header-logo { background: #101012; text-align: left; padding: 32px 0; padding: 2rem 0; }
+
+@media (min-width: 768px) { .header-logo { text-align: center; } }
 
 .header-logo img { max-width: 320px; max-width: 20rem; }
 
@@ -1801,7 +1805,9 @@ form { margin-top: 32px; margin-top: 2rem; }
 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
 
-.social-media { text-align: center; margin-bottom: 24px; margin-bottom: 1.5rem; }
+.social-media { text-align: left; margin-bottom: 24px; margin-bottom: 1.5rem; }
+
+@media (min-width: 768px) { .social-media { text-align: center; } }
 
 .social-media .au-link-list li img { height: 30px; width: 30px; }
 
