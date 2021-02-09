@@ -16,9 +16,6 @@ jobs:
             source $BASH_ENV
       - checkout
       - run:
-          name: Install Node-Gyph
-          command: npm install -g node-gyp
-      - run:
           name: Install NodeJs dependencies
           command: npm install
       - run:
