@@ -80,7 +80,7 @@
 		"@gov.au/tags": "latest",
 		"@gov.au/text-inputs": "latest",
 		"autoprefixer": "^9.0.1",
-		"node-sass": "^4.12.0",
+		"node-sass": "latest",
 		"postcss-cli": "^6.0.0"
 	},
 	"pancake": {
