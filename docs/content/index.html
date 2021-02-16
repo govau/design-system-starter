@@ -240,9 +240,55 @@
 						<p>If you don’t have a Centrelink account, you can establish your identity online through myGov and get a Centrelink Customer Reference Number (CRN). This will create a Centrelink online account linked to myGov.</p>
 						<p>After you submit your claim online, you’ll get a receipt and you can track its progress online.</p>
 
-						<button class="au-btn">
-						Sign in to myGov and start a claim
-						</button>
+						<form action="index.html" id="form-1" novalidate>
+							<div class="au-form-group">
+								<label for="name" class="au-label">Full name</label>
+								<span class="au-error-text hide_content" id="full-name-error"></span>
+								<input class="au-text-input au-text-input--width-lg" name="Full name" id="name" type="text" aria-required="true" aria-describedby="full-name-error" autocomplete="name">
+							</div>
+
+							<div class="au-form-group">
+								<label for="email" class="au-label">Email</label>
+								<span class="au-hint-text" id="email-hint">We will only use this to respond to your request</span>
+								<span class="au-error-text hide_content" id="email-error"></span>
+								<input class="au-text-input au-text-input--width-lg" name="Email" id="email" type="email" aria-required="true" aria-describedby="email-error email-hint" autocomplete="email">
+							</div>
+
+							<!--RADIO OPTIONS-->
+							<div class="au-form-group">
+								<fieldset class="au-fieldset">
+									<legend class="au-fieldset__legend">
+										<label class="au-label">Type of feedback</label>
+									</legend>
+									<div class="au-control-input au-control-input--block">
+										<input class="au-control-input__input" type="radio" name="type-of-feedback" id="compliment" value="Compliment" checked>
+										<label class="au-control-input__text" for="compliment">Compliment</label>
+									</div>
+
+									<div class="au-control-input au-control-input--block">
+										<input class="au-control-input__input" type="radio" name="type-of-feedback" id="suggestion" value="suggestion">
+										<label class="au-control-input__text" for="suggestion">Suggestion</label>
+									</div>
+
+									<div class="au-control-input au-control-input--block">
+										<input class="au-control-input__input" type="radio" name="type-of-feedback" id="complaint" value="complaint">
+										<label class="au-control-input__text" for="complaint">Complaint</label>
+									</div>
+								</fieldset>
+							</div>
+
+							<div class="au-form-group">
+								<label class="au-label" for="help-comment"> How can we help you?</label>
+								<span class="au-hint-text" id="description-hint">Add some detail about your complaint, suggestion or compliment. Minimum 10 characters</span>
+								<span class="au-error-text hide_content" id="description-error"></span>
+								<textarea class="au-text-input au-text-input--block" name="Description" id="help-comment" aria-required="true" aria-describedby="description-error description-hint"></textarea>
+							</div>
+
+							<!--FORM SUBMIT BUTTON-->
+							<div class="au-form-group">
+								<button class="au-btn" id="form-submit" type="submit">Send feedback</button>
+							</div>
+						</form>
 
 						<h3>If you can't claim online</h3>
 						<p>If you can’t claim online, call the Students line on 132 490. </p>
