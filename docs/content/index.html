@@ -54,7 +54,7 @@
 	<meta property="article:tag" content="design system" />
 	<meta property="article:tag" content="templates" />
 
-	<title>BBB Australian Government Design System | Content</title>
+	<title>Australian Government Design System | Content</title>
 
 	<script type="text/javascript">
 		var $html = document.documentElement; if ($html.classList) $html.classList.remove("no-js"), $html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
@@ -79,7 +79,7 @@
 
 <!-- BODY -->
 <!-- GRID-12 -->
-<body class="au-grid">
+<body class="au-grid
 
 	<!-- SKIP-LINKS -->
 	<nav class="au-skip-link">
@@ -95,8 +95,8 @@
 					<a class="au-header__brand" href="#">
 						<img class="au-header__brand-image" alt="Insert alternate text here" src="../assets/img/header-logo-agov.png">
 						<div class="au-header__text">
-						<h1 class="au-header__heading">Name of website</h1>
-						<div class="au-header__subline">Simple explanation of the website</div>
+						<h1 class="au-header__heading">AU-fontgrid test 1</h1>
+						<div class="au-header__subline">Testing changes to font-scale</div>
 						</div>
 					</a>
 				</div>
@@ -148,7 +148,7 @@
 		<section class="au-body">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-sm-4 col-sm-push-8">
+					<div class="col-sm-3">
 						<aside class="au-side-nav au-accordion" aria-label="side navigation">
 							<button
 								class="au-side-nav__toggle au-accordion__title au-accordion--closed"
@@ -189,7 +189,7 @@
 							</div>
 						</aside>
 					</div>
-					<div class="col-sm-8 col-sm-pull-4" id="content">
+					<div class="col-sm-9" id="content">
 						<nav class="au-breadcrumbs" aria-label="breadcrumb">
 							<ul class="au-link-list au-link-list--inline">
 								<li><a href="../">Home</a></li>
@@ -198,15 +198,131 @@
 								<li>Content page example</li>
 							</ul>
 						</nav>
-						<h1>Content page example (h1)</h1>
-						<p>The page heading communicates the main focus of the page. Make your page heading descriptive and keep it succinct.</p>
-						<p>These headings introduce, respectively, sections and subsections within your body copy. As you create these headings, follow the same guidelines that you use when writing section headings: Be succinct, descriptive, and precise.</p>
-						<h2>Subsection heading (h2)</h2>
-						<p>The particulars of your body copy will be determined by the topic of your page. Regardless of topic, it’s a good practice to follow the inverted pyramid structure when writing copy: Begin with the information that’s most important to your users and then present information of less importance.</p>
-						<p>Keep each section and subsection focused — a good approach is to include one theme (topic) per section.</p>
-						<h3>Subsection heading (h3)</h3>
-						<p>Use the side navigation menu to help your users quickly skip to different sections of your page. The menu is best suited to displaying a hierarchy with 1 to 3 levels and, as we mentioned, to display the sub-navigation of a given page.</p>
-						<p>Read more about how to best design and structure your web content using the <a href="https://guides.service.gov.au/content-guide/">content guide</a>.</p>
+						<h1>Austudy for students and apprentices</h1>
+						<h2>What is Austudy</h2>
+						<p>Austudy is an income support payment for students and apprentices who are 25 or older.</p>
+						<p>You can’t get Austudy if you’ve already done a doctorate.</p>
+						<h2>This is for:</h2>
+						<section class="au-callout">
+						<ul>		
+							<li>Australian citizens, permanent visa holders, or protected Special Category via (SCV) holders</li>
+							<li>people with income and assets under a certain amount</li>
+							<li>people aged 25 or older who are enrolled in an approved course or Australian Apprenticeship.</li>
+						</ul>
+						</section>
+						<p>If you’re unable to study full time you may still get a payment if:</p>
+						
+						<div class="au-nothing">
+							<ul>		
+								<li>you have a disability</li>
+								<li>you’re sick or injured</li>
+								<li>your course changes and you don’t have a choice to study full time.</li>
+							</ul>
+						</div>
+
+						<h2>How much you can get</h2>
+						<p>The amount you get will depend on how much you earn, whether you’re partnered, or have children.</p>
+						<p>You'll get fortnightly payments for the minimum time it normally takes to complete your course as a full-time student.</p>
+						<p>Centrelink uses income tests to work out how much Austudy you can get. You can earn money while you get Austudy. The personal and partner income tests may affect how much you can get.</p>
+						<p>xxxx Your payment each fortnight includes Austudy and the Coronavirus Supplement. If you get $1 or more of Austudy, you’ll get the Coronavirus Supplement.</p>
+						<p>The supplement is $150 until 31 March 2021.</p>
+						<p>Check the maximum amount of Austudy you might be able to get.</p>
+						<p>Use Payment and Service Finder on the Services Australia website to find payments you may be eligible for and estimate how much you can get.</p>
+						<h2>How to claim</h2>
+						<h3>Information you'll need to apply</h3>
+						<ul>		
+							<li>Proof of your identity, such as your birth certificate, passport, or drivers licence</li>
+							<li>Your tax file number</li>
+							<li>Other supporting documents, depending on your situation</li>
+						</ul>
+						<h3>Claim online</h3>
+						<p>To claim online, you need a myGov account linked to Centrelink.</p>
+						<p>If you don’t have a Centrelink account, you can establish your identity online through myGov and get a Centrelink Customer Reference Number (CRN). This will create a Centrelink online account linked to myGov.</p>
+						<p>After you submit your claim online, you’ll get a receipt and you can track its progress online.</p>
+
+						<form action="index.html" id="form-1" novalidate>
+							<div class="au-form-group">
+								<label for="name" class="au-label">Full name</label>
+								<span class="au-error-text hide_content" id="full-name-error"></span>
+								<input class="au-text-input au-text-input--width-lg" name="Full name" id="name" type="text" aria-required="true" aria-describedby="full-name-error" autocomplete="name">
+							</div>
+
+							<div class="au-form-group">
+								<label for="email" class="au-label">Email</label>
+								<span class="au-hint-text" id="email-hint">We will only use this to respond to your request</span>
+								<span class="au-error-text hide_content" id="email-error"></span>
+								<input class="au-text-input au-text-input--width-lg" name="Email" id="email" type="email" aria-required="true" aria-describedby="email-error email-hint" autocomplete="email">
+							</div>
+
+							<!--RADIO OPTIONS-->
+							<div class="au-form-group">
+								<fieldset class="au-fieldset">
+									<legend class="au-fieldset__legend">
+										<label class="au-label">Type of feedback</label>
+									</legend>
+									<div class="au-control-input au-control-input--block">
+										<input class="au-control-input__input" type="radio" name="type-of-feedback" id="compliment" value="Compliment" checked>
+										<label class="au-control-input__text" for="compliment">Compliment</label>
+									</div>
+
+									<div class="au-control-input au-control-input--block">
+										<input class="au-control-input__input" type="radio" name="type-of-feedback" id="suggestion" value="suggestion">
+										<label class="au-control-input__text" for="suggestion">Suggestion</label>
+									</div>
+
+									<div class="au-control-input au-control-input--block">
+										<input class="au-control-input__input" type="radio" name="type-of-feedback" id="complaint" value="complaint">
+										<label class="au-control-input__text" for="complaint">Complaint</label>
+									</div>
+								</fieldset>
+							</div>
+
+							<div class="au-form-group">
+								<label class="au-label" for="help-comment"> How can we help you?</label>
+								<span class="au-hint-text" id="description-hint">Add some detail about your complaint, suggestion or compliment. Minimum 10 characters</span>
+								<span class="au-error-text hide_content" id="description-error"></span>
+								<textarea class="au-text-input au-text-input--block" name="Description" id="help-comment" aria-required="true" aria-describedby="description-error description-hint"></textarea>
+							</div>
+
+							<!--FORM SUBMIT BUTTON-->
+							<div class="au-form-group">
+								<button class="au-btn" id="form-submit" type="submit">Send feedback</button>
+							</div>
+						</form>
+
+						<h3>If you can't claim online</h3>
+						<p>If you can’t claim online, call the Students line on 132 490. </p>
+
+						<h2>How to report and manage your payment</h2>
+						<p>If Centrelink approves your claim, there are things you must do to keep getting this payment. Go to the Services Australia website to read more about how to manage your payment.</p>
+						<a href="https://guides.service.gov.au/content-guide/">content guide</a>.</p>
+						<table class="au-table">
+							<caption class="au-table__caption">Population of Australian states and territories, December 2015</caption>
+							<thead class="au-table__head">
+								<tr class="au-table__row">
+									<th scope="col" class="au-table__header">Location</th>
+									<th scope="col" class="au-table__header au-table__header--numeric">Population</th>
+									<th scope="col" class="au-table__header au-table__header--numeric">Change over previous year %</th>
+								</tr>
+							</thead>
+							<tbody class="au-table__body">
+								<tr class="au-table__row">
+									<td class="au-table__cell">New South Wales</td>
+									<td class="au-table__cell au-table__cell--numeric">7,670,700</td>
+									<td class="au-table__cell au-table__cell--numeric">3.1%</td>
+								</tr>
+								<tr class="au-table__row">
+									<td class="au-table__cell">Victoria</td>
+									<td class="au-table__cell au-table__cell--numeric">5,996,400</td>
+									<td class="au-table__cell au-table__cell--numeric">2.5%</td>
+								</tr>
+								<tr class="au-table__row">
+									<td class="au-table__cell">Tasmania</td>
+									<td class="au-table__cell au-table__cell--numeric">517,400</td>
+									<td class="au-table__cell au-table__cell--numeric">4.0%</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>
