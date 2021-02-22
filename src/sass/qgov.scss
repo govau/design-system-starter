@@ -1,0 +1,45 @@
+//QGOV: Overrides for core DTA colours
+$qg-grey: #4a4a4a;
+$qg-lightgrey: #f5f5f5;
+$qg-white:  #ffffff;
+
+// DTA - Dark theme overrides
+$AU-colordark-foreground-text:   #ffffff;
+$AU-colordark-foreground-action:  #f5f5f5;
+$AU-colordark-foreground-focus:  #edda09;
+$AU-colordark-background:       #005e85;
+
+// DTA - Light theme overrides
+$AU-color-foreground-action: #005e85;
+$AU-color-foreground-focus:  #edda09;
+
+//Distraction free overrides 
+.au-body {
+    h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
+        font-family: Lato,Helvetica,Arial,sans-serif !important;
+    }
+}
+.au-header {
+    padding: 1rem 1rem 1rem 1rem !important;
+}
+section.page_header {
+    background-color: $qg-lightgrey !important;
+    padding: 1rem 0rem 2rem 0 !important;
+}
+section.form_header {
+    background-color: $qg-lightgrey !important;
+    padding: 0.2rem 0rem 0.2rem 0 !important;
+}
+div.qg-utilities-bar {
+   background-color: $qg-grey;
+   height: 44px;
+   p {
+       color: white;
+       font-family: inherit;
+       font-weight: 800;
+   }
+}
+section.section {
+    padding: 2rem 0rem !important;
+    margin: 2rem 0rem !important;
+}

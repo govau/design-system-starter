@@ -1,19 +1,12 @@
-// Dark theme overrides
-// $AU-colordark-foreground-text:   #ffffff;
-// $AU-colordark-foreground-action: #f9f9f9;
-// $AU-colordark-foreground-focus:  #13e241;
-// $AU-colordark-background:        #134169;
 
-// Light theme overrides
-// $AU-color-foreground-action: #134169;
-// $AU-color-foreground-focus:  #0C8927;
+//QLD overrides 
+@import './qgov.scss';
 
 //Main nav, set project specific breakpoint
 $AU-main-nav-breakpoint: sm;
 
 // UI-Kit
 @import './_auds.scss';
-
 
 // Reset the body
 body {

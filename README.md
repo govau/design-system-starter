@@ -1,5 +1,7 @@
-Australian Government Design System - Starter
+QLD design system prototype - Starter
 ==========================
+
+This project leverages the Australian Government Design System.
 
 > Get started with full page templates using the Australian Government Design System.
 
@@ -9,8 +11,6 @@ Australian Government Design System - Starter
 |  | username:`ds`   password:`ds` |
 
 ## Contents
-
-
 * [Templates](#templates)
 * [Development environment](#development-environment)
 * [Get started](#get-started)
@@ -24,8 +24,6 @@ Australian Government Design System - Starter
 
 
 ## Templates
-
-
 Browse full page templates using the Australian Government Design System.
 
 - [Home page](https://design-system-starter.apps.b.cld.gov.au/)
@@ -34,7 +32,6 @@ Browse full page templates using the Australian Government Design System.
 
 
 ## Development environment
-
 Clone this repository to create a local development environment and start modifying the templates.
 
 * [Get started](#get-started)
@@ -128,12 +125,8 @@ To contribute to the Australian Government Design System Starter Pack:
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
 ## License
 
 Copyright (c) Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the [MIT license](https://raw.githubusercontent.com/govau/design-system-starter/master/LICENSE).
 
-
 **[⬆ back to top](#contents)**
-
-# };
