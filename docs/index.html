@@ -14,7 +14,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 
 	<!-- AGLS Metadata -->
 	<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
@@ -81,197 +81,107 @@
 <!-- GRID-12 -->
 <body class="au-grid">
 
-	<!-- SKIP-LINKS -->
-	<nav class="au-skip-link">
-		<a class="au-skip-link__link" href="#content">Skip to main content</a>
-		<a class="au-skip-link__link" href="#mainmenu">Skip to main navigation</a>
-	</nav>
-
-	<!-- HEADER -->
-	<header class="au-header au-header--dark" role="banner">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm-8">
-					<a class="au-header__brand" href="#">
-						<img class="au-header__brand-image" alt="Insert alternate text here" src="assets/img/header-logo-agov.png">
-						<div class="au-header__text">
-							<h1 class="au-header__heading">Name of website</h1>
-							<div class="au-header__subline">Simple explanation of the website</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-sm-4">
-					<form role="search" aria-label="sitewide" class="au-search au-search--dark au-search--icon">
-						<label for="standard" class="au-search__label">Search this website</label>
-						<input type="search" placeholder="Search this site" id="standard" name="standard" class="au-text-input au-text-input--dark"/>
-						<div class="au-search__btn">
-							<button class="au-btn au-btn--dark" type="submit"><span class="au-search__submit-btn-text">Search</span></button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</header>
-
-	<!-- MAIN NAVIGATION -->
-	<nav class="au-main-nav au-main-nav--dark" id="#mainmenu" aria-label="main">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="au-main-nav__content" id="main-nav-default-dark">
-						<button
-							aria-controls="main-nav-default-dark"
-							class="au-main-nav__toggle au-main-nav__toggle--open"
-							onClick="return AU.mainNav.Toggle( this )">
-							Menu
-						</button>
-						<div class="au-main-nav__menu">
-							<div class="au-main-nav__menu-inner">
-								<div class="au-main-nav__focus-trap-top"></div>
-								<button
-									aria-controls="main-nav-default-dark"
-									class="au-main-nav__toggle au-main-nav__toggle--close"
-									onClick="return AU.mainNav.Toggle( this )">
-									Close
-								</button>
-								<ul class="au-link-list">
-									<li class="active"><a href="#">Home</a></li>
-									<li><a href="content">Content page</a></li>
-									<li><a href="form">Form page</a></li>
-									<li><a href="#">Simple terms</a></li>
-									<li><a href="#">Distinct from eachother</a></li>
-								</ul>
-								<div class="au-main-nav__focus-trap-bottom"></div>
-							</div>
-						</div>
-						<div class="au-main-nav__overlay" aria-controls="main-nav-default-dark" onClick="return AU.mainNav.Toggle( this )"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
-
 	<!-- MAIN BODY -->
 	<main id="content">
 		<!--CONTENT-->
-		<div class="au-body au-body--alt banner">
-			<div class="container-fluid">
+
+		<style>
+
+		p.element-center, .element-center {
+			margin-left:auto;
+			margin-right:auto;
+		}
+
+		.text-center {
+			text-align: center;
+		}
+
+		.au-body.au-body--alt.hero-image
+		{
+			background-image:linear-gradient(110deg, #135E70 55%, transparent 100%),url(./assets/img/bk.png);
+			/*background-image: linear-gradient(135deg, #135E70 70%, transparent 82%),url('./assets/img/bk.png');*/
+			background-repeat: no-repeat;
+			background-position: bottom right;	
+			color:white;
+
+		}	
+
+		@media not all and (max-width: 768px)
+		{
+			main>.au-body.hero-image
+			{
+				padding: 100px 0 100px 0;
+			}
+		}
+
+		/*heading on small xxl body small*/
+
+		@media (max-width: 768px)
+		{
+			main>.au-body.hero-image
+			{
+				padding: 60px 0 60px 0;
+				
+			}
+		}
+
+		</style>
+
+		<div class="au-body au-body--alt hero-image">
+			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-sm-push-6">
-						<img class="au-responsive-media-img banner__image" src="assets/img/600x260.jpg" alt="Placeholder image 600x260">
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<h1>1. Hero banner title example that is a bit longer</h1>
+						<p>Hero banner paragraph text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget sem at consectetur dictum scelerisque potenti varius eu.</p>
 					</div>
-					<div class="col-xs-12 col-sm-6 col-sm-pull-6">
-						<h2>Hero callout</h2>
-						<p>Support the callout with some short explanatory text. You don't need more than a couple of sentences.</p>
-						<p>Use buttons to give your user a clear call to action about what to do next.</p>
-						<div class="btn-cta-group">
-							<a class="au-btn" href="#">Primary call to action</a>
-						</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<form role="search" aria-label="sitewide" class="au-search au-search--dark au-search--icon">
+							<label for="standard" class="au-search__label">Search this website</label>
+							<input type="search" placeholder="Search this site" id="standard" name="standard" class="au-text-input au-text-input--dark">
+							<div class="au-search__btn">
+								<button class="au-btn au-btn--dark" type="submit"><span class="au-search__submit-btn-text">Search</span></button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-		<section class="au-body">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Some highlighted content</h2>
-						<p>Explain some important information upfront, what is the product or service. What is the role of it. How does the user get started using it. Keep this text simple and informative. Vestibulum non consequat tellus.</p>
 
-						<p>Nullam sollicitudin orci neque, ut condimentum ipsum blandit eu. Praesent eu sagittis elit.</p>
+<hr>
 
-						<p>Nullam ut nibh sed nunc molestie faucibus. Integer pulvinar sapien in porta fringilla. Cras et velit fermentum, pretium lacus gravida, egestas mauris. Explain some important information upfront, what is the product or service. What is the role of it. How does the user get started using it. Keep this text simple and informative.</p>
-					</div>
-				</div>
+<div class="au-body au-body--alt banner hero-image">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-8 col-lg-8">
+				<h1>1. Hero banner title example that is a bit longer (no image)</h1>
+				<p>Hero banner paragraph text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget sem at consectetur dictum scelerisque potenti varius eu.</p>
 			</div>
-		</section>
-		<section class="au-body au-body--alt banner">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Sub content</h2>
-						<p>Content that is important to have on the home page but not so important that it has to be visible at the top of the page. This could include contact information, more detailed explanation of the functionality of a product or service.</p>
-						<div class="btn-cta-group">
-							<a class="au-btn" href="#">Primary call to action</a>
-							<a class="au-btn au-btn--secondary" href="#">Secondary call to action</a>
-						</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 col-md-8 col-lg-8">
+				<form role="search" aria-label="sitewide" class="au-search au-search--dark au-search--icon">
+					<label for="standard" class="au-search__label">Search this website</label>
+					<input type="search" placeholder="Search this site" id="standard" name="standard" class="au-text-input au-text-input--dark">
+					<div class="au-search__btn">
+						<button class="au-btn au-btn--dark" type="submit"><span class="au-search__submit-btn-text">Search</span></button>
 					</div>
-				</div>
+				</form>
 			</div>
-		</section>
-		<section class="au-body">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Articles</h2>
-						<div class="row">
-							<ul class="au-card-list au-card-list--matchheight ">
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card au-card--shadow au-card--centred au-card--clickable">
-										<img class="au-responsive-media-img" alt="placeholder image"
-												src="assets/img/600x260.jpg">
-										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="#"
-													class="au-card--clickable__link ">Card title</a></h2>
-											<p type="content" class="au-card__content">Additional text relating to the card.</p>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card  au-card--shadow au-card--centred au-card--clickable">
-										<img class="au-responsive-media-img"
-											alt="placeholder image" src="assets/img/600x260.jpg">
-										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="#"
-													class="au-card--clickable__link ">Card title</a></h2>
-											<p type="content" class="au-card__content">Additional text relating to the card.</p>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card  au-card--shadow au-card--centred au-card--clickable">
-										<img class="au-responsive-media-img" alt="placeholder image"
-											src="assets/img/600x260.jpg">
-										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="#"
-													class="au-card--clickable__link ">Card title</a></h2>
-										<p type="content" class="au-card__content">Additional text relating to the card.</p>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+		</div>
+	</div>
+</div>
 
-			<div class="articles-cta">
-				<a class="au-cta-link" href="#">See more articles</a>
-			</div>
-		</section>
+<hr>
+
+
+		
 		<!--END CONTENT-->
 	</main>
 	<!-- END MAIN BODY -->
 
-	<!--FOOTER -->
-	<footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
-		<div class="container-fluid">
-			<div class="row">
-				<nav class="col-md-12" aria-label="footer">
-					<ul class="au-link-list au-link-list--inline">
-						<li><a href="#">Privacy</a></li>
-						<li><a href="#">Need Help?</a></li>
-						<li><a href="#">Accessibility</a></li>
-					</ul>
-				</nav>
-				<section class="col-sm-12">
-					<div class="au-footer__end">
-						<p>
-							© Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the <a href="https://github.com/govau/design-system-starter/blob/master/LICENSE" rel="external">MIT license</a>
-						</p>
-					</div>
-				</section>
-			</div>
-	</footer>
+
 
 	<!-- The javascript from pancake to open and close side nav on desktop -->
 	<script type="text/javascript" src="js/script.min.js"></script>
