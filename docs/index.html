@@ -96,21 +96,27 @@
 			text-align: center;
 		}
 
-		.au-body.au-body--alt.hero-image
+		main>.au-body.au-body--alt.hero-image
 		{
 			background-image:linear-gradient(110deg, #135E70 55%, transparent 100%),url(./assets/img/bk.png);
-			/*background-image: linear-gradient(135deg, #135E70 70%, transparent 82%),url('./assets/img/bk.png');*/
 			background-repeat: no-repeat;
-			background-position: bottom right;	
+			background-size: cover;
+    		background-position: center;
 			color:white;
-
 		}	
+
+		main>.au-body.au-body--alt.hero-image.--no-image
+		{
+			background-image:none;
+			background-color: #135E70;
+		}
 
 		@media not all and (max-width: 768px)
 		{
-			main>.au-body.hero-image
+			main>.au-body.au-body--alt.hero-image
 			{
 				padding: 100px 0 100px 0;
+				
 			}
 		}
 
@@ -118,10 +124,12 @@
 
 		@media (max-width: 768px)
 		{
-			main>.au-body.hero-image
+			main>.au-body.au-body--alt.hero-image
 			{
-				padding: 60px 0 60px 0;
-				
+				padding: 60px 0 60px 0;	
+				background-image:none;
+			background-color: #135E70;
+							
 			}
 		}
 
@@ -151,11 +159,11 @@
 
 <hr>
 
-<div class="au-body au-body--alt banner hero-image">
+<div class="au-body au-body--alt banner hero-image --no-image">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 col-md-8 col-lg-8">
-				<h1>1. Hero banner title example that is a bit longer (no image)</h1>
+				<h1>2. Hero banner title example that is a bit longer</h1>
 				<p>Hero banner paragraph text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget sem at consectetur dictum scelerisque potenti varius eu.</p>
 			</div>
 		</div>
@@ -175,8 +183,67 @@
 
 <hr>
 
+<div class="au-body au-body--alt banner hero-image --no-image">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12 text-center">
+				<h1>3. Hero banner title example that is a bit longer</h1>
+				<p class="element-center">Hero banner paragraph text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget sem at consectetur dictum scelerisque potenti varius eu.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10">
+				<form role="search" aria-label="sitewide" class="au-search au-search--dark au-search--icon">
+					<label for="standard" class="au-search__label">Search this website</label>
+					<input type="search" placeholder="Search this site" id="standard" name="standard" class="au-text-input au-text-input--dark">
+					<div class="au-search__btn">
+						<button class="au-btn au-btn--dark" type="submit"><span class="au-search__submit-btn-text">Search</span></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
 
-		
+<hr>
+
+<div class="au-body au-body--alt hero-image">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<h1>4. Hero banner title example that is a bit longer</h1>
+				<p>Hero banner paragraph text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget sem at consectetur dictum scelerisque potenti varius eu.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<hr>
+
+<div class="au-body au-body--alt hero-image --no-image">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<h1>5. Hero banner title example that is a bit longer</h1>
+				<p>Hero banner paragraph text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget sem at consectetur dictum scelerisque potenti varius eu.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<hr>
+
+<div class="au-body au-body--alt banner hero-image --no-image">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12 text-center">
+				<h1>3. Hero banner title example that is a bit longer</h1>
+				<p class="element-center">Hero banner paragraph text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget sem at consectetur dictum scelerisque potenti varius eu.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
 		<!--END CONTENT-->
 	</main>
 	<!-- END MAIN BODY -->
