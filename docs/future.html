@@ -58,7 +58,7 @@
 	<meta property="article:tag" content="design system" />
 	<meta property="article:tag" content="templates" />
 
-	<title>Service | Queensland Government</title>
+	<title>Future | Queensland Government</title>
 
 	<script type="text/javascript">
 		var $html = document.documentElement; if ($html.classList) $html.classList.remove("no-js"), $html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
@@ -94,6 +94,7 @@
 	<!-- UTILITIES -->
 	<div class="qg-utilities-bar">
 	</div>
+
 	<!-- HEADER -->
 	<header class="au-header au-header--dark" role="banner">
 		<div class="container-fluid">
@@ -113,7 +114,7 @@
 					</a>
 				</div>
 
-				<!-- Search 
+                <!--
 				<div class="col-sm-4">
 					<form role="search" aria-label="sitewide" class="au-search au-search--dark au-search--icon">
 						<label for="standard" class="au-search__label">Search this website</label>
@@ -148,9 +149,9 @@
 									Close
 								</button>
 								<ul class="au-link-list">
-									<li><a href="../index.html">Design system</a></li>
-									<li class="active"><a href="#">Services</a></li>
-									<li><a href="../form/">Forms</a></li>
+									<li class="active"><a href="/future.html">Design system</a></li>
+									<li><a href="/index.html">Service finder</a></li>
+									<!--<li><a href="../form/">Forms</a></li>-->
 								</ul>
 								<div class="au-main-nav__focus-trap-bottom"></div>
 							</div>
@@ -165,19 +166,17 @@
 
 	<!-- MAIN BODY -->
 	<main>
-		<!--CONTENT-->
 
+		<!--CONTENT-->
 		<section class="au-body page_header">
 			<div class="container-fluid">
 				<nav class="au-breadcrumbs" aria-label="breadcrumb">
 					<ul class="au-link-list au-link-list--inline">
 						<li><a href="https://qld.gov.au">Home</a></li>
-						<li><a href="https://www.qld.gov.au/services">Service finder</a></li>
-						<li>{{service.title}}</li>
+						<li>Design System</li>
 					</ul>
 				</nav>
-
-				<h1>Services</h1>
+				<h1>Queensland Design System</h1>
 			</div>
 		</section>
 
@@ -187,81 +186,36 @@
 
 					<div class="col-sm-12" id="content">
 
-						<main class="au-grid">
-							<div class="container">
-								<div class="row">
-									<div class="col-xs-4 col-xs-push-8">
+						<nav class="au-inpage-nav-links" aria-label="in page navigation">
+							<h2 class="au-inpage-nav-links__heading">Contents</h2>
+							<ul class="au-link-list">
+								<li><a href="#roadmap">Roadmap</a></li>
+                                <li><a href="#community">Community</a></li>
+								<li><a href="#work">How does it work?</a></li>
+							</ul>
+						</nav>
 
-										<div class="au-card au-body au-card--shadow au-card--clickable">
-											<div class="au-card__inner">
-												<h3 class="au-card__title"><a class="au-card--clickable__link" href="#">{{service.title}}</a></h3>
-												<p>{{service.description}}</p>
-											</div>
-										</div>
+						<p>The QLD design system is a prototype and is intended to act as a product face for API and data-driven services and forms.</p>
+                        <p>The design library is not intending to replace the SWE (Single Web Experience) framework instead it is intended to be used for transactions, registrations, authentication and other user flows requiring focus to be placed on the bodys form elements (where a user has elected to complete a service/form).</p>
 
-									</div>
-									<div class="col-xs-4">
+                        <p><strong>Examples</strong></p>
+                            <ul>
+                                <li><a href="https://www.gov.uk/apply-renew-passport" target="_blank">Apply online for a UK passport (Gov.uk)</a></li>
+                                <li><a href="https://www.gov.uk/apply-renew-passport" target="_blank">Apply for an aquatic licence (ServiceNSW)</a></li>
+                            </ul>
 
-										<div class="au-card au-body au-card--shadow au-card--clickable">
-											<div class="au-card__inner">
-												<h3 class="au-card__title"><a class="au-card--clickable__link"
-														href="#">{{service.title}}</a></h3>
-												<p>{{service.description}}</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-xs-4 col-xs-pull-8">
+						<section id="roadmap" class="section">
+							<h2>Roadmap</h2>
+							<p>[INSERT TRELLO BOARD]</p>
+						</section>
 
-										<div class="au-card au-body au-card--shadow au-card--clickable">
-											<div class="au-card__inner">
-												<h3 class="au-card__title"><a class="au-card--clickable__link"
-														href="#">{{service.title}}</a></h3>
-												<p>{{service.description}}</p>
-											</div>
-										</div>
-
-									</div>
-								</div>
-								<br>
-								<div class="row">
-									<div class="col-xs-4 col-xs-push-8">
-
-										<div class="au-card au-body au-card--shadow au-card--clickable">
-											<div class="au-card__inner">
-												<h3 class="au-card__title"><a class="au-card--clickable__link"
-														href="#">{{service.title}}</a></h3>
-												<p>{{service.description}}</p>
-											</div>
-										</div>
-
-									</div>
-									<div class="col-xs-4">
-
-										<div class="au-card au-body au-card--shadow au-card--clickable">
-											<div class="au-card__inner">
-												<h3 class="au-card__title"><a class="au-card--clickable__link"
-														href="#">{{service.title}}</a></h3>
-												<p>{{service.description}}</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-xs-4 col-xs-pull-8">
-
-										<div class="au-card au-body au-card--shadow au-card--clickable">
-											<div class="au-card__inner">
-												<h3 class="au-card__title"><a class="au-card--clickable__link"
-														href="#">{{service.title}}</a></h3>
-												<p>{{service.description}}</p>
-											</div>
-										</div>
-
-									</div>
-								</div>
-							</div>
-						</main>
+						<section id="community" class="section">
+							<h2>Community</h2>
+							<p>[INSERT SLACK LINK]</p>
+                            <p>[INSERT GITHUB LINK]</p>
+						</section>
 
 					</div>
-
 				</div>
 			</div>
 		</section>
