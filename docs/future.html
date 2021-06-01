@@ -96,14 +96,17 @@
 	</div>
 
 	<!-- HEADER -->
-	<header class="au-header au-header--dark" role="banner">
+	<header class="au-header au-header" role="banner">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-8">
 
 					<a class="au-header__brand" href="#">
-						<img class="au-header__brand-image" alt="Insert alternate text here"
-							src="../assets/img/qg-coa-white.svg">
+						<img class="au-header__brand-image" alt="Queensland Government"
+						src="../assets/img/qg-coa.svg">
+
+						<img class="au-header__brand-image--dark" alt="Queensland Government"
+						src="../assets/img/qg-coa-white.svg">
 
 						<!-- Proposed CUE sub branding 
 						<div class="au-header__text">
@@ -114,23 +117,22 @@
 					</a>
 				</div>
 
-                <!--
 				<div class="col-sm-4">
-					<form role="search" aria-label="sitewide" class="au-search au-search--dark au-search--icon">
-						<label for="standard" class="au-search__label">Search this website</label>
-						<input type="search" placeholder="Search this site" id="standard" name="standard" class="au-text-input au-text-input--dark"/>
+					<form role="search" aria-label="sitewide" class="au-search au-search au-search--icon">
+						<label for="standard" class="au-search__label">Search website</label>
+						<input type="search" placeholder="Search website" id="standard" name="standard" class="au-text-input au-text-input"/>
 						<div class="au-search__btn">
-							<button class="au-btn au-btn--dark" type="submit"><span class="au-search__submit-btn-text">Search</span></button>
+							<button class="au-btn au-btn" type="submit"><span class="au-search__submit-btn-text">Search</span></button>
 						</div>
 					</form>
-				</div> -->
+				</div> 
 
 			</div>
 		</div>
 	</header>
 
 	<!-- MAIN NAVIGATION -->
-	<nav class="au-main-nav au-main-nav--dark" id="mainmenu" aria-label="main">
+	<nav class="au-main-nav au-main-nav" id="mainmenu" aria-label="main">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
@@ -150,8 +152,13 @@
 								</button>
 								<ul class="au-link-list">
 									<li class="active"><a href="/future.html">Design system</a></li>
-									<li><a href="/index.html">Service finder</a></li>
+									<li><a href="./">For Queenslanders</a></li>
+									<li><a href="./covid-example.html">COVID-19 Resources</a></li>
+									<li><a href="./contact-us.html">Contact us</a></li>
 									<!--<li><a href="../form/">Forms</a></li>-->
+								</ul>
+								<ul class="au-link-list au-main-nav--submenu">
+									<li class=""><a class="icon icon--dark icon--github icon--action" href="https://github.com/qld-gov-au/qld-design-system">GitHub</a></li>
 								</ul>
 								<div class="au-main-nav__focus-trap-bottom"></div>
 							</div>
@@ -189,22 +196,27 @@
 						<nav class="au-inpage-nav-links" aria-label="in page navigation">
 							<h2 class="au-inpage-nav-links__heading">Contents</h2>
 							<ul class="au-link-list">
+								<li><a href="./developer/gettingstarted.html">Getting started</a></li>
+								<!--<li><a href="./developer/components/index.html">Components</a></li>-->
+								<li><a href="./developer/page-models/index.html">Page models</a></li>
+								<!--<br>
 								<li><a href="#roadmap">Roadmap</a></li>
-                                <li><a href="#community">Community</a></li>
-								<li><a href="#work">How does it work?</a></li>
+                                <li><a href="#community">Community</a></li>-->
 							</ul>
 						</nav>
 
-						<p>The QLD design system is a prototype and is intended to act as a product face for API and data-driven services and forms.</p>
-                        <p>The design library is not intending to replace the SWE (Single Web Experience) framework instead it is intended to be used for transactions, registrations, authentication and other user flows requiring focus to be placed on the bodys form elements (where a user has elected to complete a service/form).</p>
-
-                        <p><strong>Examples</strong></p>
+						<section id="introduction" class="section">
+							<h2>Introduction</h2>
+							<p>The QLD design system is a prototype and is intended to act as a product face for API and data-driven services and forms.</p>
+                        	<p>The design library is not intending to replace the SWE (Single Web Experience) framework instead it is intended to be used for transactions, registrations, authentication and other user flows requiring focus to be placed on the bodys form elements (where a user has elected to complete a service/form).</p>
+							<p><strong>Examples</strong></p>
                             <ul>
                                 <li><a href="https://www.gov.uk/apply-renew-passport" target="_blank">Apply online for a UK passport (Gov.uk)</a></li>
-                                <li><a href="https://www.gov.uk/apply-renew-passport" target="_blank">Apply for an aquatic licence (ServiceNSW)</a></li>
+                                <li><a href="https://www.service.nsw.gov.au/transaction/apply-aquatic-licence" target="_blank">Apply for an aquatic licence (Eligibility)</a></li>
                             </ul>
+						</section>
 
-						<section id="roadmap" class="section">
+						<!--<section id="roadmap" class="section">
 							<h2>Roadmap</h2>
 							<p>[INSERT TRELLO BOARD]</p>
 						</section>
@@ -213,7 +225,7 @@
 							<h2>Community</h2>
 							<p>[INSERT SLACK LINK]</p>
                             <p>[INSERT GITHUB LINK]</p>
-						</section>
+						</section>-->
 
 					</div>
 				</div>
@@ -224,7 +236,7 @@
 	<!-- END MAIN BODY -->
 
 	<!--FOOTER -->
-	<footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
+	<footer class="au-footer au-footer" role="contentinfo">
 		<div class="container-fluid">
 			<div class="row">
 				<nav class="col-md-12" aria-label="footer">

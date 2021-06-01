@@ -58,7 +58,7 @@
 	<meta property="article:tag" content="design system" />
 	<meta property="article:tag" content="templates" />
 
-	<title>Service finder | Queensland Government</title>
+	<title>Contact us | Queensland Government</title>
 
 	<script type="text/javascript">
 		var $html = document.documentElement; if ($html.classList) $html.classList.remove("no-js"), $html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
@@ -92,82 +92,31 @@
 	</nav>
 
 	<!-- UTILITIES -->
-	<div class="qg-utilities-bar">
-		<!-- 
-			<div class="container-fluid">
-				<a href="#" class="">beta.design.qld.gov.au</a>
-			</div>
-		-->
-
-		<div class="qg-utilities-bar">
-			<div class="container-fluid" style="float: right;">
-			<form> 
-				<select id="selectTheme">
-					<option id="swe-theme">Existing SWE</option>
-					<option id="qld-theme">QLD Design system</option>
-					<option id="covid-theme">COVID theme</option>
-					<option id="des-theme">DES</option>
-					<option id="des-theme">DPC</option>
-				</select>
-			</form>
-		</div>
-				<!-- 
-					<div class="container-fluid">
-						<a href="#" class="">beta.design.qld.gov.au</a>
-					</div>
-				-->
-			</div>
-
+	<div class="qg-utilities-bar qg-utilities-bar--covid">
 	</div>
 
 	<!-- HEADER -->
-	<header class="au-header au-header" role="banner">
+	<header class="au-header au-header--covid" role="banner">
 		<div class="container-fluid">
 			<div class="row">
-
-
-				<!--<div class="col-sm-12" style="display:flex;">
-
-					<div style="flex-basis: flex-start; flex:1;">
-						<a class="au-header__brand" href="#" >
-							<img class="au-header__brand-image" alt="Insert alternate text here"
-								src="../assets/img/qg-coa-white.svg"></a>
-					</div>-->
-					
-						<!-- Proposed CUE sub branding 
-						<div class="au-header__text">
-							<h1 class="au-header__heading">Name of website</h1>
-							<div class="au-header__subline">Simple explanation of the website</div>
-						</div> 
-
-					-->
-
 				<div class="col-sm-8">
 
 					<a class="au-header__brand" href="#">
-
 						<img class="au-header__brand-image" alt="Queensland Government"
-							src="../assets/img/qg-coa.svg">
+						src="../assets/img/qg-coa.svg">
 
 						<img class="au-header__brand-image--dark" alt="Queensland Government"
-							src="../assets/img/qg-coa-white.svg">
+						src="../assets/img/qg-coa-white.svg">
 
-						<!-- Proposed CUE sub branding 
-						<div class="au-header__text">
-							<h1 class="au-header__heading">Name of website</h1>
-							<div class="au-header__subline">Simple explanation of the website</div>
-						</div> -->
 					</a>
-
-
 				</div>
 
 				<div class="col-sm-4">
-					<form role="search" aria-label="sitewide" class="au-search au-search au-search--icon">
+					<form role="search" aria-label="sitewide" class="au-search au-search--covid au-search--icon">
 						<label for="standard" class="au-search__label">Search website</label>
-						<input type="search" placeholder="Search website" id="standard" name="standard" class="au-text-input au-text-input"/>
+						<input type="search" placeholder="Search website" id="standard" name="standard" class="au-text-input au-text-input--covid"/>
 						<div class="au-search__btn">
-							<button class="au-btn au-btn" type="submit"><span class="au-search__submit-btn-text">Search</span></button>
+							<button class="au-btn au-btn--covid" type="submit"><span class="au-search__submit-btn-text">Search</span></button>
 						</div>
 					</form>
 				</div> 
@@ -177,12 +126,12 @@
 	</header>
 
 	<!-- MAIN NAVIGATION -->
-	<nav class="au-main-nav au-main-nav" id="mainmenu" aria-label="main">
+	<nav class="au-main-nav au-main-nav--covid" id="mainmenu" aria-label="main">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="au-main-nav__content" id="main-nav-default-dark">
-						<button aria-controls="main-nav-default-dark"
+					<div class="au-main-nav__content" id="main-nav-default">
+						<button aria-controls="main-nav-default"
 							class="au-main-nav__toggle au-main-nav__toggle--open"
 							onClick="return AU.mainNav.Toggle( this )">
 							Menu
@@ -197,13 +146,10 @@
 								</button>
 								<ul class="au-link-list">
 									<li><a href="./future.html">Design system</a></li>
-									<li class="active"><a href="">For Queenslanders</a></li>
-									<li><a href="./covid-example.html">COVID-19 Resources</a></li>
+									<li><a href="./">For Queenslanders</a></li>
+									<li class="active"><a href="./">COVID-19 Resources</a></li>
 									<li><a href="./contact-us.html">Contact us</a></li>
 									<!--<li><a href="../form/">Forms</a></li>-->
-								</ul>
-								<ul class="au-link-list au-main-nav--submenu">
-									<li class=""><a href="./developer/projects/myqld.html">Sign in</a></li>
 								</ul>
 								<div class="au-main-nav__focus-trap-bottom"></div>
 							</div>
@@ -218,12 +164,36 @@
 
 	<!-- MAIN BODY -->
 	<main>
-		<div id="qg-app"></div>
+
+		<!--CONTENT-->
+		<section class="au-body page_header">
+			<div class="container-fluid">
+				<nav class="au-breadcrumbs" aria-label="breadcrumb">
+					<ul class="au-link-list au-link-list--inline">
+						<li><a href="https://qld.gov.au">Home</a></li>
+						<li>Design System</li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+
+		<section class="au-body">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12" id="content">
+						<section id="mail" class="section">
+						</section>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--END CONTENT-->
+
 	</main>
 	<!-- END MAIN BODY -->
 
 	<!--FOOTER -->
-	<footer class="au-footer au-footer" role="contentinfo">
+	<footer class="au-footer au-footer--covid au-body au-body" role="contentinfo">
 		<div class="container-fluid">
 			<div class="row">
 				<nav class="col-md-12" aria-label="footer">
@@ -246,24 +216,6 @@
 
 	<!-- The javascript from pancake to open and close side nav on desktop -->
 	<script type="text/javascript" src="../js/script.min.js"></script>
-	<script type="text/javascript">
-		/**
-			.qg-utilities-bar
-		**/
-		var selectTheme=document.getElementById('selectTheme');
-		var sweTheme=document.getElementById('swe-theme');
-		var sweTheme=document.getElementById('swe-theme');
-		var qldTheme=document.getElementById('qld-theme');
-		var covidTheme=document.getElementById('covid-theme');
-
-		function addEventHandler(selectTheme, eventType, handler) {
-			if (selectTheme.addEventListener)
-				console.log('here');
-			else if (selectTheme.attachEvent)
-				console.log('on' + eventType, handler); 
-		}
-
-	</script>
 </body>
 
 </html>

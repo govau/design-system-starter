@@ -1,45 +1,218 @@
 //QGOV: Overrides for core DTA colours
+$qg-blue: #005e85;
+$qg-white: white;
+$qg-black: black;
 $qg-grey: #4a4a4a;
-$qg-lightgrey: #f5f5f5;
-$qg-white:  #ffffff;
+$qg-accent: #f5f5f5;
+$qg-focus: #80009a;
+$qg-font: Lato, Helvetica, Arial, sans-serif;
 
-// DTA - Dark theme overrides
-$AU-colordark-foreground-text:   #ffffff;
-$AU-colordark-foreground-action:  #f5f5f5;
-$AU-colordark-foreground-focus:  #edda09;
-$AU-colordark-background:       #005e85;
+//variants
+$qg-blue-variant: #004765;
 
-// DTA - Light theme overrides
-$AU-color-foreground-action: #005e85;
-$AU-color-foreground-focus:  #edda09;
+/** DTA DEFAULT overrides
+$qg-blue: #005e85;
+$qg-white: white;
+$qg-black: black;
+$qg-grey: #4a4a4a;
+$qg-accent: #f5f5f5;
+$qg-font: Lato, Helvetica, Arial, sans-serif;
 
-//Distraction free overrides 
-.au-body {
-    h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
-        font-family: Lato,Helvetica,Arial,sans-serif !important;
-    }
+.au-header,
+.au-search,
+.au-text-input,
+.au-btn,
+.au-main-nav,
+.au-footer {
 }
+**/
+
+$AU-color-foreground-action: $qg-blue;
+$AU-color-foreground-focus: $qg-focus;
+$AU-color-foreground-text: $qg-black;
+$AU-color-background: $qg-white;
+
+$AU-colordark-foreground-text: $qg-white;
+$AU-colordark-foreground-action: $qg-blue;
+$AU-colordark-foreground-focus: $qg-focus;
+$AU-colordark-background: $qg-blue;
+
+.au-header,
+.au-search,
+.au-text-input,
+.au-btn {
+}
+
+.au-header__brand {
+	display: inline-block;
+	.au-header__brand-image {
+		float: left;
+	}
+	.au-header__brand-image + .au-header__text {
+		float: left;
+	}
+}
+
+.au-footer,
+.au-footer--dark {
+	background-color: $qg-blue !important;
+	li a,
+	li a:visited,
+	li a:active,
+	p {
+		color: $qg-white !important;
+	}
+	div.au-footer__end {
+		border-top: 1px solid $qg-white !important;
+	}
+}
+
+.au-main-nav,
+.au-footer {
+	border-color: $qg-blue !important;
+}
+
+.au-main-nav,
+.au-main-nav--submenu {
+	li.active {
+		background-color: $qg-accent !important;
+		a {
+			border-color: $qg-accent !important;
+		}
+	}
+}
+
+.au-main-nav {
+	li.active {
+		background-color: $qg-accent !important;
+		a {
+			border-color: $qg-accent !important;
+		}
+	}
+}
+
+.au-main-nav--dark {
+	background-color: $qg-blue !important;
+	li,
+	li.active {
+		background-color: $qg-blue !important;
+		border-color: $qg-blue !important;
+		a {
+			color: $qg-white !important;
+			border-color: $qg-blue !important;
+		}
+		a:hover {
+			background-color: $qg-blue-variant !important;
+			border-color: $qg-blue-variant !important;
+		}
+	}
+}
+
+.au-header--dark,
+.au-search--dark,
+.au-text-input--dark,
+.au-main-nav--dark,
+.au-footer--dark {
+}
+
+//Overrides to core DTA -
+html,
+body,
+nav,
+.au-header,
+.au-body,
+.au-footer,
+form,
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+a {
+	font-family: $qg-font !important;
+}
+
+//Core layout
 .au-header {
-    padding: 1rem 1rem 1rem 1rem !important;
+	padding: 1rem 1rem 1rem 1rem !important;
+	.au-header__brand-image--dark {
+		display: none;
+	}
+	.au-header__brand {
+		margin-top: 2rem;
+	}
 }
-section.page_header {
-    background-color: $qg-lightgrey !important;
-    padding: 1rem 0rem 2rem 0 !important;
+.au-header--dark {
+	background-color: $qg-blue !important;
+	.au-header__brand-image {
+		display: none !important;
+	}
+	.au-header__brand-image--dark {
+		display: block;
+	}
+	.au-btn {
+		background-color: black;
+		border-color: black;
+	}
+	.au-search--dark {
+	}
 }
+
+.au-body.au-body--alt {
+	background: $qg-accent !important;
+}
+
+section.page_header,
+section.page_header--dark {
+	background-color: $qg-accent !important;
+	padding: 1rem 0rem 2rem 0 !important;
+}
+
 section.form_header {
-    background-color: $qg-lightgrey !important;
-    padding: 0.2rem 0rem 0.2rem 0 !important;
+	background-color: $qg-accent !important;
+	padding: 0.2rem 0rem 0.2rem 0 !important;
 }
+
 div.qg-utilities-bar {
-   background-color: $qg-grey;
-   height: 44px;
-   p {
-       color: white;
-       font-family: inherit;
-       font-weight: 800;
-   }
+	height: 44px;
+	background: $qg-blue;
+	p {
+		color: $qg-white;
+		font-family: inherit;
+		font-weight: 800;
+	}
+	form {
+		margin-top: 0;
+	}
+}
+div.qg-utilities-bar--dark {
+	background: $qg-grey;
 }
 section.section {
-    padding: 2rem 0rem !important;
-    margin: 2rem 0rem !important;
+	padding: 2rem 0rem !important;
+	margin: 2rem 0rem !important;
+}
+
+@media (min-width: 992px) {
+	.au-main-nav .au-link-list + .au-link-list {
+		float: right;
+	}
+}
+
+@media (min-width: 992px) {
+	.au-main-nav .au-link-list {
+		float: left;
+	}
+}
+
+@media (min-width: 992px) {
+	.au-footer {
+		text-align: left;
+	}
 }

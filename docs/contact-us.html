@@ -58,7 +58,7 @@
 	<meta property="article:tag" content="design system" />
 	<meta property="article:tag" content="templates" />
 
-	<title>Service finder | Queensland Government</title>
+	<title>Contact us | Queensland Government</title>
 
 	<script type="text/javascript">
 		var $html = document.documentElement; if ($html.classList) $html.classList.remove("no-js"), $html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
@@ -93,73 +93,29 @@
 
 	<!-- UTILITIES -->
 	<div class="qg-utilities-bar">
-		<!-- 
-			<div class="container-fluid">
-				<a href="#" class="">beta.design.qld.gov.au</a>
-			</div>
-		-->
-
-		<div class="qg-utilities-bar">
-			<div class="container-fluid" style="float: right;">
-			<form> 
-				<select id="selectTheme">
-					<option id="swe-theme">Existing SWE</option>
-					<option id="qld-theme">QLD Design system</option>
-					<option id="covid-theme">COVID theme</option>
-					<option id="des-theme">DES</option>
-					<option id="des-theme">DPC</option>
-				</select>
-			</form>
-		</div>
-				<!-- 
-					<div class="container-fluid">
-						<a href="#" class="">beta.design.qld.gov.au</a>
-					</div>
-				-->
-			</div>
-
 	</div>
 
 	<!-- HEADER -->
 	<header class="au-header au-header" role="banner">
 		<div class="container-fluid">
 			<div class="row">
-
-
-				<!--<div class="col-sm-12" style="display:flex;">
-
-					<div style="flex-basis: flex-start; flex:1;">
-						<a class="au-header__brand" href="#" >
-							<img class="au-header__brand-image" alt="Insert alternate text here"
-								src="../assets/img/qg-coa-white.svg"></a>
-					</div>-->
-					
-						<!-- Proposed CUE sub branding 
-						<div class="au-header__text">
-							<h1 class="au-header__heading">Name of website</h1>
-							<div class="au-header__subline">Simple explanation of the website</div>
-						</div> 
-
-					-->
-
 				<div class="col-sm-8">
 
 					<a class="au-header__brand" href="#">
-
 						<img class="au-header__brand-image" alt="Queensland Government"
-							src="../assets/img/qg-coa.svg">
+						src="../assets/img/qg-coa.svg">
 
-						<img class="au-header__brand-image--dark" alt="Queensland Government"
-							src="../assets/img/qg-coa-white.svg">
+					<img class="au-header__brand-image--dark" alt="Queensland Government"
+						src="../assets/img/qg-coa-white.svg">
+
 
 						<!-- Proposed CUE sub branding 
 						<div class="au-header__text">
 							<h1 class="au-header__heading">Name of website</h1>
 							<div class="au-header__subline">Simple explanation of the website</div>
 						</div> -->
+
 					</a>
-
-
 				</div>
 
 				<div class="col-sm-4">
@@ -174,6 +130,10 @@
 
 			</div>
 		</div>
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/formiojs@latest/dist/formio.full.min.css">
+		<script src="https://unpkg.com/formiojs@latest/dist/formio.full.min.js"></script>
 	</header>
 
 	<!-- MAIN NAVIGATION -->
@@ -197,9 +157,9 @@
 								</button>
 								<ul class="au-link-list">
 									<li><a href="./future.html">Design system</a></li>
-									<li class="active"><a href="">For Queenslanders</a></li>
+									<li><a href="./">For Queenslanders</a></li>
 									<li><a href="./covid-example.html">COVID-19 Resources</a></li>
-									<li><a href="./contact-us.html">Contact us</a></li>
+									<li class="active"><a href="./contact-us.html">Contact us</a></li>
 									<!--<li><a href="../form/">Forms</a></li>-->
 								</ul>
 								<ul class="au-link-list au-main-nav--submenu">
@@ -218,12 +178,132 @@
 
 	<!-- MAIN BODY -->
 	<main>
-		<div id="qg-app"></div>
+
+		<!--CONTENT-->
+		<section class="au-body page_header">
+			<div class="container-fluid">
+				<nav class="au-breadcrumbs" aria-label="breadcrumb">
+					<ul class="au-link-list au-link-list--inline">
+						<li><a href="https://qld.gov.au">Home</a></li>
+						<li>Design System</li>
+					</ul>
+				</nav>
+				<h1>Contact us</h1>
+			</div>
+		</section>
+
+		<section class="au-body">
+			<div class="container-fluid">
+				<div class="row">
+
+					<div class="col-sm-4 col-sm-push-8">
+
+						<aside class="au-side-nav au-accordion" aria-label="side navigation">
+							<button class="au-side-nav__toggle au-accordion__title au-accordion--closed"
+								aria-controls="nav-default" aria-expanded="false" aria-selected="false"
+								onclick="return AU.accordion.Toggle( this )">
+								In the content page section
+							</button>
+							<div id="nav-default" class="au-side-nav__content au-accordion--closed au-accordion__body">
+								<h2 class="au-sidenav__title">
+									<a href="https://www.qld.gov.au/services">Service finder</a>
+								</h2>
+								<ul class="au-link-list">
+									<li><a href="#">{{service.title}}</a>
+										<ul class="au-link-list">
+											<li><a href="#">Contact us</a></li>
+											<li><a href="#">Frequently asked questions</a>
+												<!--<ul class="au-link-list">
+													<li><a href="#">Grandchild link</a></li>
+													<li><a href="#">Grandchild link</a></li>
+												</ul>-->
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</aside>
+					</div>
+					
+					<div class="col-sm-8 col-sm-pull-4" id="content">
+
+						<nav class="au-inpage-nav-links" aria-label="in page navigation">
+							<h2 class="au-inpage-nav-links__heading">Contents</h2>
+							<ul class="au-link-list">
+								<li><a href="#form">Contact form</a></li>
+								<li><a href="#socialmedia">Social media</a></li>
+								<li><a href="#phone">Phone</a></li>
+								<li><a href="#person">In person</a></li>
+                                <li><a href="#mail">Mail</a></li>
+							</ul>
+						</nav>
+
+						<div class="au-body au-page-alerts au-page-alerts--info">
+							<h3>Call 000 for emergencies (Police, Fire or Ambulance)</h3>
+							<p>Call 000 for emergencies (Police, Fire or Ambulance).</p>
+						</div>
+
+						<section id="form" class="section">
+							<h2>Contact us</h2>
+							<p>Form.io</p>
+						</section>
+
+						<section id="socialmedia" class="section">
+							<h2>Social media</h2>
+							<p>You can ask a question about a Queensland Government service on:
+										<ul><li>Facebook (QueenslandGovernment)</li>
+											<li>Twitter (@qldgov)</li>
+											<li>Instagram (@qldgov) via direct message.</li></ul>
+</p>
+
+						</section>
+
+						<section id="phone" class="section">
+							<h2>Phone</h2>
+							<p>
+								<ul>
+<li>If you are contacting us about COVID-19 including hot spots, border passes, restrictions, testing or more, call 134 COVID (13 42 68).</li>
+							<li>Within Australia: 13 QGOV (13 74 68)</li>
+<li>International callers: +61 7 3328 4811 (+10 hours UTC)</li>
+</ul>
+								</p>
+
+						</section>
+
+						<section id="person" class="section">
+							<h2>In person
+							</h2>
+							<p>
+								<ul>
+<li>Visit one of our counters
+</li>
+</ul>
+								</p>
+
+						</section>
+
+
+						<section id="mail" class="section">
+							<h2>Mail
+							</h2>
+							<p>
+								<ul>
+<li>Look up the postal address of the department you wish to deal with.
+</li>
+</ul>
+								</p>
+
+						</section>
+										</div>
+				</div>
+			</div>
+		</section>
+		<!--END CONTENT-->
 	</main>
 	<!-- END MAIN BODY -->
 
 	<!--FOOTER -->
-	<footer class="au-footer au-footer" role="contentinfo">
+	<footer class="au-footer au-footer au-body au-body" role="contentinfo">
 		<div class="container-fluid">
 			<div class="row">
 				<nav class="col-md-12" aria-label="footer">
@@ -246,24 +326,21 @@
 
 	<!-- The javascript from pancake to open and close side nav on desktop -->
 	<script type="text/javascript" src="../js/script.min.js"></script>
-	<script type="text/javascript">
-		/**
-			.qg-utilities-bar
-		**/
-		var selectTheme=document.getElementById('selectTheme');
-		var sweTheme=document.getElementById('swe-theme');
-		var sweTheme=document.getElementById('swe-theme');
-		var qldTheme=document.getElementById('qld-theme');
-		var covidTheme=document.getElementById('covid-theme');
 
-		function addEventHandler(selectTheme, eventType, handler) {
-			if (selectTheme.addEventListener)
-				console.log('here');
-			else if (selectTheme.attachEvent)
-				console.log('on' + eventType, handler); 
-		}
 
-	</script>
+	<!-- Core Form io -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/formiojs@latest/dist/formio.full.min.css">
+	<script type="text/javascript" src="https://unpkg.com/formiojs@latest/dist/formio.full.min.js"></script>
+	<script type="text/javascript" src="./?a=132932"></script>
+
+	<!-- Form io CSS -->
+	<link href="./?a=132931" rel="stylesheet">
+
+	<!-- DTA/Form.io workarounds -->
+	<link href="./?a=157535" rel="stylesheet">
+	<script type="text/javascript" src="./?a=157536"></script>
+
 </body>
 
 </html>

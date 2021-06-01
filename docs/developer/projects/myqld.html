@@ -58,14 +58,14 @@
 	<meta property="article:tag" content="design system" />
 	<meta property="article:tag" content="templates" />
 
-	<title>Service detail | Queensland Government</title>
+	<title>Campaign page | Queensland Government</title>
 
 	<script type="text/javascript">
 		var $html = document.documentElement; if ($html.classList) $html.classList.remove("no-js"), $html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
 	</script>
 
-	<link rel="icon" href="../assets/favicons/favicon.ico">
-	<link type="text/css" rel="stylesheet" href="../css/main.css">
+	<link rel="icon" href="../../assets/favicons/favicon.ico">
+	<link type="text/css" rel="stylesheet" href="../../css/main.css">
 
 	<!-- These are shivs to help modern html work in older internet explorer browsers -->
 	<!--[if lt IE 9]>
@@ -94,15 +94,19 @@
 	<!-- UTILITIES -->
 	<div class="qg-utilities-bar">
 	</div>
+
 	<!-- HEADER -->
-	<header class="au-header au-header--dark" role="banner">
+	<header class="au-header au-header" role="banner">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-8">
 
 					<a class="au-header__brand" href="#">
-						<img class="au-header__brand-image" alt="Insert alternate text here"
-							src="../assets/img/qg-coa-white.svg">
+						<img class="au-header__brand-image" alt="Queensland Government"
+						src="../../assets/img/qg-coa.svg">
+
+						<img class="au-header__brand-image--dark" alt="Queensland Government"
+						src="../../assets/img/qg-coa-white.svg">
 
 						<!-- Proposed CUE sub branding 
 						<div class="au-header__text">
@@ -113,23 +117,22 @@
 					</a>
 				</div>
 
-				<!-- Search 
 				<div class="col-sm-4">
-					<form role="search" aria-label="sitewide" class="au-search au-search--dark au-search--icon">
-						<label for="standard" class="au-search__label">Search this website</label>
-						<input type="search" placeholder="Search this site" id="standard" name="standard" class="au-text-input au-text-input--dark"/>
+					<form role="search" aria-label="sitewide" class="au-search au-search au-search--icon">
+						<label for="standard" class="au-search__label">Search website</label>
+						<input type="search" placeholder="Search website" id="standard" name="standard" class="au-text-input au-text-input"/>
 						<div class="au-search__btn">
-							<button class="au-btn au-btn--dark" type="submit"><span class="au-search__submit-btn-text">Search</span></button>
+							<button class="au-btn au-btn" type="submit"><span class="au-search__submit-btn-text">Search</span></button>
 						</div>
 					</form>
-				</div> -->
+				</div> 
 
 			</div>
 		</div>
 	</header>
 
 	<!-- MAIN NAVIGATION -->
-	<nav class="au-main-nav au-main-nav--dark" id="mainmenu" aria-label="main">
+	<nav class="au-main-nav au-main-nav" id="mainmenu" aria-label="main">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
@@ -148,9 +151,13 @@
 									Close
 								</button>
 								<ul class="au-link-list">
-									<li><a href="/future.html">Design system</a></li>
-									<li class="active"><a href="/index.html">Service finder</a></li>
+									<li><a href="https://www.qld.gov.au">Home</a></li>
+									<li><a href="https://www.qld.gov.au/queenslanders">For Queenslanders</a></li>
+									<li><a href="https://www.qld.gov.au/contact-us">Contact us</a></li>
 									<!--<li><a href="../form/">Forms</a></li>-->
+								</ul>
+								<ul class="au-link-list au-main-nav--submenu">
+									<li class="active"><a class="icon icon--dark icon--account icon--action" href="#">Sign in</a></li>
 								</ul>
 								<div class="au-main-nav__focus-trap-bottom"></div>
 							</div>
@@ -172,110 +179,95 @@
 				<nav class="au-breadcrumbs" aria-label="breadcrumb">
 					<ul class="au-link-list au-link-list--inline">
 						<li><a href="https://qld.gov.au">Home</a></li>
-						<li><a href="https://www.qld.gov.au/services">Service finder</a></li>
-						<li><a href="/index.html">Services example</a></li>
-						<li>{{service.title}}</li>
+						<li>myQld</li>
 					</ul>
 				</nav>
 
-				<h1>{{service.title}}</h1>
+			</div>
+		</section>
+
+		<div class="au-body au-body--alt banner">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-sm-push-6">
+						<div class="placeholder"></div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-sm-pull-6">
+						<h2>We are simplifying the way you access government services.</h2>
+						<p>myQld will provide secure and easy access to online government services in one place.
+							From your personalised dashboard, you'll be able to find and apply for services, track progress, get timely reminders and notifications, and keep your details up to date across multiple services.</p>
+						<div class="btn-cta-group">
+							<a class="au-btn" href="#">Primary call to action</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="au-body">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>myQld is in development</h2>
+						<p>Bond Loans and Rental Grants is the first service in myQld. More services and features will be available soon.</p>
+						<h2>Find other government services</h2>
+						<p>Looking for a service not yet available in myQld?</p></div>
+						<div class="btn-group">
+							<a class="au-btn au-btn--secondary" href="https://www.qld.gov.au/services">Find other services</a>
+						</div>
+				</div>
 			</div>
 		</section>
 
 		<section class="au-body">
 			<div class="container-fluid">
 				<div class="row">
-
-					<div class="col-sm-4 col-sm-push-8">
-
-						<aside class="au-side-nav au-accordion" aria-label="side navigation">
-							<button class="au-side-nav__toggle au-accordion__title au-accordion--closed"
-								aria-controls="nav-default" aria-expanded="false" aria-selected="false"
-								onclick="return AU.accordion.Toggle( this )">
-								In the content page section
-							</button>
-							<div id="nav-default" class="au-side-nav__content au-accordion--closed au-accordion__body">
-								<h2 class="au-sidenav__title">
-									<a href="https://www.qld.gov.au/services">Service finder</a>
-								</h2>
-								<ul class="au-link-list">
-									<li><a href="#">{{service.title}}</a>
-										<ul class="au-link-list">
-											<li><a href="#">Contact us</a></li>
-											<li><a href="#">Frequently asked questions</a>
-												<!--<ul class="au-link-list">
-													<li><a href="#">Grandchild link</a></li>
-													<li><a href="#">Grandchild link</a></li>
-												</ul>-->
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-						</aside>
-					</div>
-					<div class="col-sm-8 col-sm-pull-4" id="content">
-
-						<nav class="au-inpage-nav-links" aria-label="in page navigation">
-							<h2 class="au-inpage-nav-links__heading">Contents</h2>
-							<ul class="au-link-list">
-								<li><a href="#introduction">Introduction</a></li>
-								<li><a href="#eligibility">Eligibility</a></li>
-								<li><a href="#need">What you need</a></li>
-								<li><a href="#apply">How to apply</a></li>
-								<li><a href="#payment">Payment methods</a></li>
-								<li><a href="#documents">Documents</a></li>
-								<li><a href="#links">Links</a></li>
-							</ul>
-						</nav>
-
-						<p>{{service.description}}</p>
-
-						<section id="introduction" class="section">
-							<h2>Introduction</h2>
-							<p>{{service.introduction}}</p>
-						</section>
-
-						<section id="eligibility" class="section">
-							<h2>Eligibility</h2>
-							<p>{{service.eligibility}}</p>
-						</section>
-
-						<section id="need" class="section">
-							<h2>What you need</h2>
-							<p>{{service.need}}</p>
-						</section>
-
-						<section id="apply" class="section">
-							<h2>How to apply</h2>
-							<p>{{service.apply}}</p>
-						</section>
-
-						<section id="payment" class="section">
-							<h2>Payment methods</h2>
-							<p>{{service.payments}}</p>
-						</section>
-
-						<section id="documents" class="section">
-							<h2>Documents</h2>
-							<p>{{service.documents}}</p>
-						</section>
-
-						<section id="links" class="section">
-							<h2>Links</h2>
-							<p>{{service.links}}</p>
-						</section>
-
+					<div class="col-md-12">
+						<h2>Articles</h2>
+						<div class="row">
+							<ul class="au-card-list au-card-list--matchheight ">
+								<li class="col-xs-12 col-sm-4">
+									<div class="au-card au-card--shadow au-card--centred au-card--clickable">
+										<div class="placeholder au-responsive-media-img"></div>
+										<div class="au-card__inner ">
+											<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Card title</a></h2>
+											<p type="content" class="au-card__content">Additional text relating to the card.</p>
+										</div>
+									</div>
+								</li>
+								<li class="col-xs-12 col-sm-4">
+									<div class="au-card  au-card--shadow au-card--centred au-card--clickable">
+										<div class="placeholder au-responsive-media-img"></div>
+										<div class="au-card__inner ">
+											<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Card title</a></h2>
+											<p type="content" class="au-card__content">Additional text relating to the card.</p>
+										</div>
+									</div>
+								</li>
+								<li class="col-xs-12 col-sm-4">
+									<div class="au-card  au-card--shadow au-card--centred au-card--clickable">
+										<div class="placeholder au-responsive-media-img"></div>
+										<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Card title</a></h2>
+										<p type="content" class="au-card__content">Additional text relating to the card.</p>
+									</div>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
-		</section>
+
+			<div class="articles-cta">
+				<a class="au-cta-link" href="#">See more articles</a>
+			</div>
+		</div></section>
 		<!--END CONTENT-->
 	</main>
 	<!-- END MAIN BODY -->
 
 	<!--FOOTER -->
-	<footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
+	<footer class="au-footer au-footer" role="contentinfo">
 		<div class="container-fluid">
 			<div class="row">
 				<nav class="col-md-12" aria-label="footer">
@@ -297,7 +289,7 @@
 	</footer>
 
 	<!-- The javascript from pancake to open and close side nav on desktop -->
-	<script type="text/javascript" src="../js/script.min.js"></script>
+	<script type="text/javascript" src="../../../js/script.min.js"></script>
 </body>
 
 </html>

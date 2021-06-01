@@ -1,0 +1,57 @@
+//Custom themes
+$qg-covid: #681727;
+$qg-covid-card-accent: #ff8e28;
+$qg-covid-menu-accent: #ae0a44;
+
+/**
+.au-search--covid,
+.au-text-input--covid,
+.au-btn--covid {
+}
+**/
+
+.au-btn--covid {
+	background-color: black;
+	border-color: black;
+}
+.au-header--covid,
+.au-footer--covid,
+.au-main-nav--covid {
+	li a {
+		color: white !important;
+	}
+	li.active {
+		border-color: $qg-covid !important;
+	}
+	li.active a,
+	li.active a:hover {
+		border-color: $qg-covid !important;
+		background-color: $qg-covid !important;
+	}
+	background-color: $qg-covid !important;
+	color: white !important;
+}
+.au-footer--covid {
+	border-top: 0.5rem solid $qg-covid-menu-accent !important;
+}
+.au-main-nav--covid {
+	a:hover {
+		background-color: black;
+		color: white;
+	}
+	.active a {
+		border-bottom: 0.5rem solid $qg-covid !important;
+	}
+	border-bottom: 0.5rem solid $qg-covid-menu-accent !important;
+}
+.au-header--covid {
+	.au-header__brand-image {
+		display: none;
+	}
+	.au-header__brand-image--dark {
+		display: block;
+	}
+}
+.qg-utilities-bar--covid {
+	display: none;
+}
