@@ -61,9 +61,14 @@ $AU-colordark-background: $qg-blue;
 	li a:active,
 	p {
 		color: $qg-white !important;
+		text-align: center;
+		margin: 0px auto;
 	}
 	div.au-footer__end {
 		border-top: 1px solid $qg-white !important;
+	}
+	nav {
+		text-align: center;
 	}
 }
 
@@ -148,6 +153,7 @@ a {
 		margin-top: 2rem;
 	}
 }
+
 .au-header--dark {
 	background-color: $qg-blue !important;
 	.au-header__brand-image {

@@ -14,6 +14,7 @@ $qg-covid-menu-accent: #ae0a44;
 	background-color: black;
 	border-color: black;
 }
+
 .au-header--covid,
 .au-footer--covid,
 .au-main-nav--covid {
@@ -30,9 +31,11 @@ $qg-covid-menu-accent: #ae0a44;
 	background-color: $qg-covid !important;
 	color: white !important;
 }
+
 .au-footer--covid {
 	border-top: 0.5rem solid $qg-covid-menu-accent !important;
 }
+
 .au-main-nav--covid {
 	a:hover {
 		background-color: black;
@@ -43,6 +46,7 @@ $qg-covid-menu-accent: #ae0a44;
 	}
 	border-bottom: 0.5rem solid $qg-covid-menu-accent !important;
 }
+
 .au-header--covid {
 	.au-header__brand-image {
 		display: none;
@@ -51,6 +55,7 @@ $qg-covid-menu-accent: #ae0a44;
 		display: block;
 	}
 }
+
 .qg-utilities-bar--covid {
 	display: none;
 }
