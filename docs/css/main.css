@@ -1789,7 +1789,7 @@ a.au-tag.au-tag--dark::-moz-focus-inner { border: 0; }
 
 .au-header--covid li.active, .au-footer--covid li.active, .au-main-nav--covid li.active { border-color: #681727 !important; }
 
-.au-header--covid li.active a, .au-header--covid li.active a:hover, .au-footer--covid li.active a, .au-footer--covid li.active a:hover, .au-main-nav--covid li.active a, .au-main-nav--covid li.active a:hover { border-color: #681727 !important; background-color: #681727 !important; }
+.au-header--covid li.active a:hover, .au-footer--covid li.active a:hover, .au-main-nav--covid li.active a:hover { border-color: #681727 !important; background-color: #681727 !important; }
 
 .au-footer--covid { border-top: 0.5rem solid #ae0a44 !important; }
 
