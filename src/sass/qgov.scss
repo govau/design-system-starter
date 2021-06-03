@@ -8,6 +8,9 @@ $qg-accent: #f5f5f5;
 $qg-focus: #80009a;
 $qg-font: Lato, Helvetica, Arial, sans-serif;
 
+//Breakpoint
+$AU-main-nav-breakpoint: sm;
+
 //Light default
 $AU-color-foreground-action: $qg-blue;
 $AU-color-foreground-focus: $qg-focus;
@@ -107,7 +110,14 @@ div.qg-utilities-bar--dark {
 }
 .au-main-nav {
 	.home-icon {
-		max-height: 1rem;
+		height: 18px !important;
+		padding-top: 2px;
+	}
+	.icon-text {
+		height: 1px;
+		width: 1px;
+		position: absolute;
+		z-index: -99;
 	}
 	.au-link-list {
 		float: left !important;
@@ -119,7 +129,7 @@ div.qg-utilities-bar--dark {
 
 .au-main-nav--dark {
 	background-color: $qg-blue !important;
-	border-bottom: 0px !important;
+	border-color: $qg-blue-variant !important;
 	.au-main-nav__content {
 		.au-main-nav__toggle {
 			color: $qg-grey !important;
@@ -154,6 +164,9 @@ div.qg-utilities-bar--dark {
 .au-body.au-body--alt {
 	background: $qg-accent !important;
 }
+.au-body.au-body--alt.app-feature {
+	padding: 2rem 0rem !important;
+}
 
 //Section padding/alt accent
 section.page_header,
@@ -161,6 +174,7 @@ section.page_header--dark {
 	background-color: $qg-accent !important;
 	padding: 1rem 0rem 2rem 0 !important;
 }
+
 section.form_header {
 	background-color: $qg-accent !important;
 	padding: 0.2rem 0rem 0.2rem 0 !important;
@@ -191,17 +205,22 @@ section.section {
 }
 
 //Mobile ----------------------------------------------
-@media (max-width: 992px) {
+@media (max-width: 769px) {
+	.au-header__brand {
+		margin-top: 0px !important;
+	}
 	.search-container {
 		display: none;
 	}
 	.au-footer {
 		text-align: left;
 	}
-	.au-main-nav .au-link-list + .au-link-list {
-		float: left;
+	.au-main-nav--dark li a,
+	.au-main-nav--dark li.active a {
+		background-color: $qg-white !important;
+		color: $qg-grey !important;
 	}
-	.au-main-nav .au-link-list {
-		float: left;
+	.au-link-list {
+		float: left !important;
 	}
 }
