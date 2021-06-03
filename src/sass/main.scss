@@ -16,7 +16,7 @@ body {
 
 // Increase the spacing for au-body elements inside main
 main > .au-body {
-	@include AU-space(padding, 2unit 0);
+	@include AU-space(padding, 4unit 0);
 }
 
 main > .banner {

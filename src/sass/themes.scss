@@ -10,11 +10,6 @@ $qg-covid-menu-accent: #ae0a44;
 }
 **/
 
-.au-btn--covid {
-	background-color: black;
-	border-color: black;
-}
-
 .au-header--covid,
 .au-footer--covid,
 .au-main-nav--covid {
@@ -58,4 +53,9 @@ $qg-covid-menu-accent: #ae0a44;
 
 .qg-utilities-bar--covid {
 	display: none;
+}
+
+.au-btn--covid {
+	background-color: black;
+	border-color: black;
 }

@@ -1,52 +1,4 @@
 @charset "UTF-8";
-/** DTA DEFAULT overrides
-$qg-blue: #005e85;
-$qg-white: white;
-$qg-black: black;
-$qg-grey: #4a4a4a;
-$qg-accent: #f5f5f5;
-$qg-font: Lato, Helvetica, Arial, sans-serif;
-
-.au-header,
-.au-search,
-.au-text-input,
-.au-btn,
-.au-main-nav,
-.au-footer {
-}
-**/
-.au-header__brand { display: inline-block; }
-
-.au-header__brand .au-header__brand-image { float: left; }
-
-.au-header__brand .au-header__brand-image + .au-header__text { float: left; }
-
-.au-footer, .au-footer--dark { background-color: #005e85 !important; }
-
-.au-footer li a, .au-footer li a:visited, .au-footer li a:active, .au-footer p, .au-footer--dark li a, .au-footer--dark li a:visited, .au-footer--dark li a:active, .au-footer--dark p { color: white !important; text-align: center; margin: 0px auto !important; }
-
-.au-footer div.au-footer__end, .au-footer--dark div.au-footer__end { border-top: 0px solid white !important; }
-
-.au-footer nav, .au-footer--dark nav { text-align: center; }
-
-.au-main-nav, .au-footer { border-color: #005e85 !important; }
-
-.au-main-nav li.active, .au-main-nav--submenu li.active { background-color: #f5f5f5 !important; }
-
-.au-main-nav li.active a, .au-main-nav--submenu li.active a { border-color: #f5f5f5 !important; }
-
-.au-main-nav li.active { background-color: #f5f5f5 !important; }
-
-.au-main-nav li.active a { border-color: #f5f5f5 !important; }
-
-.au-main-nav--dark { background-color: #005e85 !important; }
-
-.au-main-nav--dark li, .au-main-nav--dark li.active { background-color: #005e85 !important; border-color: #005e85 !important; }
-
-.au-main-nav--dark li a, .au-main-nav--dark li.active a { color: white !important; border-color: #005e85 !important; }
-
-.au-main-nav--dark li a:hover, .au-main-nav--dark li.active a:hover { background-color: #004765 !important; border-color: #004765 !important; }
-
 html, body, nav, .au-header, .au-body, .au-footer, form, input, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a { font-family: Lato, Helvetica, Arial, sans-serif !important; }
 
 .au-header { padding: 1rem 1rem 1rem 1rem !important; }
@@ -63,12 +15,6 @@ html, body, nav, .au-header, .au-body, .au-footer, form, input, h1, h2, h3, h4, 
 
 .au-header--dark .au-btn { background-color: black; border-color: black; }
 
-.au-body.au-body--alt { background: #f5f5f5 !important; }
-
-section.page_header, section.page_header--dark { background-color: #f5f5f5 !important; padding: 1rem 0rem 2rem 0 !important; }
-
-section.form_header { background-color: #f5f5f5 !important; padding: 0.2rem 0rem 0.2rem 0 !important; }
-
 div.qg-utilities-bar { height: 44px; background: #005e85; }
 
 div.qg-utilities-bar p { color: white; font-family: inherit; font-weight: 800; }
@@ -77,13 +23,56 @@ div.qg-utilities-bar form { margin-top: 0; }
 
 div.qg-utilities-bar--dark { background: #4a4a4a; }
 
+.au-header__brand { display: inline-block; }
+
+.au-header__brand .au-header__brand-image { float: left; }
+
+.au-header__brand .au-header__brand-image + .au-header__text { float: left; }
+
+.au-main-nav li.active, .au-main-nav--submenu li.active { background-color: #f5f5f5 !important; }
+
+.au-main-nav li.active a, .au-main-nav--submenu li.active a { border-color: #f5f5f5 !important; }
+
+.au-main-nav .home-icon { max-height: 1rem; }
+
+.au-main-nav .au-link-list { float: left !important; }
+
+.au-main-nav .au-link-list + .au-main-nav--submenu { float: right !important; }
+
+.au-main-nav--dark { background-color: #005e85 !important; border-bottom: 0px !important; }
+
+.au-main-nav--dark .au-main-nav__content .au-main-nav__toggle { color: #4a4a4a !important; background-color: white !important; }
+
+.au-main-nav--dark .au-main-nav__content .au-main-nav__toggle--open { color: white !important; background-color: #004765 !important; }
+
+.au-main-nav--dark .au-main-nav__content .au-main-nav__menu { background-color: white !important; color: #4a4a4a !important; }
+
+.au-main-nav--dark li, .au-main-nav--dark li.active { background-color: #005e85 !important; border-color: #005e85 !important; }
+
+.au-main-nav--dark li a, .au-main-nav--dark li.active a { color: white !important; border-color: #005e85 !important; border-bottom: 0px !important; }
+
+.au-main-nav--dark li a:hover, .au-main-nav--dark li a:active, .au-main-nav--dark li.active a:hover, .au-main-nav--dark li.active a:active { background-color: #004765 !important; }
+
+.au-body.au-body--alt { background: #f5f5f5 !important; }
+
+section.page_header, section.page_header--dark { background-color: #f5f5f5 !important; padding: 1rem 0rem 2rem 0 !important; }
+
+section.form_header { background-color: #f5f5f5 !important; padding: 0.2rem 0rem 0.2rem 0 !important; }
+
 section.section { padding: 2rem 0rem !important; margin: 2rem 0rem !important; }
 
-@media (min-width: 992px) { .au-main-nav .au-link-list + .au-link-list { float: right; } }
+.au-footer, .au-footer--dark { background-color: #005e85 !important; }
 
-@media (min-width: 992px) { .au-main-nav .au-link-list { float: left; } }
+.au-footer li a, .au-footer li a:visited, .au-footer li a:active, .au-footer p, .au-footer--dark li a, .au-footer--dark li a:visited, .au-footer--dark li a:active, .au-footer--dark p { color: white !important; text-align: center; margin: 0px auto !important; }
 
-@media (min-width: 992px) { .au-footer { text-align: left; } }
+.au-footer div.au-footer__end, .au-footer--dark div.au-footer__end { border-top: 0px solid white !important; }
+
+.au-footer nav, .au-footer--dark nav { text-align: center; }
+
+@media (max-width: 992px) { .search-container { display: none; }
+  .au-footer { text-align: left; }
+  .au-main-nav .au-link-list + .au-link-list { float: left; }
+  .au-main-nav .au-link-list { float: left; } }
 
 /*! PANCAKE v1.4.1 PANCAKE-SASS v2.3.7 */
 /* THIS FILE IS AUTOGENERATED EVERY TIME YOU INSTALL A PANCAKE MODULE. DO NOT EDIT THIS FILE AND AVOID COMMITTING IT TO VERSION CONTROL. */
@@ -1783,8 +1772,6 @@ a.au-tag.au-tag--dark::-moz-focus-inner { border: 0; }
 .au-btn--covid {
 }
 **/
-.au-btn--covid { background-color: black; border-color: black; }
-
 .au-header--covid, .au-footer--covid, .au-main-nav--covid { background-color: #681727 !important; color: white !important; }
 
 .au-header--covid li a, .au-footer--covid li a, .au-main-nav--covid li a { color: white !important; }
@@ -1807,9 +1794,11 @@ a.au-tag.au-tag--dark::-moz-focus-inner { border: 0; }
 
 .qg-utilities-bar--covid { display: none; }
 
+.au-btn--covid { background-color: black; border-color: black; }
+
 body { padding: 0; margin: 0; }
 
-main > .au-body { padding: 32px 0; padding: 2rem 0; }
+main > .au-body { padding: 64px 0; padding: 4rem 0; }
 
 @media (min-width: 768px) { main > .banner { padding: 64px 0; padding: 4rem 0; } }
 
