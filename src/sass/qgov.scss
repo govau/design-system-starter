@@ -62,10 +62,10 @@ $AU-colordark-background: $qg-blue;
 	p {
 		color: $qg-white !important;
 		text-align: center;
-		margin: 0px auto;
+		margin: 0px auto !important;
 	}
 	div.au-footer__end {
-		border-top: 1px solid $qg-white !important;
+		border-top: 0px solid $qg-white !important;
 	}
 	nav {
 		text-align: center;

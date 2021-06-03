@@ -23,9 +23,11 @@ $qg-font: Lato, Helvetica, Arial, sans-serif;
 
 .au-footer, .au-footer--dark { background-color: #005e85 !important; }
 
-.au-footer li a, .au-footer li a:visited, .au-footer li a:active, .au-footer p, .au-footer--dark li a, .au-footer--dark li a:visited, .au-footer--dark li a:active, .au-footer--dark p { color: white !important; }
+.au-footer li a, .au-footer li a:visited, .au-footer li a:active, .au-footer p, .au-footer--dark li a, .au-footer--dark li a:visited, .au-footer--dark li a:active, .au-footer--dark p { color: white !important; text-align: center; margin: 0px auto !important; }
 
-.au-footer div.au-footer__end, .au-footer--dark div.au-footer__end { border-top: 1px solid white !important; }
+.au-footer div.au-footer__end, .au-footer--dark div.au-footer__end { border-top: 0px solid white !important; }
+
+.au-footer nav, .au-footer--dark nav { text-align: center; }
 
 .au-main-nav, .au-footer { border-color: #005e85 !important; }
 
