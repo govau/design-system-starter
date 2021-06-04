@@ -58,7 +58,7 @@
 	<meta property="article:tag" content="design system" />
 	<meta property="article:tag" content="templates" />
 
-	<title>Campaign page | Queensland Government</title>
+	<title>Service detail | Queensland Government</title>
 
 	<script type="text/javascript">
 		var $html = document.documentElement; if ($html.classList) $html.classList.remove("no-js"), $html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
@@ -103,10 +103,10 @@
 
 					<a class="au-header__brand" href="#">
 						<img class="au-header__brand-image" alt="Queensland Government"
-						src="../../../assets/img/qg-coa.svg">
+							src="../../../assets/img/qg-coa.svg">
 
 						<img class="au-header__brand-image--dark" alt="Queensland Government"
-						src="../../../assets/img/qg-coa-white.svg">
+							src="../../../assets/img/qg-coa-white.svg">
 
 						<!-- Proposed CUE sub branding 
 						<div class="au-header__text">
@@ -120,12 +120,14 @@
 				<div class="col-sm-4">
 					<form role="search" aria-label="sitewide" class="au-search au-search au-search--icon">
 						<label for="standard" class="au-search__label">Search website</label>
-						<input type="search" placeholder="Search website" id="standard" name="standard" class="au-text-input au-text-input"/>
+						<input type="search" placeholder="Search website" id="standard" name="standard"
+							class="au-text-input au-text-input" />
 						<div class="au-search__btn">
-							<button class="au-btn au-btn" type="submit"><span class="au-search__submit-btn-text">Search</span></button>
+							<button class="au-btn au-btn" type="submit"><span
+									class="au-search__submit-btn-text">Search</span></button>
 						</div>
 					</form>
-				</div> 
+				</div>
 
 			</div>
 		</div>
@@ -151,9 +153,9 @@
 									Close
 								</button>
 								<ul class="au-link-list">
-									<li class="active"><a href="../../../future.html">Design system</a></li>
-									<li><a href="../../../index.html">For Queenslanders</a></li>
-									<li><a href="../../../contact-us.html">Contact us</a></li>
+									<li class="active"><a href="../../../index.html">Design system</a></li>
+									<li><a href="../../../projects.html">Projects</a></li>
+									<!--<li><a href="contact-us.html">Contact us</a></li>-->
 									<!--<li><a href="../form/">Forms</a></li>-->
 								</ul>
 
@@ -176,14 +178,13 @@
 			<div class="container-fluid">
 				<nav class="au-breadcrumbs" aria-label="breadcrumb">
 					<ul class="au-link-list au-link-list--inline">
-						<li><a href="https://qld.gov.au">Home</a></li>
-						<li><a href="https://www.qld.gov.au/services">For Queenslanders</a></li>
-						<li><a href="/index.html">Franchise title</a></li>
-						<li>Campaign title</li>
+						<li><a href="../../../index.html">Design system</a></li>
+						<li><a href="../index.html">Page models</a></li>
+						<li>Service detail</li>
 					</ul>
 				</nav>
 
-				<h1>Campaign title</h1>
+				<h1>Service detail</h1>
 			</div>
 		</section>
 
@@ -191,7 +192,87 @@
 			<div class="container-fluid">
 				<div class="row">
 
-					
+					<div class="col-sm-4 col-sm-push-8">
+
+						<aside class="au-side-nav au-accordion" aria-label="side navigation">
+							<button class="au-side-nav__toggle au-accordion__title au-accordion--closed"
+								aria-controls="nav-default" aria-expanded="false" aria-selected="false"
+								onclick="return AU.accordion.Toggle( this )">
+								In the content page section
+							</button>
+							<div id="nav-default" class="au-side-nav__content au-accordion--closed au-accordion__body">
+								<h2 class="au-sidenav__title">
+									<a href="https://www.qld.gov.au/services">Service finder</a>
+								</h2>
+								<ul class="au-link-list">
+									<li><a href="#">{{service.title}}</a>
+										<ul class="au-link-list">
+											<li><a href="#">Contact us</a></li>
+											<li><a href="#">Frequently asked questions</a>
+												<!--<ul class="au-link-list">
+													<li><a href="#">Grandchild link</a></li>
+													<li><a href="#">Grandchild link</a></li>
+												</ul>-->
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</aside>
+					</div>
+					<div class="col-sm-8 col-sm-pull-4" id="content">
+
+						<nav class="au-inpage-nav-links" aria-label="in page navigation">
+							<h2 class="au-inpage-nav-links__heading">Contents</h2>
+							<ul class="au-link-list">
+								<li><a href="#introduction">Introduction</a></li>
+								<li><a href="#eligibility">Eligibility</a></li>
+								<li><a href="#need">What you need</a></li>
+								<li><a href="#apply">How to apply</a></li>
+								<li><a href="#payment">Payment methods</a></li>
+								<li><a href="#documents">Documents</a></li>
+								<li><a href="#links">Links</a></li>
+							</ul>
+						</nav>
+
+						<p>{{service.description}}</p>
+
+						<section id="introduction" class="section">
+							<h2>Introduction</h2>
+							<p>{{service.introduction}}</p>
+						</section>
+
+						<section id="eligibility" class="section">
+							<h2>Eligibility</h2>
+							<p>{{service.eligibility}}</p>
+						</section>
+
+						<section id="need" class="section">
+							<h2>What you need</h2>
+							<p>{{service.need}}</p>
+						</section>
+
+						<section id="apply" class="section">
+							<h2>How to apply</h2>
+							<p>{{service.apply}}</p>
+						</section>
+
+						<section id="payment" class="section">
+							<h2>Payment methods</h2>
+							<p>{{service.payments}}</p>
+						</section>
+
+						<section id="documents" class="section">
+							<h2>Documents</h2>
+							<p>{{service.documents}}</p>
+						</section>
+
+						<section id="links" class="section">
+							<h2>Links</h2>
+							<p>{{service.links}}</p>
+						</section>
+
+					</div>
 				</div>
 			</div>
 		</section>
@@ -200,15 +281,21 @@
 	<!-- END MAIN BODY -->
 
 	<!--FOOTER -->
-	<footer class="au-footer au-footer" role="contentinfo">
+	<footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
 		<div class="container-fluid">
 			<div class="row">
 				<nav class="col-md-12" aria-label="footer">
 					<ul class="au-link-list au-link-list--inline">
+						<li><a href="https://www.qld.gov.au/contact-us">Contact us</a></li>
+						<li><a href="https://www.qld.gov.au/help">Help</a></li>
+						<li><a href="https://www.qld.gov.au/legal/copyright">Copyright</a></li>
+						<li><a href="https://www.qld.gov.au/legal/disclaimer">Disclaimer</a></li>
 						<li><a href="https://www.qld.gov.au/legal/privacy">Privacy</a></li>
 						<li><a href="https://www.qld.gov.au/about/rights-accountability/right-to-information">Right to
 								information</a></li>
 						<li><a href="https://www.qld.gov.au/help/accessibility">Accessibility</a></li>
+						<li><a href="http://www.smartjobs.qld.gov.au/">Jobs in Queensland Government</a></li>
+						<li><a href="https://www.qld.gov.au/help/languages">Other languages</a></li>
 					</ul>
 				</nav>
 				<section class="col-sm-12">

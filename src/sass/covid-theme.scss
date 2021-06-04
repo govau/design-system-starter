@@ -13,15 +13,12 @@ $qg-covid-menu-accent: #ae0a44;
 .au-header--covid,
 .au-footer--covid,
 .au-main-nav--covid {
-	li a {
-		color: white !important;
-	}
-	li.active {
-		border-color: $qg-covid !important;
-	}
+	li a,
+	li a.active,
 	li.active a:hover {
-		border-color: $qg-covid !important;
+		color: white !important;
 		background-color: $qg-covid !important;
+		border-color: $qg-covid !important;
 	}
 	background-color: $qg-covid !important;
 	color: white !important;

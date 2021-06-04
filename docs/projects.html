@@ -58,7 +58,7 @@
 	<meta property="article:tag" content="design system" />
 	<meta property="article:tag" content="templates" />
 
-	<title>Campaign page | Queensland Government</title>
+	<title>Service detail | Queensland Government</title>
 
 	<script type="text/javascript">
 		var $html = document.documentElement; if ($html.classList) $html.classList.remove("no-js"), $html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
@@ -103,10 +103,10 @@
 
 					<a class="au-header__brand" href="#">
 						<img class="au-header__brand-image" alt="Queensland Government"
-						src="../../../assets/img/qg-coa.svg">
+							src="../../../assets/img/qg-coa.svg">
 
 						<img class="au-header__brand-image--dark" alt="Queensland Government"
-						src="../../../assets/img/qg-coa-white.svg">
+							src="../../../assets/img/qg-coa-white.svg">
 
 						<!-- Proposed CUE sub branding 
 						<div class="au-header__text">
@@ -120,12 +120,14 @@
 				<div class="col-sm-4">
 					<form role="search" aria-label="sitewide" class="au-search au-search au-search--icon">
 						<label for="standard" class="au-search__label">Search website</label>
-						<input type="search" placeholder="Search website" id="standard" name="standard" class="au-text-input au-text-input"/>
+						<input type="search" placeholder="Search website" id="standard" name="standard"
+							class="au-text-input au-text-input" />
 						<div class="au-search__btn">
-							<button class="au-btn au-btn" type="submit"><span class="au-search__submit-btn-text">Search</span></button>
+							<button class="au-btn au-btn" type="submit"><span
+									class="au-search__submit-btn-text">Search</span></button>
 						</div>
 					</form>
-				</div> 
+				</div>
 
 			</div>
 		</div>
@@ -151,12 +153,15 @@
 									Close
 								</button>
 								<ul class="au-link-list">
-									<li class="active"><a href="../../../future.html">Design system</a></li>
-									<li><a href="../../../index.html">For Queenslanders</a></li>
-									<li><a href="../../../contact-us.html">Contact us</a></li>
+									<li><a href="index.html">Design system</a></li>
+									<li class="active"><a href="projects.html">Projects</a></li>
+									<!--<li><a href="contact-us.html">Contact us</a></li>-->
 									<!--<li><a href="../form/">Forms</a></li>-->
 								</ul>
-
+								<ul class="au-link-list au-main-nav--submenu">
+									<li class=""><a class="icon icon--dark icon--github icon--action"
+											href="https://github.com/qld-gov-au/qld-design-system">GitHub</a></li>
+								</ul>
 								<div class="au-main-nav__focus-trap-bottom"></div>
 							</div>
 						</div>
@@ -176,62 +181,12 @@
 			<div class="container-fluid">
 				<nav class="au-breadcrumbs" aria-label="breadcrumb">
 					<ul class="au-link-list au-link-list--inline">
-						<li><a href="https://qld.gov.au">Home</a></li>
-						<li><a href="https://www.qld.gov.au/services">For Queenslanders</a></li>
-						<li><a href="/index.html">Franchise title</a></li>
-						<li>Campaign title</li>
+						<li><a href="./index.html">Design system</a></li>
+						<li>Current projects</li>
 					</ul>
 				</nav>
 
-				<h1>Campaign title</h1>
-			</div>
-		</section>
-
-		<div class="au-body au-body--alt banner">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-sm-push-6">
-						<img class="au-responsive-media-img banner__image" src="assets/img/600x260.jpg" alt="Placeholder image 600x260">
-					</div>
-					<div class="col-xs-12 col-sm-6 col-sm-pull-6">
-						<h2>Hero callout</h2>
-						<p>Support the callout with some short explanatory text. You don't need more than a couple of sentences.</p>
-						<p>Use buttons to give your user a clear call to action about what to do next.</p>
-						<div class="btn-cta-group">
-							<a class="au-btn" href="#">Primary call to action</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<section class="au-body">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Some highlighted content</h2>
-						<p>Explain some important information upfront, what is the product or service. What is the role of it. How does the user get started using it. Keep this text simple and informative. Vestibulum non consequat tellus.</p>
-
-						<p>Nullam sollicitudin orci neque, ut condimentum ipsum blandit eu. Praesent eu sagittis elit.</p>
-
-						<p>Nullam ut nibh sed nunc molestie faucibus. Integer pulvinar sapien in porta fringilla. Cras et velit fermentum, pretium lacus gravida, egestas mauris. Explain some important information upfront, what is the product or service. What is the role of it. How does the user get started using it. Keep this text simple and informative.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="au-body au-body--alt banner">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Sub content</h2>
-						<p>Content that is important to have on the home page but not so important that it has to be visible at the top of the page. This could include contact information, more detailed explanation of the functionality of a product or service.</p>
-						<div class="btn-cta-group">
-							<a class="au-btn" href="#">Primary call to action</a>
-							<a class="au-btn au-btn--secondary" href="#">Secondary call to action</a>
-						</div>
-					</div>
-				</div>
+				<h1>Current projects</h1>
 			</div>
 		</section>
 
@@ -239,59 +194,52 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>Articles</h2>
+						<h2>In development</h2>
 						<div class="row">
 							<ul class="au-card-list au-card-list--matchheight ">
 								<li class="col-xs-12 col-sm-4">
 									<div class="au-card au-card--shadow au-card--centred au-card--clickable">
-										<img class="au-responsive-media-img" alt="placeholder image" src="assets/img/600x260.jpg">
+										<img class="au-responsive-media-img" alt="placeholder image"
+											src="assets/img/600x260.jpg">
 										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Card title</a></h2>
-											<p type="content" class="au-card__content">Additional text relating to the card.</p>
+											<h2 class="au-card__title au-display-lg" type="heading"><a
+													href="./developer/projects/myqld.html"
+													class="au-card--clickable__link ">myQLD</a></h2>
+											<p type="content" class="au-card__content">Active prototypes for myQLD
+												project</p>
 										</div>
 									</div>
 								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card  au-card--shadow au-card--centred au-card--clickable">
-										<img class="au-responsive-media-img" alt="placeholder image" src="assets/img/600x260.jpg">
-										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Card title</a></h2>
-											<p type="content" class="au-card__content">Additional text relating to the card.</p>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card  au-card--shadow au-card--centred au-card--clickable">
-										<img class="au-responsive-media-img" alt="placeholder image" src="assets/img/600x260.jpg">
-										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Card title</a></h2>
-										<p type="content" class="au-card__content">Additional text relating to the card.</p>
-									</div>
-								</div>
-							</li>
-						</ul>
+							</ul>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="articles-cta">
-				<a class="au-cta-link" href="#">See more articles</a>
+				<div class="articles-cta">
+					<a class="au-cta-link" href="#">See more articles</a>
+				</div>
 			</div>
-		</div></section>
+		</section>
 		<!--END CONTENT-->
 	</main>
 	<!-- END MAIN BODY -->
 
 	<!--FOOTER -->
-	<footer class="au-footer au-footer" role="contentinfo">
+	<footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
 		<div class="container-fluid">
 			<div class="row">
 				<nav class="col-md-12" aria-label="footer">
 					<ul class="au-link-list au-link-list--inline">
+						<li><a href="https://www.qld.gov.au/contact-us">Contact us</a></li>
+						<li><a href="https://www.qld.gov.au/help">Help</a></li>
+						<li><a href="https://www.qld.gov.au/legal/copyright">Copyright</a></li>
+						<li><a href="https://www.qld.gov.au/legal/disclaimer">Disclaimer</a></li>
 						<li><a href="https://www.qld.gov.au/legal/privacy">Privacy</a></li>
 						<li><a href="https://www.qld.gov.au/about/rights-accountability/right-to-information">Right to
 								information</a></li>
 						<li><a href="https://www.qld.gov.au/help/accessibility">Accessibility</a></li>
+						<li><a href="http://www.smartjobs.qld.gov.au/">Jobs in Queensland Government</a></li>
+						<li><a href="https://www.qld.gov.au/help/languages">Other languages</a></li>
 					</ul>
 				</nav>
 				<section class="col-sm-12">

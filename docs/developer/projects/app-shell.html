@@ -151,15 +151,17 @@
 									Close
 								</button>
 								<ul class="au-link-list">
-									<li><a href="/dashboard">
+									<!--<li><a href="/dashboard">
 										<svg class="home-icon" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M541 229.16l-61-49.83v-77.4a6 6 0 0 0-6-6h-20a6 6 0 0 0-6 6v51.33L308.19 39.14a32.16 32.16 0 0 0-40.38 0L35 229.16a8 8 0 0 0-1.16 11.24l10.1 12.41a8 8 0 0 0 11.2 1.19L96 220.62v243a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-128l64 .3V464a16 16 0 0 0 16 16l128-.33a16 16 0 0 0 16-16V220.62L520.86 254a8 8 0 0 0 11.25-1.16l10.1-12.41a8 8 0 0 0-1.21-11.27zm-93.11 218.59h.1l-96 .3V319.88a16.05 16.05 0 0 0-15.95-16l-96-.27a16 16 0 0 0-16.05 16v128.14H128V194.51L288 63.94l160 130.57z"></path></svg>
-									</a></li>
+									</a></li>-->
+									<li class="active"><a href="/dashboard">Dashboard</a></li>
+									<li><a href="/services">Service finder</a></li>
 									<li><a href="/applications">My applications</a></li>
 									<li><a href="/profile">Profile</a></li>
 									<li><a href="/account-settings">Settings</a></li>
 								</ul>
 								<ul class="au-link-list au-main-nav--submenu">
-									<li class="active"><a class="icon icon--dark icon--account icon--action" href="#">Sign out</a></li>
+									<li><a class="icon icon--dark icon--account icon--action" href="./myqld.html">Sign out</a></li>
 								</ul>
 								<div class="au-main-nav__focus-trap-bottom"></div>
 							</div>
@@ -181,8 +183,7 @@
 			<div class="container-fluid">
 				<nav class="au-breadcrumbs" aria-label="breadcrumb">
 					<ul class="au-link-list au-link-list--inline">
-						<li><a href="https://qld.gov.au">Home</a></li>
-						<li>myQld</li>
+						<li>Dashboard</li>
 					</ul>
 				</nav>
 
@@ -208,14 +209,14 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>Services</h2>
+						<h2>Featured services</h2>
 						<div class="row">
 							<ul class="au-card-list au-card-list--matchheight ">
 								<li class="col-xs-12 col-sm-4">
 									<div class="au-card au-card--shadow au-card--centred au-card--clickable">
 										<div class="placeholder au-responsive-media-img"></div>
 										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Bond Loan</a></h2>
+											<h2 class="au-card__title au-display-lg" type="heading"><a href="./service-detail.html" class="au-card--clickable__link ">Bond Loan</a></h2>
 											<p type="content" class="au-card__content">A Bond Loan is an interest-free loan to cover the rental bond when you move into private rental accommodation.</p>
 										</div>
 									</div>
@@ -245,6 +246,91 @@
 		</section>
 
 		<section class="au-body au-body--alt">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Browse services</h2>
+						<div class="row">
+							<ul class="au-card-list au-card-list--matchheight ">
+								<li class="col-xs-12 col-sm-4">
+									<div class="au-card au-card--shadow au-card--centred au-card--clickable">
+										<div class="placeholder au-responsive-media-img"></div>
+										<div class="au-card__inner ">
+											<h2 class="au-card__title au-display-lg" type="heading"><a href="./service-detail.html" class="au-card--clickable__link ">Births, relationships and deaths</a></h2>
+										</div>
+									</div>
+								</li>
+								<li class="col-xs-12 col-sm-4">
+									<div class="au-card  au-card--shadow au-card--centred au-card--clickable">
+										<div class="placeholder au-responsive-media-img"></div>
+										<div class="au-card__inner ">
+											<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Boating, fishing and outdoors</a></h2>
+										</div>
+									</div>
+								</li>
+								<li class="col-xs-12 col-sm-4">
+									<div class="au-card  au-card--shadow au-card--centred au-card--clickable">
+										<div class="placeholder au-responsive-media-img"></div>
+										<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-lg" type="heading"><a href="https://beta.my.gov.au/" class="au-card--clickable__link ">Business, industries and employment</a></h2>
+										</div>
+									</div>
+								</li>
+								<li class="col-xs-12 col-sm-4">
+									<div class="au-card  au-card--shadow au-card--centred au-card--clickable">
+										<div class="placeholder au-responsive-media-img"></div>
+										<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-lg" type="heading"><a href="https://beta.my.gov.au/" class="au-card--clickable__link ">Concessions, rebates and assistance</a></h2>
+										</div>
+									</div>
+								</li>
+								<li class="col-xs-12 col-sm-4">
+									<div class="au-card  au-card--shadow au-card--centred au-card--clickable">
+										<div class="placeholder au-responsive-media-img"></div>
+										<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-lg" type="heading"><a href="https://beta.my.gov.au/" class="au-card--clickable__link ">Driving and transport</a></h2>
+										</div>
+									</div>
+								</li>
+								<li class="col-xs-12 col-sm-4">
+									<div class="au-card  au-card--shadow au-card--centred au-card--clickable">
+										<div class="placeholder au-responsive-media-img"></div>
+										<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-lg" type="heading"><a href="https://beta.my.gov.au/" class="au-card--clickable__link ">Education</a></h2>
+										</div>
+									</div>
+								</li>
+								<li class="col-xs-12 col-sm-4">
+									<div class="au-card  au-card--shadow au-card--centred au-card--clickable">
+										<div class="placeholder au-responsive-media-img"></div>
+										<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-lg" type="heading"><a href="https://beta.my.gov.au/" class="au-card--clickable__link ">Health and care</a></h2>
+										</div>
+									</div>
+								</li>
+								<li class="col-xs-12 col-sm-4">
+									<div class="au-card  au-card--shadow au-card--centred au-card--clickable">
+										<div class="placeholder au-responsive-media-img"></div>
+										<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-lg" type="heading"><a href="https://beta.my.gov.au/" class="au-card--clickable__link ">Housing and property</a></h2>
+										</div>
+									</div>
+								</li>
+								<li class="col-xs-12 col-sm-4">
+									<div class="au-card  au-card--shadow au-card--centred au-card--clickable">
+										<div class="placeholder au-responsive-media-img"></div>
+										<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-lg" type="heading"><a href="https://beta.my.gov.au/" class="au-card--clickable__link ">Legal and police services</a></h2>
+										</div>
+									</div>
+								</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="au-body">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
@@ -282,12 +368,10 @@
 					</div>
 				</div>
 			</div>
-
-			<!--
-				<div class="articles-cta">
-					<a class="au-cta-link" href="#">See more services</a>
-				</div>
-			-->
+			
+			<div class="articles-cta">
+				<a class="au-cta-link" href="https://www.qld.gov.au/services" target="_blank">See more services</a>
+			</div>
 
 		</div></section>
 		<!--END CONTENT-->

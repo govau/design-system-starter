@@ -168,6 +168,11 @@ div.qg-utilities-bar--dark {
 	padding: 2rem 0rem !important;
 }
 
+//Accessibility link
+.au-skip-link__link {
+	background-color: $qg-black !important;
+}
+
 //Section padding/alt accent
 section.page_header,
 section.page_header--dark {

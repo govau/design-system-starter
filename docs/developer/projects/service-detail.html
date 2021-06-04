@@ -91,33 +91,32 @@
 		<a class="au-skip-link__link" href="#mainmenu">Skip to main navigation</a>
 	</nav>
 
-	<!-- UTILITIES -->
-	<div class="qg-utilities-bar">
-	</div>
+	<!-- UTILITIES 
+		<div class="qg-utilities-bar">
+		</div> 
+	-->
 
 	<!-- HEADER -->
-	<header class="au-header au-header" role="banner">
+	<header class="au-header" role="banner">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-8">
-
 					<a class="au-header__brand" href="#">
 						<img class="au-header__brand-image" alt="Queensland Government"
-						src="../../../assets/img/qg-coa.svg">
+						src="../../assets/img/qg-coa.svg">
 
 						<img class="au-header__brand-image--dark" alt="Queensland Government"
-						src="../../../assets/img/qg-coa-white.svg">
+						src="../../assets/img/qg-coa-white.svg">
 
 						<!-- Proposed CUE sub branding 
 						<div class="au-header__text">
 							<h1 class="au-header__heading">Name of website</h1>
 							<div class="au-header__subline">Simple explanation of the website</div>
 						</div> -->
-
 					</a>
 				</div>
 
-				<div class="col-sm-4">
+				<div class="col-sm-4 search-container">
 					<form role="search" aria-label="sitewide" class="au-search au-search au-search--icon">
 						<label for="standard" class="au-search__label">Search website</label>
 						<input type="search" placeholder="Search website" id="standard" name="standard" class="au-text-input au-text-input"/>
@@ -132,7 +131,7 @@
 	</header>
 
 	<!-- MAIN NAVIGATION -->
-	<nav class="au-main-nav au-main-nav" id="mainmenu" aria-label="main">
+	<nav class="au-main-nav" id="mainmenu" aria-label="main">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
@@ -142,6 +141,11 @@
 							onClick="return AU.mainNav.Toggle( this )">
 							Menu
 						</button>
+
+						<header class="mobile-only"> 
+							<img class="au-header__brand-image--dark" alt="Queensland Government" src="../../assets/img/qg-coa-stacked-white.svg">
+						</header>
+
 						<div class="au-main-nav__menu">
 							<div class="au-main-nav__menu-inner">
 								<div class="au-main-nav__focus-trap-top"></div>
@@ -151,12 +155,18 @@
 									Close
 								</button>
 								<ul class="au-link-list">
-									<li class="active"><a href="../../../future.html">Design system</a></li>
-									<li><a href="../../../index.html">For Queenslanders</a></li>
-									<li><a href="../../../contact-us.html">Contact us</a></li>
-									<!--<li><a href="../form/">Forms</a></li>-->
+									<!--<li><a href="/dashboard">
+										<svg class="home-icon" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M541 229.16l-61-49.83v-77.4a6 6 0 0 0-6-6h-20a6 6 0 0 0-6 6v51.33L308.19 39.14a32.16 32.16 0 0 0-40.38 0L35 229.16a8 8 0 0 0-1.16 11.24l10.1 12.41a8 8 0 0 0 11.2 1.19L96 220.62v243a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-128l64 .3V464a16 16 0 0 0 16 16l128-.33a16 16 0 0 0 16-16V220.62L520.86 254a8 8 0 0 0 11.25-1.16l10.1-12.41a8 8 0 0 0-1.21-11.27zm-93.11 218.59h.1l-96 .3V319.88a16.05 16.05 0 0 0-15.95-16l-96-.27a16 16 0 0 0-16.05 16v128.14H128V194.51L288 63.94l160 130.57z"></path></svg>
+									</a></li>-->
+									<li><a href="/dashboard">Dashboard</a></li>
+									<li><a href="/services">Service finder</a></li>
+									<li><a href="/applications">My applications</a></li>
+									<li><a href="/profile">Profile</a></li>
+									<li><a href="/account-settings">Settings</a></li>
 								</ul>
-
+								<ul class="au-link-list au-main-nav--submenu">
+									<li><a class="icon icon--dark icon--account icon--action" href="#">Sign out</a></li>
+								</ul>
 								<div class="au-main-nav__focus-trap-bottom"></div>
 							</div>
 						</div>
@@ -164,9 +174,11 @@
 							onClick="return AU.mainNav.Toggle( this )"></div>
 					</div>
 				</div>
+				
 			</div>
 		</div>
 	</nav>
+
 
 	<!-- MAIN BODY -->
 	<main>
@@ -176,14 +188,12 @@
 			<div class="container-fluid">
 				<nav class="au-breadcrumbs" aria-label="breadcrumb">
 					<ul class="au-link-list au-link-list--inline">
-						<li><a href="https://qld.gov.au">Home</a></li>
-						<li><a href="../../../future.html">Design system</a></li>
-						<li><a href="../index.html">Page models</a></li>
-						<li>Topic index</li>
+						<li><a href="./app-shell.html">Dashboard</a></li>
+						<li>Bond loan</li>
 					</ul>
 				</nav>
 
-				<h1>Topic index</h1>
+				<h1>Bond loan</h1>
 			</div>
 		</section>
 
@@ -280,22 +290,25 @@
 	<!-- END MAIN BODY -->
 
 	<!--FOOTER -->
-	<footer class="au-footer au-footer" role="contentinfo">
+	<footer class="au-footer au-body" role="contentinfo">
 		<div class="container-fluid">
 			<div class="row">
 				<nav class="col-md-12" aria-label="footer">
 					<ul class="au-link-list au-link-list--inline">
+						<li><a href="https://www.qld.gov.au/contact-us">Contact us</a></li>
+						<li><a href="https://www.qld.gov.au/help">Help</a></li>
+						<li><a href="https://www.qld.gov.au/legal/copyright">Copyright</a></li>
+						<li><a href="https://www.qld.gov.au/legal/disclaimer">Disclaimer</a></li>
 						<li><a href="https://www.qld.gov.au/legal/privacy">Privacy</a></li>
-						<li><a href="https://www.qld.gov.au/about/rights-accountability/right-to-information">Right to
-								information</a></li>
+						<li><a href="https://www.qld.gov.au/about/rights-accountability/right-to-information">Right to information</a></li>
 						<li><a href="https://www.qld.gov.au/help/accessibility">Accessibility</a></li>
+						<li><a href="http://www.smartjobs.qld.gov.au/">Jobs in Queensland Government</a></li>
+						<li><a href="https://www.qld.gov.au/help/languages">Other languages</a></li>
 					</ul>
 				</nav>
 				<section class="col-sm-12">
 					<div class="au-footer__end">
-						<p>© The State of Queensland 1995 –
-							<script>document.write(new Date().getFullYear())</script>
-						</p>
+						<p>© The State of Queensland 1995 –<script>document.write(new Date().getFullYear())</script></p>
 					</div>
 				</section>
 			</div>

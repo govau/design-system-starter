@@ -1,12 +1,12 @@
 //QLD overrides
-@import "./qgov.scss";
+@import "./qgov-dta.scss";
 
 //Main nav, set project specific breakpoint
 $AU-main-nav-breakpoint: sm;
 
 // UI-Kit
 @import "./_auds.scss";
-@import "./themes.scss";
+@import "./covid-theme.scss";
 
 // Reset the body
 body {
