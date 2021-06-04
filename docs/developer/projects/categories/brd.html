@@ -58,14 +58,14 @@
 	<meta property="article:tag" content="design system" />
 	<meta property="article:tag" content="templates" />
 
-	<title>App shell | Queensland Government</title>
+	<title>Births, relationships and deaths | Queensland Government</title>
 
 	<script type="text/javascript">
 		var $html = document.documentElement; if ($html.classList) $html.classList.remove("no-js"), $html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
 	</script>
 
-	<link rel="icon" href="../../assets/favicons/favicon.ico">
-	<link type="text/css" rel="stylesheet" href="../../css/main.css">
+	<link rel="icon" href="../../../assets/favicons/favicon.ico">
+	<link type="text/css" rel="stylesheet" href="../../../css/main.css">
 
 	<!-- These are shivs to help modern html work in older internet explorer browsers -->
 	<!--[if lt IE 9]>
@@ -92,31 +92,30 @@
 	</nav>
 
 	<!-- UTILITIES 
-		<div class="qg-utilities-bar qg-utilities-bar--dark">
+		<div class="qg-utilities-bar">
 		</div> 
 	-->
 
 	<!-- HEADER -->
-	<header class="au-header au-header--dark" role="banner">
+	<header class="au-header" role="banner">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-8">
-
 					<a class="au-header__brand" href="#">
 						<img class="au-header__brand-image" alt="Queensland Government"
-						src="../../assets/img/qg-coa.svg">
+						src="../../../assets/img/qg-coa.svg">
 
 						<img class="au-header__brand-image--dark" alt="Queensland Government"
-						src="../../assets/img/qg-coa-white.svg">
+						src="../../../assets/img/qg-coa-white.svg">
 
 						<!-- Proposed CUE sub branding 
 						<div class="au-header__text">
 							<h1 class="au-header__heading">Name of website</h1>
 							<div class="au-header__subline">Simple explanation of the website</div>
 						</div> -->
-
 					</a>
 				</div>
+
 				<div class="col-sm-4 search-container">
 					<form role="search" aria-label="sitewide" class="au-search au-search au-search--icon">
 						<label for="standard" class="au-search__label">Search website</label>
@@ -132,7 +131,7 @@
 	</header>
 
 	<!-- MAIN NAVIGATION -->
-	<nav class="au-main-nav au-main-nav--dark" id="mainmenu" aria-label="main">
+	<nav class="au-main-nav" id="mainmenu" aria-label="main">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
@@ -142,6 +141,11 @@
 							onClick="return AU.mainNav.Toggle( this )">
 							Menu
 						</button>
+
+						<header class="mobile-only"> 
+							<img class="au-header__brand-image--dark" alt="Queensland Government" src="../../assets/img/qg-coa-stacked-white.svg">
+						</header>
+
 						<div class="au-main-nav__menu">
 							<div class="au-main-nav__menu-inner">
 								<div class="au-main-nav__focus-trap-top"></div>
@@ -154,14 +158,14 @@
 									<!--<li><a href="/dashboard">
 										<svg class="home-icon" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M541 229.16l-61-49.83v-77.4a6 6 0 0 0-6-6h-20a6 6 0 0 0-6 6v51.33L308.19 39.14a32.16 32.16 0 0 0-40.38 0L35 229.16a8 8 0 0 0-1.16 11.24l10.1 12.41a8 8 0 0 0 11.2 1.19L96 220.62v243a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-128l64 .3V464a16 16 0 0 0 16 16l128-.33a16 16 0 0 0 16-16V220.62L520.86 254a8 8 0 0 0 11.25-1.16l10.1-12.41a8 8 0 0 0-1.21-11.27zm-93.11 218.59h.1l-96 .3V319.88a16.05 16.05 0 0 0-15.95-16l-96-.27a16 16 0 0 0-16.05 16v128.14H128V194.51L288 63.94l160 130.57z"></path></svg>
 									</a></li>-->
-									<li class="active"><a href="/dashboard">Dashboard</a></li>
+									<li><a href="/dashboard">Dashboard</a></li>
 									<li><a href="/services">Service finder</a></li>
 									<li><a href="/applications">My applications</a></li>
 									<li><a href="/profile">Profile</a></li>
 									<li><a href="/account-settings">Settings</a></li>
 								</ul>
 								<ul class="au-link-list au-main-nav--submenu">
-									<li><a class="icon icon--dark icon--account icon--action" href="./myqld.html">Sign out</a></li>
+									<li><a class="icon icon--dark icon--account icon--action" href="../myqld.html">Sign out</a></li>
 								</ul>
 								<div class="au-main-nav__focus-trap-bottom"></div>
 							</div>
@@ -175,6 +179,7 @@
 		</div>
 	</nav>
 
+
 	<!-- MAIN BODY -->
 	<main>
 		<!--CONTENT-->
@@ -183,80 +188,27 @@
 			<div class="container-fluid">
 				<nav class="au-breadcrumbs" aria-label="breadcrumb">
 					<ul class="au-link-list au-link-list--inline">
-						<li>Dashboard</li>
+						<li><a href="./app-shell.html">Dashboard</a></li>
+						<li>Services</li>
+						<li>Births, relationships and deaths</li>
 					</ul>
 				</nav>
 
+				<h1>Births, relationships and deaths</h1>
 			</div>
 		</section>
-
-		<div class="au-body au-body--alt banner app-feature">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-sm-push-6">
-						<div class="placeholder"></div>
-					</div>
-					<div class="col-xs-12 col-sm-6 col-sm-pull-6">
-						<h2>Hello, Mitch</h2>
-						<p>myQld is in development. More services and features will be available soon.</p>
-						
-					</div>
-				</div>
-			</div>
-		</div>
 
 		<section class="au-body">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12">
-						<h2>Featured services</h2>
-						<div class="row">
-							<ul class="au-card-list au-card-list--matchheight ">
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card au-card--shadow au-card--centred au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="./service-detail.html" class="au-card--clickable__link ">Bond Loan</a></h2>
-											<p type="content" class="au-card__content">A Bond Loan is an interest-free loan to cover the rental bond when you move into private rental accommodation.</p>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card  au-card--shadow au-card--centred au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Rental Grant</a></h2>
-											<p type="content" class="au-card__content">A Rental Grant is a one-off grant of 2 weeks rent for people in a housing crisis. It helps pay for the cost of moving into private rental accommodation.</p>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card  au-card--shadow au-card--centred au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Bond Loan and Rental Grant</a></h2>
-										<p type="content" class="au-card__content">Bond loan is an interest free loan to cover the rental Bond and Rental Grant is an amount equal to 2 weeks rent for the property you want to rent.</p>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="au-body au-body--alt">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Browse services</h2>
 						<div class="row">
 							<ul class="au-card-list au-card-list--matchheight ">
 								<li class="col-xs-12 col-sm-4">
 									<div class="au-card au-card--shadow   au-card--clickable">
 										<div class="placeholder au-responsive-media-img"></div>
 										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="./categories/brd.html" class="au-card--clickable__link ">Births, relationships and deaths</a></h2>
+											<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Adoptions</a></h2>
 										</div>
 									</div>
 								</li>
@@ -264,7 +216,7 @@
 									<div class="au-card  au-card--shadow   au-card--clickable">
 										<div class="placeholder au-responsive-media-img"></div>
 										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Boating, fishing and outdoors</a></h2>
+											<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Births</a></h2>
 										</div>
 									</div>
 								</li>
@@ -272,7 +224,7 @@
 									<div class="au-card  au-card--shadow   au-card--clickable">
 										<div class="placeholder au-responsive-media-img"></div>
 										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Business, industries and employment</a></h2>
+										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Change of name</a></h2>
 										</div>
 									</div>
 								</li>
@@ -280,7 +232,7 @@
 									<div class="au-card  au-card--shadow   au-card--clickable">
 										<div class="placeholder au-responsive-media-img"></div>
 										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Concessions, rebates and assistance</a></h2>
+										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Change of sex</a></h2>
 										</div>
 									</div>
 								</li>
@@ -288,7 +240,7 @@
 									<div class="au-card  au-card--shadow   au-card--clickable">
 										<div class="placeholder au-responsive-media-img"></div>
 										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Driving and transport</a></h2>
+										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Deaths, wills and deceased estates</a></h2>
 										</div>
 									</div>
 								</li>
@@ -296,31 +248,7 @@
 									<div class="au-card  au-card--shadow   au-card--clickable">
 										<div class="placeholder au-responsive-media-img"></div>
 										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Education</a></h2>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card  au-card--shadow   au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Health and care</a></h2>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card  au-card--shadow   au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Housing and property</a></h2>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card  au-card--shadow   au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Legal and police services</a></h2>
+										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Marriages, relationships and divorces</a></h2>
 										</div>
 									</div>
 								</li>
@@ -330,64 +258,12 @@
 			</div>
 		</section>
 
-		<section class="au-body">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<h3>You may also be interested in</h3>
-						<div class="row">
-							<ul class="au-card-list au-card-list--matchheight ">
-								<li class="col-xs-12 col-sm-3">
-									<div class="au-card au-card--shadow au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Residential Tenancies <br>Authority</a></h2>
-											<p type="content" class="au-card__content">For rental and tenancy information, bond management and dispute resolution services.</p>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-3">
-									<div class="au-card  au-card--shadow au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Concessions Finder</a></h2>
-											<p type="content" class="au-card__content">Find and apply for concessions and rebates that ease cost of living pressures for Queenslanders.</p>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-3">
-									<div class="au-card  au-card--shadow au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="https://beta.my.gov.au/" class="au-card--clickable__link ">myGov</a></h2>
-										<p type="content" class="au-card__content">Find and apply for Australian Government services (a trial site).</p>
-									</div>
-								</div>
-								<li class="col-xs-12 col-sm-3">
-									<div class="au-card  au-card--shadow au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="https://www.oneplace.org.au/" class="au-card--clickable__link ">oneplace</a></h2>
-											<p type="content" class="au-card__content">Find community support services for Queensland families.</p>
-										</div>
-									</div>
-								</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			
-			<div class="articles-cta">
-				<a class="au-cta-link" href="https://www.qld.gov.au/services" target="_blank">See more services</a>
-			</div>
-
-		</div></section>
 		<!--END CONTENT-->
 	</main>
 	<!-- END MAIN BODY -->
 
 	<!--FOOTER -->
-	<footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
+	<footer class="au-footer au-body" role="contentinfo">
 		<div class="container-fluid">
 			<div class="row">
 				<nav class="col-md-12" aria-label="footer">
@@ -412,7 +288,7 @@
 	</footer>
 
 	<!-- The javascript from pancake to open and close side nav on desktop -->
-	<script type="text/javascript" src="../../js/script.min.js"></script>
+	<script type="text/javascript" src="../../../js/script.min.js"></script>
 </body>
 
 </html>
