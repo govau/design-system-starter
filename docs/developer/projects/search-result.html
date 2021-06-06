@@ -64,8 +64,8 @@
 		var $html = document.documentElement; if ($html.classList) $html.classList.remove("no-js"), $html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
 	</script>
 
-	<link rel="icon" href="../../../assets/favicons/favicon.ico">
-	<link type="text/css" rel="stylesheet" href="../../../css/main.css">
+	<link rel="icon" href="../../assets/favicons/favicon.ico">
+	<link type="text/css" rel="stylesheet" href="../../css/main.css">
 
 	<!-- These are shivs to help modern html work in older internet explorer browsers -->
 	<!--[if lt IE 9]>
@@ -103,10 +103,10 @@
 				<div class="col-sm-8">
 					<a class="au-header__brand" href="#">
 						<img class="au-header__brand-image" alt="Queensland Government"
-						src="../../../assets/img/qg-coa.svg">
+							src="../../assets/img/qg-coa.svg">
 
 						<img class="au-header__brand-image--dark" alt="Queensland Government"
-						src="../../../assets/img/qg-coa-white.svg">
+							src="../../assets/img/qg-coa-white.svg">
 
 						<!-- Proposed CUE sub branding 
 						<div class="au-header__text">
@@ -119,12 +119,14 @@
 				<div class="col-sm-4 search-container">
 					<form role="search" aria-label="sitewide" class="au-search au-search au-search--icon">
 						<label for="standard" class="au-search__label">Search website</label>
-						<input type="search" placeholder="Search website" id="standard" name="standard" class="au-text-input au-text-input"/>
+						<input type="search" placeholder="Search website" id="standard" name="standard"
+							class="au-text-input au-text-input" />
 						<div class="au-search__btn">
-							<button class="au-btn au-btn" type="submit"><span class="au-search__submit-btn-text">Search</span></button>
+							<button class="au-btn au-btn" type="submit"><span
+									class="au-search__submit-btn-text">Search</span></button>
 						</div>
 					</form>
-				</div> 
+				</div>
 
 			</div>
 		</div>
@@ -142,8 +144,9 @@
 							Menu
 						</button>
 
-						<header class="mobile-only"> 
-							<img class="au-header__brand-image--dark" alt="Queensland Government" src="../../assets/img/qg-coa-stacked-white.svg">
+						<header class="mobile-only">
+							<img class="au-header__brand-image--dark" alt="Queensland Government"
+								src="../../assets/img/qg-coa-stacked-white.svg">
 						</header>
 
 						<div class="au-main-nav__menu">
@@ -165,7 +168,8 @@
 									<li><a href="/account-settings">Settings</a></li>
 								</ul>
 								<ul class="au-link-list au-main-nav--submenu">
-									<li><a class="icon icon--dark icon--account icon--action" href="./myqld.html">Sign out</a></li>
+									<li><a class="icon icon--dark icon--account icon--action" href="./myqld.html">Sign
+											out</a></li>
 								</ul>
 								<div class="au-main-nav__focus-trap-bottom"></div>
 							</div>
@@ -174,41 +178,23 @@
 							onClick="return AU.mainNav.Toggle( this )"></div>
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
 	</nav>
 
 
-	<!-- MAIN BODY -->
-	<main>
-		<!--CONTENT-->
-
-		<section class="au-body page_header">
-			<div class="container-fluid">
-				<nav class="au-breadcrumbs" aria-label="breadcrumb">
-					<ul class="au-link-list au-link-list--inline">
-						<li><a href="./app-shell.html">Dashboard</a></li>
-						<li>Mobile test</li>
-					</ul>
+	<main class="au-body container-fluid">
+		<div class="row content-matchheight">
+			<div class="col-md-3 sidebar">
+				<nav class="navigation">
+					<h1>Filters</h1>
 				</nav>
-
-				<h1>Mobile test</h1>
 			</div>
-		</section>
-
-		<section class="au-body">
-			<div class="container-fluid">
-				<div class="row">
-
-					<div class="col-sm-12">
-						
-					</div>
-
-				</div>
+			<div id="content" tabindex="-1" class="col-md-9 content">
+						Results
 			</div>
-		</section>
-		<!--END CONTENT-->
+		</div>
 	</main>
 	<!-- END MAIN BODY -->
 
@@ -223,7 +209,8 @@
 						<li><a href="https://www.qld.gov.au/legal/copyright">Copyright</a></li>
 						<li><a href="https://www.qld.gov.au/legal/disclaimer">Disclaimer</a></li>
 						<li><a href="https://www.qld.gov.au/legal/privacy">Privacy</a></li>
-						<li><a href="https://www.qld.gov.au/about/rights-accountability/right-to-information">Right to information</a></li>
+						<li><a href="https://www.qld.gov.au/about/rights-accountability/right-to-information">Right to
+								information</a></li>
 						<li><a href="https://www.qld.gov.au/help/accessibility">Accessibility</a></li>
 						<li><a href="http://www.smartjobs.qld.gov.au/">Jobs in Queensland Government</a></li>
 						<li><a href="https://www.qld.gov.au/help/languages">Other languages</a></li>
@@ -231,14 +218,16 @@
 				</nav>
 				<section class="col-sm-12">
 					<div class="au-footer__end">
-						<p>© The State of Queensland 1995 –<script>document.write(new Date().getFullYear())</script></p>
+						<p>© The State of Queensland 1995 –
+							<script>document.write(new Date().getFullYear())</script>
+						</p>
 					</div>
 				</section>
 			</div>
 	</footer>
 
 	<!-- The javascript from pancake to open and close side nav on desktop -->
-	<script type="text/javascript" src="../../../js/script.min.js"></script>
+	<script type="text/javascript" src="../../js/script.min.js"></script>
 </body>
 
 </html>
