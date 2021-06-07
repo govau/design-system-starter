@@ -37,20 +37,23 @@ div.utility-bar p { font-family: inherit; font-weight: 800; }
 
 div.utility-bar form { margin-top: 0; }
 
-@media (max-width: 769px) { .au-search { display: none !important; }
-  .au-header__brand-image { margin-top: 1rem; }
-  .au-main-nav .au-main-nav__toggle--open:hover { color: white !important; background-color: #004765 !important; }
-  .au-header, .au-header__brand { display: none; }
-  .au-main-nav .mobile-only { float: left; margin: 0px auto; margin-top: 1.7rem; }
-  .au-main-nav .mobile-only .au-header__brand-image, .au-main-nav .mobile-only .au-header__brand-image--dark { height: 50px; width: 153px; }
-  .au-main-nav .au-main-nav__toggle--open { margin-top: 1rem; float: left; } }
+@media (max-width: 769px) { .au-header, .au-header__brand { display: none; }
+  .au-main-nav { border-bottom: 0px !important; }
+  .au-main-nav .au-link-list > li { border-top: 1px solid #f5f5f5 !important; }
+  .au-main-nav .submenu-mobile { margin-top: 2rem !important; }
+  .au-main-nav .padding-none { padding-left: 0px !important; padding-right: 0px !important; }
+  .au-main-nav .mobile-header.mobile-only { align-items: center !important; justify-content: space-between !important; display: flex; flex-wrap: wrap; }
+  .au-main-nav .mobile-header.mobile-only .au-header__brand-image, .au-main-nav .mobile-header.mobile-only .au-header__brand-image--dark { height: 50px; width: 153px; }
+  .au-main-nav .au-main-nav .au-main-nav__toggle--open:hover { color: white !important; background-color: #004765 !important; }
+  .au-main-nav .au-main-nav__toggle:before { font-size: 16px; font-size: 1rem; line-height: 1; margin-bottom: 4px; margin-bottom: 0.25rem; display: block; text-align: center; }
+  .au-main-nav .au-main-nav__toggle--open { float: left; } }
 
 @media (min-width: 769px) { .au-main-nav, .au-main-nav .active a, .au-main-nav a, .au-main-nav a:hover { border-color: #004765 !important; color: white !important; }
   .au-main-nav a:hover, .au-main-nav li.active a { background-color: #004765 !important; }
   .au-main-nav .au-link-list { float: left; }
   .au-main-nav .au-main-nav--submenu { float: right; }
-  .au-header { display: block; }
-  .mobile-only { display: none; } }
+  .au-header { display: block !important; }
+  .mobile-only { display: none !important; } }
 
 .au-skip-link__link { background-color: black !important; }
 
