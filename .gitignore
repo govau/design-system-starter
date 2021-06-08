@@ -5,3 +5,6 @@ _auds.scss
 docs/css/main.css.map
 service-finder
 /docs/test.html
+/docsv2/node_modules/
+/docsv2/public
+/docsv2/.cache
