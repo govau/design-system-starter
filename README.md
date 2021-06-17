@@ -1,6 +1,13 @@
 # QLD design system prototype - Starter
 
-This project leverages the Australian Government Design System.
+WIP: This project leverages the Australian Government Design System
+/Dev contains static prototypes
+
+## Roadmap
+
+- Introduce React (SSR)
+- Introduce components repo (docusaurus)
+- Introduce NPM release
 
 ## Contents
 

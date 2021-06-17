@@ -83,14 +83,14 @@
 	<!-- HOTJAR -->
 	<!-- Hotjar Tracking Code for https://www.qld.gov.au/ -->
 	<script>
-		(function(h,o,t,j,a,r){
-			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-			h._hjSettings={hjid:2418426,hjsv:6};
-			a=o.getElementsByTagName('head')[0];
-			r=o.createElement('script');r.async=1;
-			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+		(function (h, o, t, j, a, r) {
+			h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+			h._hjSettings = { hjid: 2418426, hjsv: 6 };
+			a = o.getElementsByTagName('head')[0];
+			r = o.createElement('script'); r.async = 1;
+			r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
 			a.appendChild(r);
-		})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+		})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
 	</script>
 
 
@@ -113,82 +113,60 @@
 	-->
 
 	<!-- HEADER -->
-	<header class="au-header au-header--dark mobile-none" role="banner">
+	<header class="au-header au-header--dark qg-app-mode__header" role="banner">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-sm-9">
 
 					<a class="au-header__brand" href="#">
 						<img class="au-header__brand-image" alt="Queensland Government"
-						src="../../assets/img/qg-coa.svg">
+							src="../../assets/img/qg-coa.svg">
 
 						<img class="au-header__brand-image--dark" alt="Queensland Government"
-						src="../../assets/img/qg-coa-white.svg">
+							src="../../assets/img/qg-coa-white.svg">
 
-						<!-- Proposed CUE sub branding 
+						<!-- Proposed CUE sub branding -->
 						<div class="au-header__text">
-							<h1 class="au-header__heading">Name of website</h1>
-							<div class="au-header__subline">Simple explanation of the website</div>
-						</div> -->
+							<div class="au-header__subline">QLD Digital Identity login</div>
+						</div>
 
 					</a>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-3 mobile-none">
+					<button class="au-btn">
+						Return to service 
+						<svg 
+							stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M284.9 412.6l138.1-134c6-5.8 9-13.7 9-22.4v-.4c0-8.7-3-16.6-9-22.4l-138.1-134c-12-12.5-31.3-12.5-43.2 0-11.9 12.5-11.9 32.7 0 45.2l83 79.4h-214c-17 0-30.7 14.3-30.7 32 0 18 13.7 32 30.6 32h214l-83 79.4c-11.9 12.5-11.9 32.7 0 45.2 12 12.5 31.3 12.5 43.3 0z">
+							</path>
+						</svg>
+					</button>
+				</div>
+				<!--<div class="col-sm-2 search-container qg-app-mode">
 					<form role="search" aria-label="sitewide" class="au-search au-search au-search--icon">
 						<label for="standard" class="au-search__label">Search website</label>
-						<input type="search" placeholder="Search website" id="standard" name="standard" class="au-text-input au-text-input" />
+						<input type="search" placeholder="Search website" id="standard" name="standard"
+							class="au-text-input au-text-input" />
 						<div class="au-search__btn">
-							<button class="au-btn au-btn" type="submit">
-								<span class="">Search</span>
-							</button>
+							<button class="au-btn au-btn" type="submit"><span
+									class="">Search</span></button>
 						</div>
 					</form>
-				</div>
-
+					<div class="qg-app__auth">
+						<div class="qg-app__text"><a href="#">Login</a></div>
+						<div class="qg-app__avatar"></div>
+					</div>
+				</div>-->
 			</div>
 		</div>
 	</header>
 
 	<!-- MAIN NAVIGATION -->
-	<nav class="au-main-nav au-main-nav--dark" id="mainmenu" aria-label="main">
+	<nav class="au-main-nav au-main-nav--dark qg-app-mode__nav" id="mainmenu" aria-label="main">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-12">
-					<div class="au-main-nav__content" id="main-nav-default-dark">
-						<button aria-controls="main-nav-default-dark"
-							class="au-main-nav__toggle au-main-nav__toggle--open"
-							onClick="return AU.mainNav.Toggle( this )">
-							Menu
-						</button>
-						<div class="au-main-nav__menu">
-							<div class="au-main-nav__menu-inner">
-								<div class="au-main-nav__focus-trap-top"></div>
-								<button aria-controls="main-nav-default-dark"
-									class="au-main-nav__toggle au-main-nav__toggle--close"
-									onClick="return AU.mainNav.Toggle( this )">
-									Close
-								</button>
-								<ul class="au-link-list">
-									<!--<li><a href="/dashboard">
-										<svg class="home-icon" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M541 229.16l-61-49.83v-77.4a6 6 0 0 0-6-6h-20a6 6 0 0 0-6 6v51.33L308.19 39.14a32.16 32.16 0 0 0-40.38 0L35 229.16a8 8 0 0 0-1.16 11.24l10.1 12.41a8 8 0 0 0 11.2 1.19L96 220.62v243a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-128l64 .3V464a16 16 0 0 0 16 16l128-.33a16 16 0 0 0 16-16V220.62L520.86 254a8 8 0 0 0 11.25-1.16l10.1-12.41a8 8 0 0 0-1.21-11.27zm-93.11 218.59h.1l-96 .3V319.88a16.05 16.05 0 0 0-15.95-16l-96-.27a16 16 0 0 0-16.05 16v128.14H128V194.51L288 63.94l160 130.57z"></path></svg>
-									</a></li>-->
-									<li class="active"><a href="/dashboard">Dashboard</a></li>
-									<li><a href="/services">Service finder</a></li>
-									<li><a href="/applications">My applications</a></li>
-									<li><a href="/profile">Profile</a></li>
-									<li><a href="/account-settings">Settings</a></li>
-								</ul>
-								<ul class="au-link-list au-main-nav--submenu">
-									<li><a class="icon icon--dark icon--account icon--action" href="./myqld.html">Sign out</a></li>
-								</ul>
-								<div class="au-main-nav__focus-trap-bottom"></div>
-							</div>
-						</div>
-						<div class="au-main-nav__overlay" aria-controls="main-nav-default-dark"
-							onClick="return AU.mainNav.Toggle( this )"></div>
-					</div>
-				</div>
-				
+
 			</div>
 		</div>
 	</nav>
@@ -196,211 +174,150 @@
 	<!-- MAIN BODY -->
 	<main>
 		<!--CONTENT-->
-
-		<section class="au-body page_header">
+		<!--<section class="au-body page_header">
 			<div class="container-fluid">
 				<nav class="au-breadcrumbs" aria-label="breadcrumb">
 					<ul class="au-link-list au-link-list--inline">
 						<li>Dashboard</li>
 					</ul>
 				</nav>
-
 			</div>
-		</section>
-
-		<div class="au-body au-body--alt banner app-feature">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-sm-push-6">
-						<div class="placeholder"></div>
-					</div>
-					<div class="col-xs-12 col-sm-6 col-sm-pull-6">
-						<h2>Hello {{user.firstname}}</h2>
-						<p>myQld is in development. More services and features will be available soon.</p>
-						
-					</div>
-				</div>
-			</div>
-		</div>
+		</section>-->
 
 		<section class="au-body">
+
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-12">
-						<h2>Featured services</h2>
-						<div class="row">
-							<ul class="au-card-list au-card-list--matchheight ">
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card au-card--shadow au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="./service-detail.html" class="au-card--clickable__link ">Bond Loan</a></h2>
-											<p type="content" class="au-card__content">A Bond Loan is an interest-free loan to cover the rental bond when you move into private rental accommodation.</p>
+					<div class="dxp-consent-main__main-column col-sm-10">
+						<h1 class="mq-pageTitle">Manage your shared details</h1>
+						<p class="dxp-consent-main__paragraph">
+							You shared the following details with us previously. We don't share these details outside the Queensland Government without your consent. 
+						</p>
+						<p class="dxp-consent-main__paragraph">
+							You can stop sharing these details, but we may continue to store some details as a record of your previous transactions. 
+						</p>
+						<p class="dxp-consent-main__paragraph">
+							Read more about <a target="_blank" href="https://www.qld.gov.au/qdifaq" rel="noreferrer">QLD Digital Identity login</a>.
+						</p>
+						<br>
+						<div class="dxp-consent-section">
+							<div class="dxp-consent-section__inner">
+								<section class="au-accordion "><button class="au-accordion__title js-au-accordion "
+										aria-controls="accordion1" aria-expanded="true">MyQld</button>
+									<div class="au-accordion__body " id="accordion1">
+										<div class="au-accordion__body-wrapper">
+											<table class="au-table">
+												<thead class="au-table__head">
+													<tr class="au-table__row">
+														<th class="au-table__header au-table__header--width-75"
+															scope="col"> Details shared </th>
+														<th class="au-table__header au-table__header--width-25"
+															scope="col"> Last shared </th>
+													</tr>
+												</thead>
+												<tbody class="au-table__body">
+													<tr class="au-table__row ">
+														<td class="au-table__cell">
+															<div class="au-control-input "><input
+																	class="au-control-input__input"
+																	id="dhpw-myqld__profile" type="checkbox"
+																	checked=""><label
+																	class="dxp-consent-section au-control-input__text dxp-consent-section__disable-select"
+																	for="dhpw-myqld__profile">Given Name, Middle Name,
+																	Family Name, Date of Birth<p
+																		class="dxp-consent-section__input-description-extra">
+																		If you stop sharing these personal details, you
+																		will stop sharing all details.</p></label></div>
+														</td>
+														<td class="au-table__cell ">16/06/2021, 9:28:15 am</td>
+													</tr>
+													<tr class="au-table__row ">
+														<td class="au-table__cell">
+															<div class="au-control-input "><input
+																	class="au-control-input__input"
+																	id="dhpw-myqld__email" type="checkbox"
+																	checked=""><label
+																	class="dxp-consent-section au-control-input__text dxp-consent-section__disable-select"
+																	for="dhpw-myqld__email">Email<p
+																		class="dxp-consent-section__input-description-extra">
+																		If you stop sharing these personal details, you
+																		will stop sharing all details.</p></label></div>
+														</td>
+														<td class="au-table__cell ">16/06/2021, 9:28:15 am</td>
+													</tr>
+												</tbody>
+											</table><button id="dhpw-myqld-call-to-action" type="button"
+												class="button__Button-aw29qv-0 kDlCMt dxp-consent-section__call-to-action au-btn dxp-consent-section__call-to-action"
+												data-testid="dxp-core-consent__call-to-action" data-cta="dhpw-myqld"
+												data-action="save" disabled="">Save changes</button>
 										</div>
 									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card au-card--shadow au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Rental Grant</a></h2>
-											<p type="content" class="au-card__content">A Rental Grant is a one-off grant of 2 weeks rent for people in a housing crisis. It helps pay for the cost of moving into private rental accommodation.</p>
+								</section>
+								<section class="au-accordion "><button class="au-accordion__title js-au-accordion "
+										aria-controls="accordion2" aria-expanded="true">MyAccount Developer</button>
+									<div class="au-accordion__body " id="accordion2">
+										<div class="au-accordion__body-wrapper">
+											<table class="au-table">
+												<thead class="au-table__head">
+													<tr class="au-table__row">
+														<th class="au-table__header au-table__header--width-75"
+															scope="col"> Details shared </th>
+														<th class="au-table__header au-table__header--width-25"
+															scope="col"> Last shared </th>
+													</tr>
+												</thead>
+												<tbody class="au-table__body">
+													<tr class="au-table__row ">
+														<td class="au-table__cell">
+															<div class="au-control-input "><input
+																	class="au-control-input__input"
+																	id="dhpw-myqld-dev__profile" type="checkbox"
+																	checked=""><label
+																	class="dxp-consent-section au-control-input__text dxp-consent-section__disable-select"
+																	for="dhpw-myqld-dev__profile">Given Name, Middle
+																	Name, Family Name, Date of Birth<p
+																		class="dxp-consent-section__input-description-extra">
+																		If you stop sharing these personal details, you
+																		will stop sharing all details.</p></label></div>
+														</td>
+														<td class="au-table__cell ">14/06/2021, 11:51:46 am</td>
+													</tr>
+													<tr class="au-table__row ">
+														<td class="au-table__cell">
+															<div class="au-control-input "><input
+																	class="au-control-input__input"
+																	id="dhpw-myqld-dev__email" type="checkbox"
+																	checked=""><label
+																	class="dxp-consent-section au-control-input__text dxp-consent-section__disable-select"
+																	for="dhpw-myqld-dev__email">Email<p
+																		class="dxp-consent-section__input-description-extra">
+																		If you stop sharing these personal details, you
+																		will stop sharing all details.</p></label></div>
+														</td>
+														<td class="au-table__cell ">14/06/2021, 11:51:46 am</td>
+													</tr>
+												</tbody>
+											</table><button id="dhpw-myqld-dev-call-to-action" type="button"
+												class="button__Button-aw29qv-0 kDlCMt dxp-consent-section__call-to-action au-btn dxp-consent-section__call-to-action"
+												data-testid="dxp-core-consent__call-to-action" data-cta="dhpw-myqld-dev"
+												data-action="save" disabled="">Save changes</button>
 										</div>
 									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card au-card--shadow au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Bond Loan and Rental Grant</a></h2>
-										<p type="content" class="au-card__content">Bond loan is an interest free loan to cover the rental Bond and Rental Grant is an amount equal to 2 weeks rent for the property you want to rent.</p>
-									</div>
-								</div>
-							</li>
-						</ul>
+								</section>
+							</div>
+						</div>
 					</div>
 				</div>
+			</div>
+
+			<div class="container-fluid">
+				<button class="au-btn">
+					Cancel
+				</button>
 			</div>
 		</section>
 
-		<section class="au-body au-body--alt">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Browse services</h2>
-						<div class="row">
-							<ul class="au-card-list au-card-list--matchheight ">
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card au-card--shadow   au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="./categories/brd.html" class="au-card--clickable__link ">Births, relationships and deaths</a></h2>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card  au-card--shadow   au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Boating, fishing and outdoors</a></h2>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card  au-card--shadow   au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Business, industries and employment</a></h2>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card  au-card--shadow   au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Concessions, rebates and assistance</a></h2>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card  au-card--shadow   au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Driving and transport</a></h2>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card  au-card--shadow   au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Education</a></h2>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card  au-card--shadow   au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Health and care</a></h2>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card  au-card--shadow   au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Housing and property</a></h2>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-									<div class="au-card  au-card--shadow   au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Legal and police services</a></h2>
-										</div>
-									</div>
-								</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
 
-		<section class="au-body">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<h3>You may also be interested in</h3>
-						<div class="row">
-							<ul class="au-card-list au-card-list--matchheight ">
-								<li class="col-xs-12 col-sm-3">
-									<div class="au-card au-card--shadow au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Residential Tenancies <br>Authority</a></h2>
-											<p type="content" class="au-card__content">For rental and tenancy information, bond management and dispute resolution services.</p>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-3">
-									<div class="au-card  au-card--shadow au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Concessions Finder</a></h2>
-											<p type="content" class="au-card__content">Find and apply for concessions and rebates that ease cost of living pressures for Queenslanders.</p>
-										</div>
-									</div>
-								</li>
-								<li class="col-xs-12 col-sm-3">
-									<div class="au-card  au-card--shadow au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-										<h2 class="au-card__title au-display-lg" type="heading"><a href="https://beta.my.gov.au/" class="au-card--clickable__link ">myGov</a></h2>
-										<p type="content" class="au-card__content">Find and apply for Australian Government services (a trial site).</p>
-									</div>
-								</div>
-								<li class="col-xs-12 col-sm-3">
-									<div class="au-card  au-card--shadow au-card--clickable">
-										<div class="placeholder au-responsive-media-img"></div>
-										<div class="au-card__inner ">
-											<h2 class="au-card__title au-display-lg" type="heading"><a href="https://www.oneplace.org.au/" class="au-card--clickable__link ">oneplace</a></h2>
-											<p type="content" class="au-card__content">Find community support services for Queensland families.</p>
-										</div>
-									</div>
-								</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			
-			<div class="articles-cta">
-				<a class="au-cta-link" href="https://www.qld.gov.au/services" target="_blank">See more services</a>
-			</div>
-
-		</div></section>
-		<!--END CONTENT-->
 	</main>
 	<!-- END MAIN BODY -->
 
@@ -415,7 +332,8 @@
 						<li><a href="https://www.qld.gov.au/legal/copyright">Copyright</a></li>
 						<li><a href="https://www.qld.gov.au/legal/disclaimer">Disclaimer</a></li>
 						<li><a href="https://www.qld.gov.au/legal/privacy">Privacy</a></li>
-						<li><a href="https://www.qld.gov.au/about/rights-accountability/right-to-information">Right to information</a></li>
+						<li><a href="https://www.qld.gov.au/about/rights-accountability/right-to-information">Right to
+								information</a></li>
 						<li><a href="https://www.qld.gov.au/help/accessibility">Accessibility</a></li>
 						<li><a href="http://www.smartjobs.qld.gov.au/">Jobs in Queensland Government</a></li>
 						<li><a href="https://www.qld.gov.au/help/languages">Other languages</a></li>
@@ -423,7 +341,9 @@
 				</nav>
 				<section class="col-sm-12">
 					<div class="au-footer__end">
-						<p>© The State of Queensland 1995 –<script>document.write(new Date().getFullYear())</script></p>
+						<p>© The State of Queensland 1995 –
+							<script>document.write(new Date().getFullYear())</script>
+						</p>
 					</div>
 				</section>
 			</div>

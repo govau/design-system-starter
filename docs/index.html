@@ -96,7 +96,7 @@
 	</div>
 
 	<!-- HEADER -->
-	<header class="au-header au-header" role="banner">
+	<header class="au-header au-header mobile-none" role="banner">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-8">
@@ -120,13 +120,15 @@
 
 				<div class="col-sm-4">
 					<form role="search" aria-label="sitewide" class="au-search au-search au-search--icon">
-						<label for="search" class="au-search__label">Search website</label>
-						<input type="search" placeholder="Search website" id="search" name="search" class="au-text-input au-text-input"/>
+						<label for="standard" class="au-search__label">Search website</label>
+						<input type="search" placeholder="Search website" id="standard" name="standard" class="au-text-input au-text-input" />
 						<div class="au-search__btn">
-							<button class="au-btn au-btn" type="submit" onclick="window.location('./search-result.html');"><span class="au-search__submit-btn-text">Search</span></button>
+							<button class="au-btn au-btn" type="submit">
+								<span class="">Search</span>
+							</button>
 						</div>
 					</form>
-				</div> 
+				</div>
 
 			</div>
 		</div>

@@ -4,23 +4,17 @@ $qg-blue-variant: #004765;
 $qg-white: white;
 $qg-black: black;
 $qg-grey: #4a4a4a;
-
 $qg-success: green;
-
 $qg-accent: #f5f5f5;
 $qg-focus: #80009a;
 $qg-font: "Lato", Helvetica, Arial, sans-serif;
 
-//Bindings
 $AU-color-foreground-text: $qg-grey;
 $AU-colordark-foreground-text: $qg-grey;
-
 $AU-color-foreground-action: $qg-blue;
 $AU-colordark-foreground-action: $qg-blue;
-
 $AU-color-foreground-focus: $qg-focus;
 $AU-colordark-foreground-focus: $qg-focus;
-
 $AU-color-background: $qg-white;
 $AU-colordark-background: $qg-white;
 
@@ -71,10 +65,14 @@ nav.au-main-nav {
 }
 header.au-header,
 header.au-header--dark {
-	.au-btn,
+	.au-btn {
+		color: $qg-white !important;
+		background-color: $qg-blue-variant !important;
+		border-color: $qg-white !important;
+	}
 	.au-search .au-text-input {
-		background-color: $qg-white !important;
-		border-color: $qg-grey !important;
+		color: $qg-black !important;
+		border-color: $qg-white !important;
 	}
 }
 div.utility-bar {
@@ -102,6 +100,9 @@ header.au-header {
 	.au-header__brand {
 		margin-top: 2rem;
 		display: inline-block;
+		.au-header__subline {
+			color: $qg-white;
+		}
 	}
 }
 header.au-header,
@@ -126,10 +127,31 @@ div.utility-bar {
 
 //Mobile
 @media (max-width: 769px) {
-	//turn off desktop header and search on mobile
+	/**turn off desktop header and search on mobile
 	.au-header,
 	.au-header__brand {
 		display: none;
+	}**/
+	.mobile-none {
+		display: none;
+	}
+	.govid-login {
+	}
+	.qg-app-mode {
+		.qg-app__auth {
+			display: flex !important;
+			.qg-app__avatar {
+				margin-right: 5px;
+				height: 60px;
+				width: 60px;
+				background-image: url("../assets/img/avatar-placeholder.svg");
+			}
+		}
+	}
+	header.au-header {
+		.au-header__brand {
+			margin-top: 0px !important;
+		}
 	}
 	.au-main-nav {
 		border-bottom: 0px !important;
@@ -175,6 +197,38 @@ div.utility-bar {
 
 //Desktop
 @media (min-width: 769px) {
+	.disabled {
+		color: rgb(145, 145, 145);
+	}
+	.qg-app-mode__header {
+		.au-header__brand {
+			margin-top: 0.5rem !important;
+		}
+	}
+	.qg-app-mode__nav {
+		display: none;
+	}
+	.qg-app-mode {
+		.au-search {
+			display: none;
+		}
+		.qg-app__auth {
+			display: flex !important;
+			.qg-app__avatar {
+				height: 60px;
+				width: 60px;
+				background-image: url("../assets/img/avatar-placeholder.svg");
+			}
+			.qg-app__text {
+				margin-top: 1rem;
+				margin-right: 1rem;
+				a {
+					color: $qg-white;
+					text-decoration: none;
+				}
+			}
+		}
+	}
 	.au-main-nav,
 	.au-main-nav .active a,
 	.au-main-nav a,
@@ -229,7 +283,7 @@ section.section {
 .au-footer,
 .au-footer--dark {
 	background-color: $qg-blue !important;
-	border-color: $qg-blue-variant !important;
+	border: none !important;
 	li a,
 	li a:visited,
 	li a:active,
@@ -246,7 +300,39 @@ section.section {
 	}
 }
 
+.au-card ul.au-link-list {
+	list-style-type: circle !important;
+}
+
+.au-card .au-card__header {
+	padding: 1rem 0rem !important;
+}
 //Components ----------------------------------------------
+.qgov-login {
+	.ico {
+		background-image: url("../../assets/img/lock.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+		width: 40px;
+		width: 2.5rem;
+		height: 40px;
+		height: 2.5rem;
+	}
+}
+.govid-login {
+	background-image: url("../../assets/img/govidlogin.png");
+	height: 50px;
+	width: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: none;
+}
 .percentage-indicator {
 	height: 40px;
 	background-color: $qg-accent !important;
@@ -261,4 +347,9 @@ section.section {
 	bottom: 0;
 	left: 0;
 	right: 0;
+}
+//Hack - TO DO: FIX ME
+.au-search.au-search--icon .au-btn,
+.au-search.au-search--responsive .au-btn {
+	background-image: none !important;
 }

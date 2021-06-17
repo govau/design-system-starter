@@ -61,7 +61,9 @@
 	<title>Births, relationships and deaths | Queensland Government</title>
 
 	<script type="text/javascript">
-		var $html = document.documentElement; if ($html.classList) $html.classList.remove("no-js"), $html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
+		var $html = document.documentElement; 
+		if ($html.classList) $html.classList.remove("no-js"), 
+		$html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
 	</script>
 
 	<link rel="icon" href="../../../assets/favicons/favicon.ico">
@@ -97,11 +99,12 @@
 	-->
 
 	<!-- HEADER -->
-	<header class="au-header" role="banner">
+	<header class="au-header mobile-none" role="banner">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-8">
 					<a class="au-header__brand" href="#">
+
 						<img class="au-header__brand-image" alt="Queensland Government"
 						src="../../../assets/img/qg-coa.svg">
 
@@ -113,18 +116,21 @@
 							<h1 class="au-header__heading">Name of website</h1>
 							<div class="au-header__subline">Simple explanation of the website</div>
 						</div> -->
+
 					</a>
 				</div>
 
-				<div class="col-sm-4 search-container">
+				<div class="col-sm-4">
 					<form role="search" aria-label="sitewide" class="au-search au-search au-search--icon">
 						<label for="standard" class="au-search__label">Search website</label>
-						<input type="search" placeholder="Search website" id="standard" name="standard" class="au-text-input au-text-input"/>
+						<input type="search" placeholder="Search website" id="standard" name="standard" class="au-text-input au-text-input" />
 						<div class="au-search__btn">
-							<button class="au-btn au-btn" type="submit"><span class="au-search__submit-btn-text">Search</span></button>
+							<button class="au-btn au-btn" type="submit">
+								<span class="">Search</span>
+							</button>
 						</div>
 					</form>
-				</div> 
+				</div>
 
 			</div>
 		</div>
@@ -137,15 +143,23 @@
 				<div class="col-md-12 padding-none">
 					<div class="au-main-nav__content" id="main-nav-default-dark">
 
-						<header class="mobile-only mobile-header"> 
+						<header class="mobile-only mobile-header qg-app-mode"> 
+							
 							<button aria-controls="main-nav-default-dark" class="au-main-nav__toggle au-main-nav__toggle--open" onClick="return AU.mainNav.Toggle( this )">
 								Menu
 							</button>
+							
 							<img class="au-header__brand-image--dark" alt="Queensland Government" src="../../../assets/img/qg-coa-stacked-white.svg" />
-							<!-- Search will go here -->
+							
+							<!-- Search will go here 
 							<button aria-controls="" class="au-main-nav__toggle au-main-nav__toggle--open" onClick="">
 								Search
-							</button>
+							</button>-->
+
+							<div class="qg-app__auth">
+								<div class="qg-app__avatar"></div>
+							</div>
+
 						</header>
 
 						<div class="au-main-nav__menu">
@@ -162,7 +176,6 @@
 									<li><a class="icon icon--dark icon--account icon--action" href="../myqld.html">For Queenslanders</a></li>
 									<li><a class="icon icon--dark icon--account icon--action" href="../myqld.html">Contact us</a></li>
 								</ul>
-
 
 								<ul class="au-link-list submenu-mobile">
 									<!--<li><a href="/dashboard">
