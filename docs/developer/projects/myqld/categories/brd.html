@@ -58,14 +58,16 @@
 	<meta property="article:tag" content="design system" />
 	<meta property="article:tag" content="templates" />
 
-	<title>Getting started | Queensland Government</title>
+	<title>Births, relationships and deaths | Queensland Government</title>
 
 	<script type="text/javascript">
-		var $html = document.documentElement; if ($html.classList) $html.classList.remove("no-js"), $html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
+		var $html = document.documentElement; 
+		if ($html.classList) $html.classList.remove("no-js"), 
+		$html.classList.add("js"); else { var className = "no-js"; $html.className = $html.className.replace(new RegExp("(^|\\b)" + className.split(" ").join("|") + "(\\b|$)", "gi"), " "), $html.className += " js" }
 	</script>
 
-	<link rel="icon" href="../assets/favicons/favicon.ico">
-	<link type="text/css" rel="stylesheet" href="../css/main.css">
+	<link rel="icon" href="../../../../assets/favicons/favicon.ico">
+	<link type="text/css" rel="stylesheet" href="../../../../css/main.css">
 
 	<!-- These are shivs to help modern html work in older internet explorer browsers -->
 	<!--[if lt IE 9]>
@@ -91,21 +93,23 @@
 		<a class="au-skip-link__link" href="#mainmenu">Skip to main navigation</a>
 	</nav>
 
-	<!-- UTILITIES -->
-	<div class="qg-utilities-bar qg-utilities-bar--dark">
-	</div>
-	<!-- HEADER -->
+	<!-- UTILITIES 
+		<div class="qg-utilities-bar">
+		</div> 
+	-->
 
-	<header class="au-header au-header--dark mobile-none" role="banner">
+	<!-- HEADER -->
+	<header class="au-header mobile-none" role="banner">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-8">
-
 					<a class="au-header__brand" href="#">
-						<img class="au-header__brand-image" alt="Queensland Government" src="../assets/img/qg-coa.svg">
+
+						<img class="au-header__brand-image" alt="Queensland Government"
+						src="../../../../assets/img/qg-coa.svg">
 
 						<img class="au-header__brand-image--dark" alt="Queensland Government"
-							src="../assets/img/qg-coa-white.svg">
+						src="../../../../assets/img/qg-coa-white.svg">
 
 						<!-- Proposed CUE sub branding 
 						<div class="au-header__text">
@@ -116,13 +120,14 @@
 					</a>
 				</div>
 
-				<div class="col-sm-4 search-container">
+				<div class="col-sm-4">
 					<form role="search" aria-label="sitewide" class="au-search au-search au-search--icon">
 						<label for="standard" class="au-search__label">Search website</label>
-						<input type="search" placeholder="Search website" id="standard" name="standard"
-							class="au-text-input au-text-input" />
+						<input type="search" placeholder="Search website" id="standard" name="standard" class="au-text-input au-text-input" />
 						<div class="au-search__btn">
-							<button class="au-btn au-btn" type="submit"><span class="">Search</span></button>
+							<button class="au-btn au-btn" type="submit">
+								<span class="">Search</span>
+							</button>
 						</div>
 					</form>
 				</div>
@@ -132,16 +137,31 @@
 	</header>
 
 	<!-- MAIN NAVIGATION -->
-	<nav class="au-main-nav au-main-nav--dark" id="mainmenu" aria-label="main">
+	<nav class="au-main-nav" id="mainmenu" aria-label="main">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12 padding-none">
 					<div class="au-main-nav__content" id="main-nav-default-dark">
-						<button aria-controls="main-nav-default-dark"
-							class="au-main-nav__toggle au-main-nav__toggle--open"
-							onClick="return AU.mainNav.Toggle( this )">
-							Menu
-						</button>
+
+						<header class="mobile-only mobile-header qg-app-mode"> 
+							
+							<button aria-controls="main-nav-default-dark" class="au-main-nav__toggle au-main-nav__toggle--open" onClick="return AU.mainNav.Toggle( this )">
+								Menu
+							</button>
+							
+							<img class="au-header__brand-image--dark" alt="Queensland Government" src="../../../../assets/img/qg-coa-stacked-white.svg" />
+							
+							<!-- Search will go here 
+							<button aria-controls="" class="au-main-nav__toggle au-main-nav__toggle--open" onClick="">
+								Search
+							</button>-->
+
+							<div class="qg-app__auth">
+								<div class="qg-app__avatar"></div>
+							</div>
+
+						</header>
+
 						<div class="au-main-nav__menu">
 							<div class="au-main-nav__menu-inner">
 								<div class="au-main-nav__focus-trap-top"></div>
@@ -150,11 +170,29 @@
 									onClick="return AU.mainNav.Toggle( this )">
 									Close
 								</button>
-								<ul class="au-link-list">
-									<li class="active"><a href="../index.html">Design system</a></li>
-									<li><a href="../projects.html">Projects</a></li>
-									<!--<li><a href="contact-us.html">Contact us</a></li>-->
+
+								<ul class="au-link-list au-main-nav--submenu mobile-only">
+									<li><a class="icon icon--dark icon--account icon--action" href="../myqld.html">Home</a></li>
+									<li><a class="icon icon--dark icon--account icon--action" href="../myqld.html">For Queenslanders</a></li>
+									<li><a class="icon icon--dark icon--account icon--action" href="../myqld.html">Contact us</a></li>
 								</ul>
+
+								<ul class="au-link-list submenu-mobile">
+									<!--<li><a href="/dashboard">
+										<svg class="home-icon" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M541 229.16l-61-49.83v-77.4a6 6 0 0 0-6-6h-20a6 6 0 0 0-6 6v51.33L308.19 39.14a32.16 32.16 0 0 0-40.38 0L35 229.16a8 8 0 0 0-1.16 11.24l10.1 12.41a8 8 0 0 0 11.2 1.19L96 220.62v243a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16v-128l64 .3V464a16 16 0 0 0 16 16l128-.33a16 16 0 0 0 16-16V220.62L520.86 254a8 8 0 0 0 11.25-1.16l10.1-12.41a8 8 0 0 0-1.21-11.27zm-93.11 218.59h.1l-96 .3V319.88a16.05 16.05 0 0 0-15.95-16l-96-.27a16 16 0 0 0-16.05 16v128.14H128V194.51L288 63.94l160 130.57z"></path></svg>
+									</a></li>-->
+									<li><a href="/dashboard">Dashboard</a></li>
+									<li><a href="/services">Service finder</a></li>
+									<li><a href="/applications">My applications</a></li>
+									<li><a href="/profile">Profile</a></li>
+									<li><a href="/account-settings">Settings</a></li>
+								</ul>
+
+
+								<ul class="au-link-list au-main-nav--submenu">
+									<li><a class="icon icon--dark icon--account icon--action" href="../myqld.html">Sign out</a></li>
+								</ul>
+
 								<div class="au-main-nav__focus-trap-bottom"></div>
 							</div>
 						</div>
@@ -162,73 +200,96 @@
 							onClick="return AU.mainNav.Toggle( this )"></div>
 					</div>
 				</div>
+				
 			</div>
 		</div>
 	</nav>
+
 
 	<!-- MAIN BODY -->
 	<main>
 		<!--CONTENT-->
 
-		<section class="au-body page_header--dark">
+		<section class="au-body page_header">
 			<div class="container-fluid">
 				<nav class="au-breadcrumbs" aria-label="breadcrumb">
 					<ul class="au-link-list au-link-list--inline">
-						<li><a href="../index.html">Design system</a></li>
-						<li>Getting started</li>
+						<li><a href="./app-shell.html">Dashboard</a></li>
+						<li><a href="../app-shell.html">Services</a></li>
+						<li>Births, relationships and deaths</li>
 					</ul>
 				</nav>
 
-				<h1>Getting started</h1>
+				<h1>Births, relationships and deaths</h1>
 			</div>
 		</section>
 
 		<section class="au-body">
 			<div class="container-fluid">
 				<div class="row">
-
-					<div class="col-sm-4 col-sm-push-8">
-
-						<aside class="au-side-nav au-accordion" aria-label="side navigation">
-							<button class="au-side-nav__toggle au-accordion__title au-accordion--closed"
-								aria-controls="nav-default" aria-expanded="false" aria-selected="false"
-								onclick="return AU.accordion.Toggle( this )">
-								In the content page section
-							</button>
-							<div id="nav-default" class="au-side-nav__content au-accordion--closed au-accordion__body">
-								<h2 class="au-sidenav__title">
-									<a href="../future.html">Design system</a>
-								</h2>
-								<ul class="au-link-list">
-									<li><a href="#">Getting started</a>
-										<ul class="au-link-list">
-											<li><a href="#">Easy method</a></li>
-											<li><a href="#">In your project</a>
-												<!--<ul class="au-link-list">
-													<li><a href="#">Grandchild link</a></li>
-													<li><a href="#">Grandchild link</a></li>
-												</ul>-->
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-						</aside>
-					</div>
-					<div class="col-sm-8 col-sm-pull-4" id="content">
-
-
-
+					<div class="col-md-12">
+						<div class="row">
+							<ul class="au-card-list au-card-list--matchheight ">
+								<li class="col-xs-12 col-sm-4">
+									<div class="au-card au-card--shadow   au-card--clickable">
+										<div class="placeholder au-responsive-media-img"></div>
+										<div class="au-card__inner ">
+											<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Adoptions</a></h2>
+										</div>
+									</div>
+								</li>
+								<li class="col-xs-12 col-sm-4">
+									<div class="au-card  au-card--shadow   au-card--clickable">
+										<div class="placeholder au-responsive-media-img"></div>
+										<div class="au-card__inner ">
+											<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Births</a></h2>
+										</div>
+									</div>
+								</li>
+								<li class="col-xs-12 col-sm-4">
+									<div class="au-card  au-card--shadow   au-card--clickable">
+										<div class="placeholder au-responsive-media-img"></div>
+										<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Change of name</a></h2>
+										</div>
+									</div>
+								</li>
+								<li class="col-xs-12 col-sm-4">
+									<div class="au-card  au-card--shadow   au-card--clickable">
+										<div class="placeholder au-responsive-media-img"></div>
+										<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Change of sex</a></h2>
+										</div>
+									</div>
+								</li>
+								<li class="col-xs-12 col-sm-4">
+									<div class="au-card  au-card--shadow   au-card--clickable">
+										<div class="placeholder au-responsive-media-img"></div>
+										<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Deaths, wills and deceased estates</a></h2>
+										</div>
+									</div>
+								</li>
+								<li class="col-xs-12 col-sm-4">
+									<div class="au-card  au-card--shadow   au-card--clickable">
+										<div class="placeholder au-responsive-media-img"></div>
+										<div class="au-card__inner ">
+										<h2 class="au-card__title au-display-lg" type="heading"><a href="#" class="au-card--clickable__link ">Marriages, relationships and divorces</a></h2>
+										</div>
+									</div>
+								</li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</section>
+
 		<!--END CONTENT-->
 	</main>
 	<!-- END MAIN BODY -->
 
 	<!--FOOTER -->
-	<footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
+	<footer class="au-footer au-body" role="contentinfo">
 		<div class="container-fluid">
 			<div class="row">
 				<nav class="col-md-12" aria-label="footer">
@@ -238,8 +299,7 @@
 						<li><a href="https://www.qld.gov.au/legal/copyright">Copyright</a></li>
 						<li><a href="https://www.qld.gov.au/legal/disclaimer">Disclaimer</a></li>
 						<li><a href="https://www.qld.gov.au/legal/privacy">Privacy</a></li>
-						<li><a href="https://www.qld.gov.au/about/rights-accountability/right-to-information">Right to
-								information</a></li>
+						<li><a href="https://www.qld.gov.au/about/rights-accountability/right-to-information">Right to information</a></li>
 						<li><a href="https://www.qld.gov.au/help/accessibility">Accessibility</a></li>
 						<li><a href="http://www.smartjobs.qld.gov.au/">Jobs in Queensland Government</a></li>
 						<li><a href="https://www.qld.gov.au/help/languages">Other languages</a></li>
@@ -247,16 +307,14 @@
 				</nav>
 				<section class="col-sm-12">
 					<div class="au-footer__end">
-						<p>© The State of Queensland 1995 –
-							<script>document.write(new Date().getFullYear())</script>
-						</p>
+						<p>© The State of Queensland 1995 –<script>document.write(new Date().getFullYear())</script></p>
 					</div>
 				</section>
 			</div>
 	</footer>
 
 	<!-- The javascript from pancake to open and close side nav on desktop -->
-	<script type="text/javascript" src="../js/script.min.js"></script>
+	<script type="text/javascript" src="../../../../js/script.min.js"></script>
 </body>
 
 </html>
