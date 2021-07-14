@@ -288,7 +288,8 @@
 								<section class="au-accordion">
 									<button class="au-accordion__title js-au-accordion"
 										aria-controls="accordion-default-2" aria-expanded="false"
-										onclick="return AU.accordion.Toggle( this )">Business Launchpad</button>
+										onclick="return AU.accordion.Toggle( this )">
+										Residential Tenancies Authority</button>
 
 									<div class="au-accordion__body au-accordion--closed" id="accordion-default-2">
 										<div id="accord2" class="au-accordion__body-wrapper">
@@ -394,6 +395,7 @@
 
 			$(document).on('click', '#dhpw-myqld__1', function (e) {
 				$('#dhpw-myqld__2').trigger('click');
+				$('#dhpw-myqld__ra').prop("checked", false);
 				$('#save-btn1').prop("disabled", false);
 				$('#cancel-btn1').prop("disabled", false);
 				$('#alert').attr('hidden', true);
@@ -402,6 +404,7 @@
 			$(document).on('click', '#dhpw-myqld__2', function (e) {
 
 				$('#dhpw-myqld__1').trigger('click');
+				$('#dhpw-myqld__ra').prop("checked", false);
 				$('#save-btn1').prop("disabled", false);
 				$('#cancel-btn1').prop("disabled", false);
 				$('#alert').attr('hidden', true);

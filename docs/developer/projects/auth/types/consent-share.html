@@ -273,7 +273,7 @@
 			$(document).on('click', '.cancel-btn', function (event) {
 				$('.submit-btn').remove();
 				$('.cancel-btn').text('Return').attr('id', 'return').attr('class', 'au-btn au-btn--secondary');
-				var alert = "<div class='au-body au-page-alerts au-page-alerts--info'><h3>Notice</h3><p>All vacancies close on the advertised closing date unless otherwise specified.</p></div><br>";
+				var alert = "<div class='au-body au-page-alerts au-page-alerts--info'><p>Without consent the login process cannot continue.</p></div><br>";
 				$('#action-group').prepend(alert);
 			});
 			$(document).on('click', '#return', function (event) {
