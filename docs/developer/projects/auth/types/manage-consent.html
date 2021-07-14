@@ -212,9 +212,9 @@
 									<div id="accord1" class="au-accordion__body" id="accordion-default">
 										<div class="au-accordion__body-wrapper">
 
-											<div class="au-body au-page-alerts au-page-alerts--success">
-												<h3>Submission successful</h3>
-												<p>Your application has been successfully submitted.</p>
+											<div id="alert" class="au-body au-page-alerts au-page-alerts--success"
+												hidden>
+												<h3>Sharing preference for MyQld saved</h3>
 											</div>
 
 											<table class="au-table">
@@ -384,6 +384,7 @@
 
 	<!-- The javascript from pancake to open and close side nav on desktop -->
 	<script type="text/javascript" src="../../../../js/script.min.js"></script>
+
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
@@ -395,12 +396,15 @@
 				$('#dhpw-myqld__2').trigger('click');
 				$('#save-btn1').prop("disabled", false);
 				$('#cancel-btn1').prop("disabled", false);
+				$('#alert').attr('hidden', true);
 			});
 
 			$(document).on('click', '#dhpw-myqld__2', function (e) {
+
 				$('#dhpw-myqld__1').trigger('click');
 				$('#save-btn1').prop("disabled", false);
 				$('#cancel-btn1').prop("disabled", false);
+				$('#alert').attr('hidden', true);
 			});
 
 			$(document).on('click', '#dhpw-myqld__ra', function (e) {
@@ -433,14 +437,17 @@
 			});
 
 			$(document).on('click', '#save-btn1', function (e) {
-				target.append(alert);
+				//target.append(alert);
+				$('#alert').attr('hidden', false);
 				$('#save-btn1').prop("disabled", true);
 				$('#cancel-btn1').prop("disabled", true);
 			});
+
 			$(document).on('click', '#save-btn2', function (e) {
 				$('#save-btn2').prop("disabled", true);
 				$('#cancel-btn2').prop("disabled", true);
 			});
+
 			$(document).on('click', '.returnbtn', function (e) {
 				window.location = "./blarga/index.html";
 			});
