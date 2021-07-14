@@ -116,62 +116,11 @@
                     </a>
                 </div>
 
-                <div class="col-sm-4">
-                    <form role="search" aria-label="sitewide" class="au-search au-search au-search--icon">
-                        <label for="standard" class="au-search__label">Search website</label>
-                        <input type="search" placeholder="Search website" id="standard" name="standard"
-                            class="au-text-input au-text-input" />
-                        <div class="au-search__btn">
-                            <button class="au-btn au-btn" type="submit">
-                                <span class="">Search</span>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-
             </div>
         </div>
     </header>
 
-    <!-- MAIN NAVIGATION -->
-    <nav class="au-main-nav au-main-nav" id="mainmenu" aria-label="main">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="au-main-nav__content" id="main-nav-default-dark">
-                        <button aria-controls="main-nav-default-dark"
-                            class="au-main-nav__toggle au-main-nav__toggle--open"
-                            onClick="return AU.mainNav.Toggle( this )">
-                            Menu
-                        </button>
-                        <div class="au-main-nav__menu">
-                            <div class="au-main-nav__menu-inner">
-                                <div class="au-main-nav__focus-trap-top"></div>
-                                <button aria-controls="main-nav-default-dark"
-                                    class="au-main-nav__toggle au-main-nav__toggle--close"
-                                    onClick="return AU.mainNav.Toggle( this )">
-                                    Close
-                                </button>
-                                <ul class="au-link-list">
-                                    <li><a href="../../index.html">Design system</a></li>
-                                    <li class="active"><a href="../../projects.html">Projects</a></li>
-                                    <!--<li><a href="contact-us.html">Contact us</a></li>-->
-                                    <!--<li><a href="../form/">Forms</a></li>-->
-                                </ul>
-                                <ul class="au-link-list au-main-nav--submenu">
-                                    <li class=""><a class="icon icon--dark icon--github icon--action"
-                                            href="https://github.com/qld-gov-au/qld-design-system">GitHub</a></li>
-                                </ul>
-                                <div class="au-main-nav__focus-trap-bottom"></div>
-                            </div>
-                        </div>
-                        <div class="au-main-nav__overlay" aria-controls="main-nav-default-dark"
-                            onClick="return AU.mainNav.Toggle( this )"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+
 
     <!-- MAIN BODY -->
     <main>
@@ -181,7 +130,6 @@
             <div class="container-fluid">
                 <nav class="au-breadcrumbs" aria-label="breadcrumb">
                     <ul class="au-link-list au-link-list--inline">
-                        <li class="active"><a href="#">Projects</a></li>
                         <li>Customer testing</li>
                     </ul>
                 </nav>
@@ -235,7 +183,7 @@
     <!-- END MAIN BODY -->
 
     <!--FOOTER -->
-    <footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
+    <footer class="au-footer fixed au-footer--dark au-body au-body--dark" role="contentinfo">
         <div class="container-fluid">
             <div class="row">
                 <nav class="col-md-12" aria-label="footer">
