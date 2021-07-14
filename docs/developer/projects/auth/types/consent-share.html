@@ -103,6 +103,7 @@
 
 	<!-- SKIP-LINKS -->
 	<nav class="au-skip-link">
+		<a class="au-skip-link__link" href="./blarga/">Restart</a>
 		<a class="au-skip-link__link" href="#content">Skip to main content</a>
 		<a class="au-skip-link__link" href="#mainmenu">Skip to main navigation</a>
 	</nav>
@@ -206,32 +207,28 @@
 
 				<div class="row">
 					<div class="col-md-6">
+						<br>
+						<h3>I consent to sharing these details:</h3>
+						<br>
+						<div class="au-control-input au-control-input--block">
+							<input class="au-control-input__input" type="radio" name="radio" id="radio-phone" checked>
+							<label class="au-control-input__text" for="">Always with MyQld service</label>
+						</div>
 
-						<form class="form-actions" action="#" method="POST">
-							<h3>I consent to sharing these details:</h3>
-							<br>
-							<div class="au-control-input au-control-input--block">
-								<input class="au-control-input__input" type="checkbox" name="checkbox" id="">
-								<label class="au-control-input__text" for="">Always with MyQld service</label>
-							</div>
+						<span class="au-hint-text" id="read-faq">Read our <a href="#"> frequently asked
+								questions</a> about recent changes we've made to help you manage
+							your data sharing preferences with Queensland Government online services.</span>
 
-							<span class="au-hint-text" id="read-faq">Read our <a href="#">frequently asked
-									questions</a>
-								about
-								recent changes we've made to help you manage your data sharing preferences with
-								Queensland
-								Government online services.</span>
+						<span class="au-hint-text" id="give-consent">By giving consent you agree to our <a
+								href="#">Terms of use</a> and <a href="#">Privacy statement</a>.</span>
+						<br>
+						<div id="action-group" class="au-form-group">
+							<br>
+							<a class="au-btn au-btn--secondary cancel-btn"><span>Cancel</span></a>
+							<button id="submit-btn" class="au-btn submit-btn">Continue</button>
+						</div>
+						<br>
 
-							<span class="au-hint-text" id="give-consent">By giving consent you agree to our <a
-									href="#">Terms of
-									use</a> and <a href="#">Privacy statement</a>.</span>
-							<br>
-							<div class="au-form-group">
-								<button class="au-btn au-btn--secondary" id="form-submit">Cancel</button>
-								<button class="au-btn" id="form-submit">Continue</button>
-							</div>
-							<br>
-						</form>
 					</div>
 				</div>
 			</div>
@@ -270,6 +267,29 @@
 
 	<!-- The javascript from pancake to open and close side nav on desktop -->
 	<script type="text/javascript" src="../../../../js/script.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(document).on('click', '.cancel-btn', function (event) {
+				$('.submit-btn').remove();
+				$('.cancel-btn').text('Return').attr('id', 'return').attr('class', 'au-btn au-btn--secondary');
+				var alert = "<div class='au-body au-page-alerts au-page-alerts--info'><h3>Notice</h3><p>All vacancies close on the advertised closing date unless otherwise specified.</p></div><br>";
+				$('#action-group').prepend(alert);
+			});
+			$(document).on('click', '#return', function (event) {
+				$('.submit-btn').remove();
+				$('.cancel-btn').remove();
+				$('#return').remove();
+				$('.au-page-alerts').remove();
+				var controls = "<a class='au-btn au-btn--secondary cancel-btn'><span>Cancel</span></a><button id='submit-btn' class='au-btn submit-btn' style='margin-left: 5px;'>Continue</button>";
+				$('#action-group').prepend(controls);
+			});
+			$(document).on('click', '#submit-btn', function (event) {
+				window.location = "./myqld/applications.html";
+			});
+		});
+	</script>
+
 </body>
 
 </html>

@@ -103,14 +103,10 @@
 
 	<!-- SKIP-LINKS -->
 	<nav class="au-skip-link">
+		<a class="au-skip-link__link" href="./blarga/">Restart</a>
 		<a class="au-skip-link__link" href="#content">Skip to main content</a>
 		<a class="au-skip-link__link" href="#mainmenu">Skip to main navigation</a>
 	</nav>
-
-	<!-- UTILITIES 
-		<div class="qg-utilities-bar qg-utilities-bar--dark">
-		</div> 
-	-->
 
 	<!-- HEADER -->
 	<header class="au-header au-header--dark qg-app-mode__header" role="banner">
@@ -133,7 +129,7 @@
 					</a>
 				</div>
 				<div class="col-sm-3 mobile-none">
-					<button class="au-btn">
+					<button class="au-btn returnbtn">
 						Return to service
 						<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
 							height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -202,12 +198,18 @@
 							Read more about <a target="_blank" href="https://www.qld.gov.au/qdifaq" rel="noreferrer">QLD
 								Digital Identity login</a>.
 						</p>
+						<h2>Services</h2>
 						<br>
+
 						<div class="dxp-consent-section">
 							<div class="dxp-consent-section__inner">
-								<section class="au-accordion "><button class="au-accordion__title js-au-accordion "
-										aria-controls="accordion1" aria-expanded="true">MyQld</button>
-									<div class="au-accordion__body " id="accordion1">
+
+								<section class="au-accordion">
+									<button class="au-accordion__title js-au-accordion"
+										aria-controls="accordion-default" aria-expanded="true"
+										onclick="return AU.accordion.Toggle( this )">MyQld</button>
+
+									<div id="accord1" class="au-accordion__body" id="accordion-default">
 										<div class="au-accordion__body-wrapper">
 											<table class="au-table">
 												<thead class="au-table__head">
@@ -221,12 +223,86 @@
 												<tbody class="au-table__body">
 													<tr class="au-table__row ">
 														<td class="au-table__cell">
-															<div class="au-control-input "><input
-																	class="au-control-input__input"
-																	id="dhpw-myqld__profile" type="checkbox"
-																	checked=""><label
+															<div class="au-control-input ">
+																<input class="au-control-input__input"
+																	id="dhpw-myqld__1" type="checkbox" checked="">
+																<label
 																	class="dxp-consent-section au-control-input__text dxp-consent-section__disable-select"
-																	for="dhpw-myqld__profile">Given Name, Middle Name,
+																	for="dhpw-myqld__1">Given Name, Middle Name,
+																	Family Name, Date of Birth<p
+																		class="dxp-consent-section__input-description-extra">
+																		If you stop sharing these personal details, you
+																		will stop sharing all details.</p></label>
+															</div>
+														</td>
+														<td class="au-table__cell ">16/06/2021, 9:28:15 am</td>
+													</tr>
+													<tr class="au-table__row ">
+														<td class="au-table__cell">
+															<div class="au-control-input"><input
+																	class="au-control-input__input" id="dhpw-myqld__2"
+																	type="checkbox" checked=""><label
+																	class="dxp-consent-section au-control-input__text dxp-consent-section__disable-select"
+																	for="dhpw-myqld__2">Email<p
+																		class="dxp-consent-section__input-description-extra">
+																		If you stop sharing these personal details, you
+																		will stop sharing all details.</p></label></div>
+														</td>
+
+														<td class="au-table__cell ">16/06/2021, 9:28:15 am</td>
+													</tr>
+													<tr class="au-table__row ">
+														<td class="au-table__cell">
+															<div class="au-control-input "><input
+																	class="au-control-input__input" id="dhpw-myqld__ra"
+																	type="checkbox" checked=""><label
+																	class="dxp-consent-section au-control-input__text dxp-consent-section__disable-select"
+																	for="dhpw-myqld__ra">Residential address<p
+																		class="dxp-consent-section__input-description-extra">
+																	</p></label></div>
+														</td>
+
+														<td class="au-table__cell ">16/06/2021, 9:28:15 am</td>
+													</tr>
+												</tbody>
+											</table>
+											<br>
+											<div class="action-group">
+												<button id="save-btn1" type="button" class="save-btn au-btn"
+													disabled>Save
+													changes</button>
+												<button id="cancel-btn1" type="button"
+													class="cancel-btn hidden au-btn au-btn--tertiary"
+													disabled>Cancel</button>
+											</div>
+										</div>
+									</div>
+								</section>
+
+								<section class="au-accordion">
+									<button class="au-accordion__title js-au-accordion"
+										aria-controls="accordion-default-2" aria-expanded="false"
+										onclick="return AU.accordion.Toggle( this )">Business Launchpad</button>
+
+									<div class="au-accordion__body au-accordion--closed" id="accordion-default-2">
+										<div id="accord2" class="au-accordion__body-wrapper">
+											<table class="au-table">
+												<thead class="au-table__head">
+													<tr class="au-table__row">
+														<th class="au-table__header au-table__header--width-75"
+															scope="col"> Details shared </th>
+														<th class="au-table__header au-table__header--width-25"
+															scope="col"> Last shared </th>
+													</tr>
+												</thead>
+												<tbody class="au-table__body">
+													<tr class="au-table__row ">
+														<td class="au-table__cell">
+															<div class="au-control-input "><input
+																	class="au-control-input__input" id="dhpw-myqld__3"
+																	type="checkbox" checked=""><label
+																	class="dxp-consent-section au-control-input__text dxp-consent-section__disable-select"
+																	for="dhpw-myqld__3">Given Name, Middle Name,
 																	Family Name, Date of Birth<p
 																		class="dxp-consent-section__input-description-extra">
 																		If you stop sharing these personal details, you
@@ -237,11 +313,10 @@
 													<tr class="au-table__row ">
 														<td class="au-table__cell">
 															<div class="au-control-input "><input
-																	class="au-control-input__input"
-																	id="dhpw-myqld__email" type="checkbox"
-																	checked=""><label
+																	class="au-control-input__input" id="dhpw-myqld__4"
+																	type="checkbox" checked=""><label
 																	class="dxp-consent-section au-control-input__text dxp-consent-section__disable-select"
-																	for="dhpw-myqld__email">Email<p
+																	for="dhpw-myqld__4">Email<p
 																		class="dxp-consent-section__input-description-extra">
 																		If you stop sharing these personal details, you
 																		will stop sharing all details.</p></label></div>
@@ -249,28 +324,27 @@
 														<td class="au-table__cell ">16/06/2021, 9:28:15 am</td>
 													</tr>
 												</tbody>
-											</table><button id="dhpw-myqld-call-to-action" type="button"
-												class="button__Button-aw29qv-0 kDlCMt dxp-consent-section__call-to-action au-btn dxp-consent-section__call-to-action"
-												data-testid="dxp-core-consent__call-to-action" data-cta="dhpw-myqld"
-												data-action="save" disabled="">Save changes</button>
+											</table>
+											<br>
+											<div class="action-group">
+												<button id="save-btn2" type="button" class="save-btn au-btn"
+													disabled>Save
+													changes</button>
+												<button id="cancel-btn2" type="button"
+													class="cancel-btn hidden au-btn au-btn--tertiary"
+													disabled>Cancel</button>
+											</div>
 										</div>
 									</div>
 								</section>
+
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<br>
-			<div class="container-fluid">
-				<button class="au-btn">
-					Cancel
-				</button>
-			</div>
-
 		</section>
-
-
 	</main>
 	<!-- END MAIN BODY -->
 
@@ -303,7 +377,70 @@
 	</footer>
 
 	<!-- The javascript from pancake to open and close side nav on desktop -->
-	<script type="text/javascript" src="../../js/script.min.js"></script>
+	<script type="text/javascript" src="../../../../js/script.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			var alert = "<div class='au-body au-page-alerts au-page-alerts--success'><h3>Submission successful</h3><p>Your application has been successfully submitted.</p></div>";
+			var target = "#accord1";
+
+			$(document).on('click', '#dhpw-myqld__1', function (e) {
+				$('#dhpw-myqld__2').trigger('click');
+				$('#save-btn1').prop("disabled", false);
+				$('#cancel-btn1').prop("disabled", false);
+			});
+
+			$(document).on('click', '#dhpw-myqld__2', function (e) {
+				$('#dhpw-myqld__1').trigger('click');
+				$('#save-btn1').prop("disabled", false);
+				$('#cancel-btn1').prop("disabled", false);
+			});
+
+			$(document).on('click', '#dhpw-myqld__ra', function (e) {
+				$('#save-btn1').prop("disabled", false);
+				$('#cancel-btn1').prop("disabled", false);
+			});
+
+			$(document).on('click', '#dhpw-myqld__3', function (e) {
+				$('#dhpw-myqld__4').trigger('click');
+			});
+
+			$(document).on('click', '#dhpw-myqld__4', function (e) {
+				$('#dhpw-myqld__3').trigger('click');
+				$('#save-btn2').prop("disabled", false);
+				$('#cancel-btn2').prop("disabled", false);
+			});
+
+			$(document).on('click', '#cancel-btn1', function (e) {
+				$('#save-btn1').prop("disabled", true);
+				$('#cancel-btn1').prop("disabled", true);
+				$('#dhpw-myqld__1').prop("checked", true);
+				$('#dhpw-myqld__2').prop("checked", true);
+				$('#dhpw-myqld__ra').prop("checked", true);
+			});
+
+			$(document).on('click', '#cancel-btn2', function (e) {
+				$('#save-btn2').prop("disabled", true);
+				$('#dhpw-myqld__3').prop("checked", true);
+				$('#dhpw-myqld__4').prop("checked", true);
+			});
+
+			$(document).on('click', '#save-btn1', function (e) {
+				target.append(alert);
+				$('#save-btn1').prop("disabled", true);
+				$('#cancel-btn1').prop("disabled", true);
+			});
+			$(document).on('click', '#save-btn2', function (e) {
+				$('#save-btn2').prop("disabled", true);
+				$('#cancel-btn2').prop("disabled", true);
+			});
+			$(document).on('click', '.returnbtn', function (e) {
+				window.location = "./blarga/index.html";
+			});
+
+		});
+	</script>
 </body>
 
 </html>

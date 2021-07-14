@@ -1,0 +1,8 @@
+var config = {
+    "pages": [
+        "index.html": {
+            "tite": "QLD Design System",
+            "file": ""
+        }
+    ]
+}
