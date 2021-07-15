@@ -129,16 +129,18 @@
 					</a>
 				</div>
 				<div class="col-sm-3 mobile-none">
-					<button class="au-btn returnbtn">
+					<!--FIX ME-->
+					<button class="au-btn returnbtn action-btn" style="margin-top: 20px; float:right;">
 						Return to service
-						<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+						<!--<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
 							height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M284.9 412.6l138.1-134c6-5.8 9-13.7 9-22.4v-.4c0-8.7-3-16.6-9-22.4l-138.1-134c-12-12.5-31.3-12.5-43.2 0-11.9 12.5-11.9 32.7 0 45.2l83 79.4h-214c-17 0-30.7 14.3-30.7 32 0 18 13.7 32 30.6 32h214l-83 79.4c-11.9 12.5-11.9 32.7 0 45.2 12 12.5 31.3 12.5 43.3 0z">
 							</path>
-						</svg>
+						</svg>-->
 					</button>
 				</div>
+
 				<!--<div class="col-sm-2 search-container qg-app-mode">
 					<form role="search" aria-label="sitewide" class="au-search au-search au-search--icon">
 						<label for="standard" class="au-search__label">Search website</label>
@@ -185,7 +187,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="dxp-consent-main__main-column col-sm-10">
-						<h1 class="mq-pageTitle">Manage your shared details</h1>
+						<h2 class="mq-pageTitle">Manage your shared details</h2>
 						<p class="dxp-consent-main__paragraph">
 							You shared the following details with us previously. We don't share these details outside
 							the Queensland Government without your consent.
@@ -198,7 +200,7 @@
 							Read more about <a target="_blank" href="https://www.qld.gov.au/qdifaq" rel="noreferrer">QLD
 								Digital Identity login</a>.
 						</p>
-						<h2>Services</h2>
+						<!--<h4>Services</h4>-->
 						<br>
 
 						<div class="dxp-consent-section">
@@ -231,7 +233,7 @@
 														<td class="au-table__cell">
 															<div class="au-control-input ">
 																<input class="au-control-input__input"
-																	id="dhpw-myqld__1" type="checkbox" checked="">
+																	id="dhpw-myqld__1" type="checkbox">
 																<label
 																	class="dxp-consent-section au-control-input__text dxp-consent-section__disable-select"
 																	for="dhpw-myqld__1">Given Name, Middle Name,
@@ -247,7 +249,7 @@
 														<td class="au-table__cell">
 															<div class="au-control-input"><input
 																	class="au-control-input__input" id="dhpw-myqld__2"
-																	type="checkbox" checked=""><label
+																	type="checkbox"><label
 																	class="dxp-consent-section au-control-input__text dxp-consent-section__disable-select"
 																	for="dhpw-myqld__2">Email<p
 																		class="dxp-consent-section__input-description-extra">
@@ -261,7 +263,7 @@
 														<td class="au-table__cell">
 															<div class="au-control-input "><input
 																	class="au-control-input__input" id="dhpw-myqld__ra"
-																	type="checkbox" checked=""><label
+																	type="checkbox"><label
 																	class="dxp-consent-section au-control-input__text dxp-consent-section__disable-select"
 																	for="dhpw-myqld__ra">Residential address<p
 																		class="dxp-consent-section__input-description-extra">
@@ -307,7 +309,7 @@
 														<td class="au-table__cell">
 															<div class="au-control-input "><input
 																	class="au-control-input__input" id="dhpw-myqld__3"
-																	type="checkbox" checked=""><label
+																	type="checkbox"><label
 																	class="dxp-consent-section au-control-input__text dxp-consent-section__disable-select"
 																	for="dhpw-myqld__3">Given Name, Middle Name,
 																	Family Name, Date of Birth<p
@@ -321,7 +323,7 @@
 														<td class="au-table__cell">
 															<div class="au-control-input "><input
 																	class="au-control-input__input" id="dhpw-myqld__4"
-																	type="checkbox" checked=""><label
+																	type="checkbox"><label
 																	class="dxp-consent-section au-control-input__text dxp-consent-section__disable-select"
 																	for="dhpw-myqld__4">Email<p
 																		class="dxp-consent-section__input-description-extra">
@@ -390,30 +392,93 @@
 	<script type="text/javascript">
 		$(document).ready(function () {
 
+			$('#dhpw-myqld__1').prop("checked", true);
+			$('#dhpw-myqld__2').prop("checked", true);
+			$('#dhpw-myqld__ra').prop("checked", true);
+
+			$('#dhpw-myqld__1').attr("checked");
+			$('#dhpw-myqld__2').attr("checked");
+			$('#dhpw-myqld__ra').attr("checked");
+
 			var alert = "<div class='au-body au-page-alerts au-page-alerts--success'><h3>Submission successful</h3><p>Your application has been successfully submitted.</p></div>";
 			var target = "#accord1";
 
+
+			function toggle() {
+				if ($('#dhpw-myqld__1:checked').length > 0 && $('#dhpw-myqld__2:checked').length > 0) {
+
+				} else {
+					$('#dhpw-myqld__1').trigger("click");
+					$('#dhpw-myqld__2').trigger("click");
+				}
+			}
+
 			$(document).on('click', '#dhpw-myqld__1', function (e) {
-				$('#dhpw-myqld__2').trigger('click');
-				$('#dhpw-myqld__ra').prop("checked", false);
-				$('#save-btn1').prop("disabled", false);
-				$('#cancel-btn1').prop("disabled", false);
-				$('#alert').attr('hidden', true);
+				toggle();
+			});
+			$(document).on('click', '#dhpw-myqld__2', function (e) {
+				toggle();
+			});
+			$(document).on('click', '#dhpw-myqld__ra', function (e) {
+				toggle();
+			});
+			/**
+			$(document).on('click', '#dhpw-myqld__1', function (e) {
+				if ($('#dhpw-myqld__1:checked').length > 0) {
+					$('#dhpw-myqld__1').trigger('click');
+					$('#dhpw-myqld__2').trigger('click');
+					if ($('#dhpw-myqld__2:checked').length > 0) {
+						$('#dhpw-myqld__ra').trigger("checked");
+					}
+				} else {
+					$('#dhpw-myqld__1').trigger('click');
+					$('#dhpw-myqld__2').trigger('click');
+					if ($('#dhpw-myqld__2:checked').length > 0) {
+						$('#dhpw-myqld__ra').trigger("checked");
+					}
+				}
 			});
 
 			$(document).on('click', '#dhpw-myqld__2', function (e) {
+				if ($('#dhpw-myqld__2:checked').length > 0) {
+					$('#dhpw-myqld__2').trigger('click');
+					$('#dhpw-myqld__1').trigger('click');
+					if ($('#dhpw-myqld__1:checked').length > 0) {
+						$('#dhpw-myqld__ra').trigger("checked");
+					}
 
-				$('#dhpw-myqld__1').trigger('click');
-				$('#dhpw-myqld__ra').prop("checked", false);
-				$('#save-btn1').prop("disabled", false);
-				$('#cancel-btn1').prop("disabled", false);
-				$('#alert').attr('hidden', true);
+				} else {
+					$('#dhpw-myqld__1').trigger('click');
+					$('#dhpw-myqld__2').trigger('click');
+					if ($('#dhpw-myqld__1:checked').length > 0) {
+						$('#dhpw-myqld__ra').trigger("checked");
+					}
+
+				}
 			});
 
 			$(document).on('click', '#dhpw-myqld__ra', function (e) {
-				$('#save-btn1').prop("disabled", false);
-				$('#cancel-btn1').prop("disabled", false);
-			});
+				if ($('#dhpw-myqld__ra:checked').length > 0) {
+					console.log('checking all');
+					$('#dhpw-myqld__1').trigger('click');
+					$('#dhpw-myqld__2').trigger('click');
+					$('#dhpw-myqld__ra').trigger('click');
+				} else {
+					console.log('unchecking all');
+					$('#dhpw-myqld__1').prop("checked", "false");
+					$('#dhpw-myqld__2').prop("checked", "false");
+					$('#dhpw-myqld__ra').trigger('click');
+				}
+				/**
+				 * 
+					$('#save-btn1').prop("disabled", false);
+					$('#cancel-btn1').prop("disabled", false);
+					$('#alert').attr('hidden', true);
+
+					$('#save-btn1').prop("disabled", false);
+					$('#cancel-btn1').prop("disabled", false);
+				**/
+
 
 			$(document).on('click', '#dhpw-myqld__3', function (e) {
 				$('#dhpw-myqld__4').trigger('click');
@@ -452,7 +517,7 @@
 			});
 
 			$(document).on('click', '.returnbtn', function (e) {
-				window.location = "./blarga/index.html";
+				window.location = "./myqld/account-settings.html";
 			});
 
 		});

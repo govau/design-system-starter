@@ -332,6 +332,7 @@ section.section {
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	border: none;
+	margin: 0px auto;
 }
 .percentage-indicator {
 	height: 40px;
@@ -347,6 +348,9 @@ section.section {
 	bottom: 0;
 	left: 0;
 	right: 0;
+}
+.action-btn {
+	padding-top: 20px !important;
 }
 //Hack - TO DO: FIX ME
 .au-search.au-search--icon .au-btn,

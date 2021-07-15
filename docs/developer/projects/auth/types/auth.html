@@ -128,6 +128,17 @@
 
 					</a>
 				</div>
+				<div class="col-sm-3 mobile-none">
+					<button class="au-btn returnbtn action-btn" style="margin-top: 20px !important; float:right;">
+						Return to service
+						<!--<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+							height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M284.9 412.6l138.1-134c6-5.8 9-13.7 9-22.4v-.4c0-8.7-3-16.6-9-22.4l-138.1-134c-12-12.5-31.3-12.5-43.2 0-11.9 12.5-11.9 32.7 0 45.2l83 79.4h-214c-17 0-30.7 14.3-30.7 32 0 18 13.7 32 30.6 32h214l-83 79.4c-11.9 12.5-11.9 32.7 0 45.2 12 12.5 31.3 12.5 43.3 0z">
+							</path>
+						</svg>-->
+					</button>
+				</div>
 				<!--<div class="col-sm-3 mobile-none">
 					<button class="au-btn">
 						Return to service
@@ -181,23 +192,23 @@
 		</section>-->
 
 		<section class="au-body">
-
-
 			<div class="container-fluid">
-				<h1>Login or register</h1>
-				<p>Please login or register using one of the options below</p>
-				<p>By logging in you agree to our <a href="#">Terms of use</a> and <a href="#">Privacy statement</a>.
-				</p>
-				<p><a href="#">Read more information about the QLD Digital Identity login</a>.</p>
+				<div class="col-md-12">
+					<h2>Login or register</h2>
+					<p>Please login or register using one of the options below. <br>By logging in you agree to our <a
+							href="#">Terms of use</a> and <a href="#">Privacy
+							statement</a>.
+						<br><br><a href="#">Read more information about the QLD Digital Identity login</a>
+					</p>
+				</div>
 			</div>
-
 			<div class="container-fluid">
 				<div class="row">
 					<ul class="au-card-list au-card-list--matchheight">
 						<li class="col-lg-6 col-md-12">
-							<div class="au-card au-body">
+							<div class="au-card au-card--centred au-body">
 								<div class="au-body au-body--alt au-card__header au-card--centred">
-									<h2>Individual login</h2>
+									<h3>Individual login</h3>
 								</div>
 								<div class="au-card__inner">
 									<div class="au-grid">
@@ -206,18 +217,16 @@
 											<div class="row">
 												<div class="col-sm-12">
 													<span>
-														<p>A <b>QGov</b> Queensland Government account gives you fast,
-															secure and easy access to Queensland Government online
-															services.</p>
 
-														<br>
 														<a class="au-btn qgov-login" id="cidm"
 															href="../types/cidm/cidm-auth.html">
 															<i class="ico" role="presentation"></i>
 															<span>Login with QGov</span>
 														</a>
 
-														<br>
+														<p>A <b>QGov</b> Queensland Government account gives you fast,
+															secure and easy access to Queensland Government online
+															services.</p>
 
 														<p>Read our <a class="create-login"
 																href="https://identity.qld.gov.au/help/faq.html">login
@@ -250,8 +259,8 @@
 						<li class="col-lg-6 col-md-12">
 							<div class="au-card au-body">
 								<div class="au-body au-body--alt au-card__header au-card--centred">
-									<h2>Business login
-									</h2>
+									<h3>Business login
+									</h3>
 								</div>
 								<div class="au-card__inner">
 									<div class="au-grid">
@@ -261,11 +270,23 @@
 												<div class="col-sm-12">
 													<span>
 
-														<a class="au-btn " id="cidm" href="#">
-															<i class="ico" role="presentation"></i>
-															<span>Login with QGov</span>
+														<a class="au-btn govid-login" id="cidm" href="#"
+															style="margin:0px auto !important;">
 														</a>
 
+														<p>To login with myGovID:</p>
+														<ul style="display:table;margin:0px auto;">
+															<li>&bull; download and set up the myGovID app</li>
+															<li>&bull; access RAM to link to your myGovID to your
+																Australian
+																Business Number (ABN); and</li>
+															<li>&bull; Set your level of access to full under QLD
+																Digital
+																Identity login (found under Queensland Government).
+															</li>
+														</ul>
+														<p>Find out how to <a>access online services with myGovID and
+																and RAM</a>.</p>
 
 													</span>
 												</div>
@@ -312,7 +333,7 @@
 
 			<div class="container-fluid">
 				<br>
-				<a class="au-btn mt-5" href="./blarga/">
+				<a class="au-btn mt-5 au-btn--secondary" href="./blarga/">
 					<span>Cancel</span>
 				</a>
 			</div>
@@ -352,6 +373,14 @@
 
 	<!-- The javascript from pancake to open and close side nav on desktop -->
 	<script type="text/javascript" src="../../../../js/script.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(document).on('click', '.returnbtn', function (e) {
+				window.location = "./blarga/index.html";
+			});
+		});
+	</script>
 </body>
 
 </html>

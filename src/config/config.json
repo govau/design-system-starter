@@ -1,8 +1,53 @@
-var config = {
+{
+    "config": {
+        "type": "static/cms //if CMS, lets use Squiz or similar metadata references"
+    },
     "pages": [
-        "index.html": {
-            "tite": "QLD Design System",
-            "file": ""
+        {
+            "uid": "1",
+            "page_tite": "QLD Design System",
+            "page_template": "index.html",
+            "content": [
+                {
+                    "id": "1",
+                    "content": "Welcome!",
+                    "type": "h1",
+                    "custom": [
+                        {
+                            "key": "class",
+                            "value": "mt-5"
+                        }
+                    ]
+                },
+                {
+                    "id": "2",
+                    "content": "Introduction paragraph",
+                    "type": "p"
+                }
+            ]
+        },
+        {
+            "uid": "2",
+            "page_tite": "Projects",
+            "page_template": "./projects",
+            "content": [
+                {
+                    "id": "1",
+                    "content": "Welcome!",
+                    "type": "h1",
+                    "custom": [
+                        {
+                            "key": "class",
+                            "value": "mt-5"
+                        }
+                    ]
+                },
+                {
+                    "id": "2",
+                    "content": "Introduction paragraph",
+                    "type": "p"
+                }
+            ]
         }
     ]
 }
