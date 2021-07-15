@@ -95,7 +95,7 @@ section.section { padding: 2rem 0rem !important; margin: 2rem 0rem !important; }
 
 .qgov-login .ico { background-image: url("../assets/img/lock.png"); background-size: contain; background-repeat: no-repeat; border-top-left-radius: 4px; border-bottom-left-radius: 4px; width: 40px; width: 2.5rem; height: 40px; height: 2.5rem; }
 
-.govid-login { background-image: url("../../assets/img/govidlogin.png"); height: 50px; width: 50%; background-position: center; background-repeat: no-repeat; background-size: cover; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; border: none; margin: 0px auto; }
+.govid-login { background-image: url("../assets/img/govidlogin.png"); height: 50px; width: 50%; background-position: center; background-repeat: no-repeat; background-size: cover; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; border: none; margin: 0px auto; }
 
 .percentage-indicator { height: 40px; background-color: #f5f5f5 !important; }
 
