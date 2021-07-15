@@ -103,7 +103,7 @@ section.section { padding: 2rem 0rem !important; margin: 2rem 0rem !important; }
 
 .fixed { position: fixed; bottom: 0; left: 0; right: 0; }
 
-.action-btn { padding-top: 20px !important; }
+.action-btn { margin-top: 20px !important; }
 
 .au-search.au-search--icon .au-btn, .au-search.au-search--responsive .au-btn { background-image: none !important; }
 
