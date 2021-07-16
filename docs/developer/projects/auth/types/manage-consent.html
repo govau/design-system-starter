@@ -233,6 +233,7 @@
 														<td class="au-table__cell">
 															<div class="au-control-input ">
 																<input class="au-control-input__input"
+																	onclick="onCheckboxClick(this)"
 																	id="dhpw-myqld__1" type="checkbox">
 																<label
 																	class="dxp-consent-section au-control-input__text dxp-consent-section__disable-select"
@@ -248,6 +249,7 @@
 													<tr class="au-table__row ">
 														<td class="au-table__cell">
 															<div class="au-control-input"><input
+																	onclick="onCheckboxClick(this)"
 																	class="au-control-input__input" id="dhpw-myqld__2"
 																	type="checkbox"><label
 																	class="dxp-consent-section au-control-input__text dxp-consent-section__disable-select"
@@ -262,6 +264,7 @@
 													<tr class="au-table__row ">
 														<td class="au-table__cell">
 															<div class="au-control-input "><input
+																	onclick="onCheckboxClick(this)"
 																	class="au-control-input__input" id="dhpw-myqld__ra"
 																	type="checkbox"><label
 																	class="dxp-consent-section au-control-input__text dxp-consent-section__disable-select"
@@ -294,6 +297,11 @@
 
 									<div class="au-accordion__body au-accordion--closed" id="accordion-default-2">
 										<div id="accord2" class="au-accordion__body-wrapper">
+											<div id="alert-rta" class="au-body au-page-alerts au-page-alerts--success"
+											hidden>
+											<h3>Sharing preference for Residential Tenancies Authority saved</h3>
+										</div>
+
 											<table class="au-table">
 												<thead class="au-table__head">
 													<tr class="au-table__row">
@@ -307,6 +315,7 @@
 													<tr class="au-table__row ">
 														<td class="au-table__cell">
 															<div class="au-control-input "><input
+																	onclick="onCheckboxClick(this)"
 																	class="au-control-input__input" id="dhpw-myqld__3"
 																	type="checkbox"><label
 																	class="dxp-consent-section au-control-input__text dxp-consent-section__disable-select"
@@ -321,6 +330,7 @@
 													<tr class="au-table__row ">
 														<td class="au-table__cell">
 															<div class="au-control-input "><input
+																	onclick="onCheckboxClick(this)"
 																	class="au-control-input__input" id="dhpw-myqld__4"
 																	type="checkbox"><label
 																	class="dxp-consent-section au-control-input__text dxp-consent-section__disable-select"
@@ -389,7 +399,29 @@
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 	<script type="text/javascript">
+	    const getState = () => {
+			return localStorage.getItem("state") ? JSON.parse(localStorage.getItem("state")) : {} 
+		}
+		const state = getState()
+
+		const onCheckboxClick = (f) => {
+			state[f.id] = f.checked
+
+			if(['dhpw-myqld__1', 'dhpw-myqld__2'].includes(f.id) && f.checked === false) {
+				state['dhpw-myqld__ra'] = false
+			}
+
+			if (['dhpw-myqld__3', 'dhpw-myqld__4'].includes(f.id)) {
+				$('#alert-rta').attr('hidden', true);
+			} else {
+				$('#alert').attr('hidden', true);
+			}
+		}
+
 		$(document).ready(function () {
+			Object.entries(state).forEach(([key, value]) => {
+				$(`#${key}`).prop("checked", value);
+			})
 
 			var target = "#accord1";
 			var alert = "<div class='au-body au-page-alerts au-page-alerts--success'><h3>Submission successful</h3><p>Your application has been successfully submitted.</p></div>";
@@ -439,27 +471,36 @@
 			});
 
 			$(document).on('click', '#cancel-btn1', function (e) {
+				const original = getState()
+
 				$('#save-btn1').prop("disabled", true);
 				$('#cancel-btn1').prop("disabled", true);
-				$('#dhpw-myqld__1').prop("checked", true);
-				$('#dhpw-myqld__2').prop("checked", true);
-				$('#dhpw-myqld__ra').prop("checked", true);
+
+				['dhpw-myqld__1', 'dhpw-myqld__2', 'dhpw-myqld__ra'].forEach((key) => {
+					$(`#${key}`).prop("checked", original[key] || false);
+				})
 			});
 
 			$(document).on('click', '#cancel-btn2', function (e) {
+				const original = getState()
+
 				$('#save-btn2').prop("disabled", true);
-				$('#dhpw-myqld__3').prop("checked", true);
-				$('#dhpw-myqld__4').prop("checked", true);
+
+				['dhpw-myqld__3', 'dhpw-myqld__4'].forEach((key) => {
+					$(`#${key}`).prop("checked", original[key] || false);
+				})
 			});
 
 			$(document).on('click', '#save-btn1', function (e) {
-				//target.append(alert);
+				localStorage.setItem('state', JSON.stringify(state))
 				$('#alert').attr('hidden', false);
 				$('#save-btn1').prop("disabled", true);
 				$('#cancel-btn1').prop("disabled", true);
 			});
-
+			
 			$(document).on('click', '#save-btn2', function (e) {
+				localStorage.setItem('state', JSON.stringify(state))
+				$('#alert-rta').attr('hidden', false);
 				$('#save-btn2').prop("disabled", true);
 				$('#cancel-btn2').prop("disabled", true);
 			});
