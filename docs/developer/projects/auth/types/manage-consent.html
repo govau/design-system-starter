@@ -392,96 +392,35 @@
 	<script type="text/javascript">
 		$(document).ready(function () {
 
-			$('#dhpw-myqld__1').prop("checked", true);
-			$('#dhpw-myqld__2').prop("checked", true);
-			$('#dhpw-myqld__ra').prop("checked", true);
-
-			$('#dhpw-myqld__1').attr("checked");
-			$('#dhpw-myqld__2').attr("checked");
-			$('#dhpw-myqld__ra').attr("checked");
-
-			var alert = "<div class='au-body au-page-alerts au-page-alerts--success'><h3>Submission successful</h3><p>Your application has been successfully submitted.</p></div>";
 			var target = "#accord1";
-
-
-			function toggle() {
-				if ($('#dhpw-myqld__1:checked').length > 0 && $('#dhpw-myqld__2:checked').length > 0) {
-
-				} else {
-					$('#dhpw-myqld__1').trigger("click");
-					$('#dhpw-myqld__2').trigger("click");
-				}
-			}
+			var alert = "<div class='au-body au-page-alerts au-page-alerts--success'><h3>Submission successful</h3><p>Your application has been successfully submitted.</p></div>";
 
 			$(document).on('click', '#dhpw-myqld__1', function (e) {
-				toggle();
-			});
-			$(document).on('click', '#dhpw-myqld__2', function (e) {
-				toggle();
-			});
-			$(document).on('click', '#dhpw-myqld__ra', function (e) {
-				toggle();
-			});
-			/**
-			$(document).on('click', '#dhpw-myqld__1', function (e) {
-				if ($('#dhpw-myqld__1:checked').length > 0) {
-					$('#dhpw-myqld__1').trigger('click');
-					$('#dhpw-myqld__2').trigger('click');
-					if ($('#dhpw-myqld__2:checked').length > 0) {
-						$('#dhpw-myqld__ra').trigger("checked");
-					}
-				} else {
-					$('#dhpw-myqld__1').trigger('click');
-					$('#dhpw-myqld__2').trigger('click');
-					if ($('#dhpw-myqld__2:checked').length > 0) {
-						$('#dhpw-myqld__ra').trigger("checked");
-					}
-				}
+				$('#dhpw-myqld__2').trigger('click');
 			});
 
 			$(document).on('click', '#dhpw-myqld__2', function (e) {
-				if ($('#dhpw-myqld__2:checked').length > 0) {
-					$('#dhpw-myqld__2').trigger('click');
-					$('#dhpw-myqld__1').trigger('click');
-					if ($('#dhpw-myqld__1:checked').length > 0) {
-						$('#dhpw-myqld__ra').trigger("checked");
-					}
-
-				} else {
-					$('#dhpw-myqld__1').trigger('click');
-					$('#dhpw-myqld__2').trigger('click');
-					if ($('#dhpw-myqld__1:checked').length > 0) {
-						$('#dhpw-myqld__ra').trigger("checked");
-					}
-
-				}
+				$('#dhpw-myqld__1').trigger('click');
+				$('#save-btn1').prop("disabled", false);
+				$('#cancel-btn1').prop("disabled", false);
 			});
 
 			$(document).on('click', '#dhpw-myqld__ra', function (e) {
-				if ($('#dhpw-myqld__ra:checked').length > 0) {
-					console.log('checking all');
-					$('#dhpw-myqld__1').trigger('click');
-					$('#dhpw-myqld__2').trigger('click');
+				if ($('#dhpw-myqld__1').is(":checked") || $('#dhpw-myqld__2').is(":checked")) {
 					$('#dhpw-myqld__ra').trigger('click');
 				} else {
-					console.log('unchecking all');
-					$('#dhpw-myqld__1').prop("checked", "false");
-					$('#dhpw-myqld__2').prop("checked", "false");
-					$('#dhpw-myqld__ra').trigger('click');
+					$('#dhpw-myqld__1').trigger('click');
+					$('#dhpw-myqld__2').trigger('click');
+					$('#dhpw-myqld__ra').prop('checked', false);
 				}
-				/**
-				 * 
-					$('#save-btn1').prop("disabled", false);
-					$('#cancel-btn1').prop("disabled", false);
-					$('#alert').attr('hidden', true);
-
-					$('#save-btn1').prop("disabled", false);
-					$('#cancel-btn1').prop("disabled", false);
-				**/
-
+				$('#save-btn1').prop("disabled", false);
+				$('#cancel-btn1').prop("disabled", false);
+			});
 
 			$(document).on('click', '#dhpw-myqld__3', function (e) {
 				$('#dhpw-myqld__4').trigger('click');
+				$('#save-btn2').prop("disabled", false);
+				$('#cancel-btn2').prop("disabled", false);
 			});
 
 			$(document).on('click', '#dhpw-myqld__4', function (e) {
