@@ -6321,7 +6321,7 @@
 			}
 
 			@media (max-width: 800px) {
-				aside.hidden {
+				aside.hide {
 					display: none !important;
 				}
 
@@ -16179,14 +16179,14 @@
 		<script type="text/javascript">
 			const menu = document.getElementById("menu");
 
-			menu.classList.add("hidden");
+			menu.classList.add("hide");
 
 			document.addEventListener("click", (e) => {
 				if (e.target.className.includes("au-main-nav__toggle")) {
-					if (menu.className.includes("hidden")) {
-						menu.classList.remove("hidden");
+					if (menu.className.includes("hide")) {
+						menu.classList.remove("hide");
 					} else {
-						menu.classList.add("hidden");
+						menu.classList.add("hide");
 					}
 				}
 			});
