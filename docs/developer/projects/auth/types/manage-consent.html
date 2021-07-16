@@ -280,8 +280,7 @@
 													disabled>Save
 													changes</button>
 												<button id="cancel-btn1" type="button"
-													class="cancel-btn hidden au-btn au-btn--tertiary"
-													disabled>Cancel</button>
+													class="cancel-btn au-btn au-btn--tertiary" disabled>Cancel</button>
 											</div>
 										</div>
 									</div>
@@ -397,10 +396,20 @@
 
 			$(document).on('click', '#dhpw-myqld__1', function (e) {
 				$('#dhpw-myqld__2').trigger('click');
+
+				if ($('#dhpw-myqld__ra').is(":checked")) {
+					$('#dhpw-myqld__ra').prop("checked", false);
+				}
+
 			});
 
 			$(document).on('click', '#dhpw-myqld__2', function (e) {
 				$('#dhpw-myqld__1').trigger('click');
+
+				if ($('#dhpw-myqld__ra').is(":checked")) {
+					$('#dhpw-myqld__ra').prop("checked", false);
+				}
+
 				$('#save-btn1').prop("disabled", false);
 				$('#cancel-btn1').prop("disabled", false);
 			});
