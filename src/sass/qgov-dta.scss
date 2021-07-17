@@ -334,6 +334,11 @@ section.section {
 	border: none;
 	margin: 0px auto;
 }
+@media (max-width: 500px) {
+	.govid-login {
+		width: 75% !important;
+	}
+}
 .percentage-indicator {
 	height: 40px;
 	background-color: $qg-accent !important;
