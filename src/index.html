@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>
+	<html class="no-js lt-ie8 lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+	<html class="no-js lt-ie9 ie8" lang="en">
+<![endif]-->
+<!--[if IE 9 ]>
+	<html class="no-js ie9" lang="en">
+<![endif]-->
+<!--[if !(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+	@@include('./blocks/head/metadata.html')
+	@@include('./blocks/head/twitter.html')
+	@@include('./blocks/head/opengraph.html')
+	@@include('./blocks/head/additional.html')
+
+	<title>QLD Design System | Queensland Government</title>
+
+</head>
+
+<!-- BODY/GRID-12 -->
+
+<body class="au-grid">
+
+	@@include('./blocks/accessibility/skiplinks.html')
+	@@include('./blocks/navigation/header.html')
+	@@include('./blocks/navigation/menu.html')
+
+	<!-- MAIN BODY -->
+	<main>
+		@@include('./blocks/navigation/breadcrumb.html')
+
+		<section class="au-body">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12" id="content">
+						<nav class="au-inpage-nav-links" aria-label="in page navigation">
+							<h2 class="au-inpage-nav-links__heading">Contents</h2>
+							<ul class="au-link-list">
+								<li><a href="./developer/gettingstarted.html">Getting started</a></li>
+								<!--<li><a href="./developer/components/index.html">Components</a></li>-->
+								<li><a href="./developer/page-models/index.html">Page models</a></li>
+								<li><a href="#">Components (coming soon)</a></li>
+								<li><a href="#">Platforms (coming soon)</a></li>
+								<li><a href="#">Community (coming soon)</a></li>
+								<!--<br>
+								<li><a href="#roadmap">Roadmap</a></li>
+                                <li><a href="#community">Community</a></li>-->
+							</ul>
+						</nav>
+						<section id="introduction" class="section">
+							<h2>Introduction</h2>
+							<p>The QLD design system is a prototype (not production ready) and is intended to be used
+								for web applications and website use cases outside of qld.gov.au.</p>
+							<!--<p>The design library is not intending to replace the SWE (Single Web Experience) framework instead it is intended to be used for websites requiring minimal page models, specifically transactions, registrations, authentication and other other flows requiring focus to be placed on the bodys form elements (where a user has elected to complete a service/form).</p>-->
+							<p><strong>Inspiration</strong></p>
+							<ul>
+								<li><a href="https://www.digital.nsw.gov.au/digital-service-toolkit"
+										target="_blank">Digital Service Toolkit</a></li>
+								<li><a href="https://www.gov.uk/apply-renew-passport" target="_blank">Apply online for a
+										UK passport (Gov.uk)</a></li>
+								<li><a href="https://www.service.nsw.gov.au/transaction/apply-aquatic-licence"
+										target="_blank">Apply for an aquatic licence (Eligibility)</a></li>
+							</ul>
+						</section>
+
+						<!--<section id="roadmap" class="section">
+							<h2>Roadmap</h2>
+							<p>[INSERT TRELLO BOARD]</p>
+						</section>
+
+						<section id="community" class="section">
+							<h2>Community</h2>
+							<p>[INSERT SLACK LINK]</p>
+                            <p>[INSERT GITHUB LINK]</p>
+						</section>-->
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--END CONTENT-->
+	</main>
+	<!-- END MAIN BODY -->
+
+	@@include('./blocks/footer/footer.html')
+	@@include('./blocks/footer/scripts.html')
+</body>
+
+</html>

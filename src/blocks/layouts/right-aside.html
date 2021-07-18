@@ -1,0 +1,134 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-7">
+			<h1>Form example (h1)</h1>
+			<p>
+				The page heading communicates the main focus of the page. Make your page
+				heading descriptive and keep it succinct.
+			</p>
+			<p>
+				These headings introduce, respectively, sections and subsections within
+				your body copy. As you create these headings, follow the same guidelines
+				that you use when writing section headings: Be succinct, descriptive,
+				and precise.
+			</p>
+
+			<div
+				class="au-page-alerts au-page-alerts--error hide_content"
+				id="error-summary"
+			>
+				<h3 tabindex="0" id="error-heading">There is a problem</h3>
+				<ul id="error-list"></ul>
+			</div>
+
+			<form action="index.html" id="form-1" novalidate>
+				<div class="au-form-group">
+					<label for="name" class="au-label">Full name</label>
+					<span class="au-error-text hide_content" id="full-name-error"></span>
+					<input
+						class="au-text-input au-text-input--width-lg"
+						name="Full name"
+						id="name"
+						type="text"
+						aria-required="true"
+						aria-describedby="full-name-error"
+						autocomplete="name"
+					/>
+				</div>
+
+				<div class="au-form-group">
+					<label for="email" class="au-label">Email</label>
+					<span class="au-hint-text" id="email-hint"
+						>We will only use this to respond to your request</span
+					>
+					<span class="au-error-text hide_content" id="email-error"></span>
+					<input
+						class="au-text-input au-text-input--width-lg"
+						name="Email"
+						id="email"
+						type="email"
+						aria-required="true"
+						aria-describedby="email-error email-hint"
+						autocomplete="email"
+					/>
+				</div>
+
+				<!--RADIO OPTIONS-->
+				<div class="au-form-group">
+					<fieldset class="au-fieldset">
+						<legend class="au-fieldset__legend">
+							<label class="au-label">Type of feedback</label>
+						</legend>
+						<div class="au-control-input au-control-input--block">
+							<input
+								class="au-control-input__input"
+								type="radio"
+								name="type-of-feedback"
+								id="compliment"
+								value="Compliment"
+								checked
+							/>
+							<label class="au-control-input__text" for="compliment"
+								>Compliment</label
+							>
+						</div>
+
+						<div class="au-control-input au-control-input--block">
+							<input
+								class="au-control-input__input"
+								type="radio"
+								name="type-of-feedback"
+								id="suggestion"
+								value="suggestion"
+							/>
+							<label class="au-control-input__text" for="suggestion"
+								>Suggestion</label
+							>
+						</div>
+
+						<div class="au-control-input au-control-input--block">
+							<input
+								class="au-control-input__input"
+								type="radio"
+								name="type-of-feedback"
+								id="complaint"
+								value="complaint"
+							/>
+							<label class="au-control-input__text" for="complaint"
+								>Complaint</label
+							>
+						</div>
+					</fieldset>
+				</div>
+
+				<div class="au-form-group">
+					<label class="au-label" for="help-comment">
+						How can we help you?</label
+					>
+					<span class="au-hint-text" id="description-hint"
+						>Add some detail about your complaint, suggestion or compliment.
+						Minimum 10 characters</span
+					>
+					<span
+						class="au-error-text hide_content"
+						id="description-error"
+					></span>
+					<textarea
+						class="au-text-input au-text-input--block"
+						name="Description"
+						id="help-comment"
+						aria-required="true"
+						aria-describedby="description-error description-hint"
+					></textarea>
+				</div>
+
+				<!--FORM SUBMIT BUTTON-->
+				<div class="au-form-group">
+					<button class="au-btn" id="form-submit" type="submit">
+						Send feedback
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

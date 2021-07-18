@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+ul.cpGroup {
+	max-width: 300px;
+}
+
+.page_navigation,
+.alt_page_navigation {
+	padding-bottom: 10px;
+}
+
+.page_navigation a,
+.alt_page_navigation a {
+	padding: 3px 5px;
+	margin: 2px;
+}
+.active_page {
+	color: black !important;
+}
+
+.circle li {
+	list-style: circle;
+}
+
+.disc li {
+	list-style: disc;
+}
+
+.nostyle li {
+	list-style: none;
+}
+
+.nopaddingli li {
+	padding: 0 0 0 0;
+}
+
+.noleftpadding {
+	padding-left: 0px;
+}
+
+#loginForm {
+	max-width: 362px;
+}
+
+.account_login {
+	border-bottom: 1px solid #d1d1d1;
+}
+.account_login_line {
+	height: 1px;
+	width: 100%;
+	background-color: #d1d1d1;
+	position: relative;
+	text-align: center;
+	margin-top: 25px;
+	margin-bottom: 30px;
+}
+.account_login_circle {
+	height: 12px;
+	width: 12px;
+	border-radius: 25px;
+	background-color: #f6f6f6;
+	z-index: 5;
+	top: -15px;
+	margin: auto;
+	position: relative;
+	padding: 10px;
+}
+.account_login_circle p {
+	margin-top: -8px;
+	margin-left: -2px;
+}
+.account_login .actions {
+	line-height: 1.2em;
+}
+.account_login_header img {
+	float: left;
+	width: 40px;
+	height: 40px;
+	padding-right: 17px;
+	padding-left: 7px;
+}
+.account_login_header h2 {
+	color: #777;
+	font-size: 1.1em;
+}
+.new_cp_group {
+	position: relative;
+	height: 65px;
+}
+.new_cp_group a {
+	position: absolute;
+	top: 25px;
+	left: 0;
+}
+@media screen and (min-width: 310px) {
+	.new_cp_group_vertical {
+		display: none !important;
+	}
+}
+@media screen and (max-width: 310px) {
+	.new_cp_group {
+		display: none !important;
+	}
+}
+.credential_provider_even a {
+	left: auto;
+	right: 0;
+}
+.account_login_maintenance {
+	position: relative;
+	margin-bottom: 15px;
+}
+.account_login_maintenance li {
+	display: inline-block;
+	line-height: 0.6em;
+	border-left: 1px solid #000;
+	padding: 0.2em 0.5em;
+}
+.account_login_maintenance li:first-child {
+	border-left: none;
+	padding: 0 0.5em 0 0;
+}
+@media screen and (max-width: 415px) {
+	.account_login_maintenance li {
+		border-left: none;
+		padding: 0 0.5em 10px 0;
+	}
+	.account_login_maintenance li:first-child {
+		border-left: none;
+		padding: 0 0.5em 20px 0;
+	}
+}
+.identity_maintenance {
+	padding: 0;
+}
+.identity_maintenance li {
+	list-style: none;
+	padding-top: 0.2em;
+	padding-bottom: 0.5em;
+}
+
+@media screen and (max-width: 480px) {
+	.dont-display-on-mobile,
+	#promo-banner {
+		display: none;
+	}
+}

@@ -1,19 +1,19 @@
 {
-	"name": "design-system-starter",
+	"name": "qld-design-system-starter",
 	"version": "1.1.1",
-	"description": "The Australian Government Design System Starter Pack",
+	"description": "The QLD GOV Design System Starter Pack",
 	"scripts": {
 		"build:autoprefix": "postcss docs/css/main.css -u autoprefixer -r",
 		"build:css": "node-sass --output-style compressed \"./src/sass/main.scss\" \"./docs/css/main.css\"",
 		"build:css:dev": "node-sass --output-style compact --source-map true src/sass/main.scss docs/css/main.css",
 		"build": "npm run build:css && npm run build:autoprefix",
 		"watch:sass": "onchange \"./src/sass/main.scss\" -- npm run build:css:dev && npm run build:autoprefix",
-		"serve": "browser-sync start --server ./docs -w --files \"./docs/**/*.html\" \"./docs/css/main.css\" \"./docs/js/script.js\"",
+		"serve": "gulp && browser-sync start --server ./docs -w --files \"./docs/**/*.html\" \"./docs/css/main.css\" \"./docs/js/script.js\"",
 		"watch": "npm run build && npm-run-all --parallel serve watch:sass"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/govau/design-system-starter.git"
+		"url": "https://github.com/qld-gov-au/qld-design-system.git"
 	},
 	"author": {
 		"name": "Australian Government - Digital Transformation Agency",
@@ -45,6 +45,8 @@
 	"license": "MIT",
 	"devDependencies": {
 		"browser-sync": "^2.26.14",
+		"gulp": "^4.0.2",
+		"gulp-file-include": "^2.3.0",
 		"npm-run-all": "^4.1.5",
 		"onchange": "^4.1.0"
 	},
