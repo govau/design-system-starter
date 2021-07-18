@@ -1,0 +1,43 @@
+li.captions, li.audio-description {
+  display: none;
+}
+
+.qg-ovt-transcript .actions {
+  width: 100%;
+  padding: 0;
+  border-top: 1px solid #777777;
+  background: #ffffff url(https://static.qgov.net.au/assets/v2/images/video/video-options-bg.png) center top repeat-x;
+}
+.qg-ovt-transcript .actions .button {
+  text-decoration: none;
+  color: #000000;
+  padding: .3em 1.5em .3em 2em;
+  margin: .5em;
+  background: #ffffff url(https://static.qgov.net.au/assets/v2/images/video/plus-flat.png) .7em .6em no-repeat;
+  border: 1px solid #999999;
+}
+.qg-ovt-transcript .qg-ovt-inner.shown .actions .button {
+  background-image: url(https://static.qgov.net.au/assets/v2/images/video/minus-flat.png);
+  padding-bottom: .85em;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.qg-ovt-inner {position: relative;}
+
+.qg-ovt-transcript .video-transcript {
+  padding: 0 1em; 
+  background: #ffffff;
+  max-height: 0px;
+  overflow: hidden;
+  -webkit-transition: max-height .5s; /* Safari */
+  transition: max-height .5s;
+}
+.qg-ovt-transcript .shown .video-transcript {
+  padding: 1em;   
+  top: -8px;
+  max-height: 2000px;
+  overflow: visible;
+  -webkit-transition: max-height .5s; /* Safari */
+  transition: max-height .5s;
+}
+

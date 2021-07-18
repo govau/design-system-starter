@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://blarga.hpw.qld.gov.au/ -->
+<html style=""
+    class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths no-ios6 retina  retina">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        body {
+            transition: opacity ease-in 0.2s;
+        }
+
+        body[unresolved] {
+            opacity: 0;
+            display: block;
+            overflow: hidden;
+            position: relative;
+        }
+    </style>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Page version 1.0.0.0 (1/01/2000 12:00:00 AM) -->
+    <title>Bond Loan and Rental Grant application | Homes and housing | Queensland Government</title>
+
+
+
+    <script src="./res/jquery"></script>
+    <script id="dataslayerLaunchMonitors">
+        // console.log('** dataslayer: injecting Launch monitors **');
+        window._satellite = window._satellite || {};
+        window._satellite._monitors = window._satellite._monitors || [];
+        window._satellite._monitors.push({
+            ruleTriggered: function (e) {
+                window.parent.postMessage(
+                    {
+                        type: 'dataslayer_launchruletriggered',
+                        url: window == window.parent ? window.location.href : 'iframe',
+                        data: JSON.parse(JSON.stringify(e.rule)),
+                    },
+                    '*'
+                );
+            },
+            ruleCompleted: function (e) {
+                // console.log('** dataslayer: Launch rule completed **', e.rule);
+                var rule = JSON.parse(JSON.stringify(e.rule));
+                var sendRule = function () {
+                    if (window.dataslayer) {
+                        window.parent.postMessage(
+                            {
+                                type: 'dataslayer_launchrulecompleted',
+                                url: window == window.parent ? window.location.href : 'iframe',
+                                data: rule,
+                            },
+                            '*'
+                        );
+                        // console.log('** dataslayer: posted rule '+rule+'**'); 
+                    } else {
+                        if (document.readyState === 'complete') {
+                            // console.log('** dataslayer: giving up on launch **');
+                            window._dataslayerQueue = window._dataslayerQueue || [];
+                            window._dataslayerQueue.push({
+                                type: 'dataslayer_launchrulecompleted',
+                                url: window == window.parent ? window.location.href : 'iframe',
+                                data: rule,
+                            });
+                            return;
+                        } else {
+                            // console.log('** dataslayer: waiting 250ms to repost rule **');
+                            window.setTimeout(sendRule, 250);
+                        }
+                    }
+                }
+                sendRule();
+                if (
+                    window._satellite &&
+                    window._satellite._container &&
+                    window._satellite._container.dataElements &&
+                    true
+                ) {
+                    var elementNames = Object.keys(
+                        window._satellite._container.dataElements
+                    ).sort(function (a, b) {
+                        var nameA = a.toUpperCase();
+                        var nameB = b.toUpperCase();
+
+                        if (nameA < nameB) {
+                            return -1;
+                        } else if (nameA > nameB) {
+                            return 1;
+                        } else {
+                            return 0;
+                        }
+                    });
+
+                    let launchElements = {};
+
+                    for (const elementName of elementNames) {
+                        var newElement = JSON.parse(
+                            JSON.stringify(
+                                window._satellite._container.dataElements[elementName]
+                            )
+                        );
+
+                        let cleanValue = window._satellite.getVar(elementName);
+                        if (typeof cleanValue === 'function') {
+                            cleanValue = '(function)';
+                        } else if (
+                            cleanValue !== null &&
+                            typeof cleanValue === 'object' &&
+                            typeof cleanValue.then === 'function'
+                        ) {
+                            cleanValue = '(Promise)';
+                        }
+                        launchElements[elementName] = cleanValue;
+                        // launchElements.push({
+                        //   key: elementNames[i],
+                        //   value: cleanValue,
+                        //   element: newElement,
+                        // });
+                    }
+                    try {
+                        window.parent.postMessage(
+                            {
+                                type: 'dataslayer_launchdataelements',
+                                data: 'found',
+                                url: window == window.parent ? window.location.href : 'iframe',
+                                elements: launchElements
+                            },
+                            '*'
+                        );
+                    } catch (e) {
+                        console.warn(e);
+                    }
+
+                }
+            },
+            ruleConditionFailed: function (e) {
+                window.parent.postMessage(
+                    {
+                        type: 'dataslayer_launchrulefailed',
+                        url: window == window.parent ? window.location.href : 'iframe',
+                        data: JSON.parse(JSON.stringify(e.rule)),
+                    },
+                    '*'
+                );
+            },
+        });
+    </script>
+
+
+    <!-- BEGIN: head-assets.cshtml -->
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" type="text/css" href="./res/qgov.css" media="all">
+    <!--[if lt IE 9]><link rel="stylesheet" href="//static.qgov.net.au/assets/v2/style/qgov-ie.css" type="text/css" media="all" /><![endif]-->
+
+    <!-- layout-small is assumed by default (combined with qgov.css) -->
+    <link href="./res/layout-medium.css" media="only all and (min-width: 640px) and (max-width: 980px)" rel="stylesheet"
+        type="text/css">
+    <link href="./res/layout-large.css" media="only all and (min-width: 980px)" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" href="https://static.qgov.net.au/assets/v2/images/skin/favicon.ico">
+    <meta prefix="og:http://ogp.me/ns#" property="og:image"
+        content="https://static.qgov.net.au/assets/v2/images/skin/qg-coa-ogp.png">
+
+    <!-- Grab Google CDN's jQuery. Fall back to local copy if necessary -->
+
+    <script type="text/javascript" src="./res/qgov-environment.js" id="qgov-environment"></script>
+    <!--[if lt IE 9]>
+	<script type="text/javascript">document.createElement('abbr');document.createElement('time');</script>
+	<script type="text/javascript" src="//static.qgov.net.au/assets/v2/script/ie-layout.js"></script>
+<![endif]-->
+
+
+    <!-- END: head-assets.cshtml -->
+    <link href="./res/css" rel="stylesheet">
+
+
+    <meta name="description">
+    <meta name="keywords" content="renting,bond,loan,balance,repayment,refund,transfer,housing">
+    <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/">
+    <link rel="schema.AGLSTERMS" href="http://www.agls.gov.au/agls/terms/">
+    <meta name="DCTERMS.creator" scheme="AGLSTERMS.GOLD"
+        content="c=AU; o=The State of Queensland; ou=Department of Housing and Public Works; ou=Housing Projects">
+    <meta name="DCTERMS.publisher" scheme="AGLSTERMS.AglsAgent"
+        content="corporateName=The State of Queensland; jurisdiction=Queensland">
+    <meta name="DCTERMS.created">
+    <meta name="DCTERMS.modified">
+    <meta name="DCTERMS.title" content="Bond Loan and Rental Grant application | Homes and housing">
+    <meta name="DCTERMS.description">
+    <meta name="DCTERMS.identifier" scheme="DCTERMS.URI" content="https://blarga.hpw.qld.gov.au/">
+    <meta name="DCTERMS.subject" scheme="AGLSTERMS.APAIS" content="Homes and housing">
+    <meta name="DCTERMS.type" scheme="DCTERMS.DCMIType" content="Text">
+    <meta name="AGLSTERMS.documentType" scheme="AGLSTERMS.agls-document" content="form">
+    <meta name="DCTERMS.audience" scheme="AGLSTERMS.agls-audience" content="all">
+    <meta name="DCTERMS.jurisdiction" scheme="AGLSTERMS.AglsJuri" content="Queensland">
+    <meta name="DCTERMS.license" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/3.0/au/">
+
+    <script src="./res/modernizr"></script>
+
+
+    <script src="./res/jqueryval"></script>
+
+    <script src="./res/customval"></script>
+
+
+    <script src="./res/customhelpers"></script>
+
+    <script src="./res/jquery-ui-1.11.4.min.js" type="text/javascript"></script>
+    <script src="./res/jquery.ui.datepicker-en-GB.js" type="text/javascript"></script>
+    <script src="./res/CustomDateValidation.js" type="text/javascript"></script>
+
+
+
+    <script src="./res/quicksilver.js"></script>
+
+    <script src="./res/jquery.quickselect.js"></script>
+
+
+    <!-- application specific css/scripts -->
+    <link href="./res/jqueryui" rel="stylesheet">
+
+    <link href="./res/jquery.quickselect.css" rel="stylesheet">
+
+    <link href="./res/Collapse.css" rel="stylesheet">
+
+    <script src="./res/Collapse.js"></script>
+
+
+
+    <link rel="stylesheet" href="./res/qgov-misc.css">
+</head>
+
+<body id="qld-gov-au" style="">
+    <!-- BEGIN: header.cshtml -->
+    <!--[if lt IE 9]><script type="text/javascript">jQuery && jQuery.transformer({addClasses:true});</script><![endif]-->
+
+    <div id="access" class="hidden" role="navigation" aria-labelledby="landmark-label">
+        <h2 id="landmark-label">Skip links and keyboard navigation</h2>
+        <ul>
+            <li><a href="https://blarga.hpw.qld.gov.au/#content">Skip to content</a></li>
+            <li id="access-instructions"><a
+                    href="https://blarga.hpw.qld.gov.au/help/accessibility/keyboard.html#section-aria-keyboard-navigation">Use
+                    tab and cursor keys to move around the page (more information)</a></li>
+        </ul>
+    </div>
+    <div id="header-wrapper">
+        <div id="header" role="banner" aria-labelledby="landmark-label1">
+            <div id="header-bg"></div>
+            <div class="box-sizing">
+                <div class="max-width">
+                    <h2 id="landmark-label1">Site header</h2>
+                    <div id="qg-coa">
+                        <a href="https://www.qld.gov.au/">
+                            <!--[if gt IE 8]><!--><img src="./res/qg-coa.svg" width="287" height="50"
+                                alt="Queensland Government home">
+                            <!--<![endif]-->
+                            <!--[if (lte IE 8)&(gt IE 6)]><img src="https://static.qgov.net.au/assets/v2/images/skin/qg-coa.png" width="287" height="50" alt="Queensland Government home" /><![endif]-->
+                            <!--[if lte IE 6]><img src="https://static.qgov.net.au/assets/v2/images/skin/qg-coa-ie6.png" width="287" height="50" alt="Queensland Government home" /><![endif]-->
+                            <img src="./res/qg-coa-print.png" class="print-version" alt="">
+                        </a>
+                    </div>
+                    <ul id="tools" role="navigation">
+                        <li class="nav-contact"><a accesskey="4" href="https://www.qld.gov.au/contact-us">Contact us</a>
+                        </li>
+                        <li class="last-child" id="qgcidm-avatar"></li>
+
+                        <li id="header-search">
+                            <form action="https://find.search.qld.gov.au/s/search.html" id="search-form" role="search">
+                                <div>
+                                    <input type="hidden" name="form" value="simple-adv">
+                                    <label for="search-query" class="visuallyhidden">Search website</label>
+                                    <input accesskey="5" type="search" name="query" id="search-query" size="27" value=""
+                                        placeholder="Search website" role="combobox" autocomplete="off"
+                                        aria-autocomplete="both" aria-owns="suggestbox">
+                                    <ul role="listbox" class="listbox" aria-busy="true" id="suggestbox"></ul>
+                                    <button id="search-button" type="submit">Search</button>
+                                    <input type="hidden" name="num_ranks" value="10">
+                                    <input type="hidden" name="tiers" value="off">
+                                    <input type="hidden" name="collection" value="qld-gov">
+                                    <input type="hidden" name="profile" value="qld">
+                                </div>
+                            </form>
+                        </li>
+
+                    </ul>
+                    <div id="nav-site" role="navigation" aria-labelledby="landmark-label">
+                        <ul>
+                            <li class="nav-residents">
+                                <a href="https://www.qld.gov.au/queenslanders">For Queenslanders</a>
+                            </li>
+                            <li class="nav-business">
+                                <a href="http://www.business.qld.gov.au/">Business and industry</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- END: Header.cshtml -->
+    <div id="page-container">
+        <div class="max-width">
+            <div id="breadcrumbs" role="navigation" aria-labelledby="landmark-label2">
+                <h2 id="landmark-label2">You are here:</h2>
+                <ol>
+                    <!-- BEGIN: breadcrumb-citizen.cshtml -->
+                    <li class="nav-home"><a href="http://www.qld.gov.au/">Queensland Government home</a></li>
+                    <li class="nav-residents"><a href="http://www.qld.gov.au/queenslanders/">For Queenslanders</a></li>
+
+                    <!-- END: breadcrumb-citizen.cshtml -->
+                    <li><a href="http://www.qld.gov.au/housing/">Homes and housing</a></li>
+                    <!-- BEGIN section: RelativeBreadCrumb -->
+
+                    <li><a href="http://www.qld.gov.au/housing/renting/">Renting</a></li>
+                    <li><a href="http://www.qld.gov.au/housing/renting/rent-assistance">Help with renting</a></li>
+                    <li><a href="http://www.qld.gov.au/housing/renting/bond-loan">Bond Loans and Rental Grants</a></li>
+
+                    <!-- END section: RelativeBreadCrumb -->
+                    <li class="last-child">Bond Loan and Rental Grant application</li>
+                </ol>
+            </div>
+            <div id="content-container">
+                <div id="content" role="main" aria-labelledby="landmark-label12">
+                    <div class="article" role="article" aria-labelledby="landmark-label12" style="height: auto;">
+                        <div class="box-sizing">
+                            <div class="border">
+                                <!-- BEGIN: global-alert.cshtml -->
+                                <!-- global alert -->
+
+
+                                <!-- END: global-alert.cshtml -->
+                                <noscript>
+                                    <div class="alert-message">
+                                        <b>JavaScript</b> is <b>required</b> for this site to function correctly.
+                                    </div>
+                                </noscript>
+
+
+                                <h1 id="landmark-label12">Bond Loan and Rental Grant application</h1>
+                                <!-- BEGIN: page-options-pre.cshtml -->
+
+                                <!-- END: page-options-pre.cshtml -->
+                                <div class="section" style="min-height: 400px;">
+
+
+
+
+
+                                    <div class="row">
+                                        <p>
+                                            A <strong>Bond Loan</strong> is an interest-free loan to cover your rental
+                                            bond
+                                            when moving into private rental accommodation. The loan is up to a maximum
+                                            of
+                                            4 weeks rent, and must be repaid.
+                                        </p>
+                                        <p>
+                                            A <strong>Rental Grant</strong> is a one-off grant of 2 weeks rent – it
+                                            helps
+                                            people in housing crisis to move into private rental housing. A Rental Grant
+                                            is
+                                            paid directly to your agent or lessor (landlord) after the tenancy starts.
+                                        </p>
+
+                                        <h2>1. Check your eligibility</h2>
+                                        <p>
+                                            You may be eligible to apply for a bond loan, rental grant or both,
+                                            depending on your situation.
+                                            There are different rules for bond loans and rental grants.
+                                        </p>
+                                        <p>
+                                            <a class="custombutton secondary"
+                                                href="https://blarga.hpw.qld.gov.au/Eligibility/CheckEligibility">Eligibility
+                                                tool</a><small class="print-link-url"> (
+                                                https://blarga.hpw.qld.gov.au/Eligibility/CheckEligibility )</small>
+                                            <a class="custombutton secondary"
+                                                href="https://blarga.hpw.qld.gov.au/Eligibility/BondLoanCalculator">Bond
+                                                Loan calculator</a><small class="print-link-url"> (
+                                                https://blarga.hpw.qld.gov.au/Eligibility/BondLoanCalculator )</small>
+                                        </p>
+
+                                        <h2>2. Apply for assistance</h2>
+
+                                        <div
+                                            style="background-color: #eef4f6; border-left:4px solid #1e77aa; margin: 24px 0px; padding: 3px 15px">
+                                            <h3 id="landmark-label11">Try our new way of applying for these services.
+                                            </h3>
+                                            <p>
+                                                We are trying a new way of delivering services to Queenslanders online.
+                                                "myQld" is a new website that lets us
+                                                trial new features and using the feedback tools, you can tell us what
+                                                works for you, so we can make
+                                                our online services better. We are aiming to make it easier for you to
+                                                transact with Government.
+                                                Bond loans and rental grants are the first of these services we are
+                                                trying on myQld.
+                                            </p>
+                                            <p>
+                                                Create your profile and upload your identification to make it faster to
+                                                apply for bond loans and rental grants
+                                                now, and to use other Queensland Government services in the future.
+                                            </p>
+                                            <p>
+                                                <a href="../auth.html" class="custombutton primary">Apply in
+                                                    myQld</a><small class="print-link-url"> (
+                                                    https://www.beta.my.qld.gov.au/ )</small>
+                                            </p>
+                                            <p>
+                                                If you are experiencing <b>domestic and family violence</b>,
+                                                use the following forms or call us for assistance to apply on
+                                                ph.1300&nbsp;650&nbsp;282.
+                                            </p>
+                                            <ul>
+                                                <li><a href="https://blarga.hpw.qld.gov.au/OnlineApplication/BondLoan">Bond
+                                                        Loan Application</a><small class="print-link-url"> (
+                                                        https://blarga.hpw.qld.gov.au/OnlineApplication/BondLoan
+                                                        )</small></li>
+                                                <li><a
+                                                        href="https://blarga.hpw.qld.gov.au/OnlineApplication/RentalGrant">Rental
+                                                        Grant Application</a><small class="print-link-url"> (
+                                                        https://blarga.hpw.qld.gov.au/OnlineApplication/RentalGrant
+                                                        )</small></li>
+                                                <li><a
+                                                        href="https://blarga.hpw.qld.gov.au/OnlineApplication/BondLoanAndRentalGrant">Bond
+                                                        Loan and Rental Grant Application</a><small
+                                                        class="print-link-url"> (
+                                                        https://blarga.hpw.qld.gov.au/OnlineApplication/BondLoanAndRentalGrant
+                                                        )</small></li>
+                                            </ul>
+                                        </div>
+
+
+                                        <p>
+                                            You can also download and complete a hard copy
+                                            <a href="http://www.hpw.qld.gov.au/SiteCollectionDocuments/RentAssist.pdf"
+                                                onclick="window.open(this.href); return false;" class="download">
+                                                <span class="title">Application Form</span> <span class="meta">(PDF,
+                                                    260KB).</span>
+                                            </a><small class="print-link-url"> (
+                                                http://www.hpw.qld.gov.au/SiteCollectionDocuments/RentAssist.pdf
+                                                )</small>
+                                            <small
+                                                class="print-link-url">(http://www.hpw.qld.gov.au/SiteCollectionDocuments/RentAssist.pdf)</small>
+                                            In addition, if you have more than two applicants, download and complete the
+                                            <a href="http://hpwstage/SiteCollectionDocuments/RentAssistAddTenants.pdf"
+                                                onclick="window.open(this.href); return false;" class="download">
+                                                <span class="title">Additional Applicants Form</span> <span
+                                                    class="meta">(PDF, 101KB).</span>
+                                            </a><small class="print-link-url"> (
+                                                http://hpwstage/SiteCollectionDocuments/RentAssistAddTenants.pdf
+                                                )</small>
+                                            <small
+                                                class="print-link-url">(http://hpwstage/SiteCollectionDocuments/RentAssistAddTenants.pdf)</small>
+                                        </p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="asides">
+                    <div class="box-sizing">
+                        <div class="border">
+                            <!-- BEGIN: global-aside.cshtml -->
+                            <!-- global aside -->
+
+                            <!-- END: global-aside.cshtml -->
+                            <!-- BEGIN section: aside -->
+
+                            <div class="aside login" style="display:block" role="complementary"
+                                aria-labelledby="landmark-label4">
+                                <div class="aside-inner">
+                                    <h2 id="landmark-label4">Login</h2>
+                                    <form action="https://blarga.hpw.qld.gov.au/Account/Login?returnUrl=%2F"
+                                        method="post" novalidate="novalidate"><input name="__RequestVerificationToken"
+                                            type="hidden"
+                                            value="JF4gjo2hIejivmr8v4g-8nWlaN7a0JDzlGxCPu8ZUdfp4fRwYloQBBB1yRGRKNuqWJZAlbUijRY3_MXDAZFICTlFrpe8QQu-Zjx3srZnC_81">
+                                        <div class="exlayouttable">
+                                            <div>
+                                                Email:<br>
+                                                <input class="featureLogininput" data-val="true"
+                                                    data-val-email="The Email field is not a valid e-mail address."
+                                                    data-val-required="The Email field is required." id="Email"
+                                                    name="Email" type="text" value="">
+                                            </div>
+                                            <div>
+                                                Password:<br>
+                                                <input autocomplete="off" class="featureLogininput" data-val="true"
+                                                    data-val-required="The Password field is required." id="Password"
+                                                    name="Password" type="password">
+                                                <br>
+                                                <a class="smalllink" target="_self" id="forgotPasswordLink"
+                                                    href="https://blarga.hpw.qld.gov.au/Account/ForgotPassword"
+                                                    style="display: block;">Forgotten your password?</a><small
+                                                    class="print-link-url"> (
+                                                    https://blarga.hpw.qld.gov.au/Account/ForgotPassword )</small>
+                                            </div>
+                                            <div style="margin-top:10px;">
+                                                <span style="display: inline-block; margin-right: 1em;" class="actions">
+                                                    <strong><input type="submit" class="featurebuttons" value="Login"
+                                                            name="login_button"
+                                                            formnovalidate="formnovalidate"></strong>
+                                                </span>
+                                                &nbsp;
+                                                <span style="display: inline-block; margin-right: 1em;" class="actions">
+                                                    <a href="https://blarga.hpw.qld.gov.au/Account/Register"
+                                                        class="custombutton"
+                                                        style="padding-right: 2em !important; padding-left: 2em !important; margin-bottom: 0 !important">Register</a><small
+                                                        class="print-link-url"> (
+                                                        https://blarga.hpw.qld.gov.au/Account/Register )</small>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <script type="text/javascript">
+                                $(document).ready(function () {
+                                    $('.aside #forgotPasswordLink').click(function (event) {
+                                        event.preventDefault();
+                                        var emailValue = $(".aside #Email").val();
+                                        var hrefParams = "", hrefBase = $(this).prop('href');
+                                        if (emailValue != null && emailValue.length > 0 &&
+                                            $.validator.methods['email'].call({ optional: function () { return false; } }, emailValue)) {
+                                            hrefParams = '?' + $.param({ 'email': emailValue });
+                                        }
+                                        window.location.href = hrefBase + hrefParams;
+                                    });
+                                })
+                            </script>
+
+                            <div class="aside" style="display:block" role="complementary"
+                                aria-labelledby="landmark-label5">
+                                <h2 id="landmark-label5">Check the status of your application</h2>
+                                <p>If you have already applied for a Bond Loan or Rental Grant. All you need is your
+                                    application reference number, Bond Loan or Rental Grant number and your date of
+                                    birth.</p>
+                                <p class="actions">
+                                    <strong>
+
+                                        <a class="custombutton primary"
+                                            href="https://blbs.hpw.qld.gov.au/LoanApplicationStatus">Check application
+                                            status</a><small class="print-link-url"> (
+                                            https://blbs.hpw.qld.gov.au/LoanApplicationStatus )</small>
+                                        <small class="print-link-url">
+                                            ( https://blbs.hpw.qld.gov.au/LoanApplicationStatus ) )
+                                        </small>
+                                    </strong>
+                                </p>
+                            </div>
+
+                            <!-- END section: aside -->
+                        </div>
+                    </div>
+                </div>
+                <div id="meta-wrapper">
+                    <div class="meta-box-sizing">
+                        <div class="border">
+                            <div id="document-properties">
+                                <div class="box-sizing">
+                                    <dl>
+                                        <dt class="visuallyhidden">Licence</dt>
+                                        <dd id="document-licence">
+                                            <a href="http://creativecommons.org/licenses/by-nd/3.0/au/" rel="license"
+                                                title="Text available under Creative Commons Attribution-NoDerivs 3.0 Australia (CC BY-ND 3.0) licence">
+                                                <img src="./res/by-nd-80x15.png"
+                                                    alt="Creative Commons Attribution-NoDerivs 3.0 Australia (CC BY-ND 3.0)">
+                                            </a><small class="print-link-url"> (
+                                                http://creativecommons.org/licenses/by-nd/3.0/au/ )</small>
+                                        </dd>
+
+                                    </dl>
+                                </div>
+                            </div>
+                            <!-- BEGIN: page-options-post.cshtml-->
+                            <!-- noindex -->
+                            <div id="post-page-options" class="page-options">
+                                <ul>
+                                    <li class="feedback"><a href="https://blarga.hpw.qld.gov.au/#page-feedback"
+                                            class="button selected" id="page-feedback-useful">Feedback</a></li>
+                                    <!-- <li class="subscribe"><a href="404.html"><img alt="Subscribe" src="//static.qgov.net.au/assets/v2/images/skin/button-subscribe.png" /></a></li>-->
+                                    <li class="share">
+                                        <!-- <img src="//static.qgov.net.au/assets/v2/images/skin/button-share-share.png" alt="Share: " />-->
+                                        <h2>Share:</h2>
+                                        <a href="http://www.qld.gov.au/share/?via=facebook&amp;title=Bond%20Loan%20and%20Rental%20Grant%20application&amp;url=https%3A%2F%2Fblarga.hpw.qld.gov.au%2F"
+                                            title="Share using Facebook">
+                                            <img src="./res/button-share-facebook.png" alt="Share using Facebook"></a>
+                                        <a href="http://www.qld.gov.au/share/?via=twitter&amp;title=Bond%20Loan%20and%20Rental%20Grant%20application&amp;url=https%3A%2F%2Fblarga.hpw.qld.gov.au%2F"
+                                            title="Share using Twitter">
+                                            <img src="./res/button-share-twitter.png" alt="Share using Twitter"></a>
+                                        <a href="http://www.qld.gov.au/share/?via=linkedin&amp;title=Bond%20Loan%20and%20Rental%20Grant%20application&amp;url=https%3A%2F%2Fblarga.hpw.qld.gov.au%2F"
+                                            title="Share using LinkedIn">
+                                            <img src="./res/button-share-linkedin.png" alt="Share using LinkedIn"></a>
+                                        <a href="http://www.qld.gov.au/share/?title=Bond%20Loan%20and%20Rental%20Grant%20application&amp;url=https%3A%2F%2Fblarga.hpw.qld.gov.au%2F"
+                                            title="Share using another service…">
+                                            <img src="./res/button-share-more.png"
+                                                alt="Share using another service…"></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div id="page-feedback" aria-labelledby="landmark-label3" hidden="hidden"
+                                aria-hidden="true">
+                                <form>
+                                    <ol class="questions">
+                                        <li>
+                                            <fieldset id="page-feedback-about">
+                                                <legend><span class="label">Is your feedback about:</span></legend>
+                                                <ul class="choices">
+                                                    <li><input type="radio" name="page-feedback-about"
+                                                            value="this website" id="page-feedback-about-this-website"
+                                                            disabled="disabled"><label
+                                                            for="page-feedback-about-this-website">this website</label>
+                                                    </li>
+                                                    <li><input type="radio" name="page-feedback-about"
+                                                            value="a government service"
+                                                            id="page-feedback-about-a-government-service"
+                                                            disabled="disabled"><label
+                                                            for="page-feedback-about-a-government-service">a government
+                                                            service, department or staff member?</label></li>
+                                                </ul>
+                                            </fieldset>
+                                        </li>
+                                    </ol>
+                                </form>
+                                <div class="status info" hidden="hidden" aria-hidden="true">
+                                    <h2>Feedback on government services, departments and staff</h2>
+                                    <p>Please use our <a href="https://www.qld.gov.au/contact-us/complaints/">complaints
+                                            and compliments form</a><small class="print-link-url"> (
+                                            https://www.qld.gov.au/contact-us/complaints/ )</small>.</p>
+                                </div>
+                                <form method="post"
+                                    action="https://www.smartservice.qld.gov.au/services/submissions/email/feedback/feedback"
+                                    class="form" hidden="hidden" aria-hidden="true">
+
+                                    <h2 id="landmark-label3">Page feedback</h2>
+
+                                    <a href="https://blarga.hpw.qld.gov.au/#page-feedback-privacy"
+                                        class="expandable-toggle">Your privacy</a>
+                                    <div id="page-feedback-privacy" class="preamble expandable-active"
+                                        style="display: none;">
+                                        <h3>Your privacy</h3>
+                                        <p>Information collected through this form is used to improve this website.</p>
+                                        <p>Any information you submit that could identify you (e.g. name, email address)
+                                            will be stored securely, and destroyed after we process your feedback.</p>
+                                    </div>
+
+                                    <ol class="questions">
+                                        <li id="page-was-useful">
+                                            <fieldset>
+                                                <legend>
+                                                    <span class="label">This page was</span>
+                                                </legend>
+                                                <ul class="choices compact">
+                                                    <li>
+                                                        <input type="radio" name="useful" id="page-was-useful-yes"
+                                                            value="yes" disabled="disabled">
+                                                        <label for="page-was-useful-yes">Useful</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="useful" id="page-was-useful-no"
+                                                            value="no" disabled="disabled">
+                                                        <label for="page-was-useful-no">Not useful</label>
+                                                    </li>
+                                                </ul>
+                                            </fieldset>
+                                        </li>
+                                        <li class="instruction">
+                                            <p>
+                                                We want this information to be the best it can be and we know we can’t
+                                                do it without you.
+                                                Let us know what you thought of this page and what other information you
+                                                would like to see.
+                                            </p>
+                                            <p>We do not reply to feedback. <a
+                                                    href="http://www.qld.gov.au/contact-us/">Contact us if you need a
+                                                    response</a><small class="print-link-url"> (
+                                                    http://www.qld.gov.au/contact-us/ )</small>.</p>
+                                        </li>
+
+                                        <li>
+                                            <label for="feedback-comments">
+                                                <span class="label">Other comments</span>
+                                            </label>
+                                            <textarea name="comments" id="feedback-comments" cols="50" rows="7"
+                                                disabled="disabled"></textarea>
+                                        </li>
+
+                                        <li class="section">
+                                            <fieldset id="feedback-contact">
+                                                <legend>
+                                                    <span class="h3">Contact (optional)</span>
+                                                </legend>
+                                                <ol class="questions">
+                                                    <li>
+                                                        <label for="feedback-contact-input">
+                                                            <span class="label">Please provide your <strong>phone
+                                                                    number</strong> or <strong>email address</strong> if
+                                                                you are happy for us to contact you with any follow-up
+                                                                questions</span>
+                                                        </label>
+                                                        <input type="text" value="" name="contact"
+                                                            id="feedback-contact-input" size="48" disabled="disabled">
+                                                    </li>
+                                                </ol>
+                                            </fieldset>
+                                        </li>
+
+                                        <li id="feedback-captcha-container">
+                                            <label for="feedback-captcha">Please leave this blank (this helps us
+                                                identify automatic spam)</label>
+                                            <input type="text" name="captcha" id="feedback-captcha" value=""
+                                                disabled="disabled">
+                                        </li>
+
+                                        <li class="footer">
+                                            <input type="hidden" name="franchise" id="franchise" value="housing"
+                                                disabled="disabled">
+                                            <input type="hidden" name="page-title" id="page-title"
+                                                value="Bond Loan and Rental Grant application" disabled="disabled">
+                                            <input type="hidden" name="page-url" value="" disabled="disabled">
+                                            <input type="hidden" name="page-referer" value="" disabled="disabled">
+                                            <ul class="actions">
+                                                <li><strong>
+                                                        <input type="submit" value="Submit feedback"
+                                                            disabled="disabled"></strong></li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </form>
+                            </div>
+                            <!-- endnoindex -->
+
+                            <!-- END: page-options-post.cshtml -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="nav-section" role="navigation" aria-labelledby="landmark-label6">
+                <div class="box-sizing">
+                    <!-- BEGIN section: NavMenu -->
+
+                    <h2 id="landmark-label6"><a href="http://www.qld.gov.au/housing/renting/bond-loan">Bond Loans and
+                            Rental Grants</a></h2>
+                    <ul>
+                        <li><a href="http://www.qld.gov.au/housing/renting/bond-loan-rental-grant-guide/">Guide to Bond
+                                Loans and Rental Grants</a></li>
+                        <li class="expanded">
+                            <div class="current-page"><a href="https://blarga.hpw.qld.gov.au/">Bond Loan and Rental
+                                    Grant application</a></div>
+
+                            <ul>
+                                <li><a href="https://blarga.hpw.qld.gov.au/Eligibility/BondLoanCalculator">How much can
+                                        I borrow?</a></li>
+                                <li><a href="https://blarga.hpw.qld.gov.au/Eligibility/CheckEligibility">Check your
+                                        eligibility</a></li>
+
+                                <li><a href="https://blarga.hpw.qld.gov.au/OnlineApplication/BondLoan">Bond Loan
+                                        application</a></li>
+
+                                <li><a href="https://blarga.hpw.qld.gov.au/OnlineApplication/RentalGrant">Rental Grant
+                                        application</a></li>
+
+                                <li><a href="https://blarga.hpw.qld.gov.au/OnlineApplication/BondLoanAndRentalGrant">Bond
+                                        Loan and Rental Grant application</a></li>
+
+                                <li>
+
+                                    <a href="https://blbs.hpw.qld.gov.au/LoanApplicationStatus">Bond Loan/Rental Grant
+                                        application status</a>
+                                </li>
+                                <li>
+
+                                    <a
+                                        href="https://www.hpw.qld.gov.au/HousingSelfService/SelfService/UpdateBondLoanDetails">Update
+                                        your Bond Loan contact details</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                    <!-- END section: NavMenu -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BEGIN: footer.cshtml-->
+    <div id="footer" role="contentinfo" aria-labelledby="landmark-label13">
+        <div id="fat-footer" role="navigation" aria-labelledby="landmark-label7">
+            <div class="max-width">
+                <div class="box-sizing">
+                    <h2 id="landmark-label7">Explore this site</h2>
+                    <div class="section controlset" aria-labelledby="landmark-label8" id="controlset-0" role="menu"
+                        tabindex="-1">
+                        <h3 id="landmark-label8"><a href="http://www.qld.gov.au/" id="control-1" role="menuitem"
+                                tabindex="0" class="control">Queensland Government</a></h3>
+                        <ul>
+                            <li><a href="http://www.qld.gov.au/about/contact-government/contacts/" id="control-2"
+                                    role="menuitem" tabindex="-1" class="control">Government contacts</a></li>
+                            <li><a href="http://www.qld.gov.au/about/contact-government/have-your-say/" id="control-3"
+                                    role="menuitem" tabindex="-1" class="control">Have your say</a></li>
+                            <li><a href="http://www.qld.gov.au/about/staying-informed/" id="control-4" role="menuitem"
+                                    tabindex="-1" class="control">Staying informed</a></li>
+                            <li><a href="http://www.qld.gov.au/about/government-jobs/" id="control-5" role="menuitem"
+                                    tabindex="-1" class="control">Government jobs</a></li>
+                            <li><a href="http://www.qld.gov.au/about/how-government-works/" id="control-6"
+                                    role="menuitem" tabindex="-1" class="control">How government works</a></li>
+                            <li><a href="http://data.qld.gov.au/" id="control-7" role="menuitem" tabindex="-1"
+                                    class="control">Queensland Government data</a></li>
+                            <li><a href="http://publications.qld.gov.au/" id="control-8" role="menuitem" tabindex="-1"
+                                    class="control">Queensland Government publications</a></li>
+                        </ul>
+                    </div>
+                    <div class="section controlset" id="for-qldrs" aria-labelledby="landmark-label9" role="menu"
+                        tabindex="-1">
+                        <h3 id="landmark-label9"><a href="http://www.qld.gov.au/queenslanders/" id="control-9"
+                                role="menuitem" tabindex="0" class="control">For Queenslanders</a></h3>
+                        <ul>
+                            <li><a href="http://www.qld.gov.au/transport/" id="control-10" role="menuitem" tabindex="-1"
+                                    class="control">Transport and motoring</a></li>
+                            <li><a href="http://www.qld.gov.au/jobs/" id="control-11" role="menuitem" tabindex="-1"
+                                    class="control">Employment and jobs</a></li>
+                            <li><a href="http://www.qld.gov.au/housing/" id="control-12" role="menuitem" tabindex="-1"
+                                    class="control">Homes and housing</a></li>
+                            <li><a href="http://www.qld.gov.au/education/" id="control-13" role="menuitem" tabindex="-1"
+                                    class="control">Education and training</a></li>
+                            <li><a href="http://www.qld.gov.au/community/" id="control-14" role="menuitem" tabindex="-1"
+                                    class="control">Community support</a></li>
+                            <li><a href="http://www.qld.gov.au/health/" id="control-15" role="menuitem" tabindex="-1"
+                                    class="control">Health and wellbeing</a></li>
+                            <li><a href="http://www.qld.gov.au/emergency/" id="control-16" role="menuitem" tabindex="-1"
+                                    class="control">Emergency services and safety</a></li>
+                            <li><a href="http://www.qld.gov.au/about/" id="control-17" role="menuitem" tabindex="-1"
+                                    class="control">About Queensland and its government</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="http://www.qld.gov.au/families/" id="control-18" role="menuitem" tabindex="-1"
+                                    class="control">Parents and families</a></li>
+                            <li><a href="http://www.qld.gov.au/disability/" id="control-19" role="menuitem"
+                                    tabindex="-1" class="control">People with disability</a></li>
+                            <li><a href="http://www.qld.gov.au/seniors/" id="control-20" role="menuitem" tabindex="-1"
+                                    class="control">Seniors</a></li>
+                            <li><a href="http://www.qld.gov.au/atsi/" id="control-21" role="menuitem" tabindex="-1"
+                                    class="control">Aboriginal and Torres Strait Islander peoples</a></li>
+                            <li><a href="http://www.qld.gov.au/youth/" id="control-22" role="menuitem" tabindex="-1"
+                                    class="control">Youth</a></li>
+                            <li><a href="http://www.qld.gov.au/environment/" id="control-23" role="menuitem"
+                                    tabindex="-1" class="control">Environment, land and water</a></li>
+                            <li><a href="http://www.qld.gov.au/law/" id="control-24" role="menuitem" tabindex="-1"
+                                    class="control">Your rights, crime and the law</a></li>
+                            <li><a href="http://www.qld.gov.au/recreation/" id="control-25" role="menuitem"
+                                    tabindex="-1" class="control">Recreation, sport and arts</a></li>
+                        </ul>
+                    </div>
+                    <div class="section controlset" aria-labelledby="landmark-label10" id="controlset-1" role="menu"
+                        tabindex="-1">
+                        <h3 id="landmark-label10"><a href="http://www.business.qld.gov.au/" id="control-26"
+                                role="menuitem" tabindex="0" class="control">Business and industry</a></h3>
+                        <ul>
+                            <li><a href="http://www.business.qld.gov.au/business/starting" id="control-27"
+                                    role="menuitem" tabindex="-1" class="control">Starting a business</a></li>
+                            <li><a href="http://www.business.qld.gov.au/business/running" id="control-28"
+                                    role="menuitem" tabindex="-1" class="control">Running a business</a></li>
+                            <li><a href="http://www.business.qld.gov.au/business/employing" id="control-29"
+                                    role="menuitem" tabindex="-1" class="control">Employing people</a></li>
+                            <li><a href="http://www.business.qld.gov.au/invest" id="control-30" role="menuitem"
+                                    tabindex="-1" class="control">Investing in Queensland</a></li>
+                            <li><a href="http://www.business.qld.gov.au/industry" id="control-31" role="menuitem"
+                                    tabindex="-1" class="control">For industry</a></li>
+                            <li><a href="http://www.business.qld.gov.au/invest/queenslands-regional-locations"
+                                    id="control-32" role="menuitem" tabindex="-1" class="control">Regional investment
+                                    opportunities</a></li>
+                            <li><a href="http://www.business.qld.gov.au/chinese" lang="zh" id="control-33"
+                                    role="menuitem" tabindex="-1" class="control">昆士兰州的投资机会</a></li>
+                            <li><a href="http://www.business.qld.gov.au/chinese-t" lang="zh" id="control-34"
+                                    role="menuitem" tabindex="-1" class="control">昆士蘭州的投資機會</a></li>
+                            <li><a href="http://www.business.qld.gov.au/japanese" lang="ja" id="control-35"
+                                    role="menuitem" tabindex="-1" class="control">クイーンズランド州への投資機会</a></li>
+                            <li><a href="http://www.business.qld.gov.au/korean" lang="ko" id="control-36"
+                                    role="menuitem" tabindex="-1" class="control">퀸즈랜드 투자 기회</a></li>
+                        </ul>
+                    </div>
+                    <div class="section controlset" aria-labelledby="landmark-label11" id="controlset-2" role="menu"
+                        tabindex="-1">
+                        <!-- For non-residents -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="max-width">
+            <div class="box-sizing">
+                <h2 id="landmark-label13">Site footer</h2>
+                <ul>
+                    <li class="nav-contact"><a accesskey="4" href="https://www.qld.gov.au/contact-us">Contact
+                            us</a><small class="print-link-url"> ( https://www.qld.gov.au/contact-us )</small></li>
+                    <li id="link-help"><a href="http://www.qld.gov.au/help/">Help</a><small class="print-link-url"> (
+                            http://www.qld.gov.au/help/ )</small></li>
+                    <!--<li id="link-legal"><a href="http://www.qld.gov.au/legal/">Terms and conditions</a></li>-->
+                    <li class="legal"><a href="http://www.qld.gov.au/legal/copyright/">Copyright</a><small
+                            class="print-link-url"> ( http://www.qld.gov.au/legal/copyright/ )</small></li>
+                    <li class="legal"><a href="http://www.qld.gov.au/legal/disclaimer/">Disclaimer</a><small
+                            class="print-link-url"> ( http://www.qld.gov.au/legal/disclaimer/ )</small></li>
+                    <li class="legal"><a href="http://www.qld.gov.au/legal/privacy/">Privacy</a><small
+                            class="print-link-url"> ( http://www.qld.gov.au/legal/privacy/ )</small></li>
+                    <li class="legal"><a href="http://www.qld.gov.au/right-to-information/">Right to
+                            information</a><small class="print-link-url"> ( http://www.qld.gov.au/right-to-information/
+                            )</small></li>
+                    <li id="link-accessibility"><a
+                            href="http://www.qld.gov.au/help/accessibility/">Accessibility</a><small
+                            class="print-link-url"> ( http://www.qld.gov.au/help/accessibility/ )</small></li>
+                    <li id="link-jobs"><a href="http://smartjobs.qld.gov.au/">Jobs in Queensland Government</a><small
+                            class="print-link-url"> ( http://smartjobs.qld.gov.au/ )</small></li>
+                    <li id="link-languages"><a href="http://www.qld.gov.au/languages/">Other languages</a><small
+                            class="print-link-url"> ( http://www.qld.gov.au/languages/ )</small></li>
+                </ul>
+                <p class="legal">© The State of Queensland 1995–2021</p>
+                <p><a href="http://www.qld.gov.au/" accesskey="1">Queensland Government</a><small
+                        class="print-link-url"> ( http://www.qld.gov.au/ )</small></p>
+                <div id="qg-branding">
+                    <p>
+                        <img class="tagline" src="./res/tagline.png" alt="Great state. Great opportunity.">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="scripts">
+        <script type="text/javascript" src="./res/loader.js"></script>
+        <script type="text/javascript" src="./res/qgov.js"></script>
+        <script type="text/javascript" src="./res/qgov-misc.js"></script>
+        <script type="text/javascript" src="./res/init.js"></script>
+    </div>
+
+    <div id="analytics">
+        <script id="analytics-inline-config" type="text/javascript">< !--
+                qg.swe.pageTitle = 'Bond Loan and Rental Grant application';
+            qg.swe.franchiseTitle = 'housing';
+
+            qg.swe.vhost = 'housing-prod';
+            qg.swe.servedBy = 'housing.qld.gov.au';
+        //--></script>
+        <!-- Load configuration for analytics -->
+        <script type="text/javascript" src="./res/analytics.js"></script>
+    </div>
+
+    <!-- END: footer.cshtml-->
+    <script src="./res/jquery.scrollTo.min.js"></script>
+
+
+
+</body>
+
+</html>
