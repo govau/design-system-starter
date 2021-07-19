@@ -1,19 +1,12 @@
-// Dark theme overrides
-// $AU-colordark-foreground-text:   #ffffff;
-// $AU-colordark-foreground-action: #f9f9f9;
-// $AU-colordark-foreground-focus:  #13e241;
-// $AU-colordark-background:        #134169;
-
-// Light theme overrides
-// $AU-color-foreground-action: #134169;
-// $AU-color-foreground-focus:  #0C8927;
+//QLD overrides
+@import "./qgov-dta.scss";
 
 //Main nav, set project specific breakpoint
 $AU-main-nav-breakpoint: sm;
 
 // UI-Kit
-@import './_auds.scss';
-
+@import "./_auds.scss";
+@import "./covid-theme.scss";
 
 // Reset the body
 body {
@@ -21,56 +14,52 @@ body {
 	margin: 0;
 }
 
-
 // Increase the spacing for au-body elements inside main
 main > .au-body {
-	@include AU-space( padding, 2unit 0 );
-
+	@include AU-space(padding, 4unit 0);
 }
 
 main > .banner {
-
-	@include AU-media( sm ) {
-		@include AU-space( padding, 4unit 0 );
+	@include AU-media(sm) {
+		@include AU-space(padding, 4unit 0);
 	}
 }
 
-
 // Slight grid changes for container fluid
 .au-grid .container-fluid {
-	@include AU-space( max-width, 80unit );
+	@include AU-space(max-width, 80unit);
 
-	@include AU-media( sm ){
-		@include AU-space( padding-left, 2unit );
-		@include AU-space( padding-right, 2unit );
+	@include AU-media(sm) {
+		@include AU-space(padding-left, 2unit);
+		@include AU-space(padding-right, 2unit);
 	}
 }
 
 // Increase spacing between inline list items in footer
 .au-footer .au-link-list--inline li {
-	@include AU-space( padding-right, 1unit );
+	@include AU-space(padding-right, 1unit);
 }
 
 // The call to actions on the home page
 .btn-cta-group {
-	@include AU-space( margin-top, 1unit );
+	@include AU-space(margin-top, 1unit);
 
 	.au-btn {
-		@include AU-space( margin-top, 1unit );
+		@include AU-space(margin-top, 1unit);
 	}
 }
 
 // Mobile side nav spacing
 .au-side-nav {
-	@include AU-space( margin-bottom, 2unit );
+	@include AU-space(margin-bottom, 2unit);
 
-	@include AU-media( sm ){
+	@include AU-media(sm) {
 		margin-bottom: 0;
 	}
 }
 
 form {
-	@include AU-space( margin-top, 2unit );
+	@include AU-space(margin-top, 2unit);
 }
 
 .hide_content {
@@ -79,26 +68,24 @@ form {
 
 //increase the space between form groups
 .au-form-group + .au-form-group {
-	@include AU-space( 'margin-top', 2unit)
+	@include AU-space("margin-top", 2unit);
 }
 
 .articles-cta {
-	@include AU-space( 'margin-top', 0.25unit );
+	@include AU-space("margin-top", 0.25unit);
 	text-align: right;
 
-	@include AU-media( md ) {
-		@include AU-space( 'margin-top', 1unit );
+	@include AU-media(md) {
+		@include AU-space("margin-top", 1unit);
 	}
 }
 
-
 .au-header .au-search {
-
 	width: 100%;
-	@include AU-media( xs ) {
+	@include AU-media(xs) {
 		width: 75%;
 	}
-	@include AU-media( sm ) {
+	@include AU-media(sm) {
 		width: 100%;
 	}
 }

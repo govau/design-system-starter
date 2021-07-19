@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="12px" viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>button-right-dark</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-146.000000, -180.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="button-right-dark" transform="translate(146.000000, 180.000000)">
+                <path d="M6.802,6.20976316 L1.68768421,11.3240526 C1.44102632,11.5707105 1.04113158,11.5707105 0.7945,11.3240526 L0.198,10.7275526 C-0.0482368421,10.4813158 -0.0487105263,10.0822368 0.196947368,9.83542105 L4.25013158,5.76315789 L0.196947368,1.69092105 C-0.0487105263,1.44410526 -0.0482368421,1.04502632 0.198,0.798789474 L0.7945,0.202289474 C1.04115789,-0.0443684211 1.44105263,-0.0443684211 1.68768421,0.202289474 L6.80197368,5.31657895 C7.04863158,5.56321053 7.04863158,5.96310526 6.802,6.20976316 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>
